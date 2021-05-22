@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/jan_hoeck/static/css/main.613adde2.chunk.css",
+    "main.js": "/jan_hoeck/static/js/main.a7375e09.chunk.js",
+    "main.js.map": "/jan_hoeck/static/js/main.a7375e09.chunk.js.map",
+    "runtime-main.js": "/jan_hoeck/static/js/runtime-main.703b649f.js",
+    "runtime-main.js.map": "/jan_hoeck/static/js/runtime-main.703b649f.js.map",
+    "static/js/2.3a247a2f.chunk.js": "/jan_hoeck/static/js/2.3a247a2f.chunk.js",
+    "static/js/2.3a247a2f.chunk.js.map": "/jan_hoeck/static/js/2.3a247a2f.chunk.js.map",
+    "index.html": "/jan_hoeck/index.html",
+    "static/css/main.613adde2.chunk.css.map": "/jan_hoeck/static/css/main.613adde2.chunk.css.map",
+    "static/js/2.3a247a2f.chunk.js.LICENSE.txt": "/jan_hoeck/static/js/2.3a247a2f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/jan_hoeck/static/media/DINPro.6ef85ba7.otf",
+    "static/media/me.5142fb10.jpg": "/jan_hoeck/static/media/me.5142fb10.jpg",
+    "static/media/node-js.04e483b5.jpg": "/jan_hoeck/static/media/node-js.04e483b5.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.703b649f.js",
+    "static/js/2.3a247a2f.chunk.js",
+    "static/css/main.613adde2.chunk.css",
+    "static/js/main.a7375e09.chunk.js"
+  ]
+}
