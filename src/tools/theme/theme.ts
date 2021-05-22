@@ -13,6 +13,12 @@ export interface Theme {
             white: string;
         },
         primary: PaletteColor;
+        text: {
+            primary: string;
+            secondary: string;
+            backgroundText: string;
+            contrastPrimary: string;
+        }
     }
 }
 
@@ -42,6 +48,12 @@ export const theme: Theme = {
             dark: '#213038',
             light: '#6794ad',
             contrastColor: '#FFFFFF'
+        },
+        text: {
+            primary: '#000',
+            secondary: '#999',
+            contrastPrimary: 'rgba(255,255,255,0.8)',
+            backgroundText: '#FAFAFA'
         }
     }
 }

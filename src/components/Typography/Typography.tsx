@@ -5,10 +5,12 @@ import clsx from 'clsx';
 import {ClassesOverride} from '../../tools/types/ReactJSSTypes';
 import {mergeClasses} from '../../tools/theme/mergeClasses';
 
-type ClassKeys = 'root' | Variant;
-const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>({
+type ClassKeys = 'root' | 'noWrap' | Variant;
+const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>((theme) => ({
     root: {
-        fontFamily: `'Roboto', sans-serif`
+        fontFamily: 'DINPro',
+        margin: 0,
+        color: ({ color }) => theme.palette.text[color || 'primary']
     },
     headlineBig: {
         fontSize: 140,
@@ -20,8 +22,11 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>({
     },
     default: {
         fontSize: 20
+    },
+    noWrap: {
+        whiteSpace: 'nowrap'
     }
-}, { name: 'Typography' });
+}), { name: 'Typography' });
 
 type Variant = 'headlineBig' | 'subHeadlineBig' | 'default';
 
@@ -29,7 +34,9 @@ export interface TypographyProps {
     classes?: ClassesOverride<ClassKeys>;
     className?: string;
     children: string;
-    variant?: Variant
+    variant?: Variant,
+    color?: keyof Theme['palette']['text'];
+    noWrap?: boolean;
 }
 
 const componentMapping: Record<Variant, React.ElementType> = {
@@ -39,11 +46,11 @@ const componentMapping: Record<Variant, React.ElementType> = {
 }
 
 export const Typography = (props: TypographyProps) => {
-    const { className, classes: classesProp, children, variant = 'default' } = props;
-    const classes = mergeClasses(useStyles(props), classesProp);
+    const { className, classes: classesProp, children, variant = 'default', noWrap = false, color = 'primary' } = props;
+    const classes = mergeClasses(useStyles({ ...props, color }), classesProp);
 
     const Component = componentMapping[variant];
     return (
-        <Component className={clsx(className, classes.root, classes[variant])}>{children}</Component>
+        <Component className={clsx(className, classes.root, classes[variant], { [classes.noWrap]: noWrap })}>{children}</Component>
     )
 }

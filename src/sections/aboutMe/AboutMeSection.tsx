@@ -5,17 +5,18 @@ import {Theme} from '../../tools/theme/theme';
 import {MeImage} from './components/MeImage';
 import clsx from 'clsx';
 import {Typography} from '../../components';
+import {BackgroundTypography} from '../../components/Typography/BackgroundTypography';
 
 type ClassKeys = 'root' | 'container' | 'meImage' | 'text' | 'headline' ;
 const useStyles = createUseStyles<ClassKeys, AboutMeSectionProps, Theme>((theme) => ({
     root: {
         backgroundColor: 'white',
-        height: 'auto',
         padding: theme.spacing(3),
         boxSizing: 'border-box'
     },
     headline: {
         textAlign: 'center',
+        textTransform: 'uppercase'
     },
     container: {
         display: 'flex',
@@ -43,10 +44,10 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
 
     return (
         <Section className={clsx(className, classes.root)}>
-            <Typography variant='subHeadlineBig' className={classes.headline}>Wer bin ich?</Typography>
+            <BackgroundTypography variant='headlineBig' className={classes.headline}>Wer bin ich?</BackgroundTypography>
             <div className={classes.container}>
                 <MeImage className={classes.meImage}/>
-                <Typography className={classes.text} variant='default'>
+                <Typography className={classes.text} variant='default' color='secondary'>
                     Ich heiße Jan Höck und wurde am 17.01.1996 in Siegburg geboren.
                     Ich habe eine Ausbildung zum Anwendungsentwicker absolviert und arbeite seit dem in diesem Beruf.
                     Doch wie kam ich dazu mich für diesen Berufsweg zu entscheiden?
