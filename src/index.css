@@ -1,8 +1,18 @@
 body {
-  margin: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
 @font-face {
-  font-family: "DINPro";
-  src: url(./fonts/DINPro.otf) format("opentype");
+    font-family: 'DINPro';
+    src: url(./fonts/DINPro.otf) format('opentype');
 }
