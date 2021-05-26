@@ -3,7 +3,7 @@ import { Section } from '../../components/Section';
 import clsx from 'clsx';
 import { createUseStyles, useTheme } from 'react-jss';
 import { Theme } from '../../tools/theme/theme';
-import { BackgroundTypography, Timeline, TimelineItem, Typography, useSectionsScrollerContext } from '../../components';
+import { SectionCaption, Timeline, TimelineItem, Typography, useSectionsScrollerContext } from '../../components';
 import { shadeColor } from '../../tools/utils/ColorUtils';
 import { useInView } from 'react-intersection-observer';
 
@@ -67,15 +67,14 @@ export const TimelineSection = (props: TimelineSectionProps) => {
 
     return (
         <Section className={clsx(className, classes.root)} ref={ref}>
-            <BackgroundTypography
+            <SectionCaption
                 classes={{
                     text: classes.headlineText,
                     backgroundText: classes.headlineBackgroundText,
                 }}
-                variant='headlineBig'
             >
                 Lebenslauf
-            </BackgroundTypography>
+            </SectionCaption>
             <div className={classes.timelineContainer}>
                 <Timeline
                     className={classes.timeline}

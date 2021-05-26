@@ -11,7 +11,7 @@ const useStyles = createUseStyles<ClassKey, SectionProps, Theme>(
         root: {
             position: 'relative',
             overflow: 'hidden',
-            height: '100vh',
+            minHeight: '100vh',
             width: '100%',
         },
     },

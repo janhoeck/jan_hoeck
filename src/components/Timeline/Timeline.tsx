@@ -43,20 +43,20 @@ export const Timeline = (props: TimelineProps) => {
 
     return (
         <div className={clsx(className, classes.root)} {...restProps}>
-                {React.Children.map(children, (child, index) => {
-                    return (
-                        <Fade duration={700} direction={index % 2 ? 'left' : 'right'}>
-                            {React.cloneElement(child, {
-                                alignment: index % 2 ? 'left' : 'right',
-                                classes: {
-                                    dot: classes.dot,
-                                    line: classes.line,
-                                    content: classes.content,
-                                },
-                            })}
-                        </Fade>
-                    )
-                })}
+            {React.Children.map(children, (child, index) => {
+                return (
+                    <Fade duration={700} direction={index % 2 ? 'left' : 'right'}>
+                        {React.cloneElement(child, {
+                            alignment: index % 2 ? 'left' : 'right',
+                            classes: {
+                                dot: classes.dot,
+                                line: classes.line,
+                                content: classes.content,
+                            },
+                        })}
+                    </Fade>
+                );
+            })}
         </div>
     );
 };

@@ -3,30 +3,33 @@ import meImage from '../assets/me.jpg';
 import { createUseStyles } from 'react-jss';
 import { Theme } from '../../../tools/theme/theme';
 import clsx from 'clsx';
-import { LinesDesignHighlight } from '../../../components/DesignHighlights';
 
-type ClassKeys = 'root' | 'image' | 'lines';
+type ClassKeys = 'root' | 'image' | 'highlight';
 const useStyles = createUseStyles<ClassKeys, MeImageProps, Theme>(
-    {
+    (theme) => ({
         root: {
             position: 'relative',
-            overflow: 'hidden',
             width: 350,
             height: 350,
         },
         image: {
             width: 'inherit',
             height: 'inherit',
-            clipPath: 'polygon(0 0, 100% 0%, 100% 77%, 0% 100%)',
+            borderRadius: '50%',
+            border: `3px solid ${theme.palette.common.white}`,
             position: 'relative',
             zIndex: 1,
         },
-        lines: {
-            width: 'calc(100% - 10px)',
+        highlight: {
             position: 'absolute',
-            bottom: 10,
+            width: '100%',
+            height: '100%',
+            backgroundColor: theme.palette.primary.main,
+            borderRadius: '50%',
+            left: -45,
+            bottom: -30,
         },
-    },
+    }),
     { name: 'MeImage' }
 );
 
@@ -41,7 +44,7 @@ export const MeImage = (props: MeImageProps) => {
     return (
         <div className={clsx(className, classes.root)}>
             <img className={classes.image} src={meImage} alt='Jan Höck' />
-            <LinesDesignHighlight className={classes.lines} />
+            <div className={classes.highlight} />
         </div>
     );
 };

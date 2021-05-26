@@ -2,18 +2,30 @@ import React from 'react';
 import { createContext, FunctionComponent, useContext, useState } from 'react';
 import { useTheme } from 'react-jss';
 import { Theme } from '../../tools/theme/theme';
+import defaultBackgroundImage from './assets/node-js.jpg';
 
-type SectionsScrollerContextType = ReturnType<typeof useStore>;
+export type SectionsScrollerContextType = ReturnType<typeof useStore>;
 
 const SectionsScrollerContext = createContext<SectionsScrollerContextType>({} as any);
 
 const useStore = () => {
     const theme = useTheme<Theme>();
+
+    const [activeSectionIndex, setActiveSectionIndex] = useState<number>(0);
     const [color, setColor] = useState<string>(theme.palette.common.white);
 
+    const [backgroundImage, setBackgroundImage] = useState<string>(defaultBackgroundImage);
+    const [backgroundSize, setBackgroundSize] = useState<number>(120);
+
     return {
+        activeSectionIndex,
         color,
+        backgroundImage,
+        backgroundSize,
         setColor,
+        setBackgroundImage,
+        setBackgroundSize,
+        setActiveSectionIndex,
     };
 };
 

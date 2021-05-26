@@ -4,6 +4,7 @@ import { Theme } from '../../tools/theme/theme';
 import clsx from 'clsx';
 import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
 import { mergeClasses } from '../../tools/theme/mergeClasses';
+import { createMediaQuery } from '../../tools/theme/createMediaQuery';
 
 type ClassKeys = 'root' | 'noWrap' | Variant;
 const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
@@ -16,10 +17,29 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
         headlineBig: {
             fontSize: 140,
             letterSpacing: 24,
+            [createMediaQuery('xl').down]: {
+                fontSize: 80,
+            },
+            [createMediaQuery('md').down]: {
+                fontSize: 60,
+                letterSpacing: 0,
+            },
+            [createMediaQuery('sm').down]: {
+                fontSize: 40,
+            },
         },
         subHeadlineBig: {
             fontSize: 30,
-            letterSpacing: 14,
+            [createMediaQuery('xl').down]: {
+                fontSize: 40,
+            },
+            [createMediaQuery('md').down]: {
+                fontSize: 30,
+                letterSpacing: 0,
+            },
+            [createMediaQuery('sm').down]: {
+                fontSize: 20,
+            },
         },
         primary: {
             fontSize: 20,
@@ -29,6 +49,8 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
         },
         noWrap: {
             whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
         },
     }),
     { name: 'Typography' }

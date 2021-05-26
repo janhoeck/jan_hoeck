@@ -2,12 +2,13 @@ import React from 'react';
 import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
 import { createUseStyles } from 'react-jss';
 import { Theme } from '../../tools/theme/theme';
-import { Typography, TypographyProps } from './Typography';
 import { mergeClasses } from '../../tools/theme/mergeClasses';
 import clsx from 'clsx';
+import { createMediaQuery } from '../../tools/theme/createMediaQuery';
+import { Typography } from '../Typography';
 
 type ClassKeys = 'root' | 'backgroundText' | 'text';
-const useStyles = createUseStyles<ClassKeys, BackgroundTypographyProps, Theme>(
+const useStyles = createUseStyles<ClassKeys, SectionCaptionProps, Theme>(
     {
         root: {
             position: 'relative',
@@ -28,26 +29,37 @@ const useStyles = createUseStyles<ClassKeys, BackgroundTypographyProps, Theme>(
             transform: 'translate(-50%, -50%)',
             fontSize: 300,
             zIndex: 0,
+            [createMediaQuery('xl').down]: {
+                fontSize: 250,
+            },
+            [createMediaQuery('md').down]: {
+                fontSize: 150,
+                letterSpacing: 0,
+            },
+            [createMediaQuery('sm').down]: {
+                fontSize: 120,
+            },
         },
     },
-    { name: 'BackgroundTypography' }
+    { name: 'SectionCaption' }
 );
 
-export interface BackgroundTypographyProps extends Omit<TypographyProps, 'classes'> {
+export interface SectionCaptionProps {
     className?: string;
     classes?: ClassesOverride<ClassKeys>;
+    children: string;
 }
 
-export const BackgroundTypography = (props: BackgroundTypographyProps) => {
-    const { children, className, classes: classesProp, variant } = props;
+export const SectionCaption = (props: SectionCaptionProps) => {
+    const { children, className, classes: classesProp } = props;
     const classes = mergeClasses(useStyles(props), classesProp);
 
     return (
         <div className={clsx(className, classes.root)}>
-            <Typography variant={variant} className={classes.text}>
+            <Typography noWrap className={classes.text} variant='headlineBig'>
                 {children}
             </Typography>
-            <Typography noWrap className={classes.backgroundText} variant={variant} color='backgroundText'>
+            <Typography className={classes.backgroundText} variant='headlineBig' color='backgroundText'>
                 {children}
             </Typography>
         </div>

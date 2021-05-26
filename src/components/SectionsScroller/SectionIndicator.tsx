@@ -28,6 +28,7 @@ const useStyles = createUseStyles<ClassKeys, UseStylesParameters, Theme>(
             borderRadius: '50%',
             backgroundColor: ({ color }) => color,
             transition: 'all .4s ease-out',
+            cursor: 'pointer',
         },
         active: {
             width: 12,
@@ -46,7 +47,7 @@ export interface SectionIndicatorProps extends HTMLAttributes<HTMLUListElement> 
 export const SectionIndicator = (props: SectionIndicatorProps) => {
     const { className, classes: classesProp, sectionsCount, activeSectionIndex } = props;
 
-    const { color } = useSectionsScrollerContext();
+    const { color, setActiveSectionIndex } = useSectionsScrollerContext();
     const classes = mergeClasses(useStyles({ ...props, color }), classesProp);
 
     return (
@@ -57,6 +58,7 @@ export const SectionIndicator = (props: SectionIndicatorProps) => {
                     className={clsx(classes.item, {
                         [classes.active]: index === activeSectionIndex,
                     })}
+                    onClick={() => setActiveSectionIndex(index)}
                 />
             ))}
         </ul>

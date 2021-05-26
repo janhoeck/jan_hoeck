@@ -19,7 +19,7 @@ const useStyles = createUseStyles<ClassKeys, TrianglesProps, Theme>(
         },
         one: {
             backgroundColor: theme.palette.primary.light,
-            transform: 'rotate(6deg)',
+            transform: 'rotate(3deg)',
         },
         two: {
             backgroundColor: theme.palette.primary.main,
