@@ -10,6 +10,7 @@ export interface Theme {
     palette: {
         common: {
             white: string;
+            cardBoxShadow: string;
         };
         primary: PaletteColor;
         text: {
@@ -36,6 +37,7 @@ export const theme: Theme = {
     palette: {
         common: {
             white: '#FFFFFF',
+            cardBoxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
         },
         primary: {
             main: '#304652',
@@ -44,7 +46,7 @@ export const theme: Theme = {
             contrastColor: '#FFFFFF',
         },
         text: {
-            primary: '#565151',
+            primary: '#4d4d4d',
             secondary: '#999',
             contrastPrimary: 'rgba(255,255,255,0.8)',
             backgroundText: '#FAFAFA',

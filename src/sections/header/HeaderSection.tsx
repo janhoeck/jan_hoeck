@@ -68,7 +68,7 @@ export const HeaderSection = (props: HeaderProps) => {
     useEffect(() => {
         if (inView) {
             setColor(theme.palette.common.white);
-            setBackgroundSize(140);
+            setBackgroundSize('100% 100%');
         }
     }, [theme, inView, setColor, setBackgroundSize]);
 
@@ -76,10 +76,10 @@ export const HeaderSection = (props: HeaderProps) => {
         <Section className={clsx(className, classes.root)} ref={ref}>
             <Fade duration={2000}>
                 <div className={classes.headlineContainer}>
-                    <Typography className={classes.headline} variant='headlineBig' color='contrastPrimary'>
+                    <Typography className={classes.headline} variant='headline' color='contrastPrimary'>
                         Jan Höck
                     </Typography>
-                    <Typography className={classes.subHeadline} variant='subHeadlineBig' color='contrastPrimary'>
+                    <Typography className={classes.subHeadline} variant='subHeadline' color='contrastPrimary'>
                         Senior Frontend Entwickler
                     </Typography>
                 </div>

@@ -19,7 +19,8 @@ const useStyles = createUseStyles<ClassKeys, SkillsProps, Theme>(
             gridGap: theme.spacing(2),
         },
         skill: {
-            boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+            boxShadow: theme.palette.common.cardBoxShadow,
+            backgroundColor: theme.palette.common.white,
             padding: theme.spacing(2),
             '& svg': {
                 width: 45,

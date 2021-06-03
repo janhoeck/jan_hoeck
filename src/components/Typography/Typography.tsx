@@ -14,7 +14,7 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
             margin: 0,
             color: ({ color }) => (color === 'inherit' ? 'inherit' : theme.palette.text[color || 'primary']),
         },
-        headlineBig: {
+        headline: {
             fontSize: 140,
             letterSpacing: 24,
             [createMediaQuery('xl').down]: {
@@ -28,7 +28,7 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
                 fontSize: 40,
             },
         },
-        subHeadlineBig: {
+        subHeadline: {
             fontSize: 30,
             [createMediaQuery('xl').down]: {
                 fontSize: 40,
@@ -41,7 +41,7 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
                 fontSize: 20,
             },
         },
-        primary: {
+        text: {
             fontSize: 20,
         },
         secondary: {
@@ -56,26 +56,26 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
     { name: 'Typography' }
 );
 
-type Variant = 'headlineBig' | 'subHeadlineBig' | 'primary' | 'secondary';
+type Variant = 'headline' | 'subHeadline' | 'text' | 'secondary';
 
 export interface TypographyProps {
     classes?: ClassesOverride<ClassKeys>;
     className?: string;
-    children: string;
+    children: string | React.ReactElement | React.ReactElement[];
     variant?: Variant;
     color?: keyof Theme['palette']['text'] | 'inherit';
     noWrap?: boolean;
 }
 
 const componentMapping: Record<Variant, React.ElementType> = {
-    headlineBig: 'h1',
-    subHeadlineBig: 'h4',
-    primary: 'span',
+    headline: 'h1',
+    subHeadline: 'h4',
+    text: 'span',
     secondary: 'span',
 };
 
 export const Typography = (props: TypographyProps) => {
-    const { className, classes: classesProp, children, variant = 'primary', noWrap = false, color = 'primary' } = props;
+    const { className, classes: classesProp, children, variant = 'text', noWrap = false, color = 'primary' } = props;
     const classes = mergeClasses(useStyles({ ...props, color }), classesProp);
 
     const Component = componentMapping[variant];

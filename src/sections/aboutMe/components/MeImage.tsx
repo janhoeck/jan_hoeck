@@ -3,6 +3,7 @@ import meImage from '../assets/me.jpg';
 import { createUseStyles } from 'react-jss';
 import { Theme } from '../../../tools/theme/theme';
 import clsx from 'clsx';
+import {createMediaQuery} from '../../../tools/theme/createMediaQuery';
 
 type ClassKeys = 'root' | 'image' | 'highlight';
 const useStyles = createUseStyles<ClassKeys, MeImageProps, Theme>(
@@ -11,12 +12,19 @@ const useStyles = createUseStyles<ClassKeys, MeImageProps, Theme>(
             position: 'relative',
             width: 350,
             height: 350,
+            [createMediaQuery('md').down]: {
+                width: 250,
+                height: 250,
+                '& $highlight': {
+                    display: 'none'
+                }
+            }
         },
         image: {
             width: 'inherit',
             height: 'inherit',
             borderRadius: '50%',
-            border: `3px solid ${theme.palette.common.white}`,
+            border: `5px solid ${theme.palette.common.white}`,
             position: 'relative',
             zIndex: 1,
         },

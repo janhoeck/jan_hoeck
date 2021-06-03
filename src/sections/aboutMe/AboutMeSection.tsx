@@ -1,20 +1,19 @@
-import React, { useEffect } from 'react';
-import { createUseStyles, useTheme } from 'react-jss';
-import { Theme } from '../../tools/theme/theme';
-import { MeImage } from './components/MeImage';
+import React, {useEffect} from 'react';
+import {createUseStyles, useTheme} from 'react-jss';
+import {Theme} from '../../tools/theme/theme';
+import {MeImage} from './components/MeImage';
 import clsx from 'clsx';
-import { Section, SectionCaption, Typography, useSectionsScrollerContext } from '../../components';
-import { useInView } from 'react-intersection-observer';
-import { Fade } from 'react-awesome-reveal';
-import { createMediaQuery } from '../../tools/theme/createMediaQuery';
-import { Skills } from './components/skills/Skills';
-import { SkillsContainer } from './SkillsContainer';
+import {Section, Typography, useSectionsScrollerContext} from '../../components';
+import {useInView} from 'react-intersection-observer';
+import {Fade} from 'react-awesome-reveal';
+import {createMediaQuery} from '../../tools/theme/createMediaQuery';
+import {Skills} from './components/skills/Skills';
 
 type ClassKeys = 'root' | 'container' | 'content' | 'meImage' | 'text' | 'skillsContainer';
 const useStyles = createUseStyles<ClassKeys, AboutMeSectionProps, Theme>(
     (theme) => ({
         root: {
-            backgroundColor: theme.palette.common.white,
+            backgroundColor: '#eae5e5',
             padding: theme.spacing(3),
         },
         container: {
@@ -30,6 +29,9 @@ const useStyles = createUseStyles<ClassKeys, AboutMeSectionProps, Theme>(
         content: {
             display: 'flex',
             flexDirection: 'column',
+            '& > *:not(:last-child)': {
+                marginBottom: theme.spacing(2)
+            },
         },
         meImage: {
             marginRight: theme.spacing(6),
@@ -39,10 +41,7 @@ const useStyles = createUseStyles<ClassKeys, AboutMeSectionProps, Theme>(
             },
         },
         text: {
-            textAlign: 'justify',
             lineHeight: '32px',
-            zIndex: 1,
-            flex: '1 0',
         },
         skillsContainer: {
             marginTop: theme.spacing(2),
@@ -67,19 +66,19 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
     useEffect(() => {
         if (inView) {
             setColor(theme.palette.primary.main);
-            setBackgroundSize(105);
+            setBackgroundSize('150% 150%');
         }
     }, [theme, inView, setColor, setBackgroundSize]);
 
     return (
         <Section className={clsx(className, classes.root)} ref={ref}>
-            <SectionCaption>Wer bin ich?</SectionCaption>
             <div className={classes.container}>
                 <Fade triggerOnce direction='left'>
                     <MeImage className={classes.meImage} />
                 </Fade>
-                <div className={classes.content}>
-                    <Fade triggerOnce direction='up'>
+                <Fade triggerOnce direction='up'>
+                    <div className={classes.content}>
+                        <Typography variant='subHeadline'>ÜBER MICH</Typography>
                         <Typography className={classes.text} color='secondary'>
                             Ich heiße Jan Höck und wurde am 17.01.1996 in Siegburg geboren. Ich habe eine Ausbildung zum Anwendungsentwicker
                             absolviert und arbeite seit dem in diesem Beruf. Doch wie kam ich dazu mich für diesen Berufsweg zu entscheiden? Als
@@ -93,11 +92,10 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
                             Eltern ein eigenes Unternehmen anmelden mussten. So entdeckte ich mit 14 Jahren meine Leidenschaft für das Programmieren
                             und machte anschließend mein Hobby zu meinem Beruf.
                         </Typography>
-                    </Fade>
-                    <Fade triggerOnce direction='up'>
-                        <SkillsContainer className={classes.skillsContainer} />
-                    </Fade>
-                </div>
+                        <Typography variant='subHeadline'>SKILLS</Typography>
+                        <Skills />
+                    </div>
+                </Fade>
             </div>
         </Section>
     );

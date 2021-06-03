@@ -84,48 +84,17 @@ export const TimelineSection = (props: TimelineSectionProps) => {
                         content: classes.timelineContent,
                     }}
                 >
-                    <TimelineItem headline='2014 - 2016'>
+                    <TimelineItem headline='Juli 2012 - Juli 2014'>
+                        <Typography>Fachabitur im Bereich Informatik</Typography>
+                        <Typography><i>Carl-Reuther-Berufskolleg Hennef</i></Typography>
+                    </TimelineItem>
+                    <TimelineItem headline='August 2014 - Februar 2016'>
                         <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography>FLOWFACT GmbH</Typography>
+                        <Typography><i>FLOWFACT GmbH</i></Typography>
                     </TimelineItem>
-                    <TimelineItem headline='2014 - 2016'>
-                        <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography>FLOWFACT GmbH</Typography>
-                    </TimelineItem>
-                    <TimelineItem headline='2014 - 2016'>
-                        <Typography>
-                            Ausbildung zum Fachinformatiker für AnwendungsentwicklungAusbildung zum Fachinformatiker für
-                            AnwendungsentwicklungAusbildung zum Fachinformatiker für AnwendungsentwicklungAusbildung zum Fachinformatiker für
-                            Anwendungsentwicklung
-                        </Typography>
-                        <Typography>FLOWFACT GmbH</Typography>
-                    </TimelineItem>
-                    <TimelineItem headline='2014 - 2016'>
-                        <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography>FLOWFACT GmbH</Typography>
-                    </TimelineItem>
-                    <TimelineItem headline='2014 - 2016'>
-                        <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography>FLOWFACT GmbH</Typography>
-                    </TimelineItem>
-                    <TimelineItem headline='2014 - 2016'>
-                        <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography>FLOWFACT GmbH</Typography>
-                    </TimelineItem>
-                    <TimelineItem headline='2014 - 2016'>
-                        <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography>FLOWFACT GmbH</Typography>
-                    </TimelineItem>
-                    <TimelineItem headline='2014 - 2016'>
-                        <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography>FLOWFACT GmbH</Typography>
-                    </TimelineItem>
-                    <TimelineItem headline='2014 - 2016'>
-                        <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography>FLOWFACT GmbH</Typography>
-                    </TimelineItem>
-                    <TimelineItem lastItem headline='2018 - 2020'>
-                        <Typography>Das ist ein Test</Typography>
+                    <TimelineItem headline='Februar 2016 - jetzt'>
+                        <Typography>Frontend React Entwickler</Typography>
+                        <Typography><i>FLOWFACT GmbH</i></Typography>
                     </TimelineItem>
                 </Timeline>
             </div>

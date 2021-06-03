@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React, {Children, HTMLAttributes} from 'react';
 import { TimelineItemProps } from './TimelineItem';
 import { createUseStyles } from 'react-jss';
 import clsx from 'clsx';
@@ -43,11 +43,12 @@ export const Timeline = (props: TimelineProps) => {
 
     return (
         <div className={clsx(className, classes.root)} {...restProps}>
-            {React.Children.map(children, (child, index) => {
+            {Children.map(children, (child, index) => {
                 return (
                     <Fade duration={700} direction={index % 2 ? 'left' : 'right'}>
                         {React.cloneElement(child, {
                             alignment: index % 2 ? 'left' : 'right',
+                            lastItem: index === Children.count(children) - 1,
                             classes: {
                                 dot: classes.dot,
                                 line: classes.line,

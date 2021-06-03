@@ -56,10 +56,10 @@ export const SectionCaption = (props: SectionCaptionProps) => {
 
     return (
         <div className={clsx(className, classes.root)}>
-            <Typography noWrap className={classes.text} variant='headlineBig'>
+            <Typography noWrap className={classes.text} variant='headline'>
                 {children}
             </Typography>
-            <Typography className={classes.backgroundText} variant='headlineBig' color='backgroundText'>
+            <Typography className={classes.backgroundText} variant='headline' color='backgroundText'>
                 {children}
             </Typography>
         </div>

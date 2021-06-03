@@ -3,6 +3,7 @@ import { createContext, FunctionComponent, useContext, useState } from 'react';
 import { useTheme } from 'react-jss';
 import { Theme } from '../../tools/theme/theme';
 import defaultBackgroundImage from './assets/node-js.jpg';
+import { Property } from 'csstype';
 
 export type SectionsScrollerContextType = ReturnType<typeof useStore>;
 
@@ -14,8 +15,8 @@ const useStore = () => {
     const [activeSectionIndex, setActiveSectionIndex] = useState<number>(0);
     const [color, setColor] = useState<string>(theme.palette.common.white);
 
-    const [backgroundImage, setBackgroundImage] = useState<string>(defaultBackgroundImage);
-    const [backgroundSize, setBackgroundSize] = useState<number>(120);
+    const [backgroundImage, setBackgroundImage] = useState<Property.BackgroundImage>(defaultBackgroundImage);
+    const [backgroundSize, setBackgroundSize] = useState<Property.BackgroundSize>('100% 100%');
 
     return {
         activeSectionIndex,
