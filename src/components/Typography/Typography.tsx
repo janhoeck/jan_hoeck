@@ -20,23 +20,12 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
             [createMediaQuery('xl').down]: {
                 fontSize: 80,
             },
-            [createMediaQuery('md').down]: {
-                fontSize: 60,
-                letterSpacing: 0,
-            },
             [createMediaQuery('sm').down]: {
                 fontSize: 40,
             },
         },
         subHeadline: {
             fontSize: 30,
-            [createMediaQuery('xl').down]: {
-                fontSize: 40,
-            },
-            [createMediaQuery('md').down]: {
-                fontSize: 30,
-                letterSpacing: 0,
-            },
             [createMediaQuery('sm').down]: {
                 fontSize: 20,
             },

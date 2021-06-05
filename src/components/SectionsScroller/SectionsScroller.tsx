@@ -13,8 +13,6 @@ const useStyles = createUseStyles<ClassKeys, SectionsScrollerProps & SectionsScr
     (theme) => ({
         root: {
             position: 'relative',
-            background: ({ backgroundImage }) => `#283339 url(${backgroundImage}) no-repeat center`,
-            backgroundSize: ({ backgroundSize }) => backgroundSize,
             transition: 'background-size .5s ease-out',
         },
         content: {

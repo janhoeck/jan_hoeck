@@ -12,7 +12,7 @@ type ClassKey = 'root' | 'headlineContainer' | 'headline' | 'subHeadline' | 'scr
 const useStyles = createUseStyles<ClassKey, HeaderProps, Theme>(
     (theme) => ({
         root: {
-            background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, rgba(51,51,51,0.2) 100%)`,
+            backgroundColor: '#9cb8b3',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -25,14 +25,14 @@ const useStyles = createUseStyles<ClassKey, HeaderProps, Theme>(
             alignItems: 'center',
             justifyContent: 'center',
             width: '100%',
-            color: theme.palette.common.white,
             textTransform: 'uppercase',
         },
         headline: {
+            color: '#efedce',
             margin: 0,
         },
         subHeadline: {
-            color: addAlpha(theme.palette.common.white, 0.5),
+            color: theme.palette.text.primary,
         },
         scrollInformation: {
             position: 'absolute',
@@ -61,16 +61,15 @@ export const HeaderSection = (props: HeaderProps) => {
     const classes = useStyles(props);
 
     const theme = useTheme<Theme>();
-    const { setColor, setBackgroundSize } = useSectionsScrollerContext();
+    const { setColor } = useSectionsScrollerContext();
 
     const { ref, inView } = useInView({ threshold: 0.1 });
 
     useEffect(() => {
         if (inView) {
             setColor(theme.palette.common.white);
-            setBackgroundSize('100% 100%');
         }
-    }, [theme, inView, setColor, setBackgroundSize]);
+    }, [theme, inView, setColor]);
 
     return (
         <Section className={clsx(className, classes.root)} ref={ref}>

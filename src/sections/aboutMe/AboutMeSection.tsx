@@ -59,16 +59,15 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
     const classes = useStyles(props);
 
     const theme = useTheme<Theme>();
-    const { setColor, setBackgroundSize } = useSectionsScrollerContext();
+    const { setColor } = useSectionsScrollerContext();
 
     const { ref, inView } = useInView({ threshold: 0.1 });
 
     useEffect(() => {
         if (inView) {
             setColor(theme.palette.primary.main);
-            setBackgroundSize('150% 150%');
         }
-    }, [theme, inView, setColor, setBackgroundSize]);
+    }, [theme, inView, setColor]);
 
     return (
         <Section className={clsx(className, classes.root)} ref={ref}>
