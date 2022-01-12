@@ -37,7 +37,7 @@ export const theme: Theme = {
     palette: {
         common: {
             white: '#FFFFFF',
-            cardBoxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
+            cardBoxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
         },
         primary: {
             main: '#304652',

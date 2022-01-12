@@ -5,6 +5,7 @@ import { ThemeProvider } from 'react-jss';
 import { theme } from './tools/theme/theme';
 import { TimelineSection } from './sections/timeline';
 import { SectionsScroller } from './components';
+import { ReferenceSection } from './sections/references';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <HeaderSection />
                 <AboutMeSection />
                 <TimelineSection />
+                <ReferenceSection />
             </SectionsScroller>
         </ThemeProvider>
     );

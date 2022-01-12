@@ -18,6 +18,7 @@ const useStyles = createUseStyles<ClassKeys, SectionCaptionProps, Theme>(
         text: {
             position: 'relative',
             zIndex: 1,
+            color: ({ mainTextColor }) => mainTextColor,
         },
         backgroundText: {
             position: 'absolute',
@@ -29,6 +30,7 @@ const useStyles = createUseStyles<ClassKeys, SectionCaptionProps, Theme>(
             transform: 'translate(-50%, -50%)',
             fontSize: 300,
             zIndex: 0,
+            color: ({ backgroundTextColor }) => backgroundTextColor,
             [createMediaQuery('xl').down]: {
                 fontSize: 250,
             },
@@ -48,6 +50,8 @@ export interface SectionCaptionProps {
     className?: string;
     classes?: ClassesOverride<ClassKeys>;
     children: string;
+    mainTextColor: string;
+    backgroundTextColor: string;
 }
 
 export const SectionCaption = (props: SectionCaptionProps) => {

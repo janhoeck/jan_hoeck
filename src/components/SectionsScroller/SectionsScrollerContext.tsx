@@ -1,6 +1,6 @@
-import React, {createContext, FunctionComponent, useContext, useState} from 'react';
-import {useTheme} from 'react-jss';
-import {Theme} from '../../tools/theme/theme';
+import React, { createContext, FunctionComponent, useContext, useState } from 'react';
+import { useTheme } from 'react-jss';
+import { Theme } from '../../tools/theme/theme';
 
 export type SectionsScrollerContextType = ReturnType<typeof useStore>;
 

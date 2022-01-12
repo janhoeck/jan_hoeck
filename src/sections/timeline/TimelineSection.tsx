@@ -7,26 +7,12 @@ import { SectionCaption, Timeline, TimelineItem, Typography, useSectionsScroller
 import { shadeColor } from '../../tools/utils/ColorUtils';
 import { useInView } from 'react-intersection-observer';
 
-type ClassKey =
-    | 'root'
-    | 'headlineText'
-    | 'headlineBackgroundText'
-    | 'timeline'
-    | 'timelineContainer'
-    | 'timelineDot'
-    | 'timelineLine'
-    | 'timelineContent';
+type ClassKey = 'root' | 'timeline' | 'timelineContainer' | 'timelineDot' | 'timelineLine' | 'timelineContent';
 const useStyles = createUseStyles<ClassKey, TimelineSectionProps, Theme>(
     (theme) => ({
         root: {
             backgroundColor: theme.palette.primary.main,
             padding: theme.spacing(2),
-        },
-        headlineText: {
-            color: theme.palette.common.white,
-        },
-        headlineBackgroundText: {
-            color: shadeColor(theme.palette.primary.main, 4),
         },
         timelineContainer: {
             marginTop: '10vh',
@@ -67,12 +53,7 @@ export const TimelineSection = (props: TimelineSectionProps) => {
 
     return (
         <Section className={clsx(className, classes.root)} ref={ref}>
-            <SectionCaption
-                classes={{
-                    text: classes.headlineText,
-                    backgroundText: classes.headlineBackgroundText,
-                }}
-            >
+            <SectionCaption mainTextColor={theme.palette.common.white} backgroundTextColor={shadeColor(theme.palette.primary.main, 4)}>
                 Lebenslauf
             </SectionCaption>
             <div className={classes.timelineContainer}>
@@ -86,15 +67,33 @@ export const TimelineSection = (props: TimelineSectionProps) => {
                 >
                     <TimelineItem headline='Juli 2012 - Juli 2014'>
                         <Typography>Fachabitur im Bereich Informatik</Typography>
-                        <Typography><i>Carl-Reuther-Berufskolleg Hennef</i></Typography>
+                        <Typography>
+                            <i>Carl-Reuther-Berufskolleg Hennef</i>
+                        </Typography>
                     </TimelineItem>
                     <TimelineItem headline='August 2014 - Februar 2016'>
                         <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography><i>FLOWFACT GmbH</i></Typography>
+                        <Typography>
+                            <i>FLOWFACT GmbH</i>
+                        </Typography>
                     </TimelineItem>
-                    <TimelineItem headline='Februar 2016 - jetzt'>
+                    <TimelineItem headline='Februar 2016 - Januar 2019'>
                         <Typography>Frontend React Entwickler</Typography>
-                        <Typography><i>FLOWFACT GmbH</i></Typography>
+                        <Typography>
+                            <i>FLOWFACT GmbH</i>
+                        </Typography>
+                    </TimelineItem>
+                    <TimelineItem headline='Januar 2019 - Jetzt'>
+                        <Typography>Frontend Senior React Entwickler</Typography>
+                        <Typography>
+                            <i>FLOWFACT GmbH</i>
+                        </Typography>
+                        <Typography variant='secondary'>
+                            <ul>
+                                <li>Verantwortlich für das Frontend Team</li>
+                                <li>Verantwortlich für unser Onboarding</li>
+                            </ul>
+                        </Typography>
                     </TimelineItem>
                 </Timeline>
             </div>

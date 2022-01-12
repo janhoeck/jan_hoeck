@@ -1,4 +1,4 @@
-import React, {Children, HTMLAttributes} from 'react';
+import React, { Children, HTMLAttributes } from 'react';
 import { TimelineItemProps } from './TimelineItem';
 import { createUseStyles } from 'react-jss';
 import clsx from 'clsx';

@@ -1,13 +1,16 @@
-import React, {useEffect} from 'react';
-import {createUseStyles, useTheme} from 'react-jss';
-import {Theme} from '../../tools/theme/theme';
-import {MeImage} from './components/MeImage';
+import React, { useEffect } from 'react';
+import { createUseStyles, useTheme } from 'react-jss';
+import { Theme } from '../../tools/theme/theme';
+import { MeImage } from './components/MeImage';
 import clsx from 'clsx';
-import {Section, Typography, useSectionsScrollerContext} from '../../components';
-import {useInView} from 'react-intersection-observer';
-import {Fade} from 'react-awesome-reveal';
-import {createMediaQuery} from '../../tools/theme/createMediaQuery';
-import {Skills} from './components/skills/Skills';
+import { Section, Typography, useSectionsScrollerContext } from '../../components';
+import { useInView } from 'react-intersection-observer';
+import { Fade } from 'react-awesome-reveal';
+import { createMediaQuery } from '../../tools/theme/createMediaQuery';
+import { Skills } from '../../components/Skills/Skills';
+import { skills } from './components/skills';
+import { libraries } from './components/libraries';
+import { testing } from './components/testing';
 
 type ClassKeys = 'root' | 'container' | 'content' | 'meImage' | 'text' | 'skillsContainer';
 const useStyles = createUseStyles<ClassKeys, AboutMeSectionProps, Theme>(
@@ -30,7 +33,7 @@ const useStyles = createUseStyles<ClassKeys, AboutMeSectionProps, Theme>(
             display: 'flex',
             flexDirection: 'column',
             '& > *:not(:last-child)': {
-                marginBottom: theme.spacing(2)
+                marginBottom: theme.spacing(2),
             },
         },
         meImage: {
@@ -92,7 +95,11 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
                             und machte anschließend mein Hobby zu meinem Beruf.
                         </Typography>
                         <Typography variant='subHeadline'>SKILLS</Typography>
-                        <Skills />
+                        <Skills skills={skills} />
+                        <Typography variant='subHeadline'>JS LIBRARIES</Typography>
+                        <Skills skills={libraries} />
+                        <Typography variant='subHeadline'>TESTING</Typography>
+                        <Skills skills={testing} />
                     </div>
                 </Fade>
             </div>
