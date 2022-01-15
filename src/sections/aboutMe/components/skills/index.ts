@@ -1,21 +1,15 @@
-import { IntelliJLogo } from './IntelliJLogo';
-import { JavaLogo } from './JavaLogo';
-import { ReactLogo } from './ReactLogo';
-import { WebpackLogo } from './WebpackLogo';
-import { TypescriptLogo } from './TypescriptLogo';
-import { SkillItem } from '../../../../components/Skills/Skill';
+import {JavaLogo} from './JavaLogo';
+import {ReactLogo} from './ReactLogo';
+import {WebpackLogo} from './WebpackLogo';
+import {TypescriptLogo} from './TypescriptLogo';
+import {SkillItem} from '../../../../components/Skills/Skill';
+import {NodeJSLogo} from './NodeJSLogo';
 
 export const skills: SkillItem[] = [
     {
-        component: IntelliJLogo,
-        tooltip: 'IntelliJ',
-        description: 'IntelliJ. Die IDE welche ich für alle meine Projekte benutzte.',
-    },
-    {
-        component: JavaLogo,
-        tooltip: 'Java',
-        description:
-            'Java ist die Programmiersprache mit der damals alles bei mir begann. Mit 14 Jahren habe ich viele Java Bücher gelesen um so mein Wissen zu erlangen. Auch heute versuche ich bei Java auf dem laufenden zu bleiben. Auch in Kotlin habe ich schon mal reingeschaut.',
+        component: NodeJSLogo,
+        tooltip: 'NodeJS',
+        description: 'NodeJS',
     },
     {
         component: ReactLogo,
@@ -35,4 +29,10 @@ export const skills: SkillItem[] = [
         description:
             'Typescript ist einfach ein MUSS in der Javascript Welt. Es hilft einfach dabei, dass Projekt weiterhin stabil zu halten, sollte es mal größer werden.',
     },
+    {
+        component: JavaLogo,
+        tooltip: 'Java',
+        description:
+            'Java ist die Programmiersprache mit der damals alles bei mir begann. Mit 14 Jahren habe ich viele Java Bücher gelesen um so mein Wissen zu erlangen. Auch heute versuche ich bei Java auf dem laufenden zu bleiben. Auch in Kotlin habe ich schon mal reingeschaut.',
+    }
 ];

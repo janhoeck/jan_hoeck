@@ -11,7 +11,7 @@ export const testing: SkillItem[] = [
     },
     {
         component: JestLogo,
-        tooltip: 'react-testing-library',
+        tooltip: 'Jest',
         description: 'Mit der Hilfe Jest habe ich für meine Componente (oder auch normale Funktionen), Unittests geschrieben.',
     },
 ];

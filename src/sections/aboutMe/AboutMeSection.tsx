@@ -96,7 +96,7 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
                         </Typography>
                         <Typography variant='subHeadline'>SKILLS</Typography>
                         <Skills skills={skills} />
-                        <Typography variant='subHeadline'>JS LIBRARIES</Typography>
+                        <Typography variant='subHeadline'>3RD PARTY</Typography>
                         <Skills skills={libraries} />
                         <Typography variant='subHeadline'>TESTING</Typography>
                         <Skills skills={testing} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReferenceCard } from '../../ReferenceCard';
-import Image from './adventscalendar.png';
+import Image from '../../../../assets/adventscalendar.png';
 
 export const AdventscalendarReference = () => {
     return (
