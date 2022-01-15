@@ -5,14 +5,18 @@ import { Theme } from '../../tools/theme/theme';
 import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
 import { mergeClasses } from '../../tools/theme/mergeClasses';
 import { Typography } from '../Typography';
+import { createMediaQuery } from '../../tools/theme/createMediaQuery';
 
 type ClassKeys = 'root' | 'content' | 'lineContainer' | 'dot' | 'line' | 'lastItem' | 'headline';
 const useStyles = createUseStyles<ClassKeys, TimelineItemProps, Theme>(
     (theme) => ({
-        root: ({ alignment }) => ({
+        root: {
             display: 'flex',
-            flexDirection: alignment === 'left' ? 'row-reverse' : 'row',
-        }),
+            flexDirection: ({ alignment }) => (alignment === 'left' ? 'row-reverse' : 'row'),
+            [createMediaQuery('sm').down]: {
+                flexDirection: 'row !important',
+            },
+        },
         lastItem: {
             '& $line': {
                 display: 'none',
@@ -23,21 +27,25 @@ const useStyles = createUseStyles<ClassKeys, TimelineItemProps, Theme>(
             flexDirection: 'column',
             alignItems: 'center',
         },
-        content: ({ alignment, color }) => ({
+        content: {
             marginTop: 5,
             marginBottom: theme.spacing(2),
-            marginLeft: alignment === 'right' ? theme.spacing(2) : undefined,
-            marginRight: alignment === 'left' ? theme.spacing(2) : undefined,
+            marginLeft: ({ alignment }) => (alignment === 'right' ? theme.spacing(2) : undefined),
+            marginRight: ({ alignment }) => (alignment === 'left' ? theme.spacing(2) : undefined),
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: theme.palette.primary[color || 'main'],
+            backgroundColor: ({ color }) => theme.palette.primary[color || 'main'],
             boxShadow: theme.palette.common.cardBoxShadow,
             padding: theme.spacing(2),
             maxWidth: 600,
-        }),
+            [createMediaQuery('sm').down]: {
+                marginLeft: theme.spacing(2),
+                marginRight: 0,
+            },
+        },
         dot: ({ color }) => ({
-            height: 25,
-            width: 25,
+            height: 17,
+            width: 17,
             backgroundColor: theme.palette.primary[color || 'main'],
             borderRadius: '50%',
         }),

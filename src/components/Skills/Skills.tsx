@@ -5,14 +5,18 @@ import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
 import { mergeClasses } from '../../tools/theme/mergeClasses';
 import { Theme } from '../../tools/theme/theme';
 import { Skill, SkillItem } from './Skill';
+import { createMediaQuery } from '../../tools/theme/createMediaQuery';
 
 type ClassKeys = 'root';
 const useStyles = createUseStyles<ClassKeys, SkillsProps, Theme>(
     (theme) => ({
         root: {
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: theme.spacing(2),
+            display: 'grid',
+            gridGap: theme.spacing(2),
+            gridTemplateColumns: 'repeat(2, minmax(90px, 1fr))',
+            [createMediaQuery('md').down]: {
+                gridTemplateColumns: '1fr',
+            },
         },
     }),
     { name: 'Skills' }

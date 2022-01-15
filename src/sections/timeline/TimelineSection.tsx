@@ -6,6 +6,7 @@ import { Theme } from '../../tools/theme/theme';
 import { SectionCaption, Timeline, TimelineItem, Typography, useSectionsScrollerContext } from '../../components';
 import { shadeColor } from '../../tools/utils/ColorUtils';
 import { useInView } from 'react-intersection-observer';
+import { createMediaQuery } from '../../tools/theme/createMediaQuery';
 
 type ClassKey = 'root' | 'timeline' | 'timelineContainer' | 'timelineDot' | 'timelineLine' | 'timelineContent';
 const useStyles = createUseStyles<ClassKey, TimelineSectionProps, Theme>(
@@ -17,6 +18,9 @@ const useStyles = createUseStyles<ClassKey, TimelineSectionProps, Theme>(
         timelineContainer: {
             marginTop: '10vh',
             padding: theme.spacing(3),
+            [createMediaQuery('sm').down]: {
+                padding: 0,
+            },
         },
         timeline: {},
         timelineDot: {

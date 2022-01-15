@@ -21,7 +21,7 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
                 fontSize: 80,
             },
             [createMediaQuery('sm').down]: {
-                fontSize: 40,
+                fontSize: '1em',
             },
         },
         subHeadline: {

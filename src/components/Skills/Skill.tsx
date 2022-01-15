@@ -14,9 +14,8 @@ const useStyles = createUseStyles<ClassKeys, SkillProps, Theme>(
             backgroundColor: theme.palette.common.white,
             padding: theme.spacing(2),
             display: 'flex',
-            width: 'fit-content',
+            width: 'auto',
             gap: theme.spacing(2),
-            maxWidth: 270,
         },
         logo: {
             '& svg': {

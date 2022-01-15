@@ -6,6 +6,7 @@ import { Theme } from '../../tools/theme/theme';
 import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
 import { mergeClasses } from '../../tools/theme/mergeClasses';
 import { Fade } from 'react-awesome-reveal';
+import { createMediaQuery } from '../../tools/theme/createMediaQuery';
 
 type ClassKey = 'root' | 'dot' | 'line' | 'content';
 const useStyles = createUseStyles<ClassKey, TimelineProps, Theme>(
@@ -18,11 +19,20 @@ const useStyles = createUseStyles<ClassKey, TimelineProps, Theme>(
             },
             '& > div:nth-child(2n+1)': {
                 alignSelf: 'flex-end',
-                marginRight: 12.5,
+                marginRight: 12,
+                [createMediaQuery('sm').down]: {
+                    marginRight: 0,
+                },
             },
             '& > div:nth-child(2n+2)': {
                 alignSelf: 'flex-start',
-                marginLeft: 12.5,
+                marginLeft: 5,
+                [createMediaQuery('sm').down]: {
+                    marginLeft: 0,
+                },
+            },
+            [createMediaQuery('sm').down]: {
+                display: 'unset',
             },
         },
         dot: {},

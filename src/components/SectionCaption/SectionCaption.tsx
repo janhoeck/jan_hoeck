@@ -39,7 +39,7 @@ const useStyles = createUseStyles<ClassKeys, SectionCaptionProps, Theme>(
                 letterSpacing: 0,
             },
             [createMediaQuery('sm').down]: {
-                fontSize: 120,
+                fontSize: '5em',
             },
         },
     },
