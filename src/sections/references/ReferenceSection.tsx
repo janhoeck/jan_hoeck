@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Section } from '../../components/Section';
 import clsx from 'clsx';
-import { createUseStyles, useTheme } from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import { Theme } from '../../tools/theme/theme';
 import { SectionCaption, useSectionsScrollerContext } from '../../components';
 import { shadeColor } from '../../tools/utils/ColorUtils';
@@ -36,30 +36,29 @@ export const ReferenceSection = (props: ReferenceSectionProps) => {
     const { className } = props;
     const classes = useStyles(props);
 
-    const theme = useTheme<Theme>();
     const { setColor } = useSectionsScrollerContext();
 
     const { ref, inView } = useInView({ threshold: 0.1 });
 
     useEffect(() => {
         if (inView) {
-            setColor(theme.palette.common.white);
+            setColor('#efedce');
         }
-    }, [theme, inView, setColor]);
+    }, [inView, setColor]);
 
     return (
         <Section className={clsx(className, classes.root)} ref={ref}>
-            <SectionCaption mainTextColor={theme.palette.common.white} backgroundTextColor={shadeColor('#9cb8b3', 4)}>
+            <SectionCaption mainTextColor='#efedce' backgroundTextColor={shadeColor('#9cb8b3', 4)}>
                 Referenzen
             </SectionCaption>
             <div className={classes.referencesContainer}>
-                <Fade direction='left'>
+                <Fade triggerOnce direction='left'>
                     <AdventscalendarReference />
                 </Fade>
-                <Fade direction='up'>
+                <Fade triggerOnce direction='up'>
                     <SlotReference />
                 </Fade>
-                <Fade direction='right'>
+                <Fade triggerOnce direction='right'>
                     <WorkingTimeReference />
                 </Fade>
             </div>

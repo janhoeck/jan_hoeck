@@ -71,31 +71,27 @@ export const TimelineSection = (props: TimelineSectionProps) => {
                 >
                     <TimelineItem headline='Juli 2012 - Juli 2014'>
                         <Typography>Fachabitur im Bereich Informatik</Typography>
-                        <Typography>
+                        <Typography variant='secondary'>
                             <i>Carl-Reuther-Berufskolleg Hennef</i>
                         </Typography>
                     </TimelineItem>
                     <TimelineItem headline='August 2014 - Februar 2016'>
                         <Typography>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</Typography>
-                        <Typography>
-                            <i>FLOWFACT GmbH</i>
-                        </Typography>
+                        <Typography variant='secondary'>FLOWFACT GmbH (ImmobilienScout24)</Typography>
                     </TimelineItem>
                     <TimelineItem headline='Februar 2016 - Januar 2019'>
                         <Typography>Frontend React Entwickler</Typography>
-                        <Typography>
-                            <i>FLOWFACT GmbH</i>
-                        </Typography>
+                        <Typography variant='secondary'>FLOWFACT GmbH (ImmobilienScout24)</Typography>
                     </TimelineItem>
                     <TimelineItem headline='Januar 2019 - Jetzt'>
                         <Typography>Frontend Senior React Entwickler</Typography>
-                        <Typography>
-                            <i>FLOWFACT GmbH</i>
-                        </Typography>
+                        <Typography variant='secondary'>FLOWFACT GmbH (ImmobilienScout24)</Typography>
                         <Typography variant='secondary'>
                             <ul>
                                 <li>Verantwortlich für das Frontend Team</li>
                                 <li>Verantwortlich für unser Onboarding</li>
+                                <li>Entwicklung mit React 17</li>
+                                <li>Aufbau eines Monorepository ausgelegt auf weit über 50.000 Kunden</li>
                             </ul>
                         </Typography>
                     </TimelineItem>

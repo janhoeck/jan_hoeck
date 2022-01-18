@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { createUseStyles, useTheme } from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import clsx from 'clsx';
 import { Section, Typography, useSectionsScrollerContext } from '../../components';
 import { Theme } from '../../tools/theme/theme';
@@ -7,8 +7,9 @@ import { CgMouse } from 'react-icons/all';
 import { addAlpha } from '../../tools/utils/ColorUtils';
 import { useInView } from 'react-intersection-observer';
 import { Fade } from 'react-awesome-reveal';
+import { Socials } from './components/Socials';
 
-type ClassKey = 'root' | 'headlineContainer' | 'headline' | 'subHeadline' | 'scrollInformation';
+type ClassKey = 'root' | 'headlineContainer' | 'headline' | 'subHeadline' | 'scrollInformation' | 'socials';
 const useStyles = createUseStyles<ClassKey, HeaderProps, Theme>(
     (theme) => ({
         root: {
@@ -48,6 +49,9 @@ const useStyles = createUseStyles<ClassKey, HeaderProps, Theme>(
                 fontSize: '2rem',
             },
         },
+        socials: {
+            marginTop: theme.spacing(2),
+        },
     }),
     { name: 'HeaderSection' }
 );
@@ -60,16 +64,15 @@ export const HeaderSection = (props: HeaderProps) => {
     const { className } = props;
     const classes = useStyles(props);
 
-    const theme = useTheme<Theme>();
     const { setColor } = useSectionsScrollerContext();
 
     const { ref, inView } = useInView({ threshold: 0.1 });
 
     useEffect(() => {
         if (inView) {
-            setColor(theme.palette.common.white);
+            setColor('#efedce');
         }
-    }, [theme, inView, setColor]);
+    }, [inView, setColor]);
 
     return (
         <Section className={clsx(className, classes.root)} ref={ref}>
@@ -81,6 +84,7 @@ export const HeaderSection = (props: HeaderProps) => {
                     <Typography className={classes.subHeadline} variant='subHeadline' color='contrastPrimary'>
                         Senior Frontend Entwickler
                     </Typography>
+                    <Socials className={classes.socials} />
                 </div>
             </Fade>
             <div className={classes.scrollInformation}>

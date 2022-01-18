@@ -5,7 +5,6 @@ import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
 import { mergeClasses } from '../../tools/theme/mergeClasses';
 import { Theme } from '../../tools/theme/theme';
 import { Skill, SkillItem } from './Skill';
-import { createMediaQuery } from '../../tools/theme/createMediaQuery';
 
 type ClassKeys = 'root';
 const useStyles = createUseStyles<ClassKeys, SkillsProps, Theme>(
@@ -13,10 +12,7 @@ const useStyles = createUseStyles<ClassKeys, SkillsProps, Theme>(
         root: {
             display: 'grid',
             gridGap: theme.spacing(2),
-            gridTemplateColumns: 'repeat(2, minmax(90px, 1fr))',
-            [createMediaQuery('md').down]: {
-                gridTemplateColumns: '1fr',
-            },
+            gridTemplateColumns: 'repeat(auto-fit, 77px)',
         },
     }),
     { name: 'Skills' }

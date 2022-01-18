@@ -84,15 +84,20 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
                         <Typography className={classes.text} color='secondary'>
                             Ich heiße Jan Höck und wurde am 17.01.1996 in Siegburg geboren. Ich habe eine Ausbildung zum Anwendungsentwicker
                             absolviert und arbeite seit dem in diesem Beruf. Doch wie kam ich dazu mich für diesen Berufsweg zu entscheiden? Als
-                            meinen Freunden und mir mit 14 Jahren das Spielen von „Minecraft“ zu eintönig wurde, hatten wir die Idee es durch das
-                            Programmieren von Erweiterungen abwechlunsgreicher zu gestalten. Problem dabei war nur, dass keiner von uns programmieren
-                            konnte. Kurzer Hand haben wir angefangen Youtube-Videos zu diesem Thema zu schauen, die verschiedenen Herangehensweisen
-                            erlernt und umgesetzt. Nachdem Aufbau eines Wissensfundus haben wir uns die kostenfrei zugängliche Serverdatei von
-                            „Minecraft“ heruntergeladen und das Gelernte angewandt. Durch die verschiedenen, von uns programmierten Erweiterungen
-                            haben wir es geschafft einen der größten deutschen Server aufzubauen. Andere Spieler:innen wurden auf uns aufmerksam und
-                            unterstützten uns. Hierdurch haben wir zunehmend mehr Geld mit unseren Programmierungen verdient, sodass wir über unsere
-                            Eltern ein eigenes Unternehmen anmelden mussten. So entdeckte ich mit 14 Jahren meine Leidenschaft für das Programmieren
-                            und machte anschließend mein Hobby zu meinem Beruf.
+                            meinen Freunden und mir, mit 14 Jahren, das Spielen von „Minecraft“ zu eintönig wurde, hatten wir die Idee, es durch das
+                            Programmieren von Erweiterungen abwechlunsgreicher zu gestalten. Die Herausforderung dabei war, dass keiner von uns
+                            programmieren konnte. Kurzer Hand haben wir angefangen Youtube-Videos zu diesem Thema zu schauen, die verschiedenen
+                            Herangehensweisen erlernt und umgesetzt. Nachdem Aufbau eines Wissensfundus haben wir uns die kostenfrei zugängliche
+                            Serverdatei von „Minecraft“ heruntergeladen und das Gelernte angewandt. Durch die verschiedenen, von uns programmierten
+                            Erweiterungen haben wir es geschafft einen der größten deutschen Server aufzubauen. Andere Spieler:innen wurden auf uns
+                            aufmerksam und unterstützten uns. Hierdurch verdienten wir zunehmend mehr Geld und meldeten aufgrund unseres Alters ein
+                            Unternehmen über unsere Eltern an. So entdeckte ich mit 14 Jahren meine Leidenschaft für das Programmieren und machte
+                            anschließend mein Hobby zu meinem Beruf.
+                            <br />
+                            <br />
+                            Seit 5 Jahren habe ich mich auf die Frontendentwicklung mit ReactJS spezialisiert. Ich liebe es, mich Herausforderungen zu
+                            stellen und diese zu meistern. Ich habe mich in dieser Zeit viel mit Web Performance, Best Practices und Design Standards
+                            auseinander gesetzt.
                         </Typography>
                         <Typography variant='subHeadline'>SKILLS</Typography>
                         <Skills skills={skills} />

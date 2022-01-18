@@ -12,6 +12,10 @@ body {
     width: 100vw;
 }
 
+a {
+    color: inherit;
+}
+
 @font-face {
     font-family: 'DINPro';
     src: url(./fonts/DINPro.otf) format('opentype');

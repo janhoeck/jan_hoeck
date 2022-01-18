@@ -21,7 +21,8 @@ const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
                 fontSize: 80,
             },
             [createMediaQuery('sm').down]: {
-                fontSize: '1em',
+                fontSize: '2em',
+                letterSpacing: 10,
             },
         },
         subHeadline: {
@@ -50,7 +51,6 @@ type Variant = 'headline' | 'subHeadline' | 'text' | 'secondary';
 export interface TypographyProps {
     classes?: ClassesOverride<ClassKeys>;
     className?: string;
-    children: string | React.ReactElement | React.ReactElement[];
     variant?: Variant;
     color?: keyof Theme['palette']['text'] | 'inherit';
     noWrap?: boolean;
@@ -63,7 +63,7 @@ const componentMapping: Record<Variant, React.ElementType> = {
     secondary: 'span',
 };
 
-export const Typography = (props: TypographyProps) => {
+export const Typography: React.FunctionComponent<TypographyProps> = (props) => {
     const { className, classes: classesProp, children, variant = 'text', noWrap = false, color = 'primary' } = props;
     const classes = mergeClasses(useStyles({ ...props, color }), classesProp);
 

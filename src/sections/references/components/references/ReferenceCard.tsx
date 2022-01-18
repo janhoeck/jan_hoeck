@@ -4,8 +4,9 @@ import { createUseStyles } from 'react-jss';
 import { Theme } from '../../../../tools/theme/theme';
 import { ClassesOverride } from '../../../../tools/types/ReactJSSTypes';
 import { mergeClasses } from '../../../../tools/theme/mergeClasses';
+import { Typography } from '../../../../components/Typography';
 
-type ClassKeys = 'root' | 'backgroundImage' | 'content';
+type ClassKeys = 'root' | 'backgroundImage' | 'content' | 'texts' | 'links';
 const useStyles = createUseStyles<ClassKeys, ReferenceCardProps, Theme>(
     (theme) => ({
         root: {
@@ -39,18 +40,23 @@ const useStyles = createUseStyles<ClassKeys, ReferenceCardProps, Theme>(
             left: 0,
             backgroundColor: 'rgba(52,73,94,0.75)',
         },
-        links: {
+        texts: {
             position: 'absolute',
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
             display: 'flex',
-            gap: theme.spacing(2),
-            flexWrap: 'wrap',
-            '& > a': {
+            flexDirection: 'column',
+            alignItems: 'center',
+            '& *': {
                 fontFamily: 'DINPro',
                 color: theme.palette.common.white,
             },
+        },
+        links: {
+            display: 'flex',
+            gap: theme.spacing(2),
+            flexWrap: 'wrap',
         },
     }),
     { name: 'ReferenceCard' }
@@ -62,25 +68,29 @@ export interface ReferenceCardProps {
     image: string;
     githubUrl: string;
     liveDemoUrl?: string;
+    title: string;
 }
 
 export const ReferenceCard = (props: ReferenceCardProps) => {
-    const { className, classes: classesProp, githubUrl, liveDemoUrl } = props;
+    const { className, classes: classesProp, githubUrl, liveDemoUrl, title } = props;
     const classes = mergeClasses(useStyles(props), classesProp);
 
     return (
         <div className={clsx(className, classes.root)}>
             <div className={classes.backgroundImage}>
                 <div className={classes.content}>
-                    <div className={classes.links}>
-                        <a href={githubUrl} target='_blank'>
-                            Github
-                        </a>
-                        {liveDemoUrl && (
-                            <a href={liveDemoUrl} target='_blank'>
-                                Live Demo
+                    <div className={classes.texts}>
+                        <Typography>{title}</Typography>
+                        <div className={classes.links}>
+                            <a href={githubUrl} target='_blank' rel='noreferrer'>
+                                Github
                             </a>
-                        )}
+                            {liveDemoUrl && (
+                                <a href={liveDemoUrl} target='_blank' rel='noreferrer'>
+                                    Live Demo
+                                </a>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
