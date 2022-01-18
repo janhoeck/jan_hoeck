@@ -90,7 +90,7 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
                             Herangehensweisen erlernt und umgesetzt. Nachdem Aufbau eines Wissensfundus haben wir uns die kostenfrei zugängliche
                             Serverdatei von „Minecraft“ heruntergeladen und das Gelernte angewandt. Durch die verschiedenen, von uns programmierten
                             Erweiterungen haben wir es geschafft einen der größten deutschen Server aufzubauen. Andere Spieler:innen wurden auf uns
-                            aufmerksam und unterstützten uns. Hierdurch verdienten wir zunehmend mehr Geld und meldeten aufgrund unseres Alters ein
+                            aufmerksam und unterstützten uns. Hierdurch verdienten wir zunehmend mehr Geld und meldeten, aufgrund unseres Alters, ein
                             Unternehmen über unsere Eltern an. So entdeckte ich mit 14 Jahren meine Leidenschaft für das Programmieren und machte
                             anschließend mein Hobby zu meinem Beruf.
                             <br />
