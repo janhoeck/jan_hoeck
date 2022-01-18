@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/jan_hoeck/static/css/main.598c0d8d.chunk.css",
-    "main.js": "/jan_hoeck/static/js/main.75dceda5.chunk.js",
-    "main.js.map": "/jan_hoeck/static/js/main.75dceda5.chunk.js.map",
+    "main.js": "/jan_hoeck/static/js/main.8c726519.chunk.js",
+    "main.js.map": "/jan_hoeck/static/js/main.8c726519.chunk.js.map",
     "runtime-main.js": "/jan_hoeck/static/js/runtime-main.703b649f.js",
     "runtime-main.js.map": "/jan_hoeck/static/js/runtime-main.703b649f.js.map",
     "static/js/2.f4020546.chunk.js": "/jan_hoeck/static/js/2.f4020546.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.703b649f.js",
     "static/js/2.f4020546.chunk.js",
     "static/css/main.598c0d8d.chunk.css",
-    "static/js/main.75dceda5.chunk.js"
+    "static/js/main.8c726519.chunk.js"
   ]
 }
