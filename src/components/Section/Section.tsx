@@ -13,7 +13,6 @@ const useStyles = createUseStyles<ClassKey, SectionProps, Theme>(
             overflow: 'hidden',
             minHeight: '100vh',
             width: '100%',
-            paddingBottom: '20vh !important' // !important here, because each section can have its own padding
         },
     },
     { name: 'Section' }
