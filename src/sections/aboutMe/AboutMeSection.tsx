@@ -80,24 +80,25 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
                 </Fade>
                 <Fade triggerOnce direction='up'>
                     <div className={classes.content}>
-                        <Typography variant='subHeadline'>ÜBER MICH</Typography>
+                        <Typography variant='subHeadline'>WER BIN ICH?</Typography>
                         <Typography className={classes.text} color='secondary'>
-                            Ich heiße Jan Höck und wurde am 17.01.1996 in Siegburg geboren. Ich habe eine Ausbildung zum Anwendungsentwicker
-                            absolviert und arbeite seit dem in diesem Beruf. Doch wie kam ich dazu mich für diesen Berufsweg zu entscheiden? Als
-                            meinen Freunden und mir, mit 14 Jahren, das Spielen von „Minecraft“ zu eintönig wurde, hatten wir die Idee, es durch das
-                            Programmieren von Erweiterungen abwechlunsgreicher zu gestalten. Die Herausforderung dabei war, dass keiner von uns
-                            programmieren konnte. Kurzer Hand haben wir angefangen Youtube-Videos zu diesem Thema zu schauen, die verschiedenen
-                            Herangehensweisen erlernt und umgesetzt. Nachdem Aufbau eines Wissensfundus haben wir uns die kostenfrei zugängliche
-                            Serverdatei von „Minecraft“ heruntergeladen und das Gelernte angewandt. Durch die verschiedenen, von uns programmierten
-                            Erweiterungen haben wir es geschafft einen der größten deutschen Server aufzubauen. Andere Spieler:innen wurden auf uns
-                            aufmerksam und unterstützten uns. Hierdurch verdienten wir zunehmend mehr Geld und meldeten, aufgrund unseres Alters, ein
-                            Unternehmen über unsere Eltern an. So entdeckte ich mit 14 Jahren meine Leidenschaft für das Programmieren und machte
-                            anschließend mein Hobby zu meinem Beruf.
-                            <br />
-                            <br />
-                            Seit 5 Jahren habe ich mich auf die Frontendentwicklung mit ReactJS spezialisiert. Ich liebe es, mich Herausforderungen zu
-                            stellen und diese zu meistern. Ich habe mich in dieser Zeit viel mit Web Performance, Best Practices und Design Standards
-                            auseinander gesetzt.
+                            Ich heiße Jan Höck, wurde am 17.01.1996 geboren und komme aus der Nähe von Köln. Meine Leidenschaft ist die Programmierung.
+                            Seit meinem 14. Lebensjahr entwickle ich Software und stelle mich seitdem technischen Herausforderungen.
+                            <br/>
+                            Doch wie begann alles?
+                            <br/>
+                            Ich war schon immer an Technik interessiert. In meinem Kinderzimmer habe ich das erste mal von Java gehört und fand es so interessant, dass ich mir
+                            es kurzerhand selber beigebracht habe. Während meiner Ausbildung bin ich dann mit ReactJS
+                            in Berührung gekommen. Von Backend zu Frontend! Nun spezialisiere ich mich seit guten 5 Jahren auf dieses Framework.
+                            Mein Fokus liegt hierbei auf Web Performance, Best Practices und Design Standards.
+                            <br/>
+                            <br/>
+                            Als Senior Frontend Entwickler habe ich schon viel Code gelesen und geschrieben. Ich bin vor viele Herausforderungen gestellt worden und musste Lösungen finden.
+                            Dabei lag mein Blick immer auf die Skalierbar- und Wartbarkeit des Codes. Zudem ist es mir wichtig in einem funktionierenden Team zu arbeiten. Jeder Entwickler hat seine eigenen Erfahrungen,
+                            seine eigenen Ansätze etwas zu lösen und eigene Stärken. Nur durch eine Kombination aus diesen Menschen und einem gewissen Freiraum, erschafft man gute Software.
+                            <br/>
+                            <br/>
+                            Scroll gerne weiter runter, um zu meinen Referenzen zu gelangen. Ein Blick in den Code ist manchmal eindeutiger, als jede Beschreibung über mich selbst.
                         </Typography>
                         <Typography variant='subHeadline'>SKILLS</Typography>
                         <Skills skills={skills} />
