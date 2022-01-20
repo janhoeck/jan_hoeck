@@ -17,7 +17,7 @@ const useStyles = createUseStyles<ClassKey, ReferenceSectionProps, Theme>(
             padding: theme.spacing(2),
         },
         referencesContainer: {
-            marginTop: '15vh',
+            marginTop: '10vh',
             padding: '0 10%',
             display: 'grid',
             gridGap: theme.spacing(4),

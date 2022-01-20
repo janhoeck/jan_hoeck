@@ -82,6 +82,12 @@ export const TimelineSection = (props: TimelineSectionProps) => {
                     <TimelineItem headline='Februar 2016 - Januar 2019'>
                         <Typography>Frontend React Entwickler</Typography>
                         <Typography variant='secondary'>FLOWFACT GmbH (ImmobilienScout24)</Typography>
+                        <Typography variant='secondary'>
+                            <ul>
+                                <li>Entwicklung von Microservices mit Java</li>
+                                <li>Frontendentwicklung mit React</li>
+                            </ul>
+                        </Typography>
                     </TimelineItem>
                     <TimelineItem headline='Januar 2019 - Jetzt'>
                         <Typography>Frontend Senior React Entwickler</Typography>
