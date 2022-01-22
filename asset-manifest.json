@@ -1,27 +1,40 @@
 {
   "files": {
     "main.css": "/jan_hoeck/static/css/main.598c0d8d.chunk.css",
-    "main.js": "/jan_hoeck/static/js/main.2a395132.chunk.js",
-    "main.js.map": "/jan_hoeck/static/js/main.2a395132.chunk.js.map",
+    "main.js": "/jan_hoeck/static/js/main.70f33411.chunk.js",
+    "main.js.map": "/jan_hoeck/static/js/main.70f33411.chunk.js.map",
     "runtime-main.js": "/jan_hoeck/static/js/runtime-main.703b649f.js",
     "runtime-main.js.map": "/jan_hoeck/static/js/runtime-main.703b649f.js.map",
-    "static/js/2.f4020546.chunk.js": "/jan_hoeck/static/js/2.f4020546.chunk.js",
-    "static/js/2.f4020546.chunk.js.map": "/jan_hoeck/static/js/2.f4020546.chunk.js.map",
+    "static/js/2.fe91acea.chunk.js": "/jan_hoeck/static/js/2.fe91acea.chunk.js",
+    "static/js/2.fe91acea.chunk.js.map": "/jan_hoeck/static/js/2.fe91acea.chunk.js.map",
     "index.html": "/jan_hoeck/index.html",
     "static/css/main.598c0d8d.chunk.css.map": "/jan_hoeck/static/css/main.598c0d8d.chunk.css.map",
-    "static/js/2.f4020546.chunk.js.LICENSE.txt": "/jan_hoeck/static/js/2.f4020546.chunk.js.LICENSE.txt",
+    "static/js/2.fe91acea.chunk.js.LICENSE.txt": "/jan_hoeck/static/js/2.fe91acea.chunk.js.LICENSE.txt",
+    "static/media/CSS3Logo.4e47c312.svg": "/jan_hoeck/static/media/CSS3Logo.4e47c312.svg",
     "static/media/CypressLogo.dd788547.svg": "/jan_hoeck/static/media/CypressLogo.dd788547.svg",
     "static/media/index.css": "/jan_hoeck/static/media/DINPro.6ef85ba7.otf",
+    "static/media/HTML5Logo.02c11ebc.svg": "/jan_hoeck/static/media/HTML5Logo.02c11ebc.svg",
+    "static/media/JavaLogo.83165dfb.svg": "/jan_hoeck/static/media/JavaLogo.83165dfb.svg",
+    "static/media/JavascriptLogo.fd46ca41.svg": "/jan_hoeck/static/media/JavascriptLogo.fd46ca41.svg",
     "static/media/JestLogo.9af4e60c.svg": "/jan_hoeck/static/media/JestLogo.9af4e60c.svg",
+    "static/media/MuiLogo.741a52f5.svg": "/jan_hoeck/static/media/MuiLogo.741a52f5.svg",
+    "static/media/NodeJSLogo.38d424a0.svg": "/jan_hoeck/static/media/NodeJSLogo.38d424a0.svg",
+    "static/media/ReactJSSLogo.fcf086b7.svg": "/jan_hoeck/static/media/ReactJSSLogo.fcf086b7.svg",
+    "static/media/ReactLogo.ae626225.svg": "/jan_hoeck/static/media/ReactLogo.ae626225.svg",
+    "static/media/SeleniumLogo.47a7b909.svg": "/jan_hoeck/static/media/SeleniumLogo.47a7b909.svg",
+    "static/media/SpringBootLogo.5e950eb4.svg": "/jan_hoeck/static/media/SpringBootLogo.5e950eb4.svg",
+    "static/media/TypescriptLogo.17d5e87e.svg": "/jan_hoeck/static/media/TypescriptLogo.17d5e87e.svg",
+    "static/media/WebpackLogo.b460dec8.svg": "/jan_hoeck/static/media/WebpackLogo.b460dec8.svg",
     "static/media/adventscalendar.a7db65a5.png": "/jan_hoeck/static/media/adventscalendar.a7db65a5.png",
+    "static/media/jQueryLogo.805a7ce8.svg": "/jan_hoeck/static/media/jQueryLogo.805a7ce8.svg",
     "static/media/me.5142fb10.jpg": "/jan_hoeck/static/media/me.5142fb10.jpg",
     "static/media/slot.25c85083.png": "/jan_hoeck/static/media/slot.25c85083.png",
     "static/media/workingtime.f9c2ae61.png": "/jan_hoeck/static/media/workingtime.f9c2ae61.png"
   },
   "entrypoints": [
     "static/js/runtime-main.703b649f.js",
-    "static/js/2.f4020546.chunk.js",
+    "static/js/2.fe91acea.chunk.js",
     "static/css/main.598c0d8d.chunk.css",
-    "static/js/main.2a395132.chunk.js"
+    "static/js/main.70f33411.chunk.js"
   ]
 }
