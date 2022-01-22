@@ -16,6 +16,9 @@ const useStyles = createUseStyles<ClassKey, TimelineProps, Theme>(
             flexDirection: 'column',
             '& > div': {
                 width: '50%',
+                [createMediaQuery('sm').down]: {
+                    width: 'unset',
+                },
             },
             '& > div:nth-child(2n+1)': {
                 alignSelf: 'flex-end',

@@ -40,7 +40,7 @@ const useStyles = createUseStyles<ClassKeys, TimelineItemProps, Theme>(
             maxWidth: 600,
             [createMediaQuery('sm').down]: {
                 marginLeft: theme.spacing(2),
-                marginRight: 0,
+                marginRight: '0 !important',
             },
         },
         dot: ({ color }) => ({
