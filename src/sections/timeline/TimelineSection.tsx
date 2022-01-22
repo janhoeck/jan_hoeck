@@ -96,7 +96,7 @@ export const TimelineSection = (props: TimelineSectionProps) => {
                             <ul>
                                 <li>Verantwortlich für das Frontend Team</li>
                                 <li>Verantwortlich für das Onboarding neuer Kollegen</li>
-                                <li>Entwicklung mit React 17 (Hooks, Context, etc...)</li>
+                                <li>Entwicklung mit React 17 (Hooks, Context etc.)</li>
                                 <li>Aufbau eines Monorepository ausgelegt auf weit über 50.000 Kunden</li>
                                 <li>Sicherstellung der Frontend Wartbarkeit durch kleine, logikgetrennte Componenten</li>
                                 <li>Vieles mehr...</li>
