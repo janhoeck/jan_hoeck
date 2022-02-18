@@ -94,7 +94,7 @@ export const AboutMeSection = (props: AboutMeSectionProps) => {
                             <br />
                             <br />
                             Als Senior Frontend Entwickler habe ich schon viel Code gelesen und geschrieben. Ich bin vor viele Herausforderungen
-                            gestellt worden und fand geignete Lösungen. Dabei lag mein Blick immer auf die Skalier- und Wartbarkeit des Codes. Zudem
+                            gestellt worden und fand geeignete Lösungen. Dabei lag mein Blick immer auf die Skalier- und Wartbarkeit des Codes. Zudem
                             ist es mir wichtig in einem funktionierenden Team zu arbeiten. Jeder Entwickler hat seine eigenen Erfahrungen, seine
                             eigenen Ansätze etwas zu lösen und eigene Stärken. Nur durch eine Kombination aus diesen Menschen und einem gewissen
                             Freiraum, erschafft man gute Software.
