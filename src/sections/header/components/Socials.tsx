@@ -4,7 +4,8 @@ import { createUseStyles } from 'react-jss';
 import { Theme } from '../../../tools/theme/theme';
 import { ClassesOverride } from '../../../tools/types/ReactJSSTypes';
 import { mergeClasses } from '../../../tools/theme/mergeClasses';
-import { FiGithub, AiOutlineMail, AiOutlinePhone } from 'react-icons/all';
+import { FiGithub } from 'react-icons/fi';
+import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 
 type ClassKeys = 'root';
 const useStyles = createUseStyles<ClassKeys, SocialProps, Theme>(

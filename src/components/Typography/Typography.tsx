@@ -1,58 +1,13 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
-import { Theme } from '../../tools/theme/theme';
-import clsx from 'clsx';
-import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
-import { mergeClasses } from '../../tools/theme/mergeClasses';
-import { createMediaQuery } from '../../tools/theme/createMediaQuery';
-
-type ClassKeys = 'root' | 'noWrap' | Variant;
-const useStyles = createUseStyles<ClassKeys, TypographyProps, Theme>(
-    (theme) => ({
-        root: {
-            fontFamily: 'DINPro',
-            margin: 0,
-            color: ({ color }) => (color === 'inherit' ? 'inherit' : theme.palette.text[color || 'primary']),
-        },
-        headline: {
-            fontSize: 140,
-            letterSpacing: 24,
-            [createMediaQuery('xl').down]: {
-                fontSize: 80,
-            },
-            [createMediaQuery('sm').down]: {
-                fontSize: '2em',
-                letterSpacing: 10,
-            },
-        },
-        subHeadline: {
-            fontSize: 30,
-            [createMediaQuery('sm').down]: {
-                fontSize: 20,
-            },
-        },
-        text: {
-            fontSize: 20,
-        },
-        secondary: {
-            fontSize: 14,
-        },
-        noWrap: {
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-        },
-    }),
-    { name: 'Typography' }
-);
+import { twMerge } from 'tailwind-merge';
 
 type Variant = 'headline' | 'subHeadline' | 'text' | 'secondary';
+type Color = 'inherit' | 'primary' | 'secondary' | 'backgroundText' | 'contrastPrimary';
 
 export interface TypographyProps {
-    classes?: ClassesOverride<ClassKeys>;
     className?: string;
     variant?: Variant;
-    color?: keyof Theme['palette']['text'] | 'inherit';
+    color?: Color;
     noWrap?: boolean;
 }
 
@@ -64,16 +19,26 @@ const componentMapping: Record<Variant, React.ElementType> = {
 };
 
 export const Typography: React.FunctionComponent<TypographyProps> = (props) => {
-    const { className, classes: classesProp, children, variant = 'text', noWrap = false, color = 'primary' } = props;
-    const classes = mergeClasses(useStyles({ ...props, color }), classesProp);
+    const { className, children, variant = 'text', noWrap = false, color = 'primary' } = props;
+
+    const styles: Record<Variant, string> = {
+        headline: 'text-[140px] tracking-[24px] xl:text-7xl sm:text-3xl sm:tracking-[10px]',
+        subHeadline: 'text-2xl sm:text-lg',
+        text: 'text-lg',
+        secondary: 'text-sm',
+    };
+
+    const colorStyles: Record<Color, string> = {
+        inherit: 'text-inherit',
+        primary: 'text-primary',
+        secondary: 'text-secondary',
+        backgroundText: 'text-backgroundText',
+        contrastPrimary: 'text-contrastPrimary',
+    };
 
     const Component = componentMapping[variant];
     return (
-        <Component
-            className={clsx(className, classes.root, classes[variant], {
-                [classes.noWrap]: noWrap,
-            })}
-        >
+        <Component className={twMerge(`m-0 font-['DINPro'] ${colorStyles[color]}`, styles[variant], noWrap && 'truncate', className)}>
             {children}
         </Component>
     );

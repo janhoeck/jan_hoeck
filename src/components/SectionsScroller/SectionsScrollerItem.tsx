@@ -1,32 +1,15 @@
 import React, { FunctionComponent, TouchEvent, useRef, useState, WheelEvent } from 'react';
-import { createUseStyles } from 'react-jss';
-import { Theme } from '../../tools/theme/theme';
-import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
-import { mergeClasses } from '../../tools/theme/mergeClasses';
-import clsx from 'clsx';
-
-type ClassKeys = 'root';
-const useStyles = createUseStyles<ClassKeys, SectionsScrollerItemProps, Theme>(
-    {
-        root: {
-            height: '100vh',
-            overflow: 'auto',
-        },
-    },
-    { name: 'SectionsScrollerItem' }
-);
+import { twMerge } from 'tailwind-merge';
 
 export interface SectionsScrollerItemProps {
     className?: string;
-    classes?: ClassesOverride<ClassKeys>;
     sectionIndex: number;
     sectionsCount: number;
     onSectionChange: (toIndex: number) => void;
 }
 
 export const SectionsScrollerItem: FunctionComponent<SectionsScrollerItemProps> = (props) => {
-    const { children, className, classes: classesProp, sectionIndex, sectionsCount, onSectionChange } = props;
-    const classes = mergeClasses(useStyles(props), classesProp);
+    const { children, className, sectionIndex, sectionsCount, onSectionChange } = props;
     const rootRef = useRef<HTMLDivElement>(null);
 
     const [lastTouchY, setLastTouchY] = useState<number | undefined>(undefined);
@@ -81,7 +64,7 @@ export const SectionsScrollerItem: FunctionComponent<SectionsScrollerItemProps> 
 
     return (
         <div
-            className={clsx(className, classes.root)}
+            className={twMerge('h-screen overflow-auto', className)}
             ref={rootRef}
             onWheel={handleWheel}
             onTouchStart={handleTouchStart}

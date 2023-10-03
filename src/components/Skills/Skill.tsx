@@ -1,33 +1,6 @@
 import React, { createElement, ElementType, HTMLAttributes } from 'react';
 import clsx from 'clsx';
-import { createUseStyles } from 'react-jss';
-import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
-import { mergeClasses } from '../../tools/theme/mergeClasses';
-import { Theme } from '../../tools/theme/theme';
 import { Typography } from '../Typography';
-
-type ClassKeys = 'root' | 'logo';
-const useStyles = createUseStyles<ClassKeys, SkillProps, Theme>(
-    (theme) => ({
-        root: {
-            boxShadow: theme.palette.common.cardBoxShadow,
-            backgroundColor: theme.palette.common.white,
-            padding: theme.spacing(2),
-            display: 'flex',
-            width: 'auto',
-            gap: theme.spacing(2),
-        },
-        logo: {
-            '& svg': {
-                width: 45,
-                height: 45,
-            },
-            width: 45,
-            height: 45,
-        },
-    }),
-    { name: 'Skill' }
-);
 
 export interface SkillItem {
     component: ElementType<HTMLAttributes<SVGElement>>;
@@ -37,16 +10,14 @@ export interface SkillItem {
 
 export interface SkillProps extends SkillItem {
     className?: string;
-    classes?: ClassesOverride<ClassKeys>;
 }
 
 export const Skill = (props: SkillProps) => {
-    const { className, classes: classesProp, component, tooltip, description } = props;
-    const classes = mergeClasses(useStyles(props), classesProp);
+    const { className, component, tooltip, description } = props;
 
     return (
-        <div className={clsx(className, classes.root)} title={tooltip}>
-            <div className={classes.logo}>{createElement(component)}</div>
+        <div className={clsx(className, 'shadow-card bg-white p-4 flex w-auto gap-4')} title={tooltip}>
+            <div className='w-[45px] h-[45px] [&>svg]:w-[45px] [&>svg]:h-[45px]'>{createElement(component)}</div>
             {description && <Typography variant='secondary'>{description}</Typography>}
         </div>
     );

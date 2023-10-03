@@ -1,35 +1,17 @@
 import React from 'react';
 import clsx from 'clsx';
-import { createUseStyles } from 'react-jss';
-import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
-import { mergeClasses } from '../../tools/theme/mergeClasses';
-import { Theme } from '../../tools/theme/theme';
 import { Skill, SkillItem } from './Skill';
-
-type ClassKeys = 'root';
-const useStyles = createUseStyles<ClassKeys, SkillsProps, Theme>(
-    (theme) => ({
-        root: {
-            display: 'grid',
-            gridGap: theme.spacing(2),
-            gridTemplateColumns: 'repeat(auto-fit, 77px)',
-        },
-    }),
-    { name: 'Skills' }
-);
 
 export interface SkillsProps {
     className?: string;
-    classes?: ClassesOverride<ClassKeys>;
     skills: SkillItem[];
 }
 
 export const Skills = (props: SkillsProps) => {
-    const { className, classes: classesProp, skills } = props;
-    const classes = mergeClasses(useStyles(props), classesProp);
+    const { className, skills } = props;
 
     return (
-        <div className={clsx(className, classes.root)}>
+        <div className={clsx(className, 'grid gap-4 grid-cols-[repeat(auto-fit,77px)]')}>
             {skills.map((skill, index) => (
                 <Skill key={index} {...skill} />
             ))}
