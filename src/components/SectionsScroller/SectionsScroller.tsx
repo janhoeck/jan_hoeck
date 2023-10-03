@@ -17,11 +17,15 @@ const SectionsScrollerInternal = (props: SectionsScrollerProps) => {
     const { activeSectionIndex, setActiveSectionIndex } = context;
     const sectionsCount = Children.count(children);
 
+    const handleSectionChange = (sectionIndex: number) => {
+      setActiveSectionIndex(sectionIndex)
+    }
+
     return (
         <div className={clsx(className, 'relative transition-[background-size] duration-500')}>
             <div className='transition-transform duration-700 h-screen' style={{ transform: `translate3d(0, -${activeSectionIndex * 100}vh, 0` }}>
                 {Children.map(children, (child, index) => (
-                    <SectionsScrollerItem key={index} sectionIndex={index} sectionsCount={sectionsCount} onSectionChange={setActiveSectionIndex}>
+                    <SectionsScrollerItem key={index} sectionIndex={index} sectionsCount={sectionsCount} onSectionChange={handleSectionChange}>
                         {React.cloneElement(child)}
                     </SectionsScrollerItem>
                 ))}

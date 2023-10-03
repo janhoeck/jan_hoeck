@@ -1,70 +1,9 @@
 import React from 'react';
-import clsx from 'clsx';
-import { createUseStyles } from 'react-jss';
-import { Theme } from '../../../../tools/theme/theme';
-import { ClassesOverride } from '../../../../tools/types/ReactJSSTypes';
-import { mergeClasses } from '../../../../tools/theme/mergeClasses';
 import { Typography } from '../../../../components/Typography';
-
-type ClassKeys = 'root' | 'backgroundImage' | 'content' | 'texts' | 'links';
-const useStyles = createUseStyles<ClassKeys, ReferenceCardProps, Theme>(
-    (theme) => ({
-        root: {
-            boxShadow: theme.palette.common.cardBoxShadow,
-            width: 'auto',
-            height: 450,
-            overflow: 'hidden',
-            position: 'relative',
-        },
-        backgroundImage: {
-            backgroundImage: (props) => `url("${props.image}")`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            width: '100%',
-            height: '100%',
-            transition: 'transform 0.3s',
-            '&:hover': {
-                transform: 'scale(1.2)',
-            },
-            '&:hover $content': {
-                display: 'block',
-            },
-        },
-        content: {
-            display: 'none',
-            height: '100%',
-            width: '100%',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            backgroundColor: 'rgba(52,73,94,0.75)',
-        },
-        texts: {
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            '& *': {
-                fontFamily: 'DINPro',
-                color: theme.palette.common.white,
-            },
-        },
-        links: {
-            display: 'flex',
-            gap: theme.spacing(2),
-            flexWrap: 'wrap',
-        },
-    }),
-    { name: 'ReferenceCard' }
-);
+import { twMerge } from 'tailwind-merge';
 
 export interface ReferenceCardProps {
     className?: string;
-    classes?: ClassesOverride<ClassKeys>;
     image: string;
     githubUrl: string;
     liveDemoUrl?: string;
@@ -72,21 +11,23 @@ export interface ReferenceCardProps {
 }
 
 export const ReferenceCard = (props: ReferenceCardProps) => {
-    const { className, classes: classesProp, githubUrl, liveDemoUrl, title } = props;
-    const classes = mergeClasses(useStyles(props), classesProp);
+    const { className, githubUrl, liveDemoUrl, title, image } = props;
 
     return (
-        <div className={clsx(className, classes.root)}>
-            <div className={classes.backgroundImage}>
-                <div className={classes.content}>
-                    <div className={classes.texts}>
-                        <Typography>{title}</Typography>
-                        <div className={classes.links}>
-                            <a href={githubUrl} target='_blank' rel='noreferrer'>
+        <div className={twMerge('shadow-card h-[450px] overflow-hidden relative w-auto', className)}>
+            <div
+                className={twMerge(['group', 'bg-cover bg-no-repeat bg-center w-full h-full transition-transform', 'hover:scale-125'])}
+                style={{ backgroundImage: `url("${image}")` }}
+            >
+                <div className={twMerge(['hidden h-full w-full absolute top-0 left-0 bg-[rgba(52,73,94,0.75)]', 'group-hover:block'])}>
+                    <div className='absolute top-1/2 left-1/2 flex flex-col items-center -translate-x-1/2 -translate-y-1/2'>
+                        <Typography className='text-white'>{title}</Typography>
+                        <div className='flex gap-4 flex-wrap'>
+                            <a className='text-white underline' href={githubUrl} target='_blank' rel='noreferrer'>
                                 Github
                             </a>
                             {liveDemoUrl && (
-                                <a href={liveDemoUrl} target='_blank' rel='noreferrer'>
+                                <a className='text-white underline' href={liveDemoUrl} target='_blank' rel='noreferrer'>
                                     Live Demo
                                 </a>
                             )}
