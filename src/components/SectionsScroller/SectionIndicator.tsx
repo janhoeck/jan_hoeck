@@ -1,66 +1,29 @@
-import React, { HTMLAttributes } from 'react';
-import clsx from 'clsx';
-import { createUseStyles } from 'react-jss';
-import { Theme } from '../../tools/theme/theme';
-import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
-import { mergeClasses } from '../../tools/theme/mergeClasses';
-import { useSectionsScrollerContext } from './SectionsScrollerContext';
+import React from 'react'
+import { useSectionsScrollerContext } from './SectionsScrollerContext'
+import { twMerge } from 'tailwind-merge'
+import colors from '../../tools/theme/colors'
 
-interface UseStylesParameters extends SectionIndicatorProps {
-    color: string;
-}
-
-type ClassKeys = 'root' | 'item' | 'active';
-const useStyles = createUseStyles<ClassKeys, UseStylesParameters, Theme>(
-    (theme) => ({
-        root: {
-            display: 'flex',
-            alignItems: 'center',
-            flexDirection: 'column',
-            listStyleType: 'none',
-            '& > *:not(:last-child)': {
-                marginBottom: theme.spacing(2),
-            },
-        },
-        item: {
-            width: 4,
-            height: 4,
-            borderRadius: '50%',
-            backgroundColor: ({ color }) => color,
-            transition: 'all .4s ease-out',
-            cursor: 'pointer',
-        },
-        active: {
-            width: 12,
-            height: 12,
-        },
-    }),
-    { name: 'SectionIndicator' }
-);
-
-export interface SectionIndicatorProps extends HTMLAttributes<HTMLUListElement> {
-    classes?: ClassesOverride<ClassKeys>;
-    sectionsCount: number;
-    activeSectionIndex: number;
+export interface SectionIndicatorProps {
+    className?: string
 }
 
 export const SectionIndicator = (props: SectionIndicatorProps) => {
-    const { className, classes: classesProp, sectionsCount, activeSectionIndex } = props;
-
-    const { color, setActiveSectionIndex } = useSectionsScrollerContext();
-    const classes = mergeClasses(useStyles({ ...props, color }), classesProp);
+    const { className } = props
+    const { sections, activeSection, activeSectionIndex, setActiveSectionKey } = useSectionsScrollerContext()
 
     return (
-        <ul className={clsx(className, classes.root)}>
-            {new Array(sectionsCount).fill(true).map((_, index) => (
+        <ul className={twMerge('flex flex-col items-center list-none [&>*:not(:last-child)]:mb-4', className)}>
+            {sections.map((section, index) => (
                 <li
-                    key={index}
-                    className={clsx(classes.item, {
-                        [classes.active]: index === activeSectionIndex,
-                    })}
-                    onClick={() => setActiveSectionIndex(index)}
+                    key={section.key}
+                    className={twMerge(
+                        'w-[4px] h-[4px] rounded-full transition-all duration-300 cursor-pointer',
+                        index === activeSectionIndex && 'w-[12px] h-[12px]'
+                    )}
+                    style={{ backgroundColor: activeSection?.indicatorColor ?? colors.white }}
+                    onClick={() => setActiveSectionKey(section.key)}
                 />
             ))}
         </ul>
-    );
-};
+    )
+}

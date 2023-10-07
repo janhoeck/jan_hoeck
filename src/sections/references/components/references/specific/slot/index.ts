@@ -1,1 +1,1 @@
-export * from './SlotReference';
+export * from './SlotReference'

@@ -1,3 +1,3 @@
-export * from './adventscalendar';
-export * from './slot';
-export * from './workingtime';
+export * from './adventscalendar'
+export * from './slot'
+export * from './workingtime'

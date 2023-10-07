@@ -1,36 +1,16 @@
-import React from 'react';
-import clsx from 'clsx';
-import { createUseStyles } from 'react-jss';
-import { Theme } from '../../../tools/theme/theme';
-import { ClassesOverride } from '../../../tools/types/ReactJSSTypes';
-import { mergeClasses } from '../../../tools/theme/mergeClasses';
-import { FiGithub, AiOutlineMail, AiOutlinePhone } from 'react-icons/all';
-
-type ClassKeys = 'root';
-const useStyles = createUseStyles<ClassKeys, SocialProps, Theme>(
-    (theme) => ({
-        root: {
-            display: 'flex',
-            gap: theme.spacing(1),
-            color: theme.palette.text.primary,
-            alignItems: 'center',
-            justifyContent: 'center',
-        },
-    }),
-    { name: 'Socials' }
-);
+import React from 'react'
+import { FiGithub } from 'react-icons/fi'
+import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai'
+import { twMerge } from 'tailwind-merge'
 
 export interface SocialProps {
-    className?: string;
-    classes?: ClassesOverride<ClassKeys>;
+    className?: string
 }
 
 export const Socials = (props: SocialProps) => {
-    const { className, classes: classesProp } = props;
-    const classes = mergeClasses(useStyles(props), classesProp);
-
+    const { className } = props
     return (
-        <div className={clsx(classes.root, className)}>
+        <div className={twMerge('flex items-center justify-center gap-2 text-primary', className)}>
             <a href='https://github.com/janhoeck' target='_blank' rel='noreferrer'>
                 <FiGithub size={25} />
             </a>
@@ -41,5 +21,5 @@ export const Socials = (props: SocialProps) => {
                 <AiOutlinePhone size={25} />
             </a>
         </div>
-    );
-};
+    )
+}

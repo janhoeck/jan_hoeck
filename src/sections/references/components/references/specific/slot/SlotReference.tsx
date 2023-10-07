@@ -1,6 +1,6 @@
-import React from 'react';
-import { ReferenceCard } from '../../ReferenceCard';
-import Image from '../../../../assets/slot.png';
+import React from 'react'
+import { ReferenceCard } from '../../ReferenceCard'
+import Image from '../../../../assets/slot.png'
 
 export const SlotReference = () => {
     return (
@@ -10,5 +10,5 @@ export const SlotReference = () => {
             githubUrl='https://github.com/janhoeck/knossi-slot'
             liveDemoUrl='https://janhoeck.github.io/knossi-slot/'
         />
-    );
-};
+    )
+}
