@@ -1,13 +1,13 @@
-import React from 'react';
-import meImage from '../assets/me.jpg';
-import { twMerge } from 'tailwind-merge';
+import React from 'react'
+import meImage from '../assets/me.jpg'
+import { twMerge } from 'tailwind-merge'
 
 export interface MeImageProps {
-    className?: string;
+    className?: string
 }
 
 export const MeImage = (props: MeImageProps) => {
-    const { className } = props;
+    const { className } = props
 
     return (
         <div
@@ -29,5 +29,5 @@ export const MeImage = (props: MeImageProps) => {
                 ])}
             />
         </div>
-    );
-};
+    )
+}

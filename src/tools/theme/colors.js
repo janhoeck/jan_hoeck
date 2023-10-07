@@ -1,4 +1,4 @@
-const tailwindColors = require('tailwindcss/colors');
+const tailwindColors = require('tailwindcss/colors')
 
 module.exports = {
     ...tailwindColors,
@@ -8,4 +8,4 @@ module.exports = {
         light: '#6794ad',
         contrastColor: '#FFFFFF',
     },
-};
+}

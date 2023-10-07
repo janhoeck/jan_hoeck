@@ -1,14 +1,14 @@
-import React from 'react';
-import clsx from 'clsx';
-import { Skill, SkillItem } from './Skill';
+import React from 'react'
+import clsx from 'clsx'
+import { Skill, SkillItem } from './Skill'
 
 export interface SkillsProps {
-    className?: string;
-    skills: SkillItem[];
+    className?: string
+    skills: SkillItem[]
 }
 
 export const Skills = (props: SkillsProps) => {
-    const { className, skills } = props;
+    const { className, skills } = props
 
     return (
         <div className={clsx(className, 'grid gap-4 grid-cols-[repeat(auto-fit,77px)]')}>
@@ -16,5 +16,5 @@ export const Skills = (props: SkillsProps) => {
                 <Skill key={index} {...skill} />
             ))}
         </div>
-    );
-};
+    )
+}

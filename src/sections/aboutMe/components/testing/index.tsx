@@ -1,7 +1,7 @@
-import { ReactComponent as CypressLogo } from './CypressLogo.svg';
-import { ReactComponent as JestLogo } from './JestLogo.svg';
-import { ReactComponent as SeleniumLogo } from './SeleniumLogo.svg';
-import { SkillItem } from '../../../../components/Skills/Skill';
+import { ReactComponent as CypressLogo } from './CypressLogo.svg'
+import { ReactComponent as JestLogo } from './JestLogo.svg'
+import { ReactComponent as SeleniumLogo } from './SeleniumLogo.svg'
+import { SkillItem } from '../../../../components/Skills/Skill'
 
 export const testing: SkillItem[] = [
     {
@@ -16,4 +16,4 @@ export const testing: SkillItem[] = [
         component: SeleniumLogo,
         tooltip: 'Selenium',
     },
-];
+]

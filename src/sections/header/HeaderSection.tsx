@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';
-import { Section, Typography, useSectionsScrollerContext } from '../../components';
-import { CgMouse } from 'react-icons/cg';
-import { useInView } from 'react-intersection-observer';
-import { Fade } from 'react-awesome-reveal';
-import { Socials } from './components/Socials';
+import React, { useEffect } from 'react'
+import { Section, Typography, useSectionsScrollerContext } from '../../components'
+import { CgMouse } from 'react-icons/cg'
+import { useInView } from 'react-intersection-observer'
+import { Fade } from 'react-awesome-reveal'
+import { Socials } from './components/Socials'
 
 export const HeaderSection = () => {
-    const { setColor } = useSectionsScrollerContext();
-    const { ref, inView } = useInView({ threshold: 0.1 });
+    const { setColor } = useSectionsScrollerContext()
+    const { ref, inView } = useInView({ threshold: 0.1 })
 
     useEffect(() => {
         if (inView) {
-            setColor('#efedce');
+            setColor('#efedce')
         }
-    }, [inView, setColor]);
+    }, [inView, setColor])
 
     return (
         <Section className='flex flex-col items-center justify-center bg-[#9cb8b3]' ref={ref}>
@@ -35,5 +35,5 @@ export const HeaderSection = () => {
                 </Typography>
             </div>
         </Section>
-    );
-};
+    )
+}

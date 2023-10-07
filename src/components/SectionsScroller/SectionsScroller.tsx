@@ -1,25 +1,25 @@
-import React, { Children } from 'react';
-import clsx from 'clsx';
-import { SectionIndicator } from './SectionIndicator';
-import { SectionsScrollerContextProvider, useSectionsScrollerContext } from './SectionsScrollerContext';
-import { SectionsScrollerItem } from './SectionsScrollerItem';
+import React, { Children } from 'react'
+import clsx from 'clsx'
+import { SectionIndicator } from './SectionIndicator'
+import { SectionsScrollerContextProvider, useSectionsScrollerContext } from './SectionsScrollerContext'
+import { SectionsScrollerItem } from './SectionsScrollerItem'
 
 export interface SectionsScrollerProps {
-    className?: string;
-    children: React.ReactElement | React.ReactElement[];
+    className?: string
+    children: React.ReactElement | React.ReactElement[]
 }
 
 const SectionsScrollerInternal = (props: SectionsScrollerProps) => {
-    const { children, className } = props;
+    const { children, className } = props
 
-    const context = useSectionsScrollerContext();
+    const context = useSectionsScrollerContext()
 
-    const { activeSectionIndex, setActiveSectionIndex } = context;
-    const sectionsCount = Children.count(children);
+    const { activeSectionIndex, setActiveSectionIndex } = context
+    const sectionsCount = Children.count(children)
 
     const handleSectionChange = (sectionIndex: number) => {
-        setActiveSectionIndex(sectionIndex);
-    };
+        setActiveSectionIndex(sectionIndex)
+    }
 
     return (
         <div className={clsx(className, 'relative transition-[background-size] duration-500')}>
@@ -44,11 +44,11 @@ const SectionsScrollerInternal = (props: SectionsScrollerProps) => {
                 sectionsCount={sectionsCount}
             />
         </div>
-    );
-};
+    )
+}
 
 export const SectionsScroller = (props: SectionsScrollerProps) => (
     <SectionsScrollerContextProvider>
         <SectionsScrollerInternal {...props} />
     </SectionsScrollerContextProvider>
-);
+)

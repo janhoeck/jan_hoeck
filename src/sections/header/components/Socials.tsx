@@ -1,14 +1,14 @@
-import React from 'react';
-import { FiGithub } from 'react-icons/fi';
-import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
-import { twMerge } from 'tailwind-merge';
+import React from 'react'
+import { FiGithub } from 'react-icons/fi'
+import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai'
+import { twMerge } from 'tailwind-merge'
 
 export interface SocialProps {
-    className?: string;
+    className?: string
 }
 
 export const Socials = (props: SocialProps) => {
-    const { className } = props;
+    const { className } = props
     return (
         <div className={twMerge('flex items-center justify-center gap-2 text-primary', className)}>
             <a href='https://github.com/janhoeck' target='_blank' rel='noreferrer'>
@@ -21,5 +21,5 @@ export const Socials = (props: SocialProps) => {
                 <AiOutlinePhone size={25} />
             </a>
         </div>
-    );
-};
+    )
+}

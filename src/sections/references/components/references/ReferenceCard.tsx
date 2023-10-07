@@ -1,17 +1,17 @@
-import React from 'react';
-import { Typography } from '../../../../components/Typography';
-import { twMerge } from 'tailwind-merge';
+import React from 'react'
+import { Typography } from '../../../../components/Typography'
+import { twMerge } from 'tailwind-merge'
 
 export interface ReferenceCardProps {
-    className?: string;
-    image: string;
-    githubUrl: string;
-    liveDemoUrl?: string;
-    title: string;
+    className?: string
+    image: string
+    githubUrl: string
+    liveDemoUrl?: string
+    title: string
 }
 
 export const ReferenceCard = (props: ReferenceCardProps) => {
-    const { className, githubUrl, liveDemoUrl, title, image } = props;
+    const { className, githubUrl, liveDemoUrl, title, image } = props
 
     return (
         <div className={twMerge('shadow-card h-[450px] overflow-hidden relative w-auto', className)}>
@@ -45,5 +45,5 @@ export const ReferenceCard = (props: ReferenceCardProps) => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}

@@ -1,1 +1,1 @@
-export * from './TimelineSection';
+export * from './TimelineSection'

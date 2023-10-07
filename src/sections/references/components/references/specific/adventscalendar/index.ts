@@ -1,1 +1,1 @@
-export * from './AdventscalendarReference';
+export * from './AdventscalendarReference'

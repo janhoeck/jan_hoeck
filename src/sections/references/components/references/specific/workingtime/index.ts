@@ -1,1 +1,1 @@
-export * from './WorkingTimeReference';
+export * from './WorkingTimeReference'

@@ -1,27 +1,27 @@
-import React, { useEffect } from 'react';
-import { Section } from '../../components/Section';
-import { SectionCaption, Timeline, TimelineItem, Typography, useSectionsScrollerContext } from '../../components';
-import { useInView } from 'react-intersection-observer';
-import { shadeColor } from '../../tools/utils/ColorUtils';
-import colors from '../../tools/theme/colors';
+import React, { useEffect } from 'react'
+import { Section } from '../../components/Section'
+import { SectionCaption, Timeline, TimelineItem, Typography, useSectionsScrollerContext } from '../../components'
+import { useInView } from 'react-intersection-observer'
+import { shadeColor } from '../../tools/utils/ColorUtils'
+import colors from '../../tools/theme/colors'
 
 export const TimelineSection = () => {
-    const { setColor } = useSectionsScrollerContext();
+    const { setColor } = useSectionsScrollerContext()
 
-    const { ref, inView } = useInView({ threshold: 0.1 });
+    const { ref, inView } = useInView({ threshold: 0.1 })
 
     useEffect(() => {
         if (inView) {
-            setColor(colors.white);
+            setColor(colors.white)
         }
-    }, [inView, setColor]);
+    }, [inView, setColor])
 
     return (
         <Section className='bg-primary-main p-4' ref={ref}>
             <SectionCaption mainTextColor={colors.white} backgroundTextColor={shadeColor(colors.primary.main, 4)}>
                 Lebenslauf
             </SectionCaption>
-            <div className='mt-[10vh] p-6 sm:p-0'>
+            <div className='mt-4 sm:mt-6 md:mt-8 xl:mt-10 p-0 sm:p-2 md:p-4 xl:p-6'>
                 <Timeline>
                     <TimelineItem headline='Juli 2012 - Juli 2014'>
                         <Typography>Fachabitur im Bereich Informatik</Typography>
@@ -62,5 +62,5 @@ export const TimelineSection = () => {
                 </Timeline>
             </div>
         </Section>
-    );
-};
+    )
+}

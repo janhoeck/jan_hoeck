@@ -1,15 +1,15 @@
-import React, { FunctionComponent, HTMLAttributes } from 'react';
-import { Typography } from '../Typography';
-import { twMerge } from 'tailwind-merge';
+import React, { FunctionComponent, HTMLAttributes } from 'react'
+import { Typography } from '../Typography'
+import { twMerge } from 'tailwind-merge'
 
 export interface TimelineItemProps extends HTMLAttributes<HTMLDivElement> {
-    alignment?: 'left' | 'right';
-    lastItem?: boolean;
-    headline?: string;
+    alignment?: 'left' | 'right'
+    lastItem?: boolean
+    headline?: string
 }
 
 export const TimelineItem: FunctionComponent<TimelineItemProps> = (props) => {
-    const { className, children, alignment = 'right', lastItem = false, headline, ...restProps } = props;
+    const { className, children, alignment = 'right', lastItem = false, headline, ...restProps } = props
 
     return (
         <div
@@ -38,5 +38,5 @@ export const TimelineItem: FunctionComponent<TimelineItemProps> = (props) => {
                 {children}
             </div>
         </div>
-    );
-};
+    )
+}

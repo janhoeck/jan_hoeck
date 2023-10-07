@@ -1,24 +1,24 @@
-import React, { useEffect } from 'react';
-import { MeImage } from './components/MeImage';
-import { Section, Typography, useSectionsScrollerContext } from '../../components';
-import { useInView } from 'react-intersection-observer';
-import { Fade } from 'react-awesome-reveal';
-import { Skills } from '../../components/Skills/Skills';
-import { skills } from './components/skills';
-import { frameworks } from './components/frameworks';
-import { testing } from './components/testing';
-import { twMerge } from 'tailwind-merge';
-import colors from '../../tools/theme/colors';
+import React, { useEffect } from 'react'
+import { MeImage } from './components/MeImage'
+import { Section, Typography, useSectionsScrollerContext } from '../../components'
+import { useInView } from 'react-intersection-observer'
+import { Fade } from 'react-awesome-reveal'
+import { Skills } from '../../components/Skills/Skills'
+import { skills } from './components/skills'
+import { frameworks } from './components/frameworks'
+import { testing } from './components/testing'
+import { twMerge } from 'tailwind-merge'
+import colors from '../../tools/theme/colors'
 
 export const AboutMeSection = () => {
-    const { setColor } = useSectionsScrollerContext();
-    const { ref, inView } = useInView({ threshold: 0.1 });
+    const { setColor } = useSectionsScrollerContext()
+    const { ref, inView } = useInView({ threshold: 0.1 })
 
     useEffect(() => {
         if (inView) {
-            setColor(colors.primary.main);
+            setColor(colors.primary.main)
         }
-    }, [inView, setColor]);
+    }, [inView, setColor])
 
     return (
         <Section className='bg-[#eae5e5] p-6' ref={ref}>
@@ -69,5 +69,5 @@ export const AboutMeSection = () => {
                 </Fade>
             </div>
         </Section>
-    );
-};
+    )
+}

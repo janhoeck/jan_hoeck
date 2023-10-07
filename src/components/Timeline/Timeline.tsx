@@ -1,14 +1,14 @@
-import React, { Children, HTMLAttributes } from 'react';
-import { TimelineItemProps } from './TimelineItem';
-import { Fade } from 'react-awesome-reveal';
-import { twMerge } from 'tailwind-merge';
+import React, { Children, HTMLAttributes } from 'react'
+import { TimelineItemProps } from './TimelineItem'
+import { Fade } from 'react-awesome-reveal'
+import { twMerge } from 'tailwind-merge'
 
 export interface TimelineProps extends HTMLAttributes<HTMLDivElement> {
-    children: React.ReactElement<TimelineItemProps, 'Timeline'> | React.ReactElement<TimelineItemProps, 'Timeline'>[];
+    children: React.ReactElement<TimelineItemProps, 'Timeline'> | React.ReactElement<TimelineItemProps, 'Timeline'>[]
 }
 
 export const Timeline = (props: TimelineProps) => {
-    const { className, children, ...restProps } = props;
+    const { className, children, ...restProps } = props
     return (
         <div
             className={twMerge([
@@ -27,8 +27,8 @@ export const Timeline = (props: TimelineProps) => {
                             lastItem: index === Children.count(children) - 1,
                         })}
                     </Fade>
-                );
+                )
             })}
         </div>
-    );
-};
+    )
+}

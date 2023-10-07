@@ -1,15 +1,15 @@
-import React, { HTMLAttributes } from 'react';
-import { useSectionsScrollerContext } from './SectionsScrollerContext';
-import { twMerge } from 'tailwind-merge';
+import React, { HTMLAttributes } from 'react'
+import { useSectionsScrollerContext } from './SectionsScrollerContext'
+import { twMerge } from 'tailwind-merge'
 
 export interface SectionIndicatorProps extends HTMLAttributes<HTMLUListElement> {
-    sectionsCount: number;
-    activeSectionIndex: number;
+    sectionsCount: number
+    activeSectionIndex: number
 }
 
 export const SectionIndicator = (props: SectionIndicatorProps) => {
-    const { className, sectionsCount, activeSectionIndex } = props;
-    const { color, setActiveSectionIndex } = useSectionsScrollerContext();
+    const { className, sectionsCount, activeSectionIndex } = props
+    const { color, setActiveSectionIndex } = useSectionsScrollerContext()
 
     return (
         <ul className={twMerge('flex flex-col items-center list-none [&>*:not(:last-child)]:mb-4', className)}>
@@ -25,5 +25,5 @@ export const SectionIndicator = (props: SectionIndicatorProps) => {
                 />
             ))}
         </ul>
-    );
-};
+    )
+}

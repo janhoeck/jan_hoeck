@@ -1,10 +1,10 @@
-import { ReactComponent as JavaLogo } from './JavaLogo.svg';
-import { ReactComponent as JavascriptLogo } from './JavascriptLogo.svg';
-import { ReactComponent as TypescriptLogo } from './TypescriptLogo.svg';
-import { SkillItem } from '../../../../components/Skills/Skill';
-import { ReactComponent as NodeJSLogo } from './NodeJSLogo.svg';
-import { ReactComponent as HTML5Logo } from './HTML5Logo.svg';
-import { ReactComponent as CSS3Logo } from './CSS3Logo.svg';
+import { ReactComponent as JavaLogo } from './JavaLogo.svg'
+import { ReactComponent as JavascriptLogo } from './JavascriptLogo.svg'
+import { ReactComponent as TypescriptLogo } from './TypescriptLogo.svg'
+import { SkillItem } from '../../../../components/Skills/Skill'
+import { ReactComponent as NodeJSLogo } from './NodeJSLogo.svg'
+import { ReactComponent as HTML5Logo } from './HTML5Logo.svg'
+import { ReactComponent as CSS3Logo } from './CSS3Logo.svg'
 
 export const skills: SkillItem[] = [
     {
@@ -31,4 +31,4 @@ export const skills: SkillItem[] = [
         component: JavaLogo,
         tooltip: 'Java',
     },
-];
+]

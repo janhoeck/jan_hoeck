@@ -1,1 +1,1 @@
-export * from './SectionCaption';
+export * from './SectionCaption'
