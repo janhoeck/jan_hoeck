@@ -1,16 +1,13 @@
 import React, { createContext, FunctionComponent, useContext, useState } from 'react';
-import { useTheme } from 'react-jss';
-import { Theme } from '../../tools/theme/theme';
+import colors from '../../tools/theme/colors';
 
 export type SectionsScrollerContextType = ReturnType<typeof useStore>;
 
 const SectionsScrollerContext = createContext<SectionsScrollerContextType>({} as any);
 
 const useStore = () => {
-    const theme = useTheme<Theme>();
-
     const [activeSectionIndex, setActiveSectionIndex] = useState<number>(0);
-    const [color, setColor] = useState<string>(theme.palette.common.white);
+    const [color, setColor] = useState<string>(colors.white);
 
     return {
         activeSectionIndex,

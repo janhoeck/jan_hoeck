@@ -1,93 +1,37 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
-import { createUseStyles } from 'react-jss';
-import clsx from 'clsx';
-import { Theme } from '../../tools/theme/theme';
-import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
-import { mergeClasses } from '../../tools/theme/mergeClasses';
 import { Typography } from '../Typography';
-import { createMediaQuery } from '../../tools/theme/createMediaQuery';
-
-type ClassKeys = 'root' | 'content' | 'lineContainer' | 'dot' | 'line' | 'lastItem' | 'headline';
-const useStyles = createUseStyles<ClassKeys, TimelineItemProps, Theme>(
-    (theme) => ({
-        root: {
-            display: 'flex',
-            flexDirection: ({ alignment }) => (alignment === 'left' ? 'row-reverse' : 'row'),
-            [createMediaQuery('sm').down]: {
-                flexDirection: 'row !important',
-            },
-        },
-        lastItem: {
-            '& $line': {
-                display: 'none',
-            },
-        },
-        lineContainer: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-        },
-        content: {
-            marginTop: 5,
-            marginBottom: theme.spacing(2),
-            marginLeft: ({ alignment }) => (alignment === 'right' ? theme.spacing(2) : undefined),
-            marginRight: ({ alignment }) => (alignment === 'left' ? theme.spacing(2) : undefined),
-            display: 'flex',
-            flexDirection: 'column',
-            backgroundColor: ({ color }) => theme.palette.primary[color || 'main'],
-            boxShadow: theme.palette.common.cardBoxShadow,
-            padding: theme.spacing(2),
-            maxWidth: 600,
-            [createMediaQuery('sm').down]: {
-                marginLeft: theme.spacing(2),
-                marginRight: '0 !important',
-            },
-        },
-        dot: ({ color }) => ({
-            height: 17,
-            width: 17,
-            backgroundColor: theme.palette.primary[color || 'main'],
-            borderRadius: '50%',
-        }),
-        line: ({ color }) => ({
-            backgroundColor: theme.palette.primary[color || 'main'],
-            flex: 1,
-            width: 3,
-        }),
-        headline: ({ alignment }) => ({
-            letterSpacing: 2,
-            marginBottom: theme.spacing(1),
-        }),
-    }),
-    { name: 'TimelineItem' }
-);
+import { twMerge } from 'tailwind-merge';
 
 export interface TimelineItemProps extends HTMLAttributes<HTMLDivElement> {
-    classes?: ClassesOverride<ClassKeys>;
     alignment?: 'left' | 'right';
-    color?: keyof Theme['palette']['primary'];
     lastItem?: boolean;
     headline?: string;
 }
 
 export const TimelineItem: FunctionComponent<TimelineItemProps> = (props) => {
-    const { className, classes: classesProp, children, alignment = 'right', color = 'main', lastItem = false, headline, ...restProps } = props;
-    const classes = mergeClasses(useStyles({ ...props, alignment, color }), classesProp);
+    const { className, children, alignment = 'right', lastItem = false, headline, ...restProps } = props;
 
     return (
         <div
-            className={clsx(className, classes.root, {
-                [classes.lastItem]: lastItem,
-            })}
+            className={twMerge(['flex flex-row', alignment === 'left' ? 'sm:flex-row-reverse' : 'sm:flex-row'])}
             {...restProps}
         >
-            <div className={classes.lineContainer}>
-                <div className={classes.dot} />
-                <div className={classes.line} />
+            <div className='flex flex-col items-center'>
+                <div data-testid='dot' className='h-[17px] w-[17px] rounded-full bg-white' />
+                <div
+                    data-testid='line'
+                    className={twMerge(['w-[3px] flex-1 bg-primary-light', lastItem && 'hidden'])}
+                />
             </div>
-            <div className={classes.content}>
+            <div
+                className={twMerge([
+                    'mt-1 mb-4 ml-4 flex flex-col shadow-card p-4 max-w-[600px] bg-white',
+                    alignment === 'right' ? 'sm:ml-4' : '',
+                    alignment === 'left' ? 'sm:mr-4 sm:ml-0' : '',
+                ])}
+            >
                 {headline && (
-                    <Typography className={classes.headline} variant='secondary'>
+                    <Typography className='tracking-wide mb-2' variant='secondary'>
                         {headline}
                     </Typography>
                 )}

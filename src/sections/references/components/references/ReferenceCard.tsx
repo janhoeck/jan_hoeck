@@ -16,10 +16,19 @@ export const ReferenceCard = (props: ReferenceCardProps) => {
     return (
         <div className={twMerge('shadow-card h-[450px] overflow-hidden relative w-auto', className)}>
             <div
-                className={twMerge(['group', 'bg-cover bg-no-repeat bg-center w-full h-full transition-transform', 'hover:scale-125'])}
+                className={twMerge([
+                    'group',
+                    'bg-cover bg-no-repeat bg-center w-full h-full transition-transform',
+                    'hover:scale-125',
+                ])}
                 style={{ backgroundImage: `url("${image}")` }}
             >
-                <div className={twMerge(['hidden h-full w-full absolute top-0 left-0 bg-[rgba(52,73,94,0.75)]', 'group-hover:block'])}>
+                <div
+                    className={twMerge([
+                        'hidden h-full w-full absolute top-0 left-0 bg-[rgba(52,73,94,0.75)]',
+                        'group-hover:block',
+                    ])}
+                >
                     <div className='absolute top-1/2 left-1/2 flex flex-col items-center -translate-x-1/2 -translate-y-1/2'>
                         <Typography className='text-white'>{title}</Typography>
                         <div className='flex gap-4 flex-wrap'>

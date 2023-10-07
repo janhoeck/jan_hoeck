@@ -19,10 +19,10 @@ export const HeaderSection = () => {
         <Section className='flex flex-col items-center justify-center bg-[#9cb8b3]' ref={ref}>
             <Fade duration={2000}>
                 <div className='text-center flex flex-col items-center justify-center w-full uppercase'>
-                    <Typography className='text-[#efedce]' variant='headline' color='contrastPrimary'>
+                    <Typography className='text-[#efedce]' variant='headline'>
                         Jan Höck
                     </Typography>
-                    <Typography className='text-primary' variant='subHeadline' color='contrastPrimary'>
+                    <Typography className='text-primary' variant='subHeadline'>
                         Senior Frontend Entwickler
                     </Typography>
                     <Socials className='mt-4' />
@@ -30,7 +30,7 @@ export const HeaderSection = () => {
             </Fade>
             <div className='absolute bottom-4 flex flex-col text-center items-center uppercase text-white/[0.5]'>
                 <CgMouse className='mb-2 text-3xl' />
-                <Typography color='inherit' variant='secondary'>
+                <Typography className='text-inherit' variant='secondary'>
                     Finde mehr heraus
                 </Typography>
             </div>

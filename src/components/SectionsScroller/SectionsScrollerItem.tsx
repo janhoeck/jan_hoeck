@@ -21,7 +21,8 @@ export const SectionsScrollerItem: FunctionComponent<SectionsScrollerItemProps> 
         }
 
         const isScrollBarTop = current.scrollTop === 0;
-        const isScrollBarBottom = Math.round(current.scrollHeight - current.clientHeight) === Math.round(current.scrollTop);
+        const isScrollBarBottom =
+            Math.round(current.scrollHeight - current.clientHeight) === Math.round(current.scrollTop);
 
         // Just scroll up when the user scrolled up and the actual scrollbar is placed on top
         if (direction === 'up' && isScrollBarTop) {

@@ -1,69 +1,30 @@
 import React from 'react';
-import { ClassesOverride } from '../../tools/types/ReactJSSTypes';
-import { createUseStyles } from 'react-jss';
-import { Theme } from '../../tools/theme/theme';
-import { mergeClasses } from '../../tools/theme/mergeClasses';
-import clsx from 'clsx';
-import { createMediaQuery } from '../../tools/theme/createMediaQuery';
 import { Typography } from '../Typography';
-
-type ClassKeys = 'root' | 'backgroundText' | 'text';
-const useStyles = createUseStyles<ClassKeys, SectionCaptionProps, Theme>(
-    {
-        root: {
-            position: 'relative',
-            textTransform: 'uppercase',
-            textAlign: 'center',
-        },
-        text: {
-            position: 'relative',
-            zIndex: 1,
-            color: ({ mainTextColor }) => mainTextColor,
-        },
-        backgroundText: {
-            position: 'absolute',
-            width: '500vw',
-            height: '120%',
-            margin: 0,
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            fontSize: 300,
-            zIndex: 0,
-            color: ({ backgroundTextColor }) => backgroundTextColor,
-            [createMediaQuery('xl').down]: {
-                fontSize: 250,
-            },
-            [createMediaQuery('md').down]: {
-                fontSize: 150,
-                letterSpacing: 0,
-            },
-            [createMediaQuery('sm').down]: {
-                fontSize: '5em',
-            },
-        },
-    },
-    { name: 'SectionCaption' }
-);
+import { twMerge } from 'tailwind-merge';
 
 export interface SectionCaptionProps {
     className?: string;
-    classes?: ClassesOverride<ClassKeys>;
     children: string;
     mainTextColor: string;
     backgroundTextColor: string;
 }
 
 export const SectionCaption = (props: SectionCaptionProps) => {
-    const { children, className, classes: classesProp } = props;
-    const classes = mergeClasses(useStyles(props), classesProp);
+    const { children, className, mainTextColor, backgroundTextColor } = props;
 
     return (
-        <div className={clsx(className, classes.root)}>
-            <Typography noWrap className={classes.text} variant='headline'>
+        <div className={twMerge('relative uppercase text-center', className)}>
+            <Typography noWrap style={{ color: mainTextColor }} className='relative z-10' variant='headline'>
                 {children}
             </Typography>
-            <Typography className={classes.backgroundText} variant='headline' color='backgroundText'>
+            <Typography
+                style={{ color: backgroundTextColor }}
+                className={twMerge([
+                    'absolute text-backgroundText w-[500vw] h-[120%] m-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0',
+                    'text-5xl sm:text-6xl md:ext-8xl xl:text-9xl',
+                ])}
+                variant='headline'
+            >
                 {children}
             </Typography>
         </div>

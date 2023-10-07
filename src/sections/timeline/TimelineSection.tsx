@@ -1,74 +1,28 @@
 import React, { useEffect } from 'react';
 import { Section } from '../../components/Section';
-import clsx from 'clsx';
-import { createUseStyles, useTheme } from 'react-jss';
-import { Theme } from '../../tools/theme/theme';
 import { SectionCaption, Timeline, TimelineItem, Typography, useSectionsScrollerContext } from '../../components';
-import { shadeColor } from '../../tools/utils/ColorUtils';
 import { useInView } from 'react-intersection-observer';
-import { createMediaQuery } from '../../tools/theme/createMediaQuery';
+import { shadeColor } from '../../tools/utils/ColorUtils';
+import colors from '../../tools/theme/colors';
 
-type ClassKey = 'root' | 'timeline' | 'timelineContainer' | 'timelineDot' | 'timelineLine' | 'timelineContent';
-const useStyles = createUseStyles<ClassKey, TimelineSectionProps, Theme>(
-    (theme) => ({
-        root: {
-            backgroundColor: theme.palette.primary.main,
-            padding: theme.spacing(2),
-        },
-        timelineContainer: {
-            marginTop: '10vh',
-            padding: theme.spacing(3),
-            [createMediaQuery('sm').down]: {
-                padding: 0,
-            },
-        },
-        timeline: {},
-        timelineDot: {
-            backgroundColor: theme.palette.common.white,
-        },
-        timelineLine: {
-            backgroundColor: theme.palette.primary.light,
-        },
-        timelineContent: {
-            backgroundColor: theme.palette.common.white,
-        },
-    }),
-    { name: 'TimelineSection' }
-);
-
-export interface TimelineSectionProps {
-    className?: string;
-}
-
-export const TimelineSection = (props: TimelineSectionProps) => {
-    const { className } = props;
-    const classes = useStyles(props);
-
-    const theme = useTheme<Theme>();
+export const TimelineSection = () => {
     const { setColor } = useSectionsScrollerContext();
 
     const { ref, inView } = useInView({ threshold: 0.1 });
 
     useEffect(() => {
         if (inView) {
-            setColor(theme.palette.common.white);
+            setColor(colors.white);
         }
-    }, [theme, inView, setColor]);
+    }, [inView, setColor]);
 
     return (
-        <Section className={clsx(className, classes.root)} ref={ref}>
-            <SectionCaption mainTextColor={theme.palette.common.white} backgroundTextColor={shadeColor(theme.palette.primary.main, 4)}>
+        <Section className='bg-primary-main p-4' ref={ref}>
+            <SectionCaption mainTextColor={colors.white} backgroundTextColor={shadeColor(colors.primary.main, 4)}>
                 Lebenslauf
             </SectionCaption>
-            <div className={classes.timelineContainer}>
-                <Timeline
-                    className={classes.timeline}
-                    classes={{
-                        dot: classes.timelineDot,
-                        line: classes.timelineLine,
-                        content: classes.timelineContent,
-                    }}
-                >
+            <div className='mt-[10vh] p-6 sm:p-0'>
+                <Timeline>
                     <TimelineItem headline='Juli 2012 - Juli 2014'>
                         <Typography>Fachabitur im Bereich Informatik</Typography>
                         <Typography variant='secondary'>
@@ -98,7 +52,9 @@ export const TimelineSection = (props: TimelineSectionProps) => {
                                 <li>Verantwortlich für das Onboarding neuer Kollegen</li>
                                 <li>Entwicklung mit React 17 (Hooks, Context etc.)</li>
                                 <li>Aufbau eines Monorepository ausgelegt auf weit über 50.000 Kunden</li>
-                                <li>Sicherstellung der Frontend Wartbarkeit durch kleine, logikgetrennte Componenten</li>
+                                <li>
+                                    Sicherstellung der Frontend Wartbarkeit durch kleine, logikgetrennte Componenten
+                                </li>
                                 <li>Vieles mehr...</li>
                             </ul>
                         </Typography>

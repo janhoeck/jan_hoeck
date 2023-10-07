@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 type Variant = 'headline' | 'subHeadline' | 'text' | 'secondary';
-type Color = 'inherit' | 'primary' | 'secondary' | 'backgroundText' | 'contrastPrimary';
 
-export interface TypographyProps {
+export interface TypographyProps extends HTMLAttributes<HTMLSpanElement> {
     className?: string;
     variant?: Variant;
-    color?: Color;
     noWrap?: boolean;
 }
 
@@ -19,26 +17,21 @@ const componentMapping: Record<Variant, React.ElementType> = {
 };
 
 export const Typography: React.FunctionComponent<TypographyProps> = (props) => {
-    const { className, children, variant = 'text', noWrap = false, color = 'primary' } = props;
+    const { className, children, variant = 'text', noWrap = false, ...restProps } = props;
 
     const styles: Record<Variant, string> = {
-        headline: 'text-[140px] tracking-[24px] xl:text-7xl sm:text-3xl sm:tracking-[10px]',
+        headline: 'text-3xl tracking-normal sm:text-3xl sm:tracking-wider md:text-5xl md:tracking-widest xl:text-7xl',
         subHeadline: 'text-2xl sm:text-lg',
         text: 'text-lg',
         secondary: 'text-sm',
     };
 
-    const colorStyles: Record<Color, string> = {
-        inherit: 'text-inherit',
-        primary: 'text-primary',
-        secondary: 'text-secondary',
-        backgroundText: 'text-backgroundText',
-        contrastPrimary: 'text-contrastPrimary',
-    };
-
     const Component = componentMapping[variant];
     return (
-        <Component className={twMerge(`m-0 font-['DINPro'] ${colorStyles[color]}`, styles[variant], noWrap && 'truncate', className)}>
+        <Component
+            className={twMerge([`m-0 font-['DINPro']`, styles[variant], noWrap && 'truncate', className])}
+            {...restProps}
+        >
             {children}
         </Component>
     );
