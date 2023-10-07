@@ -1,7 +1,7 @@
 import React, { Children } from 'react'
 import clsx from 'clsx'
 import { SectionIndicator } from './SectionIndicator'
-import { SectionsScrollerContextProvider, useSectionsScrollerContext } from './SectionsScrollerContext'
+import { SectionsScrollerContextProvider, SectionType, useSectionsScrollerContext } from './SectionsScrollerContext'
 import { SectionsScrollerItem } from './SectionsScrollerItem'
 
 export interface SectionsScrollerProps {
@@ -11,14 +11,10 @@ export interface SectionsScrollerProps {
 
 const SectionsScrollerInternal = (props: SectionsScrollerProps) => {
     const { children, className } = props
+    const { sectionsCount, activeSectionIndex, setActiveSectionKey } = useSectionsScrollerContext()
 
-    const context = useSectionsScrollerContext()
-
-    const { activeSectionIndex, setActiveSectionIndex } = context
-    const sectionsCount = Children.count(children)
-
-    const handleSectionChange = (sectionIndex: number) => {
-        setActiveSectionIndex(sectionIndex)
+    const handleSectionChange = (section: SectionType) => {
+        setActiveSectionKey(section.key)
     }
 
     return (
@@ -38,11 +34,7 @@ const SectionsScrollerInternal = (props: SectionsScrollerProps) => {
                     </SectionsScrollerItem>
                 ))}
             </div>
-            <SectionIndicator
-                className='absolute top-2/4 right-6'
-                activeSectionIndex={activeSectionIndex}
-                sectionsCount={sectionsCount}
-            />
+            <SectionIndicator className='absolute top-2/4 right-6' />
         </div>
     )
 }

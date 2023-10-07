@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { MeImage } from './components/MeImage'
-import { Section, Typography, useSectionsScrollerContext } from '../../components'
-import { useInView } from 'react-intersection-observer'
+import { Section, Typography } from '../../components'
 import { Fade } from 'react-awesome-reveal'
 import { Skills } from '../../components/Skills/Skills'
 import { skills } from './components/skills'
@@ -11,17 +10,13 @@ import { twMerge } from 'tailwind-merge'
 import colors from '../../tools/theme/colors'
 
 export const AboutMeSection = () => {
-    const { setColor } = useSectionsScrollerContext()
-    const { ref, inView } = useInView({ threshold: 0.1 })
-
-    useEffect(() => {
-        if (inView) {
-            setColor(colors.primary.main)
-        }
-    }, [inView, setColor])
-
     return (
-        <Section className='bg-[#eae5e5] p-6' ref={ref}>
+        <Section
+            className='bg-[#eae5e5] p-6'
+            sectionKey='aboutMe'
+            sectionBackgroundColor='#eae5e5'
+            sectionIndicatorColor={colors.primary.main}
+        >
             <div
                 className={twMerge([
                     'flex flex-col items-center m-[5vh_auto_10vh_auto] max-w-[1440]',

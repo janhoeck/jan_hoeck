@@ -1,15 +1,17 @@
 import React, { FunctionComponent, TouchEvent, useRef, useState, WheelEvent } from 'react'
 import { twMerge } from 'tailwind-merge'
+import { SectionType, useSectionsScrollerContext } from './SectionsScrollerContext'
 
 export interface SectionsScrollerItemProps {
     className?: string
     sectionIndex: number
     sectionsCount: number
-    onSectionChange: (toIndex: number) => void
+    onSectionChange: (section: SectionType) => void
 }
 
 export const SectionsScrollerItem: FunctionComponent<SectionsScrollerItemProps> = (props) => {
     const { children, className, sectionIndex, sectionsCount, onSectionChange } = props
+    const { sections } = useSectionsScrollerContext()
     const rootRef = useRef<HTMLDivElement>(null)
 
     const [lastTouchY, setLastTouchY] = useState<number | undefined>(undefined)
@@ -29,7 +31,9 @@ export const SectionsScrollerItem: FunctionComponent<SectionsScrollerItemProps> 
             if (sectionIndex === 0) {
                 return
             }
-            onSectionChange(sectionIndex - 1)
+
+            const section = sections[sectionIndex - 1]
+            onSectionChange(section)
         }
 
         // Just scroll down when the user scrolled down and the actual scrollbar is placed on bottom
@@ -37,7 +41,9 @@ export const SectionsScrollerItem: FunctionComponent<SectionsScrollerItemProps> 
             if (sectionIndex === sectionsCount - 1) {
                 return
             }
-            onSectionChange(sectionIndex + 1)
+
+            const section = sections[sectionIndex + 1]
+            onSectionChange(section)
         }
     }
 

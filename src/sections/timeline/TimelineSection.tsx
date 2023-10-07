@@ -1,23 +1,17 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Section } from '../../components/Section'
-import { SectionCaption, Timeline, TimelineItem, Typography, useSectionsScrollerContext } from '../../components'
-import { useInView } from 'react-intersection-observer'
+import { SectionCaption, Timeline, TimelineItem, Typography } from '../../components'
 import { shadeColor } from '../../tools/utils/ColorUtils'
 import colors from '../../tools/theme/colors'
 
 export const TimelineSection = () => {
-    const { setColor } = useSectionsScrollerContext()
-
-    const { ref, inView } = useInView({ threshold: 0.1 })
-
-    useEffect(() => {
-        if (inView) {
-            setColor(colors.white)
-        }
-    }, [inView, setColor])
-
     return (
-        <Section className='bg-primary-main p-4' ref={ref}>
+        <Section
+            className='bg-primary-main p-4'
+            sectionKey='timeline'
+            sectionBackgroundColor={colors.primary.main}
+            sectionIndicatorColor={colors.white}
+        >
             <SectionCaption mainTextColor={colors.white} backgroundTextColor={shadeColor(colors.primary.main, 4)}>
                 Lebenslauf
             </SectionCaption>

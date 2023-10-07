@@ -1,23 +1,18 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Section } from '../../components/Section'
-import { SectionCaption, useSectionsScrollerContext } from '../../components'
+import { SectionCaption } from '../../components'
 import { shadeColor } from '../../tools/utils/ColorUtils'
-import { useInView } from 'react-intersection-observer'
 import { AdventscalendarReference, SlotReference, WorkingTimeReference } from './components/references/specific'
 import { Fade } from 'react-awesome-reveal'
 
 export const ReferenceSection = () => {
-    const { setColor } = useSectionsScrollerContext()
-    const { ref, inView } = useInView({ threshold: 0.1 })
-
-    useEffect(() => {
-        if (inView) {
-            setColor('#efedce')
-        }
-    }, [inView, setColor])
-
     return (
-        <Section className='bg-[#9cb8b3] p-4' ref={ref}>
+        <Section
+            className='bg-[#9cb8b3] p-4'
+            sectionKey='reference'
+            sectionBackgroundColor='#9cb8b3'
+            sectionIndicatorColor='#efedce'
+        >
             <SectionCaption mainTextColor='#efedce' backgroundTextColor={shadeColor('#9cb8b3', 4)}>
                 Referenzen
             </SectionCaption>

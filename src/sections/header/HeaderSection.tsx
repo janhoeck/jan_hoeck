@@ -1,22 +1,17 @@
-import React, { useEffect } from 'react'
-import { Section, Typography, useSectionsScrollerContext } from '../../components'
+import React from 'react'
+import { Section, Typography } from '../../components'
 import { CgMouse } from 'react-icons/cg'
-import { useInView } from 'react-intersection-observer'
 import { Fade } from 'react-awesome-reveal'
 import { Socials } from './components/Socials'
 
 export const HeaderSection = () => {
-    const { setColor } = useSectionsScrollerContext()
-    const { ref, inView } = useInView({ threshold: 0.1 })
-
-    useEffect(() => {
-        if (inView) {
-            setColor('#efedce')
-        }
-    }, [inView, setColor])
-
     return (
-        <Section className='flex flex-col items-center justify-center bg-[#9cb8b3]' ref={ref}>
+        <Section
+            className='flex flex-col items-center justify-center'
+            sectionKey='header'
+            sectionBackgroundColor='#9cb8b3'
+            sectionIndicatorColor='#efedce'
+        >
             <Fade duration={2000}>
                 <div className='text-center flex flex-col items-center justify-center w-full uppercase'>
                     <Typography className='text-[#efedce]' variant='headline'>
