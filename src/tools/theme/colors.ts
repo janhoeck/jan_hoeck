@@ -1,6 +1,6 @@
-const tailwindColors = require('tailwindcss/colors')
+import tailwindColors from 'tailwindcss/colors'
 
-module.exports = {
+export default {
     ...tailwindColors,
     primary: {
         main: '#304652',

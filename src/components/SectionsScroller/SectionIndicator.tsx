@@ -18,6 +18,7 @@ export const SectionIndicator = (props: SectionIndicatorProps) => {
                     key={section.key}
                     className={twMerge(
                         'w-[4px] h-[4px] rounded-full transition-all duration-300 cursor-pointer',
+                        'hover:w-[8px] hover:h-[8px]',
                         index === activeSectionIndex && 'w-[12px] h-[12px]'
                     )}
                     style={{ backgroundColor: activeSection?.indicatorColor ?? colors.white }}
