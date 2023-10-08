@@ -1,4 +1,4 @@
-import React, { createContext, FunctionComponent, useContext, useEffect, useMemo, useState } from 'react'
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
 export type SectionsScrollerContextType = ReturnType<typeof useStore>
 export type SectionType = {
@@ -67,7 +67,7 @@ const useStore = () => {
     }
 }
 
-export const SectionsScrollerContextProvider: FunctionComponent = (props) => {
+export const SectionsScrollerContextProvider = (props: { children: React.ReactNode }) => {
     const { children } = props
     const store = useStore()
 

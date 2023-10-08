@@ -1,15 +1,16 @@
-import React, { FunctionComponent, TouchEvent, useRef, useState, WheelEvent } from 'react'
+import React, { TouchEvent, useRef, useState, WheelEvent } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { SectionType, useSectionsScrollerContext } from './SectionsScrollerContext'
 
 export interface SectionsScrollerItemProps {
     className?: string
+    children: React.ReactNode
     sectionIndex: number
     sectionsCount: number
     onSectionChange: (section: SectionType) => void
 }
 
-export const SectionsScrollerItem: FunctionComponent<SectionsScrollerItemProps> = (props) => {
+export const SectionsScrollerItem = (props: SectionsScrollerItemProps) => {
     const { children, className, sectionIndex, sectionsCount, onSectionChange } = props
     const { sections } = useSectionsScrollerContext()
     const rootRef = useRef<HTMLDivElement>(null)

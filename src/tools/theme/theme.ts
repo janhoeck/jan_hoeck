@@ -11,7 +11,7 @@ export const boxShadow = {
 
 const theme = {
     extend,
-    boxShadow
+    boxShadow,
 }
 
 export default theme

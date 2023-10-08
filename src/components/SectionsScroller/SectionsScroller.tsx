@@ -1,8 +1,8 @@
 import React, { Children } from 'react'
-import clsx from 'clsx'
 import { SectionIndicator } from './SectionIndicator'
 import { SectionsScrollerContextProvider, SectionType, useSectionsScrollerContext } from './SectionsScrollerContext'
 import { SectionsScrollerItem } from './SectionsScrollerItem'
+import { twMerge } from 'tailwind-merge'
 
 export interface SectionsScrollerProps {
     className?: string
@@ -18,7 +18,7 @@ const SectionsScrollerInternal = (props: SectionsScrollerProps) => {
     }
 
     return (
-        <div className={clsx(className, 'relative transition-[background-size] duration-500')}>
+        <div className={twMerge('relative transition-[background-size] duration-500', className)}>
             <div
                 className='transition-transform duration-700 h-screen'
                 style={{ transform: `translate3d(0, -${activeSectionIndex * 100}vh, 0` }}
