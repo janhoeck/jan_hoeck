@@ -17,7 +17,7 @@ export const TimelineItem: FunctionComponent<TimelineItemProps> = (props) => {
             {...restProps}
         >
             <div className='flex flex-col items-center'>
-                <div data-testid='dot' className='h-[17px] w-[17px] rounded-full bg-white' />
+                <div data-testid='dot' className='shadow-md h-[17px] w-[17px] rounded-full bg-white' />
                 <div
                     data-testid='line'
                     className={twMerge(['w-[3px] flex-1 bg-primary-light', lastItem && 'hidden'])}
@@ -25,7 +25,7 @@ export const TimelineItem: FunctionComponent<TimelineItemProps> = (props) => {
             </div>
             <div
                 className={twMerge([
-                    'mt-1 mb-4 ml-4 flex flex-col shadow-card p-4 max-w-[600px] bg-white',
+                    'mt-1 mb-4 ml-4 flex flex-col shadow-md p-4 max-w-[600px] bg-white',
                     alignment === 'right' ? 'sm:ml-4' : '',
                     alignment === 'left' ? 'sm:mr-4 sm:ml-0' : '',
                 ])}

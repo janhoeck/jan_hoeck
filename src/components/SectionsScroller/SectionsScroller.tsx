@@ -1,6 +1,7 @@
+'use client'
 import React, { Children } from 'react'
 import { SectionIndicator } from './SectionIndicator'
-import { SectionsScrollerContextProvider, SectionType, useSectionsScrollerContext } from './SectionsScrollerContext'
+import { SectionsScrollerContextProvider, SectionType, useSectionsScrollerContext } from '@/components'
 import { SectionsScrollerItem } from './SectionsScrollerItem'
 import { twMerge } from 'tailwind-merge'
 
@@ -18,9 +19,9 @@ const SectionsScrollerInternal = (props: SectionsScrollerProps) => {
     }
 
     return (
-        <div className={twMerge('relative transition-[background-size] duration-500', className)}>
+        <div className={twMerge('relative h-full w-full overflow-hidden', className)}>
             <div
-                className='transition-transform duration-700 h-screen'
+                className='transition-transform duration-700 h-full'
                 style={{ transform: `translate3d(0, -${activeSectionIndex * 100}vh, 0` }}
             >
                 {Children.map(children, (child, index) => (

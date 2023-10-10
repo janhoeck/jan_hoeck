@@ -1,20 +1,14 @@
 import React from 'react'
-import { Skill, SkillItem } from './Skill'
+import { Skill, SkillItem, SkillProps } from './Skill'
 import { twMerge } from 'tailwind-merge'
 
 export interface SkillsProps {
     className?: string
-    skills: SkillItem[]
+    children: React.ReactElement<SkillProps> | React.ReactElement<SkillProps>[]
 }
 
 export const Skills = (props: SkillsProps) => {
-    const { className, skills } = props
+    const { className, children } = props
 
-    return (
-        <div className={twMerge('grid gap-4 grid-cols-[repeat(auto-fit,77px)]', className)}>
-            {skills.map((skill, index) => (
-                <Skill key={index} {...skill} />
-            ))}
-        </div>
-    )
+    return <div className={twMerge('grid gap-4 grid-cols-[repeat(auto-fit,77px)]', className)}>{children}</div>
 }

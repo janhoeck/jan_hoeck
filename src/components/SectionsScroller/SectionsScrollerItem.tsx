@@ -1,3 +1,4 @@
+'use client'
 import React, { TouchEvent, useRef, useState, WheelEvent } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { SectionType, useSectionsScrollerContext } from './SectionsScrollerContext'
