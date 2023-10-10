@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '../Typography'
+import { Typography } from '@/components'
 import { twMerge } from 'tailwind-merge'
 
 export interface SectionCaptionProps {

@@ -30,10 +30,7 @@ export const Typography: React.FunctionComponent<TypographyProps> = (props) => {
 
     const Component = componentMapping[variant]
     return (
-        <Component
-            className={twMerge([`m-0 font-['DINPro']`, styles[variant], noWrap && 'truncate', className])}
-            {...restProps}
-        >
+        <Component className={twMerge([`m-0`, styles[variant], noWrap && 'truncate', className])} {...restProps}>
             {children}
         </Component>
     )

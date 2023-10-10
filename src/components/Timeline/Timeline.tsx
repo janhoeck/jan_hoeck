@@ -1,6 +1,7 @@
+'use client'
+
 import React, { Children, HTMLAttributes } from 'react'
 import { TimelineItemProps } from './TimelineItem'
-import { Fade } from 'react-awesome-reveal'
 import { twMerge } from 'tailwind-merge'
 
 export interface TimelineProps extends HTMLAttributes<HTMLDivElement> {
@@ -20,14 +21,10 @@ export const Timeline = (props: TimelineProps) => {
             {...restProps}
         >
             {Children.map(children, (child, index) => {
-                return (
-                    <Fade duration={700} direction={index % 2 ? 'left' : 'right'}>
-                        {React.cloneElement(child, {
-                            alignment: index % 2 ? 'left' : 'right',
-                            lastItem: index === Children.count(children) - 1,
-                        })}
-                    </Fade>
-                )
+                return React.cloneElement(child, {
+                    alignment: index % 2 ? 'left' : 'right',
+                    lastItem: index === Children.count(children) - 1,
+                })
             })}
         </div>
     )

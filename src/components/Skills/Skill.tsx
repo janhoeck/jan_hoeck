@@ -1,9 +1,10 @@
-import React, { createElement, ElementType, HTMLAttributes } from 'react'
-import { Typography } from '../Typography'
+import React from 'react'
+import { Typography } from '@/components'
 import { twMerge } from 'tailwind-merge'
+import Image from 'next/image'
 
 export interface SkillItem {
-    component: ElementType<HTMLAttributes<SVGElement>>
+    imageSrc: string
     tooltip?: string
     description?: string
 }
@@ -13,11 +14,11 @@ export interface SkillProps extends SkillItem {
 }
 
 export const Skill = (props: SkillProps) => {
-    const { className, component, tooltip, description } = props
+    const { className, imageSrc, tooltip, description } = props
 
     return (
-        <div className={twMerge('shadow-card bg-white p-4 flex w-auto gap-4', className)} title={tooltip}>
-            <div className='w-[45px] h-[45px] [&>svg]:w-[45px] [&>svg]:h-[45px]'>{createElement(component)}</div>
+        <div className={twMerge('shadow-md bg-white p-4 flex w-auto gap-4', className)} title={tooltip}>
+            <Image src={imageSrc} alt={tooltip ?? ''} height={45} width={45} />
             {description && <Typography variant='secondary'>{description}</Typography>}
         </div>
     )

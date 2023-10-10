@@ -1,3 +1,4 @@
+'use client'
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
 export type SectionsScrollerContextType = ReturnType<typeof useStore>
@@ -15,14 +16,15 @@ const useStore = () => {
     // The current active section key. Can also be undefined, if no active section is defined yet
     const [activeSectionKey, setActiveSectionKey] = useState<string | undefined>(undefined)
 
-    const registerSection = (section: SectionType): boolean => {
-        const isAlreadyKnown = sections.find((_section) => _section.key === section.key)
-        if (isAlreadyKnown) {
-            return false
-        }
+    const registerSection = (section: SectionType) => {
+        setSections((prevSections) => {
+            const isAlreadyKnown = prevSections.find((_section) => _section.key === section.key)
+            if (isAlreadyKnown) {
+                return prevSections
+            }
 
-        setSections((sections) => [...sections, section])
-        return true
+            return [...prevSections, section]
+        })
     }
 
     const activeSectionIndex = useMemo(

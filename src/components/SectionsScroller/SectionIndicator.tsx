@@ -1,7 +1,8 @@
+'use client'
 import React from 'react'
 import { useSectionsScrollerContext } from './SectionsScrollerContext'
 import { twMerge } from 'tailwind-merge'
-import colors from '../../tools/theme/colors'
+import colors from '@/tools/theme/colors'
 
 export interface SectionIndicatorProps {
     className?: string

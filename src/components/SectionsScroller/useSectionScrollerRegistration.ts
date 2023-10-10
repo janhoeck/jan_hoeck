@@ -1,3 +1,4 @@
+'use client'
 import { SectionType, useSectionsScrollerContext } from './SectionsScrollerContext'
 import { useEffect } from 'react'
 
