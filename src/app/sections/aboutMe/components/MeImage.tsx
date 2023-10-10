@@ -20,7 +20,7 @@ export const MeImage = (props: MeImageProps) => {
             <Image
                 fill
                 className='rounded-full border-4 border-solid border-white relative z-10'
-                src='/me.jpg'
+                src='/static/me.jpg'
                 alt='Jan Höck'
             />
             <div

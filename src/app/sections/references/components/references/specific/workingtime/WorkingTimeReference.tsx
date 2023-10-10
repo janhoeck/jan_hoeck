@@ -4,7 +4,7 @@ import { ReferenceCard } from '../../ReferenceCard'
 export const WorkingTimeReference = () => (
     <ReferenceCard
         title='Arbeitsstundenerfassung'
-        imageSrc='./references/workingtime.png'
+        imageSrc='/static/references/workingtime.png'
         githubUrl='https://github.com/janhoeck/working-time-resolver'
     />
 )

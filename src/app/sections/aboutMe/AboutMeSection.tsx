@@ -41,27 +41,27 @@ export const AboutMeSection = () => {
                     </Typography>
                     <Typography variant='subHeadline'>SKILLS</Typography>
                     <Skills>
-                        <Skill imageSrc='/skills/JavascriptLogo.svg' tooltip='Javascript' />
-                        <Skill imageSrc='/skills/NodeJSLogo.svg' tooltip='NodeJS' />
-                        <Skill imageSrc='/skills/TypescriptLogo.svg' tooltip='Typescript 5+' />
-                        <Skill imageSrc='/skills/HTML5Logo.svg' tooltip='HTML 5' />
-                        <Skill imageSrc='/skills/CSS3Logo.svg' tooltip='CSS 3' />
-                        <Skill imageSrc='/skills/JavaLogo.svg' tooltip='Java' />
+                        <Skill imageSrc='/static/skills/JavascriptLogo.svg' tooltip='Javascript' />
+                        <Skill imageSrc='/static/skills/NodeJSLogo.svg' tooltip='NodeJS' />
+                        <Skill imageSrc='/static/skills/TypescriptLogo.svg' tooltip='Typescript 5+' />
+                        <Skill imageSrc='/static/skills/HTML5Logo.svg' tooltip='HTML 5' />
+                        <Skill imageSrc='/static/skills/CSS3Logo.svg' tooltip='CSS 3' />
+                        <Skill imageSrc='/static/skills/JavaLogo.svg' tooltip='Java' />
                     </Skills>
                     <Typography variant='subHeadline'>FRAMEWORKS</Typography>
                     <Skills>
-                        <Skill imageSrc='/frameworks/ReactLogo.svg' tooltip='React' />
-                        <Skill imageSrc='/frameworks/MuiLogo.svg' tooltip='Mui 5' />
-                        <Skill imageSrc='/frameworks/ReactJSSLogo.svg' tooltip='React JSS' />
-                        <Skill imageSrc='/frameworks/jQueryLogo.svg' tooltip='jQuery' />
-                        <Skill imageSrc='/frameworks/WebpackLogo.svg' tooltip='Webpack' />
-                        <Skill imageSrc='/frameworks/SpringBootLogo.svg' tooltip='Spring Boot' />
+                        <Skill imageSrc='/static/frameworks/ReactLogo.svg' tooltip='React' />
+                        <Skill imageSrc='/static/frameworks/MuiLogo.svg' tooltip='Mui 5' />
+                        <Skill imageSrc='/static/frameworks/ReactJSSLogo.svg' tooltip='React JSS' />
+                        <Skill imageSrc='/static/frameworks/jQueryLogo.svg' tooltip='jQuery' />
+                        <Skill imageSrc='/static/frameworks/WebpackLogo.svg' tooltip='Webpack' />
+                        <Skill imageSrc='/static/frameworks/SpringBootLogo.svg' tooltip='Spring Boot' />
                     </Skills>
                     <Typography variant='subHeadline'>TESTING</Typography>
                     <Skills>
-                        <Skill imageSrc='/testing/CypressLogo.svg' tooltip='Cypress' />
-                        <Skill imageSrc='/testing/JestLogo.svg' tooltip='Jest' />
-                        <Skill imageSrc='/testing/SeleniumLogo.svg' tooltip='Selenium' />
+                        <Skill imageSrc='/static/testing/CypressLogo.svg' tooltip='Cypress' />
+                        <Skill imageSrc='/static/testing/JestLogo.svg' tooltip='Jest' />
+                        <Skill imageSrc='/static/testing/SeleniumLogo.svg' tooltip='Selenium' />
                     </Skills>
                 </div>
             </div>

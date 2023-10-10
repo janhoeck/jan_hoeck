@@ -5,7 +5,7 @@ export const AdventscalendarReference = () => {
     return (
         <ReferenceCard
             title='Adventskalender'
-            imageSrc='./references/adventscalendar.png'
+            imageSrc='/static/references/adventscalendar.png'
             githubUrl='https://github.com/janhoeck/adventscalendar-v2'
             liveDemoUrl='https://janhoeck.github.io/adventscalendar-v2/#/'
         />
