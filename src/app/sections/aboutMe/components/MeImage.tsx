@@ -10,25 +10,19 @@ export const MeImage = (props: MeImageProps) => {
     const { className } = props
 
     return (
-        <div
-            className={twMerge([
-                'relative h-60 w-60',
-                'md:h-72 md:w-72',
-                className,
-            ])}
-        >
+        <div className={twMerge(['relative h-60 w-60', 'md:h-72 md:w-72', className])}>
             <Image
-              priority
-              fill
-              className='rounded-full border-4 border-solid border-white z-10'
-              src='/assets/me.jpg'
-              alt='Jan Höck'
+                priority
+                fill
+                className='rounded-full border-4 border-solid border-white z-10'
+                src='/assets/me.jpg'
+                alt='Jan Höck'
             />
             <div
-              className={twMerge([
-                'absolute w-full h-full rounded-full left-[-45px] bottom-[-30px] bg-primary-main',
-                'hidden lg:block',
-              ])}
+                className={twMerge([
+                    'absolute w-full h-full rounded-full left-[-45px] bottom-[-30px] bg-primary-main',
+                    'hidden lg:block',
+                ])}
             />
         </div>
     )

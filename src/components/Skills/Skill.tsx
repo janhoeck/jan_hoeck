@@ -16,13 +16,9 @@ export const Skill = (props: SkillProps) => {
 
     return (
         <div className={twMerge('shadow-md bg-white p-4', className)} title={tooltip}>
-          <div className='relative h-12 w-12'>
-            <Image
-              fill
-              src={imageSrc}
-              alt={tooltip ?? ''}
-            />
-          </div>
+            <div className='relative h-12 w-12'>
+                <Image fill src={imageSrc} alt={tooltip ?? ''} />
+            </div>
         </div>
     )
 }
