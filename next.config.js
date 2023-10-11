@@ -1,10 +1,10 @@
-const isProduction = process.env.NODE_ENV === "production";
+const isDevelopment = process.env.NODE_ENV === "development";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    basePath: isProduction ? '/jan_hoeck' : '',
-    assetPrefix: isProduction ? '/jan_hoeck' : '',
+    basePath: !isDevelopment ? '/jan_hoeck' : '',
+    assetPrefix: !isDevelopment ? '/jan_hoeck' : '',
     /**
      * Enable static exports for the App Router.
      *
