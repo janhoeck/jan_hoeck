@@ -6,7 +6,6 @@ console.log('isDevelopment', isDevelopment)
 const nextConfig = {
     reactStrictMode: true,
     basePath: !isDevelopment ? '/jan_hoeck' : undefined,
-    assetPrefix: !isDevelopment ? 'https://janhoeck.github.io/jan_hoeck' : undefined,
     /**
      * Enable static exports for the App Router.
      *

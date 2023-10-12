@@ -2,6 +2,7 @@
   "name": "jan_hoeck",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://janhoeck.github.io/jan_hoeck",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
