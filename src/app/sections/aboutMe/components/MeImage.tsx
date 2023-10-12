@@ -15,7 +15,7 @@ export const MeImage = (props: MeImageProps) => {
                 priority
                 fill
                 className='rounded-full border-4 border-solid border-white z-10'
-                src='/assets/me.jpg'
+                src='/jan_hoeck/assets/me.jpg'
                 alt='Jan Höck'
             />
             <div

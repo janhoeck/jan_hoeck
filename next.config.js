@@ -1,11 +1,10 @@
 const isDevelopment = process.env.NODE_ENV === "development";
-
 console.log('isDevelopment', isDevelopment)
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    basePath: !isDevelopment ? '/jan_hoeck' : undefined,
+    basePath: '/jan_hoeck',
     /**
      * Enable static exports for the App Router.
      *

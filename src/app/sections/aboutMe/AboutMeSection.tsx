@@ -45,27 +45,27 @@ export const AboutMeSection = () => {
                     </Typography>
                     <Typography variant='subHeadline'>SKILLS</Typography>
                     <Skills>
-                        <Skill imageSrc='/assets/skills/JavascriptLogo.svg' tooltip='Javascript' />
-                        <Skill imageSrc='/assets/skills/NodeJSLogo.svg' tooltip='NodeJS' />
-                        <Skill imageSrc='/assets/skills/TypescriptLogo.svg' tooltip='Typescript 5+' />
-                        <Skill imageSrc='/assets/skills/HTML5Logo.svg' tooltip='HTML 5' />
-                        <Skill imageSrc='/assets/skills/CSS3Logo.svg' tooltip='CSS 3' />
-                        <Skill imageSrc='/assets/skills/JavaLogo.svg' tooltip='Java' />
+                        <Skill imageSrc='/jan_hoeck/assets/skills/JavascriptLogo.svg' tooltip='Javascript' />
+                        <Skill imageSrc='/jan_hoeck/assets/skills/NodeJSLogo.svg' tooltip='NodeJS' />
+                        <Skill imageSrc='/jan_hoeck/assets/skills/TypescriptLogo.svg' tooltip='Typescript 5+' />
+                        <Skill imageSrc='/jan_hoeck/assets/skills/HTML5Logo.svg' tooltip='HTML 5' />
+                        <Skill imageSrc='/jan_hoeck/assets/skills/CSS3Logo.svg' tooltip='CSS 3' />
+                        <Skill imageSrc='/jan_hoeck/assets/skills/JavaLogo.svg' tooltip='Java' />
                     </Skills>
                     <Typography variant='subHeadline'>FRAMEWORKS</Typography>
                     <Skills>
-                        <Skill imageSrc='/assets/frameworks/ReactLogo.svg' tooltip='React' />
-                        <Skill imageSrc='/assets/frameworks/MuiLogo.svg' tooltip='Mui 5' />
-                        <Skill imageSrc='/assets/frameworks/ReactJSSLogo.svg' tooltip='React JSS' />
-                        <Skill imageSrc='/assets/frameworks/jQueryLogo.svg' tooltip='jQuery' />
-                        <Skill imageSrc='/assets/frameworks/WebpackLogo.svg' tooltip='Webpack' />
-                        <Skill imageSrc='/assets/frameworks/SpringBootLogo.svg' tooltip='Spring Boot' />
+                        <Skill imageSrc='/jan_hoeck/assets/frameworks/ReactLogo.svg' tooltip='React' />
+                        <Skill imageSrc='/jan_hoeck/assets/frameworks/MuiLogo.svg' tooltip='Mui 5' />
+                        <Skill imageSrc='/jan_hoeck/assets/frameworks/ReactJSSLogo.svg' tooltip='React JSS' />
+                        <Skill imageSrc='/jan_hoeck/assets/frameworks/jQueryLogo.svg' tooltip='jQuery' />
+                        <Skill imageSrc='/jan_hoeck/assets/frameworks/WebpackLogo.svg' tooltip='Webpack' />
+                        <Skill imageSrc='/jan_hoeck/assets/frameworks/SpringBootLogo.svg' tooltip='Spring Boot' />
                     </Skills>
                     <Typography variant='subHeadline'>TESTING</Typography>
                     <Skills>
-                        <Skill imageSrc='/assets/testing/CypressLogo.svg' tooltip='Cypress' />
-                        <Skill imageSrc='/assets/testing/JestLogo.svg' tooltip='Jest' />
-                        <Skill imageSrc='/assets/testing/SeleniumLogo.svg' tooltip='Selenium' />
+                        <Skill imageSrc='/jan_hoeck/assets/testing/CypressLogo.svg' tooltip='Cypress' />
+                        <Skill imageSrc='/jan_hoeck/assets/testing/JestLogo.svg' tooltip='Jest' />
+                        <Skill imageSrc='/jan_hoeck/assets/testing/SeleniumLogo.svg' tooltip='Selenium' />
                     </Skills>
                 </div>
             </div>
