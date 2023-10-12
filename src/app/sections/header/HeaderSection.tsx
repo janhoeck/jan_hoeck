@@ -37,7 +37,7 @@ export const HeaderSection = () => {
                     <Socials className='mt-4' />
                 </div>
             </motion.div>
-            <div className='absolute bottom-4 flex flex-col text-center items-center uppercase text-white/[0.5]'>
+            <div className='absolute w-full bottom-4 flex flex-col text-center items-center uppercase text-white/[0.5]'>
                 <CgMouse className='mb-2 text-3xl' />
                 <Typography className='text-inherit' variant='secondary'>
                     Finde mehr heraus

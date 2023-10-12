@@ -7,10 +7,14 @@ import colors from '@/tools/theme/colors'
 
 export const AboutMeSection = () => {
     return (
-        <Section sectionKey='aboutMe' sectionBackgroundColor='#eae5e5' sectionIndicatorColor={colors.primary.main}>
+        <Section
+            sectionKey='aboutMe'
+            sectionBackgroundColor='#eae5e5'
+            sectionIndicatorColor={colors.primary.main}
+        >
             <div
                 className={twMerge([
-                    'flex flex-col items-center m-[5vh_auto_10vh_auto] max-w-[1440px]',
+                    'flex flex-col items-center m-[5vh_auto_10vh_auto]',
                     'lg:flex-row lg:m-[5vh_auto] lg:items-start',
                 ])}
             >

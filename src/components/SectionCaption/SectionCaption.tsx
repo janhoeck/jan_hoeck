@@ -19,7 +19,7 @@ export const SectionCaption = (props: SectionCaptionProps) => {
             </Typography>
             <Typography
                 style={{ color: backgroundTextColor }}
-                className='absolute text-backgroundText w-[500vw] h-[120%] m-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0'
+                className='absolute text-backgroundText m-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0'
                 variant='hugeHeadline'
             >
                 {children}

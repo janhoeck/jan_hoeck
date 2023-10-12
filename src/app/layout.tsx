@@ -1,8 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Barlow } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const barlow = Barlow({
+    subsets: ['latin'],
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+})
 
 export const metadata: Metadata = {
     title: 'Jan Höck',
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang='de'>
-            <body className={inter.className}>{children}</body>
+            <body className={barlow.className}>{children}</body>
         </html>
     )
 }

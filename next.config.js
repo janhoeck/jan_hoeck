@@ -5,8 +5,8 @@ console.log('isDevelopment', isDevelopment)
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    basePath: !isDevelopment ? '/jan_hoeck' : '',
-    assetPrefix: !isDevelopment ? '/jan_hoeck' : '',
+    basePath: !isDevelopment ? '/jan_hoeck' : undefined,
+    assetPrefix: !isDevelopment ? 'https://janhoeck.github.io/jan_hoeck' : undefined,
     /**
      * Enable static exports for the App Router.
      *

@@ -21,12 +21,14 @@ export const Section = forwardRef<HTMLDivElement, SectionProps>((props, ref) => 
 
     return (
         <div
-            className={twMerge('relative overflow-hidden min-h-screen w-full pr-10 pl-8 py-4', className)}
+            className={twMerge('relative overflow-hidden min-h-screen w-full pr-10 pl-8 py-4 flex justify-center', className)}
             style={{ backgroundColor: sectionBackgroundColor }}
             ref={ref}
             {...restProps}
         >
-            {children}
+            <div className='w-full max-w-[1440px]'>
+                {children}
+            </div>
         </div>
     )
 })
