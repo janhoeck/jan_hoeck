@@ -1,6 +1,6 @@
 import React from 'react'
 import { FiGithub } from 'react-icons/fi'
-import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai'
+import { AiOutlineMail } from 'react-icons/ai'
 import { twMerge } from 'tailwind-merge'
 
 export interface SocialProps {
@@ -16,9 +16,6 @@ export const Socials = (props: SocialProps) => {
             </a>
             <a href='mailto:jan.hoeck@gmx.net'>
                 <AiOutlineMail size={25} />
-            </a>
-            <a href='tel:+49017656790159'>
-                <AiOutlinePhone size={25} />
             </a>
         </div>
     )
