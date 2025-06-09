@@ -1,0 +1,12 @@
+{
+  "name": "@jan_hoeck/tailwind-config",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "Jan Höck",
+  "exports": {
+    ".": "./tailwind.config.ts"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.8"
+  }
+}
