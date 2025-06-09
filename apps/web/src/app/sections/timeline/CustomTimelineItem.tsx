@@ -1,4 +1,5 @@
-import { TimelineItem, type TimelineItemProps, Typography } from '@jan_hoeck/ui'
+import { TimelineItem, type TimelineItemProps } from '@jan_hoeck/ui/timeline'
+import { Typography } from '@jan_hoeck/ui/typography'
 import React from 'react'
 
 export type CustomTimelineItemProps = Omit<TimelineItemProps, 'children'> & {

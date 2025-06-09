@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
-import { Timeline } from '@jan_hoeck/ui'
+import { Timeline } from '@jan_hoeck/ui/timeline'
 import { Section, SectionCaption } from '../../../components'
-import { CustomTimelineItem } from '@/app/sections/timeline/CustomTimelineItem'
+import { CustomTimelineItem } from './CustomTimelineItem'
 
 export const TimelineSection = () => {
   return (

@@ -4,12 +4,15 @@ import react from '@vitejs/plugin-react-swc'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
 import tailwindcss from '@tailwindcss/vite'
+import { adapter, analyzer } from 'vite-bundle-analyzer'
 
 export default defineConfig({
   build: {
     lib: {
       entry: {
         index: resolve(__dirname, './src/index.ts'),
+        typography: resolve(__dirname, './src/components/Typography/index.ts'),
+        timeline: resolve(__dirname, './src/components/Timeline/index.ts'),
         styles: resolve(__dirname, './src/styles/styles.css'),
       },
     },
@@ -19,7 +22,6 @@ export default defineConfig({
       output: [
         {
           format: 'es',
-          preserveModules: true,
           preserveModulesRoot: 'src',
           entryFileNames: '[name].js',
           chunkFileNames: '[name].js',
@@ -27,7 +29,6 @@ export default defineConfig({
         },
         {
           format: 'cjs',
-          preserveModules: true,
           preserveModulesRoot: 'src',
           entryFileNames: '[name].cjs',
           chunkFileNames: '[name].cjs',
@@ -51,5 +52,6 @@ export default defineConfig({
       rollupTypes: true,
       insertTypesEntry: true,
     }),
+    //adapter(analyzer())
   ],
 })

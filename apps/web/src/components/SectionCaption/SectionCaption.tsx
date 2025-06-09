@@ -1,6 +1,6 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
-import { Typography } from '@jan_hoeck/ui'
+import { Typography } from '@jan_hoeck/ui/typography'
 
 export interface SectionCaptionProps {
   className?: string
