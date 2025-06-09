@@ -14,36 +14,10 @@
   ],
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.cjs.js"
-      }
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
-    "./typography": {
-      "import": {
-        "types": "./dist/typography.d.ts",
-        "default": "./dist/typography.js"
-      },
-      "require": {
-        "types": "./dist/typography.d.ts",
-        "default": "./dist/typography.cjs"
-      }
-    },
-    "./timeline": {
-      "import": {
-        "types": "./dist/timeline.d.ts",
-        "default": "./dist/timeline.js"
-      },
-      "require": {
-        "types": "./dist/timeline.d.ts",
-        "default": "./dist/timeline.cjs"
-      }
-    },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./dist/assets/ui.css"
   },
   "scripts": {
     "dev": "vite",
@@ -63,16 +37,16 @@
     "@types/node": "^22.15.3",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.5",
-    "@vitejs/plugin-react-swc": "^3.10.1",
+    "@vitejs/plugin-react": "^4.5.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.27.0",
     "postcss": "^8.5.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "rollup-plugin-preserve-directives": "^0.4.0",
     "tailwindcss": "^4.1.8",
     "typescript": "5.8.2",
     "vite": "^6.3.5",
-    "vite-bundle-analyzer": "^0.22.1",
     "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {

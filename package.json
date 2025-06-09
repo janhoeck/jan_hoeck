@@ -13,7 +13,8 @@
     "prettier": "^3.5.3",
     "turbo": "^2.5.3",
     "typescript": "5.8.2",
-    "vercel": "^42.3.0"
+    "vercel": "^42.3.0",
+    "glob": "^11.0.2"
   },
   "engines": {
     "node": ">=22"

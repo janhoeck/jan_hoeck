@@ -1,57 +1,51 @@
 /// <reference types="vite/client" />
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import { resolve } from 'path'
+import { extname, relative, resolve } from 'path'
 import dts from 'vite-plugin-dts'
 import tailwindcss from '@tailwindcss/vite'
-import { adapter, analyzer } from 'vite-bundle-analyzer'
+import { fileURLToPath } from 'node:url'
+import { glob } from 'glob'
+import react from '@vitejs/plugin-react'
+import preserveDirectives from "rollup-plugin-preserve-directives"
 
 export default defineConfig({
   build: {
     lib: {
-      entry: {
-        index: resolve(__dirname, './src/index.ts'),
-        typography: resolve(__dirname, './src/components/Typography/index.ts'),
-        timeline: resolve(__dirname, './src/components/Timeline/index.ts'),
-        styles: resolve(__dirname, './src/styles/styles.css'),
-      },
+      entry: resolve(__dirname, 'src/index.ts'),
+      formats: ['es']
     },
     rollupOptions: {
-      treeshake: 'smallest',
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
-      output: [
-        {
-          format: 'es',
-          preserveModulesRoot: 'src',
-          entryFileNames: '[name].js',
-          chunkFileNames: '[name].js',
-          exports: 'named',
-        },
-        {
-          format: 'cjs',
-          preserveModulesRoot: 'src',
-          entryFileNames: '[name].cjs',
-          chunkFileNames: '[name].cjs',
-          exports: 'named',
-          globals: {
-            react: 'React',
-            'react-dom': 'ReactDOM',
-            'react/jsx-runtime': 'react/jsx-runtime',
-          },
-        },
-      ],
+      external: ['react', 'react/jsx-runtime'],
+      input: Object.fromEntries(
+        // https://rollupjs.org/configuration-options/#input
+        glob.sync('src/**/*.{ts,tsx}', {
+          ignore: ["src/**/*.d.ts"],
+        }).map(file => [
+          // 1. The name of the entry point
+          // lib/nested/foo.js becomes nested/foo
+          relative(
+            'src',
+            file.slice(0, file.length - extname(file).length)
+          ),
+          // 2. The absolute path to the entry file
+          // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
+          fileURLToPath(new URL(file, import.meta.url))
+        ])
+      ),
+      output: {
+        preserveModules: true,
+        assetFileNames: 'assets/[name][extname]',
+        entryFileNames: '[name].js',
+      }
     },
-    sourcemap: true,
-    emptyOutDir: true,
-    cssCodeSplit: true,
   },
   plugins: [
+    preserveDirectives(),
     react(),
     tailwindcss(),
     dts({
       rollupTypes: true,
       insertTypesEntry: true,
     }),
-    //adapter(analyzer())
   ],
 })

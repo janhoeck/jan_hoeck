@@ -1,3 +1,4 @@
+'use client'
 import { createContext, PropsWithChildren, useContext } from 'react'
 
 export type TimelineThemeContextType = {
