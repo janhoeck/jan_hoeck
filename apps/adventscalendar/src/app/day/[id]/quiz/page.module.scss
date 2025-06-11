@@ -1,0 +1,19 @@
+@use '../../../../tools/theme/vars' as *;
+
+.root {
+    background: linear-gradient(40deg, rgba(10, 85, 112, 1) 0%, rgba(13, 90, 90, 1) 35%, rgba(10, 112, 83, 1) 100%);
+    color: $color_text;
+
+    .innerContent {
+        display: flex;
+        justify-content: center;
+        max-width: 1000px;
+
+        .quizContainer {
+            z-index: 1; // Because snowflakes should not flow over
+            padding: $spacing * 2;
+            border-radius: 4px;
+            background-color: #0c595d;
+        }
+    }
+}

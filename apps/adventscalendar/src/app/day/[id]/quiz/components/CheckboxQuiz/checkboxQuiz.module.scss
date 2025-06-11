@@ -1,0 +1,13 @@
+@use '../../../../../../tools/theme/vars' as *;
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing * 2;
+
+    .checkboxes {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing;
+    }
+}

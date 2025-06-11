@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
 
 import '@jan_hoeck/ui/styles.css'
-import './globals.css'
+import './index.css'
 
 const barlow = Barlow({
   subsets: ['latin'],

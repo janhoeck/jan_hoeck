@@ -1,13 +1,5 @@
 import './styles/styles.css'
 
-import { Typography, type TypographyProps } from './components/Typography'
-import { Timeline, type TimelineProps, TimelineItem, type TimelineItemProps } from './components/Timeline'
-
-export {
-  Typography,
-  TypographyProps,
-  Timeline,
-  TimelineProps,
-  TimelineItem,
-  TimelineItemProps
-}
+export { Typography, type TypographyProps } from './components/Typography'
+export { Timeline, type TimelineProps, TimelineItem, type TimelineItemProps } from './components/Timeline'
+export { Shaker, type ShakerProps, type ShakerRef } from './components/Shaker'

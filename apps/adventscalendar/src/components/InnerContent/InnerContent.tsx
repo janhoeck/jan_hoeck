@@ -1,0 +1,15 @@
+import React, { PropsWithChildren } from 'react'
+import { twMerge } from 'tailwind-merge'
+
+export interface InnerContentProps {
+  className?: string
+  innerClassName?: string
+}
+
+export const InnerContent = ({ children, className, innerClassName }: PropsWithChildren<InnerContentProps>) => {
+  return (
+    <div className={twMerge('pb-[20vh] h-fit overflow-y-scroll', className)}>
+      <div className={twMerge('container m-auto p-6', innerClassName)}>{children}</div>
+    </div>
+  )
+}
