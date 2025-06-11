@@ -6,8 +6,8 @@ export const AdventscalendarReference = () => {
     <ReferenceCard
       title='Adventskalender'
       imageSrc='/assets/references/adventscalendar.png'
-      githubUrl='https://github.com/janhoeck/adventscalendar-v2'
-      liveDemoUrl='https://janhoeck.github.io/adventscalendar-v2/#/'
+      githubUrl='https://github.com/janhoeck/jan_hoeck/tree/master/apps/adventscalendar'
+      liveDemoUrl='https://jan-hoeck-adventscalendar.vercel.app/'
     />
   )
 }
