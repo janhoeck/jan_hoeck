@@ -8,7 +8,7 @@ export interface InnerContentProps {
 
 export const InnerContent = ({ children, className, innerClassName }: PropsWithChildren<InnerContentProps>) => {
   return (
-    <div className={twMerge('pb-[20vh] h-fit overflow-y-scroll', className)}>
+    <div className={twMerge('h-fit overflow-y-scroll pb-[20vh]', className)}>
       <div className={twMerge('container m-auto p-6', innerClassName)}>{children}</div>
     </div>
   )

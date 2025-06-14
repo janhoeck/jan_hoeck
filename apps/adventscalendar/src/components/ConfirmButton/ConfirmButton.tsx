@@ -8,7 +8,7 @@ export const ConfirmButton = (props: PropsWithChildren<ConfirmButtonProps>) => {
   return (
     <button
       className={twMerge(
-        'bg-red-700 text-white shadow-md shadow-red-900 rounded-sm cursor-pointer py-1 px-2',
+        'cursor-pointer rounded-sm bg-red-700 px-2 py-1 text-white shadow-md shadow-red-900',
         'active:scale-[0.98]',
         className
       )}

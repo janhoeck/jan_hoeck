@@ -33,15 +33,27 @@ export const DayViewContent = (props: DayViewContentProps) => {
 
   return (
     <>
-      <CalendarItem className={styles.calenderItem} item={item} />
+      <CalendarItem
+        className={styles.calenderItem}
+        item={item}
+      />
       <div className={styles.content}>
         <div className={styles.textContainer}>
-          <span className={styles.text} color='textPrimary'>
+          <span
+            className={styles.text}
+            color='textPrimary'
+          >
             {item.text}
           </span>
           <ConfirmButton onClick={() => router.push(`/?${searchParams}`)}>Zurück zum Kalender</ConfirmButton>
         </div>
-        <Image className={styles.image} src='/images/tree.png' width={150} height={650} alt='Bild' />
+        <Image
+          className={styles.image}
+          src='/images/tree.png'
+          width={150}
+          height={650}
+          alt='Bild'
+        />
       </div>
     </>
   )

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
 
-import '@jan_hoeck/ui/styles.css'
 import './index.css'
 
 const barlow = Barlow({

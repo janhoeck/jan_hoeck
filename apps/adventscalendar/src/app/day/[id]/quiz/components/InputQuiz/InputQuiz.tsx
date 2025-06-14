@@ -37,7 +37,12 @@ export const InputQuiz = (props: InputQuizProps) => {
   return (
     <div className={styles.root}>
       <div className={styles.container}>
-        <input autoFocus value={value} onChange={handleValueChange} onKeyDown={handleKeyDown} />
+        <input
+          autoFocus
+          value={value}
+          onChange={handleValueChange}
+          onKeyDown={handleKeyDown}
+        />
         <ConfirmButton onClick={handleConfirm}>Weiter</ConfirmButton>
       </div>
     </div>

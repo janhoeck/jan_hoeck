@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+@source "../../../node_modules/@jan_hoeck/ui";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@theme {
+  --animate-slide-in-right: slide-in-right 0.2s linear;
+
+  @keyframes slide-in-right {
+    0% {
+      visibility: visible;
+      transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

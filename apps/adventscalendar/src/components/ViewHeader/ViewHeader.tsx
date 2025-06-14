@@ -8,8 +8,14 @@ export interface ViewHeaderProps {
 
 export const ViewHeader = ({ className }: ViewHeaderProps) => {
   return (
-    <header className={twMerge('w-full text-center text-white', className)}>
-      <Typography variant='hugeHeadline'>Adventkalender</Typography>
+    <header className={twMerge('flex w-full justify-center', className)}>
+      <Typography
+        className='w-fit text-white'
+        variant='heading'
+        size={1}
+      >
+        Adventkalender
+      </Typography>
     </header>
   )
 }

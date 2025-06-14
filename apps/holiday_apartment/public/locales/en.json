@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about_us": "About us",
+    "apartment": "Apartment",
+    "house": "House",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome to Murcia"
+  }
+}

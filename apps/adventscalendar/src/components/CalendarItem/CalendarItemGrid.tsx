@@ -64,7 +64,12 @@ export const CalendarItemGrid = forwardRef<CalendarItemGridRef, CalendarItemGrid
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 750: 3, 900: 4 }}>
         <Masonry gutter='24px'>
           {items.map((item, index) => (
-            <Shaker<CalendarTilesConfiguration> key={item.day} className='w-full' item={item} ref={handleRegisterRef}>
+            <Shaker<CalendarTilesConfiguration>
+              key={item.day}
+              className='w-full'
+              item={item}
+              ref={handleRegisterRef}
+            >
               <CalendarItem
                 style={{ height: `${heights[index]}px` }}
                 variant={alreadyOpenedDays.includes(item.day) ? 'open' : 'closed'}

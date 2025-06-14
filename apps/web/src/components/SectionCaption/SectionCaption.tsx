@@ -13,16 +13,22 @@ export const SectionCaption = (props: SectionCaptionProps) => {
   const { children, className, mainTextColor, backgroundTextColor } = props
 
   return (
-    <div className={twMerge('relative uppercase text-center', className)}>
-      <Typography noWrap className={twMerge('relative z-10', mainTextColor)} variant='headline'>
+    <div className={twMerge('relative text-center uppercase', className)}>
+      <Typography
+        noWrap
+        className={twMerge('relative z-10', mainTextColor)}
+        variant='heading'
+        size={3}
+      >
         {children}
       </Typography>
       <Typography
         className={twMerge(
-          'absolute m-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 opacity-10',
+          'absolute left-1/2 top-1/2 z-0 m-0 -translate-x-1/2 -translate-y-1/2 opacity-10',
           backgroundTextColor
         )}
-        variant='hugeHeadline'
+        variant='heading'
+        size={1}
       >
         {children}
       </Typography>

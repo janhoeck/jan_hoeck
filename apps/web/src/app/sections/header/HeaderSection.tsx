@@ -28,19 +28,30 @@ export const HeaderSection = () => {
           },
         }}
       >
-        <div className='text-center flex flex-col items-center justify-center w-full uppercase'>
-          <Typography className='text-indigo-400' variant='headline'>
+        <div className='flex w-full flex-col items-center justify-center text-center uppercase'>
+          <Typography
+            className='text-indigo-400'
+            variant='heading'
+            size={1}
+          >
             Jan Höck
           </Typography>
-          <Typography className='text-indigo-200' variant='subHeadline'>
+          <Typography
+            className='text-indigo-200'
+            variant='heading'
+            size={3}
+          >
             Senior Frontend Entwickler
           </Typography>
           <Socials className='mt-4' />
         </div>
       </motion.div>
-      <div className='absolute w-full left-[50%] bottom-4 -translate-x-2/4 flex flex-col text-center items-center uppercase text-gray-400'>
+      <div className='absolute bottom-4 left-[50%] flex w-full -translate-x-2/4 flex-col items-center text-center uppercase text-gray-400'>
         <CgMouse className='mb-2 text-3xl' />
-        <Typography className='text-inherit' variant='secondary'>
+        <Typography
+          className='text-inherit'
+          variant='leadText'
+        >
           Finde mehr heraus
         </Typography>
       </div>

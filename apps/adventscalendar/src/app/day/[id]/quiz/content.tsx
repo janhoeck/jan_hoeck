@@ -23,7 +23,10 @@ export const QuizViewContent = (props: QuizViewContentProps) => {
 
   return (
     <div className={styles.quizContainer}>
-      <Quiz quiz={item?.quiz || []} onAllCorrect={handleFinishQuiz} />
+      <Quiz
+        quiz={item?.quiz || []}
+        onAllCorrect={handleFinishQuiz}
+      />
     </div>
   )
 }

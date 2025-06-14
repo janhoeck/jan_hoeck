@@ -12,16 +12,14 @@ export const CustomTimelineItem = (props: CustomTimelineItemProps) => {
   const { timePeriod, jobTitle, organization, tasks, ...restProps } = props
   return (
     <TimelineItem {...restProps}>
-      <Typography variant='secondary' className='text-gray-400 mb-4'>
-        {timePeriod}
-      </Typography>
+      <Typography className='mb-4 text-gray-400'>{timePeriod}</Typography>
       <Typography>{jobTitle}</Typography>
-      <Typography variant='secondary' className='text-gray-300'>
+      <Typography className='text-gray-300'>
         <i>{organization}</i>
       </Typography>
       {tasks && (
-        <Typography variant='secondary' className='mt-2'>
-          <ul className='list-disc list-inside'>
+        <Typography className='mt-2'>
+          <ul className='list-inside list-disc'>
             {tasks.map((task, index) => (
               <li key={index}>{task}</li>
             ))}

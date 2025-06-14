@@ -7,7 +7,6 @@ import { QuizContextProvider } from '../tools/context/QuizContext'
 import { CalendarContextProvider } from '../tools/context/CalendarContext'
 
 import './index.css'
-import '@jan_hoeck/ui/styles.css'
 
 const christmasFont = localFont({
   src: '../../public/fonts/Christmas.ttf',
@@ -16,7 +15,10 @@ const christmasFont = localFont({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='de' className={christmasFont.className}>
+    <html
+      lang='de'
+      className={christmasFont.className}
+    >
       <body>
         <Snowfall snowflakeCount={70} />
         <CalendarContextProvider>

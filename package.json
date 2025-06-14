@@ -11,6 +11,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.12",
     "turbo": "^2.5.3",
     "typescript": "5.8.2",
     "vercel": "^42.3.0",

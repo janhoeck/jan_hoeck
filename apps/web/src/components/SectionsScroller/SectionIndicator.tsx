@@ -30,7 +30,7 @@ export const SectionIndicator = (props: SectionIndicatorProps) => {
   const { sections, activeSection, activeSectionIndex, setActiveSectionKey } = useSectionsScrollerContext()
 
   return (
-    <ul className={twMerge('relative flex flex-col items-center list-none', className)}>
+    <ul className={twMerge('relative flex list-none flex-col items-center', className)}>
       {sections.map((section, index) => {
         const isActiveSection = index === activeSectionIndex
         const defaultDimension = SECTION_INDICATOR_DIMENSION_CONFIG.default
@@ -54,7 +54,7 @@ export const SectionIndicator = (props: SectionIndicatorProps) => {
             key={section.key}
             className={twMerge(
               'absolute',
-              'rounded-full transition-all duration-300 cursor-pointer',
+              'cursor-pointer rounded-full transition-all duration-300',
               !isActiveSection && `hover:scale-150`,
               // Color
               activeSection?.indicatorColor

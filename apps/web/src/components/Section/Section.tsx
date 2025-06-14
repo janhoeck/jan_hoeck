@@ -23,7 +23,7 @@ export const Section = forwardRef<HTMLDivElement, SectionProps>((props, ref) => 
   return (
     <div
       className={twMerge(
-        'relative overflow-hidden min-h-screen w-full pr-10 pl-8 py-4 flex justify-center',
+        'relative flex min-h-screen w-full justify-center overflow-hidden py-4 pl-8 pr-10',
         className,
         sectionBackgroundColor
       )}

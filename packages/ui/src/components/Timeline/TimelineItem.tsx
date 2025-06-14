@@ -19,8 +19,14 @@ export const TimelineItem = (props: TimelineItemProps) => {
       className={twMerge(['flex flex-row', alignment === 'left' ? 'sm:flex-row-reverse' : 'sm:flex-row', className])}
     >
       <div className='flex flex-col items-center'>
-        <div data-testid='dot' className={twMerge('shadow-md h-[17px] w-[17px] rounded-full', dotColor)} />
-        <div data-testid='line' className={twMerge('w-[3px] flex-1', lineColor, lastItem && 'hidden')} />
+        <div
+          data-testid='dot'
+          className={twMerge('h-[17px] w-[17px] rounded-full shadow-md', dotColor)}
+        />
+        <div
+          data-testid='line'
+          className={twMerge('w-[3px] flex-1', lineColor, lastItem && 'hidden')}
+        />
       </div>
       <TimelineCard alignment={alignment}>{children}</TimelineCard>
     </div>

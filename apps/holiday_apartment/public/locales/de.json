@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "about_us": "Über uns",
+    "apartment": "Ferienwohnung",
+    "house": "Ferienhaus",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "welcome": "Willkommen in Murcia"
+  }
+}

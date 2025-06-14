@@ -13,9 +13,9 @@ export const TimelineCard = (props: TimelineCardProps) => {
   return (
     <div
       className={twMerge([
-        'mt-1 mb-4 ml-4 flex flex-col shadow-md p-4 max-w-[600px]',
+        'mb-4 ml-4 mt-1 flex max-w-[600px] flex-col p-4 shadow-md',
         alignment === 'right' ? 'sm:ml-4' : '',
-        alignment === 'left' ? 'sm:mr-4 sm:ml-0' : '',
+        alignment === 'left' ? 'sm:ml-0 sm:mr-4' : '',
         cardColor,
       ])}
     >

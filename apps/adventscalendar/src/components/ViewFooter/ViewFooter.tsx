@@ -6,7 +6,7 @@ const { props: imageProps } = getImageProps({ alt: 'footer', width: 100, height:
 export const ViewFooter = () => {
   return (
     <div
-      className='h-[20vh] fixed left-0 bottom-0 w-full bg-repeat bg-cover bg-center'
+      className='fixed bottom-0 left-0 h-[20vh] w-full bg-cover bg-center bg-repeat'
       style={{ backgroundImage: `url(${imageProps.src})` }}
     />
   )

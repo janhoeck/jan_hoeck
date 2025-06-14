@@ -21,7 +21,7 @@ const SectionsScrollerInternal = (props: SectionsScrollerProps) => {
   return (
     <div className={twMerge('relative h-full w-full overflow-hidden', className)}>
       <div
-        className='transition-transform duration-700 h-full'
+        className='h-full transition-transform duration-700'
         style={{ transform: `translate3d(0, -${activeSectionIndex * 100}vh, 0` }}
       >
         {Children.map(children, (child, index) => (
@@ -35,7 +35,7 @@ const SectionsScrollerInternal = (props: SectionsScrollerProps) => {
           </SectionsScrollerItem>
         ))}
       </div>
-      <div className='absolute top-1/2 right-6'>
+      <div className='absolute right-6 top-1/2'>
         <SectionIndicator className='translate-y-[-50px]' />
       </div>
     </div>
