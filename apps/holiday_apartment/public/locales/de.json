@@ -25,6 +25,14 @@
         "valueMissing": "Bitte geben Sie eine Nachricht an"
       },
       "sendButtonLabel": "Abschicken"
+    },
+    "languageSelector": {
+      "placeholder": "Sprache auswählen",
+      "options": {
+        "de": "Deutsch",
+        "en": "Englisch",
+        "es": "Spanisch"
+      }
     }
   },
   "pages": {

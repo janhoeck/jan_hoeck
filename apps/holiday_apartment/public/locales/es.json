@@ -4,7 +4,7 @@
       "home": "Inicio",
       "about_us": "Acerca de nosotros",
       "apartment": "Apartamento vacacional",
-      "house": "Casa de vacaciones",
+      "house": "Casa vacacional",
       "contact": "Contacto"
     },
     "contactForm": {
@@ -15,7 +15,7 @@
       "email": {
         "label": "Correo electrónico",
         "valueMissing": "Por favor, ingrese su correo electrónico",
-        "typeMismatch": "Por favor, ingrese una dirección de correo electrónico válida"
+        "typeMismatch": "Por favor, ingrese una dirección de correo válida"
       },
       "phone": {
         "label": "Número de teléfono"
@@ -25,16 +25,27 @@
         "valueMissing": "Por favor, ingrese un mensaje"
       },
       "sendButtonLabel": "Enviar"
+    },
+    "languageSelector": {
+      "placeholder": "Seleccionar idioma",
+      "options": {
+        "de": "Alemán",
+        "en": "Inglés",
+        "es": "Español"
+      }
     }
   },
   "pages": {
+    "home": {
+      "welcome": "Bienvenido a Murcia"
+    },
     "contact": {
       "contact": {
         "headline": "Contacto"
       },
       "enquiry": {
         "headline": "Consulta",
-        "successMessage": "Su consulta ha sido enviada exitosamente.",
+        "successMessage": "Su consulta ha sido enviada con éxito.",
         "errorMessage": "Su consulta no pudo ser enviada."
       }
     }

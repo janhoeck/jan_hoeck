@@ -39,7 +39,7 @@ export default function ContactPage() {
           </div>
         </Section>
         <Section headline={t('enquiry.headline')}>
-          <div className='flex flex-col gap-4'>
+          <div className='flex max-w-[550px] flex-col gap-4'>
             {state && <MessageBox type='success'>{t('enquiry.successMessage')}</MessageBox>}
             {state === false && <MessageBox type='error'>{t('enquiry.errorMessage')}</MessageBox>}
             <ContactForm

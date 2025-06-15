@@ -25,17 +25,28 @@
         "valueMissing": "Please enter a message"
       },
       "sendButtonLabel": "Send"
+    },
+    "languageSelector": {
+      "placeholder": "Select Language",
+      "options": {
+        "de": "German",
+        "en": "English",
+        "es": "Spanish"
+      }
     }
   },
   "pages": {
+    "home": {
+      "welcome": "Welcome to Murcia"
+    },
     "contact": {
       "contact": {
         "headline": "Contact"
       },
       "enquiry": {
-        "headline": "Enquiry",
-        "successMessage": "Your enquiry has been sent successfully.",
-        "errorMessage": "Your enquiry could not be sent."
+        "headline": "Inquiry",
+        "successMessage": "Your inquiry has been sent successfully.",
+        "errorMessage": "Your inquiry could not be sent."
       }
     }
   }

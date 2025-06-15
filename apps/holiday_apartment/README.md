@@ -24,3 +24,4 @@ TODO:
   - facebook, twitter, social media vorschau
   - JSON-LD
 - Impressum
+- Analytics? (https://www.reddit.com/r/webdev/comments/qety61/what_is_a_good_lightweight_free_alternative_to/)

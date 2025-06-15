@@ -13,12 +13,12 @@ export const ContactForm = (props: ContactFormProps) => {
   const { action, isPending } = props
   const t = useTranslations('components.contactForm')
 
-  const inputClassName = 'w-full p-1 border-1 rounded-sm border-neutral-300 text-slate-800'
+  const inputClassName = 'w-full p-1 border-1 rounded-sm border-neutral-300 text-slate-800 bg-white'
   const fieldClassName = 'flex flex-col gap-1'
 
   return (
     <Form.Root
-      className='flex max-w-[550px] flex-col gap-4'
+      className='flex flex-col gap-4'
       action={action}
     >
       <Form.Field
@@ -98,7 +98,7 @@ export const ContactForm = (props: ContactFormProps) => {
       </Form.Field>
       <Form.Submit asChild>
         <Button
-          disabled
+          disabled={isPending}
           className='self-end'
         >
           {t('sendButtonLabel')}
