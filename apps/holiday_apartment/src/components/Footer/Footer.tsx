@@ -3,8 +3,8 @@ import { Typography } from '@jan_hoeck/ui'
 
 export const Footer = () => {
   return (
-    <div className='p-4'>
-      <div className='flex items-center justify-end gap-4 px-2'>
+    <footer className='p-4'>
+      <div className='flex items-center justify-end gap-4 px-4'>
         <Link
           scroll
           href='/imprint'
@@ -22,6 +22,6 @@ export const Footer = () => {
       <div className='w-full text-center'>
         <Typography variant='smallText'>All rights reserved</Typography>
       </div>
-    </div>
+    </footer>
   )
 }

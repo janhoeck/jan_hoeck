@@ -1,12 +1,45 @@
 {
-  "navigation": {
-    "home": "Startseite",
-    "about_us": "Über uns",
-    "apartment": "Ferienwohnung",
-    "house": "Ferienhaus",
-    "contact": "Kontakt"
+  "components": {
+    "navigation": {
+      "home": "Startseite",
+      "about_us": "Über uns",
+      "apartment": "Ferienwohnung",
+      "house": "Ferienhaus",
+      "contact": "Kontakt"
+    },
+    "contactForm": {
+      "name": {
+        "label": "Name",
+        "valueMissing": "Bitte geben Sie ihren Namen an"
+      },
+      "email": {
+        "label": "E-Mail",
+        "valueMissing": "Bitte geben Sie ihre E-Mail an",
+        "typeMismatch": "Bitte geben Sie eine korrekte E-Mail an"
+      },
+      "phone": {
+        "label": "Telefonnummer"
+      },
+      "message": {
+        "label": "Nachricht",
+        "valueMissing": "Bitte geben Sie eine Nachricht an"
+      },
+      "sendButtonLabel": "Abschicken"
+    }
   },
-  "home": {
-    "welcome": "Willkommen in Murcia"
+  "pages": {
+    "home": {
+      "welcome": "Willkommen in Murcia"
+    },
+    "contact": {
+      "contact": {
+        "headline": "Kontakt"
+      },
+      "enquiry": {
+        "headline": "Anfrage",
+        "successMessage": "Ihre Anfrage wurde erfolgreich verschickt.",
+        "errorMessage": "Ihre Anfrage konnte nicht verschickt werden."
+      }
+    }
   }
 }

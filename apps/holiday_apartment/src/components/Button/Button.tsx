@@ -23,6 +23,7 @@ export const Button = <T extends ElementType>(props: ButtonProps<T>) => {
     rounded = true,
     fullWidth = false,
     centerText = false,
+    disabled = false,
     ...restProps
   } = props
 
@@ -35,14 +36,16 @@ export const Button = <T extends ElementType>(props: ButtonProps<T>) => {
         centerText && 'justify-center',
         variant === 'ghost' && 'text-neutral-800 hover:bg-neutral-100',
         variant === 'basic' && 'bg-neutral-900 text-white',
+        disabled && variant === 'basic' && 'bg-neutral-200 text-neutral-300',
       ])
     )
-  }, [variant, rounded, fullWidth, centerText])
+  }, [variant, rounded, fullWidth, centerText, disabled])
 
   const Component = as
   return (
     <Component
       className={twMerge(styles, className)}
+      disabled={disabled}
       {...restProps}
     >
       {children}

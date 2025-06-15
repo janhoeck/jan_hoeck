@@ -41,36 +41,36 @@ export const Typography = <T extends ElementType>(props: TypographyProps<T>) => 
 
   const styles = useMemo(() => {
     if (variant === 'default') {
-      return 'font-normal leading-relaxed m-0 text-slate-500 lg:text-lg text-base max-w-3xl'
+      return 'font-normal leading-relaxed m-0 text-slate-500 lg:text-lg text-base'
     }
 
     if (variant === 'heading') {
       switch (size) {
         case 1:
-          return 'font-bold leading-snug tracking-tight text-slate-800 m-0 text-2xl lg:max-w-3xl lg:text-5xl'
+          return 'font-bold leading-snug tracking-tight text-slate-800 m-0 text-2xl lg:text-5xl'
         case 2:
-          return 'font-bold leading-snug tracking-normal text-slate-800 m-0 text-2xl lg:max-w-3xl lg:text-4xl'
+          return 'font-bold leading-snug tracking-normal text-slate-800 m-0 text-2xl lg:text-4xl'
         case 3:
-          return 'font-semibold leading-snug tracking-normal text-slate-800 m-0 text-xl max-w-lg lg:max-w-2xl lg:text-3xl'
+          return 'font-semibold leading-snug tracking-normal text-slate-800 m-0 text-xl lg:text-3xl'
         case 4:
-          return 'font-semibold leading-snug tracking-normal text-slate-800 m-0 text-lg max-w-md lg:max-w-xl lg:text-2xl'
+          return 'font-semibold leading-snug tracking-normal text-slate-800 m-0 text-lg lg:text-2xl'
         case 5:
-          return 'font-semibold leading-snug tracking-normal text-slate-800 m-0 text-base max-w-sm lg:max-w-lg lg:text-xl'
+          return 'font-semibold leading-snug tracking-normal text-slate-800 m-0 text-base lg:text-xl'
         case 6:
-          return 'font-bold leading-snug tracking-normal text-slate-800 m-0 text-sm max-w-xs lg:max-w-md lg:text-lg'
+          return 'font-bold leading-snug tracking-normal text-slate-800 m-0 text-sm lg:text-lg'
       }
     }
 
     if (variant === 'leadText') {
-      return 'font-normal leading-relaxed m-0 text-slate-500 lg:text-lg text-base max-w-3xl">'
+      return 'font-normal leading-relaxed m-0 text-slate-500 lg:text-lg text-base">'
     }
 
     if (variant === 'paragraph') {
-      return 'font-light leading-relaxed m-0 text-slate-500 lg:text-lg text-base max-w-3xl'
+      return 'font-light leading-relaxed m-0 text-slate-500 lg:text-lg text-base'
     }
 
     if (variant === 'smallText') {
-      return 'font-light leading-relaxed m-0 text-slate-500 text-sm max-w-3xl'
+      return 'font-light leading-relaxed m-0 text-slate-500 text-sm'
     }
     return ''
   }, [variant, size])

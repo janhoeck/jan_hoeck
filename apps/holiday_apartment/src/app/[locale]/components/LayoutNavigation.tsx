@@ -1,10 +1,9 @@
-import { NavigationItem } from '../../../components/Navigation/NavigationItem'
 import { Navigation } from '../../../components/Navigation/Navigation'
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
 export const LayoutNavigation = () => {
-  const t = useTranslations('navigation')
+  const t = useTranslations('components.navigation')
   return (
     <Navigation
       configuration={[

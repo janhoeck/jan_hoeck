@@ -12,7 +12,7 @@ export const GoogleMaps = (props: GoogleMapsProps) => {
   const { lat, lng } = props
   // Load the Google Maps JavaScript API asynchronously
   const { isLoaded: scriptLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API as string,
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY as string,
     libraries: libraries as Libraries,
   })
 

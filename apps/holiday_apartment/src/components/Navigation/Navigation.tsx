@@ -27,7 +27,7 @@ export const Navigation = (props: NavigationProps) => {
   }, [])
 
   return (
-    <div
+    <header
       className={twMerge([
         // default styles
         'z-1 sticky top-0 flex items-center bg-white p-4',
@@ -39,6 +39,6 @@ export const Navigation = (props: NavigationProps) => {
     >
       <DesktopNavigationContent configuration={configuration} />
       <MobileNavigationContent configuration={configuration} />
-    </div>
+    </header>
   )
 }
