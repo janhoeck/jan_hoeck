@@ -1,1 +1,42 @@
-{}
+{
+  "components": {
+    "navigation": {
+      "home": "Home",
+      "about_us": "About Us",
+      "apartment": "Holiday Apartment",
+      "house": "Holiday House",
+      "contact": "Contact"
+    },
+    "contactForm": {
+      "name": {
+        "label": "Name",
+        "valueMissing": "Please enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "valueMissing": "Please enter your email",
+        "typeMismatch": "Please enter a valid email address"
+      },
+      "phone": {
+        "label": "Phone Number"
+      },
+      "message": {
+        "label": "Message",
+        "valueMissing": "Please enter a message"
+      },
+      "sendButtonLabel": "Send"
+    }
+  },
+  "pages": {
+    "contact": {
+      "contact": {
+        "headline": "Contact"
+      },
+      "enquiry": {
+        "headline": "Enquiry",
+        "successMessage": "Your enquiry has been sent successfully.",
+        "errorMessage": "Your enquiry could not be sent."
+      }
+    }
+  }
+}

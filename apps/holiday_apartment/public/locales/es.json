@@ -1,1 +1,42 @@
-{}
+{
+  "components": {
+    "navigation": {
+      "home": "Inicio",
+      "about_us": "Acerca de nosotros",
+      "apartment": "Apartamento vacacional",
+      "house": "Casa de vacaciones",
+      "contact": "Contacto"
+    },
+    "contactForm": {
+      "name": {
+        "label": "Nombre",
+        "valueMissing": "Por favor, ingrese su nombre"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "valueMissing": "Por favor, ingrese su correo electrónico",
+        "typeMismatch": "Por favor, ingrese una dirección de correo electrónico válida"
+      },
+      "phone": {
+        "label": "Número de teléfono"
+      },
+      "message": {
+        "label": "Mensaje",
+        "valueMissing": "Por favor, ingrese un mensaje"
+      },
+      "sendButtonLabel": "Enviar"
+    }
+  },
+  "pages": {
+    "contact": {
+      "contact": {
+        "headline": "Contacto"
+      },
+      "enquiry": {
+        "headline": "Consulta",
+        "successMessage": "Su consulta ha sido enviada exitosamente.",
+        "errorMessage": "Su consulta no pudo ser enviada."
+      }
+    }
+  }
+}
