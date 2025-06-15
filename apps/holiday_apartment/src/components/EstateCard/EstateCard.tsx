@@ -1,4 +1,3 @@
-import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 import { EstateCardContent } from './EstateCardContent'
 

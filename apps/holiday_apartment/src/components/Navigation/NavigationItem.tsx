@@ -1,7 +1,7 @@
 'use client'
 import { Button, ButtonProps } from '../Button/Button'
-import clsx from 'clsx'
 import { Link, usePathname } from '../../i18n/navigation'
+import { twMerge } from 'tailwind-merge'
 
 export type NavigationItemProps = {
   children: string
@@ -21,7 +21,7 @@ export const NavigationItem = (props: NavigationItemProps) => {
       variant='ghost'
       as={Link}
       href={to}
-      className={clsx([isActive && 'font-bold'])}
+      className={twMerge([isActive && 'font-bold'])}
       fullWidth={fullWidth}
       centerText={centerText}
       onClick={onClick}
