@@ -28,6 +28,7 @@ export const DesktopImageGrid = (props: DesktopImageGridProps) => {
               priority
               alt='Bild'
               src={imageSources[0]!}
+              sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw'
               className='h-full w-full cursor-pointer object-cover'
             />
           </div>
@@ -35,8 +36,8 @@ export const DesktopImageGrid = (props: DesktopImageGridProps) => {
         <div className='grid auto-rows-fr grid-cols-[repeat(2,minmax(150px,1fr))] gap-2'>
           {imageSources.slice(1, 5).map((imageSrc) => (
             <Dialog.Trigger
-              key={imageSrc}
               asChild
+              key={imageSrc}
             >
               <div className='relative'>
                 <Image
@@ -44,6 +45,7 @@ export const DesktopImageGrid = (props: DesktopImageGridProps) => {
                   priority
                   alt='Bild'
                   src={imageSrc}
+                  sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw'
                   className='h-full w-full cursor-pointer object-cover'
                 />
               </div>

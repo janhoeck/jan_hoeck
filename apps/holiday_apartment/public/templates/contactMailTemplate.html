@@ -112,12 +112,12 @@
                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <tr>
                       <td style="background-color: #f8f9fa; border-radius: 6px; padding: 15px; border: 1px solid #e9ecef;">
-                        <p style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #333333; line-height: 1.5;">
-                          {{#if message}}
-                          {{{message}}}
-                          {{else}}
-                          <em style="color: #6c757d;">Keine Nachricht hinterlassen</em>
-                          {{/if}}
+                        <p style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #333333; line-height: 1.5; white-space: pre-wrap;">
+{{#if message}}
+{{{message}}}
+{{else}}
+<em style="color: #6c757d;">Keine Nachricht hinterlassen</em>
+{{/if}}
                         </p>
                       </td>
                     </tr>
