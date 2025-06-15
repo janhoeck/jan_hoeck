@@ -7,7 +7,7 @@ You have to provide a key `RESEND_API_KEY` in your .env file.
 
 ### Google Maps
 We are using Google Maps to show a map.
-You have to provide a key `GOOGLE_MAPS_API_KEY` in your .env file.
+You have to provide a key `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` in your .env file.
 
 ## Getting started
 

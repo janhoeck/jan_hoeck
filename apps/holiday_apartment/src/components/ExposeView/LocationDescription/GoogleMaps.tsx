@@ -1,7 +1,5 @@
 'use client'
-import { GoogleMap, Libraries, Marker, useJsApiLoader } from '@react-google-maps/api'
-
-const libraries = ['places', 'drawing', 'geometry']
+import { GoogleMap, Marker } from '@react-google-maps/api'
 
 export type GoogleMapsProps = {
   lat: number
@@ -10,15 +8,6 @@ export type GoogleMapsProps = {
 
 export const GoogleMaps = (props: GoogleMapsProps) => {
   const { lat, lng } = props
-  // Load the Google Maps JavaScript API asynchronously
-  const { isLoaded: scriptLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY as string,
-    libraries: libraries as Libraries,
-  })
-
-  if (!scriptLoaded || loadError) {
-    return null
-  }
 
   return (
     <GoogleMap

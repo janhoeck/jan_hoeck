@@ -1,5 +1,6 @@
 import { Typography } from '@jan_hoeck/ui'
 import { GoogleMaps } from './GoogleMaps'
+import { GoogleMapsAPIProvider } from './GoogleMapsAPILoader'
 
 export type LocationDescriptionProps = {
   lat: number
@@ -9,6 +10,7 @@ export type LocationDescriptionProps = {
 
 export const LocationDescription = (props: LocationDescriptionProps) => {
   const { lat, lng, description } = props
+
   return (
     <div className='flex flex-col gap-4'>
       <div className='flex flex-col gap-2'>
@@ -21,10 +23,12 @@ export const LocationDescription = (props: LocationDescriptionProps) => {
           </Typography>
         ))}
       </div>
-      <GoogleMaps
-        lat={lat}
-        lng={lng}
-      />
+      <GoogleMapsAPIProvider>
+        <GoogleMaps
+          lat={lat}
+          lng={lng}
+        />
+      </GoogleMapsAPIProvider>
     </div>
   )
 }
