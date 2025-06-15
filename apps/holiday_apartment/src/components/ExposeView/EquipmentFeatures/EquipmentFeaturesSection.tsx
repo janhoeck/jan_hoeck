@@ -2,7 +2,7 @@ import { EquipmentFeatureType } from '../types'
 import { Typography } from '@jan_hoeck/ui'
 import { iconMapping } from './iconMapping'
 import { twMerge } from 'tailwind-merge'
-import { descriptionMapping } from './descriptionMapping'
+import { useTranslations } from 'next-intl'
 
 export type EquipmentFeaturesSection<T extends EquipmentFeatureType> = {
   headline: string
@@ -11,6 +11,7 @@ export type EquipmentFeaturesSection<T extends EquipmentFeatureType> = {
 
 export const EquipmentFeaturesSection = <T extends EquipmentFeatureType>(props: EquipmentFeaturesSection<T>) => {
   const { headline, featureTypes } = props
+  const t = useTranslations('components.exposeView.equipmentFeatures')
 
   if (!featureTypes) {
     return null
@@ -27,7 +28,7 @@ export const EquipmentFeaturesSection = <T extends EquipmentFeatureType>(props: 
       <div className='flex flex-col gap-2'>
         {featureTypes.map((type: EquipmentFeatureType) => {
           const Icon = iconMapping[type]
-          const description = descriptionMapping[type]
+          const description = t(`descriptions.${type}`)
 
           return (
             <div

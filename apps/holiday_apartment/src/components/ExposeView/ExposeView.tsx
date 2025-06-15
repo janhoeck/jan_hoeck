@@ -8,6 +8,7 @@ import { DesktopOnly } from '../Responsive/DesktopOnly'
 import { EquipmentFeatures } from './EquipmentFeatures/EquipmentFeatures'
 import { Section } from '../Section/Section'
 import { LocationDescription } from './LocationDescription/LocationDescription'
+import { useTranslations } from 'next-intl'
 
 export type ExposeViewProps = {
   configuration: ExposeConfiguration
@@ -16,6 +17,8 @@ export type ExposeViewProps = {
 export const ExposeView = (props: ExposeViewProps) => {
   const { configuration } = props
   const { imageSources, headline, description, location, propertySummary, equipmentFeatures } = configuration
+
+  const t = useTranslations('components.exposeView')
 
   return (
     <div>
@@ -32,11 +35,11 @@ export const ExposeView = (props: ExposeViewProps) => {
             <Typography variant='paragraph'>{description}</Typography>
           </Section>
           {equipmentFeatures && (
-            <Section headline='Ausstattungsmerkmale'>
+            <Section headline={t('equipmentFeatures.headline')}>
               <EquipmentFeatures features={equipmentFeatures} />
             </Section>
           )}
-          <Section headline='Lage'>
+          <Section headline={t('location.headline')}>
             <LocationDescription
               lat={location.lat}
               lng={location.lng}

@@ -2,9 +2,9 @@
   "components": {
     "navigation": {
       "home": "Home",
-      "about_us": "About Us",
-      "apartment": "Holiday Apartment",
-      "house": "Holiday House",
+      "about_us": "About us",
+      "apartment": "Holiday apartment",
+      "house": "Holiday house",
       "contact": "Contact"
     },
     "contactForm": {
@@ -15,10 +15,10 @@
       "email": {
         "label": "Email",
         "valueMissing": "Please enter your email",
-        "typeMismatch": "Please enter a valid email address"
+        "typeMismatch": "Please enter a valid email"
       },
       "phone": {
-        "label": "Phone Number"
+        "label": "Phone number"
       },
       "message": {
         "label": "Message",
@@ -27,11 +27,56 @@
       "sendButtonLabel": "Send"
     },
     "languageSelector": {
-      "placeholder": "Select Language",
+      "placeholder": "Select language",
       "options": {
         "de": "German",
         "en": "English",
         "es": "Spanish"
+      }
+    },
+    "exposeView": {
+      "location": {
+        "headline": "Location"
+      },
+      "equipmentFeatures": {
+        "headline": "Equipment features",
+        "subHeadlines": {
+          "general": "General",
+          "outdoorArea": "Outdoor area",
+          "kitchen": "Kitchen",
+          "bedroom": "Bedroom",
+          "baby": "Baby"
+        },
+        "descriptions": {
+          "air_conditioner": "Air conditioning",
+          "baby_bed": "Baby bed",
+          "balcony": "Balcony",
+          "barrier_free": "Barrier-free",
+          "bathtub": "Bathtub",
+          "bed_linen": "Bed linen",
+          "coffee_machine": "Coffee machine",
+          "cooker": "Cooker",
+          "dishes": "Dishes",
+          "fire_extinguisher": "Fire extinguisher",
+          "freezer": "Freezer",
+          "hairdryer": "Hair dryer",
+          "high_chair": "High chair",
+          "microwave": "Microwave",
+          "oven": "Oven",
+          "pots_pans": "Pots / Pans",
+          "refrigerator": "Refrigerator",
+          "shower": "Shower",
+          "smoke_detector": "Smoke detector",
+          "terrace": "Terrace",
+          "towels": "Towels",
+          "vacuum": "Vacuum cleaner",
+          "washing_rack": "Drying rack",
+          "parking": "Parking",
+          "tv": "TV",
+          "wlan": "WiFi",
+          "washing_machine": "Washing machine",
+          "pool": "Pool"
+        }
       }
     }
   },
@@ -44,9 +89,9 @@
         "headline": "Contact"
       },
       "enquiry": {
-        "headline": "Inquiry",
-        "successMessage": "Your inquiry has been sent successfully.",
-        "errorMessage": "Your inquiry could not be sent."
+        "headline": "Enquiry",
+        "successMessage": "Your enquiry has been sent successfully.",
+        "errorMessage": "Your enquiry could not be sent."
       }
     }
   }

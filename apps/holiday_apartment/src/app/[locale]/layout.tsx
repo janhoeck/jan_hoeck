@@ -52,7 +52,7 @@ export default async function Layout(props: LayoutProps) {
         />
         <NextIntlClientProvider>
           <LayoutNavigation />
-          <main className='min-h-[calc(100%-72px-105px)]'>{children}</main>
+          <main className='min-h-[calc(100%-73px-105px)]'>{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

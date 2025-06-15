@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { Typography } from '@jan_hoeck/ui'
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector'
+import { Link } from '../../i18n/navigation'
 
 export const Footer = () => {
   return (
@@ -8,16 +8,10 @@ export const Footer = () => {
       <div className='flex items-center justify-between gap-4 px-4'>
         <LanguageSelector />
         <div className='flex gap-4'>
-          <Link
-            scroll
-            href='/imprint'
-          >
+          <Link href='/imprint'>
             <Typography variant='smallText'>Impressum</Typography>
           </Link>
-          <Link
-            scroll
-            href='/contact'
-          >
+          <Link href='/contact'>
             <Typography variant='smallText'>Kontakt</Typography>
           </Link>
         </div>

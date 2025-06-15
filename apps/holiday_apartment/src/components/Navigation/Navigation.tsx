@@ -1,8 +1,6 @@
 'use client'
-import { ReactElement, useEffect, useState } from 'react'
-import { NavigationItemProps } from './NavigationItem'
+import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { useIsClient } from '@jan_hoeck/ui'
 import { DesktopNavigationContent } from './DesktopNavigationContent'
 import { MobileNavigationContent } from './MobileNavigationContent'
 import { NavigationConfiguration } from './types'
@@ -30,11 +28,10 @@ export const Navigation = (props: NavigationProps) => {
     <header
       className={twMerge([
         // default styles
-        'z-1 sticky top-0 flex items-center bg-white p-4',
+        'z-1 sticky top-0 flex items-center bg-white p-4 shadow-md',
         // responsive
         'justify-end sm:justify-center',
-        !didScroll && 'shadow-md',
-        didScroll && 'border-b-1 border-neutral-300',
+        didScroll && 'border-b-1 border-neutral-300 shadow-none',
       ])}
     >
       <DesktopNavigationContent configuration={configuration} />

@@ -2,7 +2,7 @@
   "components": {
     "navigation": {
       "home": "Inicio",
-      "about_us": "Acerca de nosotros",
+      "about_us": "Sobre nosotros",
       "apartment": "Apartamento vacacional",
       "house": "Casa vacacional",
       "contact": "Contacto"
@@ -10,19 +10,19 @@
     "contactForm": {
       "name": {
         "label": "Nombre",
-        "valueMissing": "Por favor, ingrese su nombre"
+        "valueMissing": "Por favor, introduzca su nombre"
       },
       "email": {
         "label": "Correo electrónico",
-        "valueMissing": "Por favor, ingrese su correo electrónico",
-        "typeMismatch": "Por favor, ingrese una dirección de correo válida"
+        "valueMissing": "Por favor, introduzca su correo electrónico",
+        "typeMismatch": "Por favor, introduzca un correo electrónico válido"
       },
       "phone": {
         "label": "Número de teléfono"
       },
       "message": {
         "label": "Mensaje",
-        "valueMissing": "Por favor, ingrese un mensaje"
+        "valueMissing": "Por favor, introduzca un mensaje"
       },
       "sendButtonLabel": "Enviar"
     },
@@ -32,6 +32,51 @@
         "de": "Alemán",
         "en": "Inglés",
         "es": "Español"
+      }
+    },
+    "exposeView": {
+      "location": {
+        "headline": "Ubicación"
+      },
+      "equipmentFeatures": {
+        "headline": "Características del equipamiento",
+        "subHeadlines": {
+          "general": "General",
+          "outdoorArea": "Área exterior",
+          "kitchen": "Cocina",
+          "bedroom": "Dormitorio",
+          "baby": "Bebé"
+        },
+        "descriptions": {
+          "air_conditioner": "Aire acondicionado",
+          "baby_bed": "Cuna",
+          "balcony": "Balcón",
+          "barrier_free": "Sin barreras",
+          "bathtub": "Bañera",
+          "bed_linen": "Ropa de cama",
+          "coffee_machine": "Cafetera",
+          "cooker": "Cocina",
+          "dishes": "Vajilla",
+          "fire_extinguisher": "Extintor",
+          "freezer": "Congelador",
+          "hairdryer": "Secador de pelo",
+          "high_chair": "Trona",
+          "microwave": "Microondas",
+          "oven": "Horno",
+          "pots_pans": "Ollas / Sartenes",
+          "refrigerator": "Refrigerador",
+          "shower": "Ducha",
+          "smoke_detector": "Detector de humo",
+          "terrace": "Terraza",
+          "towels": "Toallas",
+          "vacuum": "Aspiradora",
+          "washing_rack": "Tendedero",
+          "parking": "Aparcamiento",
+          "tv": "Televisión",
+          "wlan": "WiFi",
+          "washing_machine": "Lavadora",
+          "pool": "Piscina"
+        }
       }
     }
   },
@@ -45,7 +90,7 @@
       },
       "enquiry": {
         "headline": "Consulta",
-        "successMessage": "Su consulta ha sido enviada con éxito.",
+        "successMessage": "Su consulta ha sido enviada exitosamente.",
         "errorMessage": "Su consulta no pudo ser enviada."
       }
     }

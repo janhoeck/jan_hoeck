@@ -1,8 +1,7 @@
 'use client'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { Button, ButtonProps } from '../Button/Button'
 import clsx from 'clsx'
+import { Link, usePathname } from '../../i18n/navigation'
 
 export type NavigationItemProps = {
   children: string
@@ -22,7 +21,7 @@ export const NavigationItem = (props: NavigationItemProps) => {
       variant='ghost'
       as={Link}
       href={to}
-      className={clsx([isActive && 'bg-cyan-100'])}
+      className={clsx([isActive && 'font-bold'])}
       fullWidth={fullWidth}
       centerText={centerText}
       onClick={onClick}
