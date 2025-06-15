@@ -45,7 +45,7 @@ Gym, home theatre, bar, spa, sauna, premium snooker table, rooftop deck.
 Exclusive beach club 5-minute drive.
 Includes boat deck
 Champagne brunch upon arrival, private security 24/7. '
-          imageSrc='/images/house_1.jpg'
+          imageSrc='/images/house/image_1.png'
         />
       </div>
     </Section>

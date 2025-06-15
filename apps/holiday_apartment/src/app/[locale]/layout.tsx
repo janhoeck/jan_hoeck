@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation'
 
 import { LayoutNavigation } from './components/LayoutNavigation'
 import { Footer } from '../../components/Footer/Footer'
+import { siteMetadata } from './metadata'
 
 const geist = Geist({
   subsets: ['latin'],
@@ -19,6 +20,15 @@ type LayoutProps = {
   params: Promise<{
     locale: string
   }>
+}
+
+export const metadata = {
+  title: {
+    default: siteMetadata.title,
+    template: '%s | Costa Calida Ferienwohnungen',
+  },
+  description: siteMetadata.description,
+  keywords: siteMetadata.keywords,
 }
 
 export default async function Layout(props: LayoutProps) {
@@ -34,6 +44,12 @@ export default async function Layout(props: LayoutProps) {
       className={geist.className}
     >
       <body className='bg-neutral-100'>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(siteMetadata.structuredData),
+          }}
+        />
         <NextIntlClientProvider>
           <LayoutNavigation />
           <main className='min-h-[calc(100%-72px-105px)]'>{children}</main>

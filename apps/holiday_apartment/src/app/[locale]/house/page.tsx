@@ -5,13 +5,13 @@ export default function ApartmentPage() {
     <ExposeView
       configuration={{
         imageSources: [
-          '/images/apartment/image_1.png',
-          '/images/apartment/image_2.png',
-          '/images/apartment/image_3.png',
-          '/images/apartment/image_4.png',
-          '/images/apartment/image_5.png',
-          '/images/apartment/image_6.png',
-          '/images/apartment/image_7.png',
+          '/images/house/image_1.png',
+          '/images/house/image_2.png',
+          '/images/house/image_3.png',
+          '/images/house/image_4.png',
+          '/images/house/image_5.png',
+          '/images/house/image_6.png',
+          '/images/house/image_7.png',
         ],
         location: {
           lat: 37.431744,
@@ -66,10 +66,10 @@ export default function ApartmentPage() {
             'vacuum',
             'washing_rack',
           ],
-          outdoorArea: ['pool', 'balcony'],
+          outdoorArea: ['pool', 'terrace'],
           kitchen: ['cooker', 'oven', 'dishes', 'coffee_machine', 'microwave', 'freezer', 'refrigerator'],
           bedroom: ['bed_linen'],
-          baby: ['baby_bed', 'high_chair'],
+          baby: ['high_chair'],
         },
       }}
     />

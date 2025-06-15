@@ -15,3 +15,12 @@ You have to provide a key `GOOGLE_MAPS_API_KEY` in your .env file.
 Currently, we support en, de and es.
 If you have to add more languages, make sure to create a new .json file in /public/locales.
 You have to register your language in /src/i18n/routing.ts afterward.
+
+TODO:
+- Google Maps Key auf Domain Ebene Absichern
+- Resend Key Domain konfigurieren
+- SEO Überprüfem
+  - metadata (i18n?)
+  - facebook, twitter, social media vorschau
+  - JSON-LD
+- Impressum
