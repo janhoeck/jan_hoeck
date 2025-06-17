@@ -3,6 +3,7 @@ import './index.css'
 import React from 'react'
 import { Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { routing } from '../../i18n/routing'
@@ -57,6 +58,7 @@ export default async function Layout(props: LayoutProps) {
           <Footer />
         </NextIntlClientProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

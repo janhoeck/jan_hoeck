@@ -10,7 +10,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function sendMail(_initialState: any, formData: FormData) {
   try {
-    const filePath = path.join(process.cwd(), 'public/templates', 'contactMailTemplate.html')
+    const filePath = path.join(process.cwd(), 'templates', 'contactMailTemplate.html')
     const htmlContent = fs.readFileSync(filePath, 'utf8')
     const handlebarsTemplate = Handlebars.compile(htmlContent)
 
