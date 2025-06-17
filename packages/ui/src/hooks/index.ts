@@ -1,3 +1,5 @@
 export { useIsClient } from './useIsClient'
 export { useOpenState } from './useOpenState'
 export { useLockBodyScroll } from './useLockBodyScroll'
+export { useIsMounted } from './useIsMounted'
+export { useResizeObserver } from './useResizeObserver'

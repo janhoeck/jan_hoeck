@@ -6,6 +6,7 @@ import { twMerge } from 'tailwind-merge'
 import { NavigationItem } from './NavigationItem'
 import { NavigationConfiguration } from './types'
 import { IoMdClose } from 'react-icons/io'
+import { usePathname } from '../../i18n/navigation'
 
 export type MobileNavigationContentProps = {
   configuration: NavigationConfiguration
@@ -14,11 +15,12 @@ export type MobileNavigationContentProps = {
 export const MobileNavigationContent = (props: MobileNavigationContentProps) => {
   const { configuration } = props
   const { isOpen, open, close } = useOpenState()
+  const currentPath = usePathname()
 
   useLockBodyScroll(isOpen)
 
   return (
-    <div className='sm:hidden'>
+    <div className='py-4 sm:hidden'>
       <div className='flex'>
         <Button
           variant='ghost'
@@ -42,17 +44,21 @@ export const MobileNavigationContent = (props: MobileNavigationContentProps) => 
           <IoMdClose size={25} />
         </Button>
         <div className='flex flex-col gap-4'>
-          {configuration.map((item) => (
-            <NavigationItem
-              key={item.href}
-              to={item.href}
-              onClick={close}
-              fullWidth
-              centerText
-            >
-              {item.label}
-            </NavigationItem>
-          ))}
+          {configuration.map((item) => {
+            const isActive = item.href === currentPath
+            return (
+              <NavigationItem
+                fullWidth
+                centerText
+                key={item.href}
+                to={item.href}
+                active={isActive}
+                onClick={close}
+              >
+                {item.label}
+              </NavigationItem>
+            )
+          })}
         </div>
       </div>
     </div>

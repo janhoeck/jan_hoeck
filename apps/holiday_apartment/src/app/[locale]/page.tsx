@@ -21,30 +21,20 @@ const WelcomeSection = () => {
 
 const EstateSection = () => {
   return (
-    <Section headline='Angebote'>
-      <div className='flex flex-col gap-4'>
+    <Section headline='Unterkünfte'>
+      <div className='flex flex-wrap gap-4 sm:flex-nowrap'>
         <EstateCard
           to='/apartment'
           imageAlignment='left'
           headline='Luxurious villa in Miami, Florida with panoramic sea views.'
-          description='Waterfront mansion in Bayshore.
-Tennis court, jacuzzi, swimming pool, and water slide.
-Gym, home theatre, bar, spa, sauna, premium snooker table, rooftop deck.
-Exclusive beach club 5-minute drive.
-Includes boat deck
-Champagne brunch upon arrival, private security 24/7. '
+          description='3 Betten • 1 Badezimmer'
           imageSrc='/images/apartment/image_1.png'
         />
         <EstateCard
           to='/house'
           imageAlignment='left'
           headline='Luxurious villa in Miami, Florida with panoramic sea views.'
-          description='Waterfront mansion in Bayshore.
-Tennis court, jacuzzi, swimming pool, and water slide.
-Gym, home theatre, bar, spa, sauna, premium snooker table, rooftop deck.
-Exclusive beach club 5-minute drive.
-Includes boat deck
-Champagne brunch upon arrival, private security 24/7. '
+          description='2 Betten • 1 Badezimmer • Pool'
           imageSrc='/images/house/image_1.png'
         />
       </div>

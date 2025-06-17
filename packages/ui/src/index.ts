@@ -6,4 +6,4 @@ export { Timeline, type TimelineProps, TimelineItem, type TimelineItemProps } fr
 export { Shaker, type ShakerProps, type ShakerRef } from './components/Shaker'
 
 // Hooks
-export { useIsClient, useOpenState, useLockBodyScroll } from './hooks'
+export { useIsClient, useOpenState, useLockBodyScroll, useIsMounted, useResizeObserver } from './hooks'

@@ -1,27 +1,28 @@
 'use client'
 import { Button, ButtonProps } from '../Button/Button'
-import { Link, usePathname } from '../../i18n/navigation'
+import { Link } from '../../i18n/navigation'
 import { twMerge } from 'tailwind-merge'
+import { forwardRef } from 'react'
 
 export type NavigationItemProps = {
   children: string
   to: string
   fullWidth?: boolean
   centerText?: boolean
+  active?: boolean
   onClick?: ButtonProps<typeof Link>['onClick']
 }
 
-export const NavigationItem = (props: NavigationItemProps) => {
-  const { children, to, fullWidth = false, centerText = false, onClick } = props
-  const pathname = usePathname()
-  const isActive = pathname === to
+export const NavigationItem = forwardRef<HTMLAnchorElement, NavigationItemProps>((props, ref) => {
+  const { children, to, fullWidth = false, centerText = false, active = false, onClick } = props
   return (
     <Button
       scroll
+      ref={ref}
       variant='ghost'
       as={Link}
       href={to}
-      className={twMerge([isActive && 'font-bold'])}
+      className={twMerge([active && 'font-bold'])}
       fullWidth={fullWidth}
       centerText={centerText}
       onClick={onClick}
@@ -29,4 +30,6 @@ export const NavigationItem = (props: NavigationItemProps) => {
       {children}
     </Button>
   )
-}
+})
+
+NavigationItem.displayName = 'NavigationItem'

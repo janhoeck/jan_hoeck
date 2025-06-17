@@ -28,7 +28,7 @@ export const Navigation = (props: NavigationProps) => {
     <header
       className={twMerge([
         // default styles
-        'z-1 sticky top-0 flex items-center bg-white p-4 shadow-md',
+        'z-1 sticky top-0 flex items-center bg-white px-4 shadow-md',
         // responsive
         'justify-end sm:justify-center',
         didScroll && 'border-b-1 border-neutral-300 shadow-none',

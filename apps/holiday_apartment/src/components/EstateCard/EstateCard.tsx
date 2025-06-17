@@ -1,32 +1,60 @@
+'use client'
 import { twMerge } from 'tailwind-merge'
-import { EstateCardContent } from './EstateCardContent'
+import Image from 'next/image'
+import { Typography, useResizeObserver } from '@jan_hoeck/ui'
+import { Link } from '../../i18n/navigation'
+import { useRef } from 'react'
 
 export type EstateCardProps = {
   imageAlignment?: 'left' | 'right'
-  headline: string
   description: string
+  headline: string
   imageSrc: string
   to: string
 }
 
 export const EstateCard = (props: EstateCardProps) => {
-  const { imageAlignment = 'right', headline, description, imageSrc = 'left', to } = props
+  const { description, headline, imageSrc = 'left', to } = props
+  const contentRef = useRef<HTMLDivElement>(null)
+
+  const { height = 40 } = useResizeObserver<HTMLDivElement>({
+    ref: contentRef,
+    box: 'border-box',
+  })
+
   return (
-    <div
-      className={twMerge([
-        'border-1 flex flex-col gap-6 rounded-md border-neutral-300 bg-white px-8 py-4',
-        // responsive
-        'sm:grid sm:grid-cols-[1fr_minmax(100px,_450px)]',
-        imageAlignment === 'left' && 'sm:grid-cols-[minmax(100px,_250px)_1fr] sm:justify-start',
-      ])}
+    <Link
+      href={to}
+      className={twMerge(['relative h-[350px] w-full', 'sm:w-[350px]'])}
+      style={{ marginBottom: height / 2 }}
     >
-      <EstateCardContent
-        imageAlignment={imageAlignment}
-        headline={headline}
-        description={description}
-        to={to}
-        imageSrc={imageSrc}
+      <Image
+        fill
+        src={imageSrc}
+        alt='Estate'
+        className='rounded-md object-cover shadow-md'
       />
-    </div>
+      <div
+        ref={contentRef}
+        className='absolute left-1/2 w-[95%] -translate-x-1/2 rounded-md bg-white p-4 shadow-md'
+        style={{
+          bottom: `-${height / 2}px`,
+        }}
+      >
+        <Typography
+          noWrap
+          variant='smallText'
+          className='mb-1 uppercase'
+        >
+          {description}
+        </Typography>
+        <Typography
+          variant='heading'
+          size={6}
+        >
+          {headline}
+        </Typography>
+      </div>
+    </Link>
   )
 }
