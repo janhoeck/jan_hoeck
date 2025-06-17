@@ -2,6 +2,7 @@ import './index.css'
 
 import React from 'react'
 import { Geist } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { routing } from '../../i18n/routing'
@@ -55,6 +56,7 @@ export default async function Layout(props: LayoutProps) {
           <main className='min-h-[calc(100%-73px-105px)]'>{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   )
