@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ContentContainer } from '../../components/Container/ContentContainer'
 import { Typography } from '@jan_hoeck/ui'
 import { Section } from '../../components/Section/Section'
+import { twMerge } from 'tailwind-merge'
 
 const WelcomeSection = () => {
   return (
@@ -45,18 +46,13 @@ const EstateSection = () => {
 export default function HomePage() {
   return (
     <div className='flex flex-col gap-6'>
-      <div className='relative'>
+      <div className={twMerge(['relative h-[200px] w-full', 'sm:h-[270px] md:h-[350px] xl:h-[550px]'])}>
         <Image
+          fill
           priority
           src='/images/costacalida.jpeg'
           alt='Costa calida - murcia'
-          sizes='100vw'
-          width={0}
-          height={0}
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
+          className='object-cover'
         />
         <Typography
           variant='heading'
