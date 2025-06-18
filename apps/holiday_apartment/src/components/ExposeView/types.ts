@@ -65,6 +65,7 @@ export type Location = {
 }
 
 export type ExposeConfiguration = {
+  id: string
   imageSources: string[]
   headline: string
   description: string

@@ -4,7 +4,7 @@ import { Section } from '../../../components/Section/Section'
 
 export default function AboutUsPage() {
   return (
-    <ContentContainer className='pt-10'>
+    <ContentContainer className='mt-10'>
       <Section headline='Herzlich Willkommen'>
         <div className='flex flex-col gap-4'>
           <Typography variant='paragraph'>

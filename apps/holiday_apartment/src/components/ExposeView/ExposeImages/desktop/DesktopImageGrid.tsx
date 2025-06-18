@@ -17,7 +17,9 @@ export const DesktopImageGrid = (props: DesktopImageGridProps) => {
     <Dialog.Root>
       <div
         className={twMerge([
-          'grid grid-cols-[minmax(400px,750px)_auto] gap-2 overflow-hidden rounded-xl',
+          'grid gap-2 overflow-hidden rounded-xl',
+          // responsive
+          'grid-cols-[minmax(300px,500px)_auto] xl:grid-cols-[minmax(500px,750px)_auto]',
           'h-[450px] md:h-[650px]',
         ])}
       >

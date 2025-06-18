@@ -24,14 +24,14 @@ const EstateSection = () => {
     <Section headline='Unterkünfte'>
       <div className='flex flex-wrap gap-4 sm:flex-nowrap'>
         <EstateCard
-          to='/apartment'
+          to='/expose/apartment'
           imageAlignment='left'
           headline='Luxurious villa in Miami, Florida with panoramic sea views.'
           description='3 Betten • 1 Badezimmer'
           imageSrc='/images/apartment/image_1.png'
         />
         <EstateCard
-          to='/house'
+          to='/expose/house'
           imageAlignment='left'
           headline='Luxurious villa in Miami, Florida with panoramic sea views.'
           description='2 Betten • 1 Badezimmer • Pool'

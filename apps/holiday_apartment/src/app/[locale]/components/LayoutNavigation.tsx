@@ -16,11 +16,11 @@ export const LayoutNavigation = () => {
           label: t('about_us'),
         },
         {
-          href: '/apartment',
+          href: '/expose/apartment',
           label: t('apartment'),
         },
         {
-          href: '/house',
+          href: '/expose/house',
           label: t('house'),
         },
         {

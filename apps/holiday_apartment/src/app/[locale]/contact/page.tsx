@@ -15,7 +15,7 @@ export default function ContactPage() {
   const t = useTranslations('pages.contact')
 
   return (
-    <ContentContainer className='pt-10'>
+    <ContentContainer className='mt-10'>
       <div className='flex flex-col gap-6'>
         <Section headline={t('contact.headline')}>
           <div className='flex flex-col gap-2'>
