@@ -10,7 +10,7 @@ export const ContentContainer = (props: ContentContainerProps) => {
   const { children, className } = props
   return (
     <div className={twMerge('flex justify-center', className)}>
-      <div className='container mx-6 mb-[10vh]'>{children}</div>
+      <div className='container mx-6 mb-[10vh] overflow-hidden'>{children}</div>
     </div>
   )
 }

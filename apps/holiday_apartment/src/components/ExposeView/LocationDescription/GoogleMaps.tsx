@@ -1,5 +1,5 @@
 'use client'
-import { GoogleMap, Marker } from '@react-google-maps/api'
+import { Map, AdvancedMarker } from '@vis.gl/react-google-maps'
 
 export type GoogleMapsProps = {
   lat: number
@@ -8,20 +8,15 @@ export type GoogleMapsProps = {
 
 export const GoogleMaps = (props: GoogleMapsProps) => {
   const { lat, lng } = props
+  const position = { lat, lng }
 
   return (
-    <GoogleMap
-      mapContainerStyle={{ width: '100%', height: 400 }}
-      center={{ lat, lng }}
-      zoom={18}
-      options={{
-        zoomControl: true,
-        tilt: 0,
-        gestureHandling: 'auto',
-        mapTypeId: 'satellite',
-      }}
+    <Map
+      defaultCenter={position}
+      defaultZoom={10}
+      mapId='expose-location-map'
     >
-      <Marker position={{ lat, lng }} />
-    </GoogleMap>
+      <AdvancedMarker position={position} />
+    </Map>
   )
 }

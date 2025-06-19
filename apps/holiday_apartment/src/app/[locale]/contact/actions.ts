@@ -12,7 +12,7 @@ export async function sendMail(_initialState: any, formData: FormData) {
     contactFormData.message = contactFormData.message.replaceAll(' ', '&nbsp;').replace(/\r\n|\r|\n/g, '<br />')
 
     const { data, error } = await resend.emails.send({
-      from: `Anfrage <anfrage@janhoeck.de>`,
+      from: `Anfrage <anfrage@${process.env.DOMAIN as string}>`,
       to: ['jan.hoeck@gmx.net'],
       subject: `Neue Nachricht von ${contactFormData.name}`,
       react: ContactEmailTemplate(contactFormData),

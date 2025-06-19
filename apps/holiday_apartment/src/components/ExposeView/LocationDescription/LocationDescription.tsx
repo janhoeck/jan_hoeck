@@ -1,6 +1,5 @@
 import { Typography } from '@jan_hoeck/ui'
 import { GoogleMaps } from './GoogleMaps'
-import { GoogleMapsAPIProvider } from './GoogleMapsAPILoader'
 
 export type LocationDescriptionProps = {
   lat: number
@@ -23,12 +22,10 @@ export const LocationDescription = (props: LocationDescriptionProps) => {
           </Typography>
         ))}
       </div>
-      <GoogleMapsAPIProvider>
-        <GoogleMaps
-          lat={lat}
-          lng={lng}
-        />
-      </GoogleMapsAPIProvider>
+      <GoogleMaps
+        lat={lat}
+        lng={lng}
+      />
     </div>
   )
 }

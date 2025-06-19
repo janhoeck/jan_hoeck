@@ -30,7 +30,7 @@ export const DesktopImageGrid = (props: DesktopImageGridProps) => {
               priority
               alt='Bild'
               src={imageSources[0]!}
-              sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw'
+              sizes='(max-width: 48rem) 300px, (max-width: 64rem) 450px, 750px'
               className='h-full w-full cursor-pointer object-cover'
             />
           </div>
@@ -47,7 +47,7 @@ export const DesktopImageGrid = (props: DesktopImageGridProps) => {
                   priority
                   alt='Bild'
                   src={imageSrc}
-                  sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw'
+                  sizes='(max-width: 48rem) 150px, (max-width: 64rem) 254px, 385px'
                   className='h-full w-full cursor-pointer object-cover'
                 />
               </div>

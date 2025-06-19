@@ -33,6 +33,7 @@ export const EstateCard = (props: EstateCardProps) => {
         src={imageSrc}
         alt='Estate'
         className='rounded-md object-cover shadow-md'
+        sizes='100%'
       />
       <div
         ref={contentRef}

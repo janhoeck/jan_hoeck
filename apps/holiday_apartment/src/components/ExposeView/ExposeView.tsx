@@ -25,7 +25,7 @@ export const ExposeView = (props: ExposeViewProps) => {
       <MobileOnly>
         <ExposeImages imageSources={imageSources} />
       </MobileOnly>
-      <ContentContainer className='overflow-hidden pt-10'>
+      <ContentContainer className='pt-10'>
         <div className='flex flex-col gap-12'>
           <DesktopOnly>
             <ExposeImages imageSources={imageSources} />
