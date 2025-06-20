@@ -4,6 +4,7 @@ import { ImageCarousel } from '../ImageCarousel'
 import { Button } from '../../../shared/Button/Button'
 import { IoMdClose } from 'react-icons/io'
 import React from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export type ImageGalleryDialogContentProps = {
   imageSources: ExposeConfiguration['imageSources']
@@ -12,7 +13,12 @@ export type ImageGalleryDialogContentProps = {
 export const ImageGalleryDialogContent = (props: ImageGalleryDialogContentProps) => {
   const { imageSources } = props
   return (
-    <Dialog.Content className='z-3 fixed left-1/2 top-1/2 h-[70vh] max-h-[800px] w-[90vw] max-w-[1500px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-sm bg-white shadow-md'>
+    <Dialog.Content
+      className={twMerge([
+        'absolute left-1/2 top-1/2 z-30 flex -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-sm bg-white shadow-md',
+        'sm:h-[550px] sm:w-[90vw] md:h-[690px] xl:w-[930px]',
+      ])}
+    >
       <Dialog.Title className='flex justify-end border-b border-neutral-300 p-4'>
         <Dialog.Close asChild>
           <Button variant='ghost'>
@@ -20,10 +26,12 @@ export const ImageGalleryDialogContent = (props: ImageGalleryDialogContentProps)
           </Button>
         </Dialog.Close>
       </Dialog.Title>
-      <ImageCarousel
-        imageSources={imageSources}
-        imageClassName='object-contain'
-      />
+      <div className='flex-1'>
+        <ImageCarousel
+          imageSources={imageSources}
+          imageClassName='object-contain'
+        />
+      </div>
     </Dialog.Content>
   )
 }

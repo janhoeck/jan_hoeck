@@ -56,7 +56,7 @@ export const DesktopImageGrid = (props: DesktopImageGridProps) => {
         </div>
       </div>
       <Dialog.Portal>
-        <Dialog.Overlay className='z-2 fixed inset-0 bg-neutral-400/80' />
+        <Dialog.Overlay className='fixed inset-0 z-20 bg-neutral-400/80' />
         <ImageGalleryDialogContent imageSources={imageSources} />
       </Dialog.Portal>
     </Dialog.Root>

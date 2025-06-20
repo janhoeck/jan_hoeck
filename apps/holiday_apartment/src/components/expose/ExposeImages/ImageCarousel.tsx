@@ -50,6 +50,12 @@ export const ImageCarousel = (props: ImageCarouselProps) => {
               key={index}
               className='embla__slide relative flex-[0_0_100%]'
             >
+              <div
+                className='absolute h-full w-full blur-lg'
+                style={{
+                  backgroundImage: `url("${imageSrc}")`,
+                }}
+              />
               <Image
                 fill
                 priority
