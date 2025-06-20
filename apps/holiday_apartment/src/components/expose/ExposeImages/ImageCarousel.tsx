@@ -1,5 +1,5 @@
 'use client'
-import React, { KeyboardEvent, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { LiaAngleLeftSolid, LiaAngleRightSolid } from 'react-icons/lia'
@@ -20,16 +20,14 @@ export const ImageCarousel = (props: ImageCarouselProps) => {
   })
 
   useEffect(() => {
-    const handleKeyDownEvent = (event: Event) => {
-      const keyboardEvent = event as globalThis.KeyboardEvent
-
+    const handleKeyDownEvent = (event: KeyboardEvent) => {
       if (!emblaApi) {
         return
       }
 
-      if (keyboardEvent.code === 'ArrowLeft') {
+      if (event.code === 'ArrowLeft') {
         emblaApi.scrollPrev()
-      } else if (keyboardEvent.code === 'ArrowRight') {
+      } else if (event.code === 'ArrowRight') {
         emblaApi.scrollNext()
       }
     }
