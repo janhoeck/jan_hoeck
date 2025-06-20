@@ -11,7 +11,6 @@ import { notFound } from 'next/navigation'
 
 import { LayoutNavigation } from '@components/shared/LayoutNavigation'
 import { LayoutFooter } from '@components/shared/LayoutFooter'
-import { siteMetadata } from './metadata'
 import { getTranslations } from 'next-intl/server'
 import { Metadata } from 'next'
 
@@ -40,6 +39,9 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
         es: '/es',
       },
     },
+    icons: {
+      icon: '/favicon.ico',
+    },
   }
 }
 
@@ -56,12 +58,6 @@ export default async function Layout(props: LayoutProps) {
       className={geist.className}
     >
       <body className='bg-neutral-100'>
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(siteMetadata.structuredData),
-          }}
-        />
         <NextIntlClientProvider>
           <LayoutNavigation />
           <main className='min-h-[calc(100%-73px-105px)]'>{children}</main>
