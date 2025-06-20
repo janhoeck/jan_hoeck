@@ -2,7 +2,7 @@
 import { twMerge } from 'tailwind-merge'
 import Image from 'next/image'
 import { Typography, useResizeObserver } from '@jan_hoeck/ui'
-import { Link } from '../../i18n/navigation'
+import { Link } from '../../../i18n/navigation'
 import { useRef } from 'react'
 
 export type EstateCardProps = {
@@ -13,33 +13,37 @@ export type EstateCardProps = {
   to: string
 }
 
-export const EstateCard = (props: EstateCardProps) => {
+export const ExposeCard = (props: EstateCardProps) => {
   const { description, headline, imageSrc = 'left', to } = props
   const contentRef = useRef<HTMLDivElement>(null)
 
-  const { height = 40 } = useResizeObserver<HTMLDivElement>({
+  const { height: descriptionHeight = 40 } = useResizeObserver<HTMLDivElement>({
     ref: contentRef,
     box: 'border-box',
   })
+  // How many pixels the current box shadow spreads
+  const boxShadowSpread = 9
 
   return (
     <Link
       href={to}
-      className={twMerge(['relative h-[350px] w-full', 'sm:w-[350px]'])}
-      style={{ marginBottom: height / 2 }}
+      className={twMerge(['relative w-full', 'sm:w-[350px]'])}
     >
-      <Image
-        fill
-        src={imageSrc}
-        alt='Estate'
-        className='rounded-md object-cover shadow-md'
-        sizes='100%'
-      />
+      <div className='relative h-[350px] overflow-hidden rounded-md shadow-md'>
+        <Image
+          fill
+          src={imageSrc}
+          alt='Estate'
+          className='object-cover'
+          sizes='(max-width: 40rem) 90vw, 350px'
+        />
+      </div>
+      <div style={{ height: descriptionHeight / 2 }} />
       <div
         ref={contentRef}
-        className='absolute left-1/2 w-[95%] -translate-x-1/2 rounded-md bg-white p-4 shadow-md'
+        className='absolute bottom-0 left-1/2 w-[95%] -translate-x-1/2 rounded-md bg-white p-4 shadow-md'
         style={{
-          bottom: `-${height / 2}px`,
+          bottom: boxShadowSpread,
         }}
       >
         <Typography

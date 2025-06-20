@@ -1,6 +1,6 @@
 'use client'
 import { Button, ButtonProps } from '../Button/Button'
-import { Link } from '../../i18n/navigation'
+import { Link } from '../../../i18n/navigation'
 import { twMerge } from 'tailwind-merge'
 import { forwardRef } from 'react'
 

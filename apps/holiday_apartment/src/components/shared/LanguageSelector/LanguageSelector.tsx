@@ -1,10 +1,10 @@
 'use client'
 import { Select } from 'radix-ui'
-import { routing } from '../../i18n/routing'
+import { routing } from '../../../i18n/routing'
 import { useLocale, useTranslations } from 'next-intl'
 import { LiaAngleDownSolid, LiaCheckSolid } from 'react-icons/lia'
 import { Button } from '../Button/Button'
-import { redirect, usePathname } from '../../i18n/navigation'
+import { redirect, usePathname } from '../../../i18n/navigation'
 
 export const LanguageSelector = () => {
   const t = useTranslations('components.languageSelector')

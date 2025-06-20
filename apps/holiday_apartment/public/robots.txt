@@ -1,3 +1,9 @@
-# Allow all crawlers
+# Allow all crawerls
 User-agent: *
 Allow: /
+
+# Host
+Host: https://solymarmenor.com
+
+# Sitemaps
+Sitemap: https://solymarmenor.com/sitemap.xml

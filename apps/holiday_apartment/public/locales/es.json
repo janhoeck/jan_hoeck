@@ -3,26 +3,26 @@
     "navigation": {
       "home": "Inicio",
       "about_us": "Sobre nosotros",
-      "apartment": "Apartamento vacacional",
-      "house": "Casa vacacional",
+      "apartment": "Apartamento",
+      "house": "Casa de vacaciones",
       "contact": "Contacto"
     },
     "contactForm": {
       "name": {
         "label": "Nombre",
-        "valueMissing": "Por favor, introduzca su nombre"
+        "valueMissing": "Por favor ingrese su nombre"
       },
       "email": {
         "label": "Correo electrónico",
-        "valueMissing": "Por favor, introduzca su correo electrónico",
-        "typeMismatch": "Por favor, introduzca un correo electrónico válido"
+        "valueMissing": "Por favor ingrese su correo electrónico",
+        "typeMismatch": "Por favor ingrese un correo electrónico válido"
       },
       "phone": {
         "label": "Número de teléfono"
       },
       "message": {
         "label": "Mensaje",
-        "valueMissing": "Por favor, introduzca un mensaje"
+        "valueMissing": "Por favor ingrese un mensaje"
       },
       "sendButtonLabel": "Enviar"
     },
@@ -33,8 +33,23 @@
         "en": "Inglés",
         "es": "Español"
       }
+    }
+  },
+  "pages": {
+    "home": {
+      "welcome": "Bienvenido a Murcia"
     },
-    "exposeView": {
+    "contact": {
+      "contact": {
+        "headline": "Contacto"
+      },
+      "enquiry": {
+        "headline": "Consulta",
+        "successMessage": "Su consulta fue enviada con éxito.",
+        "errorMessage": "Su consulta no pudo ser enviada."
+      }
+    },
+    "expose": {
       "location": {
         "headline": "Ubicación"
       },
@@ -51,16 +66,16 @@
           "air_conditioner": "Aire acondicionado",
           "baby_bed": "Cuna",
           "balcony": "Balcón",
-          "barrier_free": "Sin barreras",
+          "barrier_free": "Accesible",
           "bathtub": "Bañera",
           "bed_linen": "Ropa de cama",
           "coffee_machine": "Cafetera",
           "cooker": "Cocina",
-          "dishes": "Vajilla",
+          "dishes": "Platos",
           "fire_extinguisher": "Extintor",
           "freezer": "Congelador",
           "hairdryer": "Secador de pelo",
-          "high_chair": "Trona",
+          "high_chair": "Silla alta",
           "microwave": "Microondas",
           "oven": "Horno",
           "pots_pans": "Ollas / Sartenes",
@@ -72,27 +87,20 @@
           "vacuum": "Aspiradora",
           "washing_rack": "Tendedero",
           "parking": "Aparcamiento",
-          "tv": "Televisión",
-          "wlan": "WiFi",
+          "tv": "Televisor",
+          "wlan": "Wi-Fi",
           "washing_machine": "Lavadora",
           "pool": "Piscina"
         }
       }
+    },
+    "about": {
+      "headline": "Quiénes somos",
+      "description": "<typography>Nosotros, Olaf y Tina, llevábamos mucho tiempo soñando con emigrar a España. Olaf es medio español, su madre es de la región de Murcia. Desde hace años tenemos un piso en Los Urrutias. En 2024 dimos el paso, vendimos todo lo que teníamos en Alemania y nos mudamos definitivamente a España. Aquí trabajamos por cuenta propia con un pequeño servicio alemán y ahora queremos dar a otros la oportunidad de conocer el encanto y el estilo de vida de esta zona.</typography><typography>Nos encanta este país y queremos que otros también se enamoren de él. Para nosotros es importante estar siempre presentes como propietarios y estar disponibles como personas de contacto. Nosotros mismos nos encargamos del alquiler. Para usted, como inquilino, esto significa que realizamos una inspección final (a la salida de los inquilinos) para garantizar que no se encuentre con sorpresas desagradables a su llegada y que el apartamento se encuentre en perfectas condiciones.</typography>"
     }
   },
-  "pages": {
-    "home": {
-      "welcome": "Bienvenido a Murcia"
-    },
-    "contact": {
-      "contact": {
-        "headline": "Contacto"
-      },
-      "enquiry": {
-        "headline": "Consulta",
-        "successMessage": "Su consulta ha sido enviada exitosamente.",
-        "errorMessage": "Su consulta no pudo ser enviada."
-      }
-    }
+  "metadata": {
+    "title": "Casa y apartamento de vacaciones con vista al mar y piscina | Los Alcázares | Mar Menor",
+    "description": "Casa y apartamento de vacaciones en Los Alcázares (Murcia) con vista al mar y piscina. Ideal para vacaciones en la playa, descanso y vacaciones familiares en la costa española."
   }
 }

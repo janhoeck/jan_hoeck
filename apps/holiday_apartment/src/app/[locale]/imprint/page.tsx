@@ -1,5 +1,5 @@
-import { ContentContainer } from '../../../components/Container/ContentContainer'
-import { Section } from '../../../components/Section/Section'
+import { ContentContainer } from '@components/shared/Container/ContentContainer'
+import { Section } from '@components/shared/Section/Section'
 
 export default function ImprintPage() {
   return (

@@ -33,51 +33,6 @@
         "en": "Englisch",
         "es": "Spanisch"
       }
-    },
-    "exposeView": {
-      "location": {
-        "headline": "Lage"
-      },
-      "equipmentFeatures": {
-        "headline": "Ausstattungsmerkmale",
-        "subHeadlines": {
-          "general": "Allgemein",
-          "outdoorArea": "Außenbereich",
-          "kitchen": "Küche",
-          "bedroom": "Schlafzimmer",
-          "baby": "Baby"
-        },
-        "descriptions": {
-          "air_conditioner": "Klimaanlage", 
-          "baby_bed": "Baby Bett", 
-          "balcony": "Balkon", 
-          "barrier_free": "Barrierefrei", 
-          "bathtub": "Badewanne", 
-          "bed_linen": "Bettwäsche", 
-          "coffee_machine": "Kaffeemaschine", 
-          "cooker": "Herd", 
-          "dishes": "Geschirr", 
-          "fire_extinguisher": "Feuerlöscher", 
-          "freezer": "Gefrierschrank", 
-          "hairdryer": "Föhn", 
-          "high_chair": "Hochstuhl", 
-          "microwave": "Mikrowelle", 
-          "oven": "Backofen", 
-          "pots_pans": "Töpfe / Pfanne", 
-          "refrigerator": "Kühlschrank", 
-          "shower": "Dusche", 
-          "smoke_detector": "Rauchmelder", 
-          "terrace": "Terrasse", 
-          "towels": "Handtücher", 
-          "vacuum": "Staubsauger", 
-          "washing_rack": "Wäscheständer", 
-          "parking": "Parkmöglichkeit", 
-          "tv": "Fernsehr", 
-          "wlan": "WLAN", 
-          "washing_machine": "Waschmaschine", 
-          "pool": "Pool"
-        }
-      }
     }
   },
   "pages": {
@@ -93,6 +48,59 @@
         "successMessage": "Ihre Anfrage wurde erfolgreich verschickt.",
         "errorMessage": "Ihre Anfrage konnte nicht verschickt werden."
       }
+    },
+    "expose": {
+      "location": {
+        "headline": "Lage"
+      },
+      "equipmentFeatures": {
+        "headline": "Ausstattungsmerkmale",
+        "subHeadlines": {
+          "general": "Allgemein",
+          "outdoorArea": "Außenbereich",
+          "kitchen": "Küche",
+          "bedroom": "Schlafzimmer",
+          "baby": "Baby"
+        },
+        "descriptions": {
+          "air_conditioner": "Klimaanlage",
+          "baby_bed": "Baby Bett",
+          "balcony": "Balkon",
+          "barrier_free": "Barrierefrei",
+          "bathtub": "Badewanne",
+          "bed_linen": "Bettwäsche",
+          "coffee_machine": "Kaffeemaschine",
+          "cooker": "Herd",
+          "dishes": "Geschirr",
+          "fire_extinguisher": "Feuerlöscher",
+          "freezer": "Gefrierschrank",
+          "hairdryer": "Föhn",
+          "high_chair": "Hochstuhl",
+          "microwave": "Mikrowelle",
+          "oven": "Backofen",
+          "pots_pans": "Töpfe / Pfanne",
+          "refrigerator": "Kühlschrank",
+          "shower": "Dusche",
+          "smoke_detector": "Rauchmelder",
+          "terrace": "Terrasse",
+          "towels": "Handtücher",
+          "vacuum": "Staubsauger",
+          "washing_rack": "Wäscheständer",
+          "parking": "Parkmöglichkeit",
+          "tv": "Fernsehr",
+          "wlan": "WLAN",
+          "washing_machine": "Waschmaschine",
+          "pool": "Pool"
+        }
+      }
+    },
+    "about": {
+      "headline": "Über uns",
+      "description": "<typography>Wir, Olaf und Tina, hatten schon lange den Traum, nach Spanien auszuwandern. Olaf ist Halbspanier, seine Mutter kommt aus der Region Murcia. Seit Jahren besitzen wir eine Wohnung in Los Urrutias. Im Jahr 2024 haben wir dann den Schritt gewagt, haben alles in Deutschland verkauft und sind ganz nach Spanien ausgewandert. Wir sind hier mit einem kleinen deutschen Service selbstständig und wollen nun auch anderen die Möglichkeit geben, den Flair und das Lebensgefühl dieser Gegend kennenzulernen.</typography><typography>Wir lieben dieses Land und möchten auch andere dafür begeistern. Uns ist es wichtig, dass wir als Vermieter immer vor Ort sind und als Ansprechpartner zur Verfügung stehen. Die Vermietung wird von uns selbst abgewickelt. Das bedeutet für Sie als unsere Mieter, dass wir eine Endabnahme durchführen (bei Abreise der Mieter), sodass sichergestellt ist, dass Sie bei der Anreise keine böse Überraschung erleben und die Wohnung sich in einem einwandfreien Zustand befindet.</typography>"
     }
+  },
+  "metadata": {
+    "title": "Ferienhaus & Wohnung mit Meerblick & Pool | Los Alcázares | Mar Menor",
+    "description": "Ferienhaus & Ferienwohnung in Los Alcázares (Murcia) mit Meerblick & Pool. Ideal für Strandurlaub, Erholung & Familienferien an der spanischen Küste."
   }
 }

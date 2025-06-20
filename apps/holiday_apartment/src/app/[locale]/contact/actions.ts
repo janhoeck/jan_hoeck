@@ -1,8 +1,8 @@
 'use server'
 import { Resend } from 'resend'
-import { ContactFormData } from '../../../components/ContactForm/types'
 
 import { ContactEmailTemplate } from './ContactMailTemplate'
+import { ContactFormData } from '@components/shared/ContactForm/types'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -13,7 +13,7 @@ export async function sendMail(_initialState: any, formData: FormData) {
 
     const { data, error } = await resend.emails.send({
       from: `Anfrage <anfrage@${process.env.DOMAIN as string}>`,
-      to: ['jan.hoeck@gmx.net'],
+      to: [process.env.CONTACT_MAIL_TO as string],
       subject: `Neue Nachricht von ${contactFormData.name}`,
       react: ContactEmailTemplate(contactFormData),
     })

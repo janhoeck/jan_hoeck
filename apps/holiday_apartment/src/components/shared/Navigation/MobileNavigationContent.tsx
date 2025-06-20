@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge'
 import { NavigationItem } from './NavigationItem'
 import { NavigationConfiguration } from './types'
 import { IoMdClose } from 'react-icons/io'
-import { usePathname } from '../../i18n/navigation'
+import { usePathname } from '../../../i18n/navigation'
 
 export type MobileNavigationContentProps = {
   configuration: NavigationConfiguration

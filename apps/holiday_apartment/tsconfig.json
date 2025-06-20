@@ -8,6 +8,10 @@
     ".next/types/**/*.ts"
   ],
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"]
+    },
     "plugins": [{ "name": "next" }]
   }
 }

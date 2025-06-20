@@ -18,10 +18,10 @@ You have to register your language in /src/i18n/routing.ts afterward.
 
 TODO:
 - Google Maps Key auf Domain Ebene Absichern
-- Resend Key Domain konfigurieren
 - SEO Überprüfem
   - metadata (i18n?)
   - facebook, twitter, social media vorschau
   - JSON-LD
+  - Sitemap
 - Impressum
-- Analytics? (https://www.reddit.com/r/webdev/comments/qety61/what_is_a_good_lightweight_free_alternative_to/)
+- Blur image für bilder

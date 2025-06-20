@@ -1,6 +1,6 @@
 import { configurations } from './config'
 import { notFound } from 'next/navigation'
-import { ExposeView } from '../../../../components/ExposeView/ExposeView'
+import { ExposeView } from '@components/expose/ExposeView'
 
 type Params = Promise<{ slug: string }>
 

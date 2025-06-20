@@ -1,8 +1,8 @@
 import { Typography } from '@jan_hoeck/ui'
-import { LanguageSelector } from '../LanguageSelector/LanguageSelector'
+import { LanguageSelector } from './LanguageSelector/LanguageSelector'
 import { Link } from '../../i18n/navigation'
 
-export const Footer = () => {
+export const LayoutFooter = () => {
   return (
     <footer className='p-4'>
       <div className='flex items-center justify-between gap-4 px-4'>

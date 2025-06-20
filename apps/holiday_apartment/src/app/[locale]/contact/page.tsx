@@ -1,13 +1,13 @@
 'use client'
-import { ContentContainer } from '../../../components/Container/ContentContainer'
-import { Section } from '../../../components/Section/Section'
+import { ContentContainer } from '@components/shared/Container/ContentContainer'
+import { Section } from '@components/shared/Section/Section'
 import { Typography } from '@jan_hoeck/ui'
 import { PiEnvelopeOpenLight, PiPhoneCallLight } from 'react-icons/pi'
 import Link from 'next/link'
-import { ContactForm } from '../../../components/ContactForm/ContactForm'
+import { ContactForm } from '@components/shared/ContactForm/ContactForm'
 import { sendMail } from './actions'
 import { useActionState } from 'react'
-import { MessageBox } from '../../../components/MessageBox/MessageBox'
+import { MessageBox } from '@components/shared/MessageBox/MessageBox'
 import { useTranslations } from 'next-intl'
 
 export default function ContactPage() {
@@ -20,20 +20,24 @@ export default function ContactPage() {
         <Section headline={t('contact.headline')}>
           <div className='flex flex-col gap-2'>
             <div>
-              <Typography>Olaf & Tina Asbach</Typography>
-              <Typography>Irgendwo in Spanien</Typography>
+              <Typography>Olaf und Tina Asbach</Typography>
+              <Typography>Calle Fernando Dodero 12</Typography>
+              <Typography>30368 Los Urrutias</Typography>
               <Typography>Murcia</Typography>
             </div>
             <div className='flex items-center gap-4'>
               <PiPhoneCallLight size={30} />
-              <Link href='tel:+43 1111 111111'>
-                <Typography>+43 1111 111111</Typography>
+              <Link href='tel:+34604482002'>
+                <Typography>+34 604 482 002</Typography>
+              </Link>
+              <Link href='tel:+491764736718'>
+                <Typography>+49 176 47 36 7 18</Typography>
               </Link>
             </div>
             <div className='flex items-center gap-4'>
               <PiEnvelopeOpenLight size={30} />
-              <Link href='mailto:jan.hoeck@gmx.net'>
-                <Typography>jan.hoeck@gmx.net</Typography>
+              <Link href='mailto:casas.marmenor@gmx.de'>
+                <Typography>casas.marmenor@gmx.de</Typography>
               </Link>
             </div>
           </div>

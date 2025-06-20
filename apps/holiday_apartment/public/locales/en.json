@@ -2,9 +2,9 @@
   "components": {
     "navigation": {
       "home": "Home",
-      "about_us": "About us",
-      "apartment": "Holiday apartment",
-      "house": "Holiday house",
+      "about_us": "About Us",
+      "apartment": "Apartment",
+      "house": "Holiday Home",
       "contact": "Contact"
     },
     "contactForm": {
@@ -33,33 +33,48 @@
         "en": "English",
         "es": "Spanish"
       }
+    }
+  },
+  "pages": {
+    "home": {
+      "welcome": "Welcome to Murcia"
     },
-    "exposeView": {
+    "contact": {
+      "contact": {
+        "headline": "Contact"
+      },
+      "enquiry": {
+        "headline": "Enquiry",
+        "successMessage": "Your enquiry was sent successfully.",
+        "errorMessage": "Your enquiry could not be sent."
+      }
+    },
+    "expose": {
       "location": {
         "headline": "Location"
       },
       "equipmentFeatures": {
-        "headline": "Equipment features",
+        "headline": "Equipment Features",
         "subHeadlines": {
           "general": "General",
-          "outdoorArea": "Outdoor area",
+          "outdoorArea": "Outdoor Area",
           "kitchen": "Kitchen",
           "bedroom": "Bedroom",
           "baby": "Baby"
         },
         "descriptions": {
-          "air_conditioner": "Air conditioning",
+          "air_conditioner": "Air conditioner",
           "baby_bed": "Baby bed",
           "balcony": "Balcony",
           "barrier_free": "Barrier-free",
           "bathtub": "Bathtub",
           "bed_linen": "Bed linen",
           "coffee_machine": "Coffee machine",
-          "cooker": "Cooker",
+          "cooker": "Stove",
           "dishes": "Dishes",
           "fire_extinguisher": "Fire extinguisher",
           "freezer": "Freezer",
-          "hairdryer": "Hair dryer",
+          "hairdryer": "Hairdryer",
           "high_chair": "High chair",
           "microwave": "Microwave",
           "oven": "Oven",
@@ -73,26 +88,19 @@
           "washing_rack": "Drying rack",
           "parking": "Parking",
           "tv": "TV",
-          "wlan": "WiFi",
+          "wlan": "Wi-Fi",
           "washing_machine": "Washing machine",
           "pool": "Pool"
         }
       }
+    },
+    "about": {
+      "headline": "About us",
+      "description": "<typography>We, Olaf and Tina, had long dreamed of emigrating to Spain. Olaf is half Spanish; his mother comes from the Murcia region. We have owned an apartment in Los Urrutias for years. In 2024, we took the plunge, sold everything in Germany and emigrated to Spain. We are self-employed here with a small German service business and now want to give others the opportunity to experience the flair and lifestyle of this area.</typography><typography>We love this country and want to inspire others to love it too. It is important to us that we, as landlords, are always on site and available as a point of contact. We handle the rental ourselves. For you as our tenant, this means that we carry out a final inspection (when the tenants leave) to ensure that you do not experience any unpleasant surprises on arrival and that the apartment is in perfect condition.</typography>"
     }
   },
-  "pages": {
-    "home": {
-      "welcome": "Welcome to Murcia"
-    },
-    "contact": {
-      "contact": {
-        "headline": "Contact"
-      },
-      "enquiry": {
-        "headline": "Enquiry",
-        "successMessage": "Your enquiry has been sent successfully.",
-        "errorMessage": "Your enquiry could not be sent."
-      }
-    }
+  "metadata": {
+    "title": "Holiday Home & Apartment with Sea View & Pool | Los Alcázares | Mar Menor",
+    "description": "Holiday home & apartment in Los Alcázares (Murcia) with sea view & pool. Ideal for beach holidays, relaxation & family vacations on the Spanish coast."
   }
 }

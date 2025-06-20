@@ -1,4 +1,4 @@
-import { Navigation } from '../../../components/Navigation/Navigation'
+import { Navigation } from './Navigation/Navigation'
 import React from 'react'
 import { useTranslations } from 'next-intl'
 

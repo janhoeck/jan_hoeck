@@ -9,28 +9,38 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { routing } from '../../i18n/routing'
 import { notFound } from 'next/navigation'
 
-import { LayoutNavigation } from './components/LayoutNavigation'
-import { Footer } from '../../components/Footer/Footer'
+import { LayoutNavigation } from '@components/shared/LayoutNavigation'
+import { LayoutFooter } from '@components/shared/LayoutFooter'
 import { siteMetadata } from './metadata'
+import { getTranslations } from 'next-intl/server'
+import { Metadata } from 'next'
 
 const geist = Geist({
   subsets: ['latin'],
 })
 
+type Params = Promise<{ locale: string }>
 type LayoutProps = {
   children: React.ReactNode
-  params: Promise<{
-    locale: string
-  }>
+  params: Params
 }
 
-export const metadata = {
-  title: {
-    default: siteMetadata.title,
-    template: '%s | Costa Calida Ferienwohnungen',
-  },
-  description: siteMetadata.description,
-  keywords: siteMetadata.keywords,
+export async function generateMetadata(params: Params): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'metadata' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        de: '/de',
+        en: '/en',
+        es: '/es',
+      },
+    },
+  }
 }
 
 export default async function Layout(props: LayoutProps) {
@@ -55,7 +65,7 @@ export default async function Layout(props: LayoutProps) {
         <NextIntlClientProvider>
           <LayoutNavigation />
           <main className='min-h-[calc(100%-73px-105px)]'>{children}</main>
-          <Footer />
+          <LayoutFooter />
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />

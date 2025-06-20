@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavigationItem } from './NavigationItem'
 import { NavigationConfiguration } from './types'
-import { usePathname } from '../../i18n/navigation'
+import { usePathname } from '../../../i18n/navigation'
 
 export type DesktopNavigationContentProps = {
   configuration: NavigationConfiguration
