@@ -1,4 +1,4 @@
-import { ExposeConfiguration } from '../../../../../components/ExposeView/types'
+import { ExposeConfiguration } from '@components/expose/types'
 
 export const data: ExposeConfiguration = {
   id: 'apartment',
