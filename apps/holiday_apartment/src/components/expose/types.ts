@@ -1,4 +1,4 @@
-export type PropertySummaryType = 'bedroom' | 'bed' | 'bathroom' | 'wlan' | 'accessibility' | 'pool'
+export type PropertySummaryType = 'bedroom' | 'bed' | 'bathroom' | 'group'
 export type EquipmentFeatureType =
   | 'pool'
   | 'parking'
@@ -55,20 +55,33 @@ export type EquipmentFeatures = {
 
 export type PropertySummaryItem = {
   type: PropertySummaryType
-  description: string
+  amount: number
+}
+
+type Address = {
+  building: string
+  street: string
+  houseNumber: string
+  floorApartment: string
+  postalCode: string
+  city: string
+  country: string
 }
 
 export type Location = {
   lat: number
   lng: number
-  description: string[]
+  address: Partial<Address>
+  description: Description
 }
+
+export type Description = Array<string | { text: string; bulletpoints: string[] }>
 
 export type ExposeConfiguration = {
   id: string
   imageSources: string[]
   headline: string
-  description: string
+  description: Description
   location: Location
   propertySummary?: PropertySummaryItem[]
   equipmentFeatures: EquipmentFeatures

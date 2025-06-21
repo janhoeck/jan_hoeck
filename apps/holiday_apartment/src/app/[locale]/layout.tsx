@@ -31,6 +31,7 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
   return {
     title: t('title'),
     description: t('description'),
+    keywords: ['Costa Calida', 'Los Alcázares', 'Mar Menor'],
     alternates: {
       canonical: `/${locale}`,
       languages: {

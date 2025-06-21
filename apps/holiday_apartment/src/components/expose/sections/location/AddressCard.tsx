@@ -1,0 +1,30 @@
+import { GoogleMaps } from './GoogleMaps'
+import { Typography } from '@jan_hoeck/ui'
+import { Location } from '@components/expose/types'
+
+export type AddressCardProps = {
+  lat: number
+  lng: number
+  address: Location['address']
+}
+
+export const AddressCard = (props: AddressCardProps) => {
+  const { lat, lng, address } = props
+
+  return (
+    <div className='h-fit w-full rounded-md bg-white shadow-md sm:min-w-[320px]'>
+      <GoogleMaps
+        className='h-[320px] w-full overflow-hidden rounded-t-md'
+        lat={lat}
+        lng={lng}
+      />
+      <div className='p-2'>
+        <Typography variant='smallText'>{address.building}</Typography>
+        <Typography variant='smallText'>
+          {[[address.street, address.postalCode].join(' '), address.floorApartment].join(', ')}
+        </Typography>
+        <Typography variant='smallText'>{[address.postalCode, address.city].join(' ')}</Typography>
+      </div>
+    </div>
+  )
+}

@@ -6,7 +6,6 @@ import { Link } from '../../../i18n/navigation'
 import { useRef } from 'react'
 
 export type EstateCardProps = {
-  imageAlignment?: 'left' | 'right'
   description: string
   headline: string
   imageSrc: string

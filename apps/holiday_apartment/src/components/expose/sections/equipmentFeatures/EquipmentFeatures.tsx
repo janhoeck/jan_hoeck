@@ -1,5 +1,5 @@
-import { EquipmentFeatures as EquipmentFeaturesType } from '../types'
-import { EquipmentFeaturesSection } from './EquipmentFeaturesSection'
+import { EquipmentFeatures as EquipmentFeaturesType } from '../../types'
+import { EquipmentFeaturesItem } from './EquipmentFeaturesItem'
 import { useTranslations } from 'next-intl'
 
 export type EquipmentFeaturesProps = {
@@ -12,23 +12,23 @@ export const EquipmentFeatures = (props: EquipmentFeaturesProps) => {
 
   return (
     <div className='flex flex-col gap-10'>
-      <EquipmentFeaturesSection
+      <EquipmentFeaturesItem
         headline={t('general')}
         featureTypes={features.general}
       />
-      <EquipmentFeaturesSection
+      <EquipmentFeaturesItem
         headline={t('outdoorArea')}
         featureTypes={features.outdoorArea}
       />
-      <EquipmentFeaturesSection
+      <EquipmentFeaturesItem
         headline={t('kitchen')}
         featureTypes={features.kitchen}
       />
-      <EquipmentFeaturesSection
+      <EquipmentFeaturesItem
         headline={t('bedroom')}
         featureTypes={features.bedroom}
       />
-      <EquipmentFeaturesSection
+      <EquipmentFeaturesItem
         headline={t('baby')}
         featureTypes={features.baby}
       />

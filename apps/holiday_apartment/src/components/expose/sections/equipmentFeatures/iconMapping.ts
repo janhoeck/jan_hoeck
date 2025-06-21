@@ -1,4 +1,4 @@
-import { EquipmentFeatureType } from '../types'
+import { EquipmentFeatureType } from '../../types'
 import { IconType } from 'react-icons'
 import {
   PiCarSimple,

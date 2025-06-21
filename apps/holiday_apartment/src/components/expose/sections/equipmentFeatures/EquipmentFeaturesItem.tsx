@@ -1,15 +1,15 @@
-import { EquipmentFeatureType } from '../types'
+import { EquipmentFeatureType } from '../../types'
 import { Typography } from '@jan_hoeck/ui'
 import { iconMapping } from './iconMapping'
 import { twMerge } from 'tailwind-merge'
 import { useTranslations } from 'next-intl'
 
-export type EquipmentFeaturesSection<T extends EquipmentFeatureType> = {
+export type EquipmentFeaturesItemProps<T extends EquipmentFeatureType> = {
   headline: string
   featureTypes?: T[]
 }
 
-export const EquipmentFeaturesSection = <T extends EquipmentFeatureType>(props: EquipmentFeaturesSection<T>) => {
+export const EquipmentFeaturesItem = <T extends EquipmentFeatureType>(props: EquipmentFeaturesItemProps<T>) => {
   const { headline, featureTypes } = props
   const t = useTranslations('pages.expose.equipmentFeatures')
 
