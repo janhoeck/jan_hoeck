@@ -8,8 +8,8 @@ export const ExposeListSection = () => {
       <div className='flex flex-wrap gap-4 sm:flex-nowrap'>
         <ExposeCard
           to='/expose/apartment'
-          headline='Luxurious villa in Miami, Florida with panoramic sea views.'
-          description='3 Betten • 1 Badezimmer'
+          headline='Ferienwohnung Los Alcázares Mar Menor - Luxus Apartment Puerto Marina Murcia'
+          description='4 Betten • 2 Badezimmer'
           imageSrc='/images/apartment/image_1.png'
         />
       </div>

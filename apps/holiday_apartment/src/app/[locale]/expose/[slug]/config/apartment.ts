@@ -41,8 +41,7 @@ export const data: ExposeConfiguration = {
       'Ob Sie einen Strandurlaub in Spanien, einen aktiven Golfurlaub an der Costa Cálida oder einfach nur Erholung mit der Familie suchen – Los Alcázares bietet beste Voraussetzungen für einen unvergesslichen Aufenthalt.',
     ],
   },
-  headline:
-    'Liebevoll eingerichtetes Apartment in der Luxusanlage Puerto Marina, Los Alcazeres, Mar Menor, Región Murcia, Spanien',
+  headline: 'Ferienwohnung Los Alcázares Mar Menor - Luxus Apartment Puerto Marina Murcia',
   description: [
     'Das Apartment bietet Platz für bis zu vier Personen. Es verfügt über drei Zimmer, zwei Schlafräume, ein Wohnzimmer, ein Badezimmer und eine Küche im amerikanischen Stil. Ein Highlight ist der Balkon, auf dem man ab 18:00 Uhr die Abendsonne genießen kann. Das Apartment ist mit Küchenutensilien, Handtüchern und Bettwäsche voll ausgestattet. Es verfügt über deutsches Fernsehen und einen Amazon Fire TV Stick. Es liegt im ersten Stock und ist auch mit dem Aufzug erreichbar.',
     'Die Anlage verfügt über einen wunderschönen Innenbereich mit drei Pools, von denen zwei behindertengerecht sind. Palmen umrahmen die Anlage und sorgen für Karibikflair. Der ideale Ort zum Entspannen.',
