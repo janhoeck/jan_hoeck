@@ -19,13 +19,18 @@ const geist = Geist({
 })
 
 type Params = Promise<{ locale: string }>
+
+type MetadataProps = {
+  params: Params
+}
+
 type LayoutProps = {
   children: React.ReactNode
   params: Params
 }
 
-export async function generateMetadata(params: Params): Promise<Metadata> {
-  const { locale } = await params
+export async function generateMetadata(props: MetadataProps): Promise<Metadata> {
+  const { locale } = await props.params
   const t = await getTranslations({ locale, namespace: 'metadata' })
 
   return {
