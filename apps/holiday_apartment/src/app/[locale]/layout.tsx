@@ -93,7 +93,7 @@ export async function generateMetadata(props: MetadataProps): Promise<Metadata> 
       'Ferienwohnung direkt buchen',
     ],
     alternates: {
-      canonical: `/${locale}`,
+      canonical: `https://solymarmenor.com/${locale}`,
       languages: routing.locales.reduce((acc, lang) => ({ ...acc, [lang]: `https://solymarmenor.com/${lang}` }), {}),
     },
     icons: {
