@@ -89,11 +89,7 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
     ],
     alternates: {
       canonical: `/${locale}`,
-      languages: {
-        de: '/de',
-        en: '/en',
-        es: '/es',
-      },
+      languages: routing.locales.reduce((acc, lang) => ({ ...acc, [lang]: `https://solymarmenor.com/${lang}` }), {}),
     },
     icons: {
       icon: '/favicon.ico',
