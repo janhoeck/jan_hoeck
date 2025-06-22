@@ -10,7 +10,7 @@ export const ExposeListSection = () => {
           to='/expose/apartment'
           headline='Ferienwohnung Los Alcázares Mar Menor - Luxus Apartment Puerto Marina Murcia'
           description='4 Betten • 2 Badezimmer'
-          imageSrc='/images/apartment/image_1.png'
+          imageSrc='/images/apartment/IMG_9807.PNG'
         />
       </div>
     </Section>

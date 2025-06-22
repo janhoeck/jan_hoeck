@@ -17,7 +17,7 @@ export const WelcomeImage = () => {
         priority
         src='/images/costacalida.jpeg'
         alt='Costa calida - murcia'
-        className='object-cover'
+        className='object-cover saturate-150'
         sizes='100vw'
       />
       <div className='z-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-teal-700/70 p-2 text-center md:p-4'>

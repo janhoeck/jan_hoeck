@@ -31,7 +31,62 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
   return {
     title: t('title'),
     description: t('description'),
-    keywords: ['Costa Calida', 'Los Alcázares', 'Mar Menor'],
+    keywords: [
+      // Primary geographic keywords
+      'Urlaub Murcia',
+      'Costa Cálida Urlaub',
+      'Ferienwohnung Murcia',
+      'Ferienhaus Costa Cálida',
+      'Spanien Urlaub',
+      'Costa Cálida',
+
+      // Accommodation keywords
+      'Ferienwohnung Spanien',
+      'Ferienhaus Murcia',
+      'Urlaubsunterkunft Costa Cálida',
+      'Ferienwohnung mieten Murcia',
+      'Ferienhaus mieten Spanien',
+
+      // Experience keywords
+      'Mediterrane Ferien',
+      'Strandurlaub Spanien',
+      'Sonniger Urlaub',
+      'Erholungsurlaub Spanien',
+      'Aktivurlaub Murcia',
+
+      // Long-tail keywords
+      'geschmackvoll eingerichtete Ferienwohnung',
+      'unvergesslicher Urlaub Costa Cálida',
+      'mediterrane Lebensgefühl genießen',
+      'Urlaubsträume wahr werden',
+      'zweites Zuhause spanische Sonne',
+
+      // Seasonal keywords
+      'Sommerurlaub Murcia',
+      'Winterurlaub Costa Cálida',
+      'Familienurlaub Spanien',
+      'Strand und Sport Urlaub',
+      'Kulinarik Urlaub Spanien',
+
+      // Specific activities
+      'Strandurlaub Costa Cálida',
+      'Sporturlaub Murcia',
+      'Entspannungsurlaub Spanien',
+      'Golfurlaub Costa Cálida',
+
+      // Local terms
+      'Costa Cálida',
+      'Murcia',
+      'Región de Murcia',
+      'Spanien',
+      'Mittelmeer',
+
+      // Booking keywords
+      'Ferienwohnung buchen Murcia',
+      'Ferienhaus reservieren Costa Cálida',
+      'Urlaubsunterkunft online buchen',
+      'Ferienwohnung direkt buchen',
+    ],
     alternates: {
       canonical: `/${locale}`,
       languages: {
