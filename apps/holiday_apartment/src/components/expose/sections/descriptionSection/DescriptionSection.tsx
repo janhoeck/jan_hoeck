@@ -1,6 +1,6 @@
 import { Section } from '@components/shared/Section/Section'
 import { ExposeConfiguration } from '../../types'
-import { Texts } from '../../Texts/Texts'
+import { TextDescription } from '../../../shared/TextDescription/TextDescription'
 
 export type DescriptionSectionProps = {
   headline: ExposeConfiguration['headline']
@@ -11,7 +11,7 @@ export const DescriptionSection = (props: DescriptionSectionProps) => {
   const { headline, description } = props
   return (
     <Section headline={headline}>
-      <Texts texts={description} />
+      <TextDescription texts={description} />
     </Section>
   )
 }

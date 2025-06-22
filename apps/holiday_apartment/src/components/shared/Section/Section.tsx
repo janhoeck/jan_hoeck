@@ -4,16 +4,17 @@ import { ReactNode } from 'react'
 export type SectionProps = {
   headline: string
   children: ReactNode
+  variant?: 'default' | 'subsection'
 }
 
 export const Section = (props: SectionProps) => {
-  const { headline, children } = props
+  const { headline, variant = 'default', children } = props
   return (
     <section>
       <Typography
-        className='mb-4'
+        className={variant === 'default' ? 'mb-4' : 'mb-2'}
         variant='heading'
-        size={2}
+        size={variant === 'default' ? 2 : 5}
       >
         {headline}
       </Typography>

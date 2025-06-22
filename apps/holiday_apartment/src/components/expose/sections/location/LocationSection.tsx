@@ -2,7 +2,7 @@ import { Section } from '@components/shared/Section/Section'
 import { useTranslations } from 'next-intl'
 import { ExposeConfiguration } from '../../types'
 import { AddressCard } from './AddressCard'
-import { Texts } from '../../Texts/Texts'
+import { TextDescription } from '../../../shared/TextDescription/TextDescription'
 
 export type LocationSectionProps = {
   location: ExposeConfiguration['location']
@@ -16,7 +16,7 @@ export const LocationSection = (props: LocationSectionProps) => {
   return (
     <Section headline={t('headline')}>
       <div className='flex flex-col gap-4 sm:flex-row'>
-        <Texts texts={description} />
+        <TextDescription texts={description} />
         <AddressCard
           lat={lat}
           lng={lng}

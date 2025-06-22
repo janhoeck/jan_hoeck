@@ -26,7 +26,7 @@ export const WelcomeImage = () => {
           size={1}
           className='text-center text-2xl uppercase tracking-wider text-white sm:text-3xl'
         >
-          Urlaub in Murcia
+          Urlaub an der Costa Cálida
         </Typography>
       </div>
     </div>
