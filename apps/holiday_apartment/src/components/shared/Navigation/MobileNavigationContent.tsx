@@ -6,7 +6,8 @@ import { twMerge } from 'tailwind-merge'
 import { NavigationItem } from './NavigationItem'
 import { NavigationConfiguration } from './types'
 import { IoMdClose } from 'react-icons/io'
-import { usePathname } from '../../../i18n/navigation'
+import { Link, usePathname } from '../../../i18n/navigation'
+import Image from 'next/image'
 
 export type MobileNavigationContentProps = {
   configuration: NavigationConfiguration
@@ -20,15 +21,21 @@ export const MobileNavigationContent = (props: MobileNavigationContentProps) => 
   useLockBodyScroll(isOpen)
 
   return (
-    <div className='py-4 sm:hidden'>
-      <div className='flex'>
-        <Button
-          variant='ghost'
-          onClick={open}
-        >
-          <LiaBarsSolid size={20} />
-        </Button>
-      </div>
+    <div className='flex w-full justify-between py-4'>
+      <Link href='/'>
+        <Image
+          src='/images/logo.png'
+          alt='Logo'
+          width={40}
+          height={40}
+        />
+      </Link>
+      <Button
+        variant='ghost'
+        onClick={open}
+      >
+        <LiaBarsSolid size={20} />
+      </Button>
       <div
         className={twMerge([
           'xs:w-full absolute right-0 top-0 h-dvh w-full bg-white pt-20 shadow-md',

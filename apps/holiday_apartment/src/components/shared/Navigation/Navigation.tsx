@@ -4,6 +4,8 @@ import { twMerge } from 'tailwind-merge'
 import { DesktopNavigationContent } from './DesktopNavigationContent'
 import { MobileNavigationContent } from './MobileNavigationContent'
 import { NavigationConfiguration } from './types'
+import { DesktopOnly } from '@components/shared/Responsive/DesktopOnly'
+import { MobileOnly } from '@components/shared/Responsive/MobileOnly'
 
 export type NavigationProps = {
   configuration: NavigationConfiguration
@@ -29,13 +31,15 @@ export const Navigation = (props: NavigationProps) => {
       className={twMerge([
         // default styles
         'sticky top-0 z-10 flex items-center bg-white px-4 shadow-md',
-        // responsive
-        'justify-end sm:justify-center',
         didScroll && 'border-b-1 border-neutral-300 shadow-none',
       ])}
     >
-      <DesktopNavigationContent configuration={configuration} />
-      <MobileNavigationContent configuration={configuration} />
+      <DesktopOnly>
+        <DesktopNavigationContent configuration={configuration} />
+      </DesktopOnly>
+      <MobileOnly>
+        <MobileNavigationContent configuration={configuration} />
+      </MobileOnly>
     </header>
   )
 }

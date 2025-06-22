@@ -3,7 +3,7 @@
 ## Requirements
 ### Resend
 We are using Resend to send server side emails.
-You have to provide a key `RESEND_API_KEY` in your .env file.
+You have to provide a key `NEXT_PUBLIC_RESEND_API_KEY` in your .env file.
 
 ### Google Maps
 We are using Google Maps to show a map.
@@ -17,11 +17,9 @@ If you have to add more languages, make sure to create a new .json file in /publ
 You have to register your language in /src/i18n/routing.ts afterward.
 
 TODO:
-- Google Maps Key auf Domain Ebene Absichern
 - SEO Überprüfem
   - metadata (i18n?)
   - facebook, twitter, social media vorschau
   - JSON-LD
-  - Sitemap
 - Impressum
-- Blur image für bilder
+- generateMetadata für jede Seite erstellen und canonical richtig setzen
