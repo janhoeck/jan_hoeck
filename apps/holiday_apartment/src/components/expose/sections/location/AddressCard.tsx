@@ -12,7 +12,7 @@ export const AddressCard = (props: AddressCardProps) => {
   const { lat, lng, address } = props
 
   return (
-    <div className='h-fit w-full rounded-md bg-white shadow-md sm:min-w-[320px]'>
+    <div className='h-fit w-full rounded-md border border-neutral-300 bg-white sm:min-w-[320px]'>
       <GoogleMaps
         className='h-[320px] w-full overflow-hidden rounded-t-md'
         lat={lat}

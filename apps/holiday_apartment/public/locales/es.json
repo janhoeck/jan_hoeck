@@ -90,7 +90,8 @@
           "tv": "Televisor",
           "wlan": "Wi-Fi",
           "washing_machine": "Lavadora",
-          "pool": "Piscina"
+          "pool": "Piscina",
+          "kettle": "Hervidor de agua"
         }
       }
     },

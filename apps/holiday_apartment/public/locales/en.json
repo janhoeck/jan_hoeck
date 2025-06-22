@@ -90,7 +90,8 @@
           "tv": "TV",
           "wlan": "Wi-Fi",
           "washing_machine": "Washing machine",
-          "pool": "Pool"
+          "pool": "Pool",
+          "kettle": "Kettle"
         }
       }
     },

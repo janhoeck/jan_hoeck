@@ -63,7 +63,7 @@ export const ImageCarousel = (props: ImageCarouselProps) => {
                 src={imageSrc}
                 alt='Image'
                 sizes='(max-width: 40rem) 100vw, (max-width: 96rem) 90vw, auto'
-                className={twMerge('embla__slide__img object-cover', imageClassName)}
+                className={twMerge('embla__slide__img object-cove saturate-150r', imageClassName)}
               />
             </div>
           ))}

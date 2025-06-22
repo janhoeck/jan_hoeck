@@ -31,7 +31,7 @@ export const DesktopImageGrid = (props: DesktopImageGridProps) => {
               alt='Bild'
               src={imageSources[0]!}
               sizes='(max-width: 48rem) 300px, (max-width: 64rem) 450px, 750px'
-              className='h-full w-full cursor-pointer object-cover'
+              className='h-full w-full cursor-pointer object-cover saturate-150'
             />
           </div>
         </Dialog.Trigger>
@@ -48,7 +48,7 @@ export const DesktopImageGrid = (props: DesktopImageGridProps) => {
                   alt='Bild'
                   src={imageSrc}
                   sizes='(max-width: 48rem) 150px, (max-width: 64rem) 254px, 385px'
-                  className='h-full w-full cursor-pointer object-cover'
+                  className='h-full w-full cursor-pointer object-cover saturate-150'
                 />
               </div>
             </Dialog.Trigger>

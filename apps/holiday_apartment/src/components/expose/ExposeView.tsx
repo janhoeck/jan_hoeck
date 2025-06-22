@@ -7,6 +7,7 @@ import { DesktopOnly } from '@components/shared/Responsive/DesktopOnly'
 import { LocationSection } from './sections/location/LocationSection'
 import { EquipmentFeaturesSection } from './sections/equipmentFeatures/EquipmentFeaturesSection'
 import { DescriptionSection } from './sections/descriptionSection/DescriptionSection'
+import { BookItPanel } from '@components/expose/BookItPanel/BookItPanel'
 
 export type ExposeViewProps = {
   configuration: ExposeConfiguration
@@ -14,7 +15,7 @@ export type ExposeViewProps = {
 
 export const ExposeView = (props: ExposeViewProps) => {
   const { configuration } = props
-  const { imageSources, headline, description, location, propertySummary, equipmentFeatures } = configuration
+  const { imageSources, headline, description, price, location, propertySummary, equipmentFeatures } = configuration
 
   return (
     <div>
@@ -26,6 +27,7 @@ export const ExposeView = (props: ExposeViewProps) => {
           <DesktopOnly>
             <ExposeImages imageSources={imageSources} />
           </DesktopOnly>
+          <BookItPanel price={price} />
           {propertySummary && <PropertySummary items={propertySummary} />}
           <DescriptionSection
             headline={headline}

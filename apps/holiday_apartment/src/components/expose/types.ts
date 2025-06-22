@@ -28,6 +28,7 @@ export type EquipmentFeatureType =
   | 'balcony'
   | 'fire_extinguisher'
   | 'smoke_detector'
+  | 'kettle'
 
 export type EquipmentFeatures = {
   general?: Extract<
@@ -46,7 +47,7 @@ export type EquipmentFeatures = {
   outdoorArea?: Extract<EquipmentFeatureType, 'pool' | 'balcony' | 'terrace'>[]
   kitchen?: Extract<
     EquipmentFeatureType,
-    'refrigerator' | 'freezer' | 'cooker' | 'oven' | 'microwave' | 'coffee_machine' | 'pots_pans' | 'dishes'
+    'refrigerator' | 'freezer' | 'cooker' | 'oven' | 'microwave' | 'coffee_machine' | 'pots_pans' | 'dishes' | 'kettle'
   >[]
   bathroom?: Extract<EquipmentFeatureType, 'shower' | 'bathtub' | 'hairdryer' | 'towels'>[]
   bedroom?: Extract<EquipmentFeatureType, 'bed_linen'>[]
@@ -82,6 +83,10 @@ export type ExposeConfiguration = {
   imageSources: string[]
   headline: string
   description: Description
+  price: {
+    perNight: string
+    cleaning?: string
+  }
   location: Location
   propertySummary?: PropertySummaryItem[]
   equipmentFeatures: EquipmentFeatures

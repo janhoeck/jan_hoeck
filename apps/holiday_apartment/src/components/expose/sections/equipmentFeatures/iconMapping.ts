@@ -55,4 +55,5 @@ export const iconMapping: Record<EquipmentFeatureType, IconType> = {
   wlan: PiWifiHigh,
   washing_machine: PiWashingMachine,
   pool: PiSwimmingPool,
+  kettle: PiAsteriskSimple,
 }
