@@ -1,6 +1,6 @@
-import { Section } from '@components/shared/Section/Section'
-import { ExposeConfiguration } from '../../types'
-import { TextDescription } from '../../../shared/TextDescription/TextDescription'
+import { Section } from '@/components/shared/Section/Section'
+import { ContentBlock } from '@/components/shared/ContentBlock/ContentBlock'
+import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 
 export type DescriptionSectionProps = {
   headline: ExposeConfiguration['headline']
@@ -11,7 +11,7 @@ export const DescriptionSection = (props: DescriptionSectionProps) => {
   const { headline, description } = props
   return (
     <Section headline={headline}>
-      <TextDescription texts={description} />
+      <ContentBlock items={description} />
     </Section>
   )
 }

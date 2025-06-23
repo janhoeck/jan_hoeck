@@ -1,7 +1,6 @@
-'use client'
 import React from 'react'
-import { ExposeConfiguration } from '../../types'
 import { ImageCarousel } from '../ImageCarousel'
+import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 
 export type MobileImageCarouselProps = {
   imageSources: ExposeConfiguration['imageSources']

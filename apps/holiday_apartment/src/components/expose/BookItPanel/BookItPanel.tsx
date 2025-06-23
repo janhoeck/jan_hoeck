@@ -1,8 +1,10 @@
 'use client'
-import { Button } from '@components/shared/Button/Button'
+import { Button } from '@/components/shared/Button/Button'
 import { Typography } from '@jan_hoeck/ui'
 import { Link } from '../../../i18n/navigation'
-import { ExposeConfiguration } from '@components/expose/types'
+import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { useTranslations } from 'next-intl'
+import { twMerge } from 'tailwind-merge'
 
 export type BookItPanelProps = {
   price: ExposeConfiguration['price']
@@ -11,9 +13,15 @@ export type BookItPanelProps = {
 export const BookItPanel = (props: BookItPanelProps) => {
   const { price } = props
   const { perNight, cleaning } = price
+  const t = useTranslations('pages.expose.bookIt')
 
   return (
-    <div className='flex items-center justify-between gap-2 rounded-md border border-neutral-300 bg-white p-4'>
+    <div
+      className={twMerge([
+        'flex gap-4 rounded-md border border-neutral-300 bg-white p-4',
+        'flex-col items-baseline sm:flex-row sm:items-center sm:justify-between',
+      ])}
+    >
       <div>
         <div className='flex gap-1'>
           <Typography
@@ -22,10 +30,14 @@ export const BookItPanel = (props: BookItPanelProps) => {
           >
             {perNight}
           </Typography>
-          <Typography>pro Nacht</Typography>
+          <Typography>{t('perNight')}</Typography>
         </div>
         {cleaning && (
-          <Typography variant='smallText'>zuzüglich einer Reinigungsgebühr von einmalig {cleaning}</Typography>
+          <Typography variant='smallText'>
+            {t('cleaning', {
+              cleaning,
+            })}
+          </Typography>
         )}
       </div>
       <Button
@@ -33,7 +45,7 @@ export const BookItPanel = (props: BookItPanelProps) => {
         href='/contact'
         variant='basic'
       >
-        Kontakt
+        {t('contact')}
       </Button>
     </div>
   )

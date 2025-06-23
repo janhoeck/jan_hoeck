@@ -2,7 +2,7 @@
 import { Resend } from 'resend'
 
 import { ContactEmailTemplate } from './ContactMailTemplate'
-import { ContactFormData } from '@components/shared/ContactForm/types'
+import { ContactFormData } from '@/components/shared/ContactForm/types'
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
 

@@ -2,8 +2,10 @@ import { twMerge } from 'tailwind-merge'
 import Image from 'next/image'
 import { Typography } from '@jan_hoeck/ui'
 import React from 'react'
+import { useTranslations } from 'next-intl'
 
 export const WelcomeImage = () => {
+  const t = useTranslations('pages.home')
   return (
     <div
       className={twMerge([
@@ -26,7 +28,7 @@ export const WelcomeImage = () => {
           size={1}
           className='text-center text-2xl uppercase tracking-wider text-white sm:text-3xl'
         >
-          Urlaub an der Costa Cálida
+          {t('welcome')}
         </Typography>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavigationItem } from './NavigationItem'
 import { NavigationConfiguration } from './types'
 import { Link, usePathname } from '../../../i18n/navigation'
@@ -13,6 +13,23 @@ export const DesktopNavigationContent = (props: DesktopNavigationContentProps) =
   const currentPath = usePathname()
 
   const [activeAnchor, setActiveAnchor] = useState<HTMLAnchorElement | null>(null)
+  const [offsetLeft, setOffsetLeft] = useState<number>(0)
+
+  useEffect(() => {
+    if (!activeAnchor) {
+      return
+    }
+
+    setOffsetLeft(activeAnchor.offsetLeft)
+    const handleResize = () => {
+      setOffsetLeft(activeAnchor.offsetLeft)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [activeAnchor])
 
   return (
     <div className='relative flex w-full justify-center gap-2 px-8 py-4'>
@@ -44,7 +61,7 @@ export const DesktopNavigationContent = (props: DesktopNavigationContentProps) =
           className='absolute h-2 rounded-t-xl bg-teal-600 transition-all'
           style={{
             width: activeAnchor.offsetWidth,
-            left: activeAnchor.offsetLeft,
+            left: offsetLeft,
             bottom: 0,
           }}
         />

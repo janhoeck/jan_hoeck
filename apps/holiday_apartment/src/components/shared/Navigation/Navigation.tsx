@@ -4,8 +4,8 @@ import { twMerge } from 'tailwind-merge'
 import { DesktopNavigationContent } from './DesktopNavigationContent'
 import { MobileNavigationContent } from './MobileNavigationContent'
 import { NavigationConfiguration } from './types'
-import { DesktopOnly } from '@components/shared/Responsive/DesktopOnly'
-import { MobileOnly } from '@components/shared/Responsive/MobileOnly'
+import { DesktopOnly } from '@/components/shared/Responsive/DesktopOnly'
+import { MobileOnly } from '@/components/shared/Responsive/MobileOnly'
 
 export type NavigationProps = {
   configuration: NavigationConfiguration

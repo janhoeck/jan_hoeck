@@ -9,8 +9,8 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { routing } from '../../i18n/routing'
 import { notFound } from 'next/navigation'
 
-import { LayoutNavigation } from '@components/shared/LayoutNavigation'
-import { LayoutFooter } from '@components/shared/LayoutFooter'
+import { LayoutNavigation } from '@/components/shared/LayoutNavigation'
+import { LayoutFooter } from '@/components/shared/LayoutFooter'
 import { getTranslations } from 'next-intl/server'
 import { Metadata } from 'next'
 

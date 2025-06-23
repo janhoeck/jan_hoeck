@@ -1,13 +1,14 @@
-import { ExposeConfiguration } from './types'
 import { PropertySummary } from './PropertySummary/PropertySummary'
 import { ExposeImages } from './ExposeImages/ExposeImages'
-import { ContentContainer } from '@components/shared/Container/ContentContainer'
-import { MobileOnly } from '@components/shared/Responsive/MobileOnly'
-import { DesktopOnly } from '@components/shared/Responsive/DesktopOnly'
-import { LocationSection } from './sections/location/LocationSection'
-import { EquipmentFeaturesSection } from './sections/equipmentFeatures/EquipmentFeaturesSection'
+import { ContentContainer } from '@/components/shared/Container/ContentContainer'
+import { MobileOnly } from '@/components/shared/Responsive/MobileOnly'
+import { DesktopOnly } from '@/components/shared/Responsive/DesktopOnly'
+import { LocationDescriptionSection } from './sections/locationDescriptionSection/LocationDescriptionSection'
+import { EquipmentFeaturesSection } from './sections/equipmentFeaturesSection/EquipmentFeaturesSection'
 import { DescriptionSection } from './sections/descriptionSection/DescriptionSection'
-import { BookItPanel } from '@components/expose/BookItPanel/BookItPanel'
+import { BookItPanel } from './BookItPanel/BookItPanel'
+import { HouseRulesSection } from './sections/houseRulesSection/HouseRulesSection'
+import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 
 export type ExposeViewProps = {
   configuration: ExposeConfiguration
@@ -15,7 +16,8 @@ export type ExposeViewProps = {
 
 export const ExposeView = (props: ExposeViewProps) => {
   const { configuration } = props
-  const { imageSources, headline, description, price, location, propertySummary, equipmentFeatures } = configuration
+  const { imageSources, headline, description, price, location, houseRules, propertySummary, equipmentFeatures } =
+    configuration
 
   return (
     <div>
@@ -34,7 +36,8 @@ export const ExposeView = (props: ExposeViewProps) => {
             description={description}
           />
           <EquipmentFeaturesSection equipmentFeatures={equipmentFeatures} />
-          <LocationSection location={location} />
+          <HouseRulesSection houseRules={houseRules} />
+          <LocationDescriptionSection location={location} />
         </div>
       </ContentContainer>
     </div>

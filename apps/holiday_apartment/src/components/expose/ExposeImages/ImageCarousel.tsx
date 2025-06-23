@@ -3,8 +3,8 @@ import React, { useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { LiaAngleLeftSolid, LiaAngleRightSolid } from 'react-icons/lia'
-import { ExposeConfiguration } from '../types'
 import { twMerge } from 'tailwind-merge'
+import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 
 export type ImageCarouselProps = {
   imageSources: ExposeConfiguration['imageSources']
@@ -63,7 +63,7 @@ export const ImageCarousel = (props: ImageCarouselProps) => {
                 src={imageSrc}
                 alt='Image'
                 sizes='(max-width: 40rem) 100vw, (max-width: 96rem) 90vw, auto'
-                className={twMerge('embla__slide__img object-cove saturate-150r', imageClassName)}
+                className={twMerge('embla__slide__img object-cover saturate-150', imageClassName)}
               />
             </div>
           ))}

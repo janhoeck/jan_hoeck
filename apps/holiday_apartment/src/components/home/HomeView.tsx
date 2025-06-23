@@ -1,5 +1,5 @@
 import { WelcomeImage } from './WelcomeImage/WelcomeImage'
-import { ContentContainer } from '@components/shared/Container/ContentContainer'
+import { ContentContainer } from '@/components/shared/Container/ContentContainer'
 import React from 'react'
 import { WelcomeSection } from './WelcomeSection/WelcomeSection'
 import { ExposeListSection } from './ExposeListSection/ExposeListSection'

@@ -1,6 +1,6 @@
-import { PropertySummaryItem } from '../types'
 import { PropertySummaryItem as PropertySummaryItemComponent } from './PropertySummaryItem'
 import { twMerge } from 'tailwind-merge'
+import { PropertySummaryItem } from '@/types/ExposeConfiguration'
 
 export type PropertySummaryProps = {
   items: PropertySummaryItem[]

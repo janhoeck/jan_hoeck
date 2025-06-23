@@ -1,19 +1,13 @@
-import { PropertySummaryType } from '../types'
 import Image from 'next/image'
 import { Typography } from '@jan_hoeck/ui'
+import { PropertySummaryType } from '@/types/ExposeConfiguration'
+import { useTranslations } from 'next-intl'
 
 const iconMapping: Record<PropertySummaryType, string> = {
   bed: 'bed.svg',
   bathroom: 'bathroom.svg',
   bedroom: 'bedroom.svg',
   group: 'group.svg',
-}
-
-const description: Record<PropertySummaryType, string> = {
-  bed: 'Betten',
-  bathroom: 'Badezimmer',
-  bedroom: 'Schlafzimmer',
-  group: 'max. Personen',
 }
 
 export type PropertySummaryItemProps = {
@@ -23,6 +17,8 @@ export type PropertySummaryItemProps = {
 
 export const PropertySummaryItem = (props: PropertySummaryItemProps) => {
   const { type, amount } = props
+  const t = useTranslations('pages.expose.propertySummary')
+
   const path = `/svgs/${iconMapping[type]}`
 
   return (
@@ -35,7 +31,7 @@ export const PropertySummaryItem = (props: PropertySummaryItemProps) => {
       />
       <div>
         <span className='rounded-full bg-teal-300 px-4 text-xs'>{amount}</span>
-        <Typography variant='smallText'>{description[type]}</Typography>
+        <Typography variant='smallText'>{t(`labels.${type}`)}</Typography>
       </div>
     </div>
   )
