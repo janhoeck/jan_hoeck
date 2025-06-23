@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { NavigationItem } from './NavigationItem'
 import { NavigationConfiguration } from './types'
 import { Link, usePathname } from '../../../i18n/navigation'
 import Image from 'next/image'
-import { useResizeObserver } from '@jan_hoeck/ui'
 
 export type DesktopNavigationContentProps = {
   configuration: NavigationConfiguration
@@ -13,12 +12,7 @@ export const DesktopNavigationContent = (props: DesktopNavigationContentProps) =
   const { configuration } = props
   const currentPath = usePathname()
 
-  const activeAnchorRef = useRef<HTMLAnchorElement | null>(null)
-
-  const { width: anchorWidth } = useResizeObserver({
-    ref: activeAnchorRef,
-    box: 'border-box',
-  })
+  const [activeAnchor, setActiveAnchor] = useState<HTMLAnchorElement | null>(null)
 
   return (
     <div className='relative flex w-full justify-center gap-2 px-8 py-4'>
@@ -36,7 +30,7 @@ export const DesktopNavigationContent = (props: DesktopNavigationContentProps) =
           return (
             <NavigationItem
               key={item.href}
-              ref={isActive ? activeAnchorRef : undefined}
+              ref={isActive ? setActiveAnchor : undefined}
               active={isActive}
               to={item.href}
             >
@@ -45,12 +39,12 @@ export const DesktopNavigationContent = (props: DesktopNavigationContentProps) =
           )
         })}
       </div>
-      {activeAnchorRef.current && (
+      {activeAnchor && (
         <div
           className='absolute h-2 rounded-t-xl bg-teal-600 transition-all'
           style={{
-            width: anchorWidth,
-            left: activeAnchorRef.current.offsetLeft,
+            width: activeAnchor.offsetWidth,
+            left: activeAnchor.offsetLeft,
             bottom: 0,
           }}
         />
