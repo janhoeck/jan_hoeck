@@ -29,6 +29,10 @@ export const EquipmentFeatures = (props: EquipmentFeaturesProps) => {
         featureTypes={features.bedroom}
       />
       <EquipmentFeaturesItem
+        headline={t('bathroom')}
+        featureTypes={features.bathroom}
+      />
+      <EquipmentFeaturesItem
         headline={t('baby')}
         featureTypes={features.baby}
       />

@@ -60,6 +60,7 @@
           "outdoorArea": "Outdoor Area",
           "kitchen": "Kitchen",
           "bedroom": "Bedroom",
+          "bathroom": "Bathroom",
           "baby": "Baby"
         },
         "descriptions": {
@@ -67,6 +68,7 @@
           "baby_bed": "Baby bed",
           "balcony": "Balcony",
           "barrier_free": "Barrier-free",
+          "elevator": "Elevator",
           "bathtub": "Bathtub",
           "bed_linen": "Bed linen",
           "coffee_machine": "Coffee machine",

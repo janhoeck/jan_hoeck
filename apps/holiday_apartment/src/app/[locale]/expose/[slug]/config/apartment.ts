@@ -122,6 +122,7 @@ export const data: ExposeConfiguration = {
       'wlan',
       'tv',
       'barrier_free',
+      'elevator',
       'fire_extinguisher',
       'smoke_detector',
       'vacuum',

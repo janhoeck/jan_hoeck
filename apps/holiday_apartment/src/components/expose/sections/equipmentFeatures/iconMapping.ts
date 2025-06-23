@@ -18,6 +18,7 @@ import {
   PiHairDryer,
   PiAsteriskSimple,
   PiWine,
+  PiElevator,
 } from 'react-icons/pi'
 import { GiVacuumCleaner } from 'react-icons/gi'
 import { TbAirConditioning } from 'react-icons/tb'
@@ -31,6 +32,7 @@ export const iconMapping: Record<EquipmentFeatureType, IconType> = {
   baby_bed: PiBed,
   balcony: PiAsteriskSimple,
   barrier_free: PiWheelchair,
+  elevator: PiElevator,
   bathtub: PiBathtub,
   bed_linen: PiAsteriskSimple,
   coffee_machine: PiCoffee,

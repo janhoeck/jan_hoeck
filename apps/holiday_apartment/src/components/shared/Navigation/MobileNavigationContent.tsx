@@ -21,7 +21,7 @@ export const MobileNavigationContent = (props: MobileNavigationContentProps) => 
   useLockBodyScroll(isOpen)
 
   return (
-    <div className='flex w-full justify-between py-4'>
+    <div className='flex w-full justify-between px-4 py-4'>
       <Link href='/'>
         <Image
           src='/images/logo.png'

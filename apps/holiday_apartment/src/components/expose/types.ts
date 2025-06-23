@@ -6,6 +6,7 @@ export type EquipmentFeatureType =
   | 'wlan'
   | 'tv'
   | 'barrier_free'
+  | 'elevator'
   | 'refrigerator'
   | 'freezer'
   | 'cooker'
@@ -34,6 +35,7 @@ export type EquipmentFeatures = {
   general?: Extract<
     EquipmentFeatureType,
     | 'barrier_free'
+    | 'elevator'
     | 'fire_extinguisher'
     | 'smoke_detector'
     | 'parking'

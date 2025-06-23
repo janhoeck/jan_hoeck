@@ -60,6 +60,7 @@
           "outdoorArea": "Außenbereich",
           "kitchen": "Küche",
           "bedroom": "Schlafzimmer",
+          "bathroom": "Badezimmer",
           "baby": "Baby"
         },
         "descriptions": {
@@ -67,6 +68,7 @@
           "baby_bed": "Baby Bett",
           "balcony": "Balkon",
           "barrier_free": "Barrierefrei",
+          "elevator": "Aufzug",
           "bathtub": "Badewanne",
           "bed_linen": "Bettwäsche",
           "coffee_machine": "Kaffeemaschine",
