@@ -1,3 +1,4 @@
+'use client'
 import { Button } from '../Button/Button'
 import { LiaBarsSolid } from 'react-icons/lia'
 import React from 'react'

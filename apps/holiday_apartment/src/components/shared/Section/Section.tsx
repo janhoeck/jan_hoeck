@@ -10,7 +10,7 @@ export type SectionProps = {
 export const Section = (props: SectionProps) => {
   const { headline, variant = 'default', children } = props
   return (
-    <section>
+    <section className='z-1'>
       <Typography
         className={variant === 'default' ? 'mb-4' : 'mb-2'}
         variant='heading'

@@ -1,5 +1,3 @@
-'use client'
-import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { DesktopNavigationContent } from './DesktopNavigationContent'
 import { MobileNavigationContent } from './MobileNavigationContent'
@@ -13,25 +11,12 @@ export type NavigationProps = {
 
 export const Navigation = (props: NavigationProps) => {
   const { configuration } = props
-  const [didScroll, setDidScroll] = useState<boolean>(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setDidScroll(document.body.scrollTop !== 0)
-    }
-
-    document.body.addEventListener('scroll', handleScroll, false)
-    return () => {
-      document.body.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
 
   return (
     <header
       className={twMerge([
         // default styles
-        'sticky top-0 z-10 flex items-center bg-white shadow-md',
-        didScroll && 'border-b-1 border-neutral-300 shadow-none',
+        'sticky top-0 z-10 flex items-center bg-white',
       ])}
     >
       <DesktopOnly>

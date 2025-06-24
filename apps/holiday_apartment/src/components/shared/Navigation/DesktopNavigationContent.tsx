@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from 'react'
 import { NavigationItem } from './NavigationItem'
 import { NavigationConfiguration } from './types'
