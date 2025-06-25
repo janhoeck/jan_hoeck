@@ -99,6 +99,34 @@ export async function generateMetadata(props: MetadataProps): Promise<Metadata> 
     icons: {
       icon: '/favicon.ico',
     },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: false,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: 'https://solymarmenor.com',
+      siteName: 'Home',
+      images: [
+        {
+          url: 'https://solymarmenor.com/images/costacalida.jpeg',
+          width: 800,
+          height: 800,
+        },
+      ],
+      locale,
+      type: 'website',
+    },
   }
 }
 
