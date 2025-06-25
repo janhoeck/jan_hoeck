@@ -13,6 +13,9 @@ export const LayoutFooter = () => {
           <Link href='/imprint'>
             <Typography variant='smallText'>{t('imprint')}</Typography>
           </Link>
+          <Link href='/privacy'>
+            <Typography variant='smallText'>{t('privacy')}</Typography>
+          </Link>
           <Link href='/contact'>
             <Typography variant='smallText'>{t('contact')}</Typography>
           </Link>

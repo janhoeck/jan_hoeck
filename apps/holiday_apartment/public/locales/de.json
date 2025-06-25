@@ -36,6 +36,7 @@
     },
     "footer": {
       "imprint": "Impressum",
+      "privacy": "Datenschutz",
       "contact": "Kontakt",
       "allRightsReserved": "Alle Rechte vorbehalten"
     }
@@ -214,6 +215,40 @@
       "description": {
         "1": "Wir, Olaf und Tina, hatten schon lange den Traum, nach Spanien auszuwandern. Olaf ist Halbspanier, seine Mutter kommt aus der Region Murcia. Seit Jahren besitzen wir eine Wohnung in Los Urrutias. Im Jahr 2024 haben wir dann den Schritt gewagt, haben alles in Deutschland verkauft und sind ganz nach Spanien ausgewandert. Wir sind hier mit einem kleinen deutschen Service selbstständig und wollen nun auch anderen die Möglichkeit geben, den Flair und das Lebensgefühl dieser Gegend kennenzulernen.",
         "2": "Wir lieben dieses Land und möchten auch andere dafür begeistern. Uns ist es wichtig, dass wir als Vermieter immer vor Ort sind und als Ansprechpartner zur Verfügung stehen. Die Vermietung wird von uns selbst abgewickelt. Das bedeutet für Sie als unsere Mieter, dass wir eine Endabnahme durchführen (bei Abreise der Mieter), sodass sichergestellt ist, dass Sie bei der Anreise keine böse Überraschung erleben und die Wohnung sich in einem einwandfreien Zustand befindet."
+      }
+    },
+    "privacy": {
+      "headline": "Datenschutzerklärung",
+      "descriptions": {
+        "1/headline": "1. Allgemeine Hinweise",
+        "1": "Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich verarbeite Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TMG). In dieser Datenschutzerklärung informiere ich Sie darüber, welche Daten beim Besuch dieser Website erhoben werden und wie ich damit umgehe.",
+        "2/headline": "2. Verantwortliche Stelle",
+        "2": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+        "3/headline": "3. Erhebung und Verarbeitung personenbezogener Daten",
+        "3": "Diese Website kann grundsätzlich ohne Angabe personenbezogener Daten besucht werden. Es werden keine Cookies gesetzt und keine Tracking- oder Analyse-Tools eingesetzt.",
+        "4/headline": "Kontaktformular:",
+        "4": "Wenn Sie per Formular auf der Website Kontakt mit mir aufnehmen, werden die von Ihnen angegebenen Daten (z.B. Name, E-Mail-Adresse, Nachricht) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben und nicht für andere Zwecke verwendet.",
+        "5/headline": "Rechtsgrundlage:",
+        "5": "Die Verarbeitung der Daten erfolgt gemäß Art. 6 Abs. 1 lit. b DSGVO (zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen).",
+        "6/headline": "4. Server-Logfiles",
+        "6": "Der Hosting-Anbieter dieser Website erhebt und speichert möglicherweise automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt. Dies können sein:",
+        "6/1": "IP-Adresse",
+        "6/2": "Browsertyp und -version",
+        "6/3": "verwendetes Betriebssystem",
+        "6/4": "Referrer URL",
+        "6/5": "Uhrzeit der Serveranfrage",
+        "7": "Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Daten dienen lediglich der technischen Überwachung und Sicherheit der Website.",
+        "8/headline": "5. Ihre Rechte",
+        "8": "Ihnen stehen grundsätzlich folgende Rechte zu:",
+        "8/1": "Auskunft über Ihre gespeicherten Daten",
+        "8/2": "Berichtigung unrichtiger Daten",
+        "8/3": "Löschung Ihrer Daten (sofern keine gesetzliche Aufbewahrungspflicht besteht)",
+        "8/4": "Einschränkung der Verarbeitung",
+        "8/5": "Widerspruch gegen die Verarbeitung",
+        "8/6": "Datenübertragbarkeit (sofern zutreffend)",
+        "9": "Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, haben Sie das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde zu beschweren.",
+        "10/headline": "6. Kontakt bezüglich Datenschutz",
+        "10": "Für Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten sowie für Auskünfte, Berichtigung, Sperrung oder Löschung von Daten wenden Sie sich bitte an: casas.marmenor@gmx.de"
       }
     }
   },

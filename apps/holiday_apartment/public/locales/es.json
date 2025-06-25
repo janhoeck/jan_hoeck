@@ -36,6 +36,7 @@
     },
     "footer": {
       "imprint": "Aviso Legal",
+      "privacy": "Privacidad",
       "contact": "Contacto",
       "allRightsReserved": "Todos los Derechos Reservados"
     }
@@ -214,6 +215,40 @@
       "description": {
         "1": "Nosotros, Olaf y Tina, habíamos soñado durante mucho tiempo con emigrar a España. Olaf es medio español, su madre viene de la región de Murcia. Hemos sido propietarios de un apartamento en Los Urrutias durante años. En 2024, entonces dimos el paso, vendimos todo en Alemania y emigramos completamente a España. Somos autónomos aquí con un pequeño servicio alemán y ahora queremos dar a otros la oportunidad de conocer el ambiente y el estilo de vida de esta zona.",
         "2": "Amamos este país y queremos inspirar a otros sobre él también. Es importante para nosotros que como propietarios estemos siempre en el sitio y disponibles como personas de contacto. El alquiler es manejado por nosotros personalmente. Esto significa para ti como nuestros inquilinos que realizamos una inspección final (cuando los inquilinos se van), para que se asegure que no experimentarás sorpresas desagradables al llegar y el apartamento esté en perfectas condiciones."
+      }
+    },
+    "privacy": {
+      "headline": "Política de Privacidad",
+      "descriptions": {
+        "1/headline": "1. Información General",
+        "1": "La protección de sus datos personales es una preocupación especial para mí. Por lo tanto, proceso sus datos exclusivamente sobre la base de las disposiciones legales (RGPD, TMG). En esta política de privacidad, le informo sobre qué datos se recopilan al visitar este sitio web y cómo los manejo.",
+        "2/headline": "2. Responsable del Tratamiento",
+        "2": "El responsable del tratamiento de datos en este sitio web es:",
+        "3/headline": "3. Recopilación y Procesamiento de Datos Personales",
+        "3": "Este sitio web generalmente puede visitarse sin proporcionar datos personales. No se establecen cookies y no se utilizan herramientas de seguimiento o análisis.",
+        "4/headline": "Formulario de Contacto:",
+        "4": "Si se pone en contacto conmigo a través del formulario en el sitio web, los datos que proporcione (por ejemplo, nombre, dirección de correo electrónico, mensaje) serán almacenados por mí con el propósito de procesar su consulta y en caso de preguntas de seguimiento. Estos datos no se compartirán sin su consentimiento y no se utilizarán para otros fines.",
+        "5/headline": "Base Legal:",
+        "5": "El procesamiento de datos se lleva a cabo de acuerdo con el Art. 6 Párr. 1 lit. b RGPD (para el cumplimiento de un contrato o medidas precontractuales).",
+        "6/headline": "4. Archivos de Registro del Servidor",
+        "6": "El proveedor de alojamiento de este sitio web puede recopilar y almacenar automáticamente información en los llamados archivos de registro del servidor, que su navegador transmite automáticamente. Estos pueden incluir:",
+        "6/1": "Dirección IP",
+        "6/2": "Tipo y versión del navegador",
+        "6/3": "Sistema operativo utilizado",
+        "6/4": "URL de referencia",
+        "6/5": "Hora de la solicitud del servidor",
+        "7": "Estos datos no pueden asignarse a personas específicas. No se realiza ninguna fusión de estos datos con otras fuentes de datos. Los datos sirven únicamente para el monitoreo técnico y la seguridad del sitio web.",
+        "8/headline": "5. Sus Derechos",
+        "8": "Usted tiene derecho a los siguientes derechos:",
+        "8/1": "Información sobre sus datos almacenados",
+        "8/2": "Corrección de datos incorrectos",
+        "8/3": "Eliminación de sus datos (siempre que no exista obligación legal de conservación)",
+        "8/4": "Restricción del procesamiento",
+        "8/5": "Oposición al procesamiento",
+        "8/6": "Portabilidad de datos (si aplica)",
+        "9": "Si cree que el procesamiento de sus datos viola la ley de protección de datos, tiene derecho a presentar una queja ante la autoridad supervisora de protección de datos competente.",
+        "10/headline": "6. Contacto Sobre Protección de Datos",
+        "10": "Para preguntas sobre la recopilación, procesamiento o uso de sus datos personales, así como para información, corrección, bloqueo o eliminación de datos, póngase en contacto con: casas.marmenor@gmx.de"
       }
     }
   },

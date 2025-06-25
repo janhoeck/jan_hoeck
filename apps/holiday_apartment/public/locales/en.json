@@ -36,6 +36,7 @@
     },
     "footer": {
       "imprint": "Imprint",
+      "privacy": "Privacy",
       "contact": "Contact",
       "allRightsReserved": "All Rights Reserved"
     }
@@ -214,6 +215,40 @@
       "description": {
         "1": "We, Olaf and Tina, had long dreamed of emigrating to Spain. Olaf is half-Spanish, his mother comes from the Murcia region. We have owned an apartment in Los Urrutias for years. In 2024, we then took the plunge, sold everything in Germany and emigrated completely to Spain. We are self-employed here with a small German service and now want to give others the opportunity to get to know the flair and lifestyle of this area.",
         "2": "We love this country and want to inspire others about it too. It is important to us that we as landlords are always on site and available as contact persons. The rental is handled by us personally. This means for you as our tenants that we carry out a final inspection (when tenants depart), so that it is ensured that you will not experience any unpleasant surprises upon arrival and the apartment is in perfect condition."
+      }
+    },
+    "privacy": {
+      "headline": "Privacy Policy",
+      "descriptions": {
+        "1/headline": "1. General Information",
+        "1": "The protection of your personal data is of particular concern to me. I therefore process your data exclusively on the basis of legal provisions (GDPR, TMG). In this privacy policy, I inform you about which data is collected when visiting this website and how I handle it.",
+        "2/headline": "2. Data Controller",
+        "2": "The data controller for data processing on this website is:",
+        "3/headline": "3. Collection and Processing of Personal Data",
+        "3": "This website can generally be visited without providing personal data. No cookies are set and no tracking or analysis tools are used.",
+        "4/headline": "Contact Form:",
+        "4": "If you contact me via the form on the website, the data you provide (e.g., name, email address, message) will be stored by me for the purpose of processing your inquiry and in case of follow-up questions. This data will not be shared without your consent and will not be used for other purposes.",
+        "5/headline": "Legal Basis:",
+        "5": "The processing of data is carried out in accordance with Art. 6 Para. 1 lit. b GDPR (for the performance of a contract or pre-contractual measures).",
+        "6/headline": "4. Server Log Files",
+        "6": "The hosting provider of this website may automatically collect and store information in so-called server log files, which your browser automatically transmits. These may include:",
+        "6/1": "IP address",
+        "6/2": "Browser type and version",
+        "6/3": "Operating system used",
+        "6/4": "Referrer URL",
+        "6/5": "Time of server request",
+        "7": "This data cannot be assigned to specific persons. No merging of this data with other data sources is undertaken. The data serves solely for technical monitoring and security of the website.",
+        "8/headline": "5. Your Rights",
+        "8": "You are generally entitled to the following rights:",
+        "8/1": "Information about your stored data",
+        "8/2": "Correction of incorrect data",
+        "8/3": "Deletion of your data (provided there is no legal retention obligation)",
+        "8/4": "Restriction of processing",
+        "8/5": "Objection to processing",
+        "8/6": "Data portability (if applicable)",
+        "9": "If you believe that the processing of your data violates data protection law, you have the right to lodge a complaint with the competent data protection supervisory authority.",
+        "10/headline": "6. Contact Regarding Data Protection",
+        "10": "For questions about the collection, processing or use of your personal data, as well as for information, correction, blocking or deletion of data, please contact: casas.marmenor@gmx.de"
       }
     }
   },
