@@ -44,7 +44,7 @@ export default function ImprintPage() {
         <Section headline='Datenschutz'>
           <ContentBlock
             items={[
-              'Diese Website verwendet keine Cookies und erhebt keine personenbezogenen Daten ohne Ihre ausdrückliche Eingabe. Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben. Weitere Hinweise finden Sie ggf. in der [Datenschutzerklärung].',
+              'Diese Website verwendet keine Cookies und erhebt keine personenbezogenen Daten ohne Ihre ausdrückliche Eingabe. Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben. Weitere Hinweise finden Sie ggf. in der Datenschutzerklärung.',
             ]}
           />
         </Section>
