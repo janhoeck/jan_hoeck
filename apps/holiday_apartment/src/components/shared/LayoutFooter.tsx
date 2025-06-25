@@ -7,7 +7,7 @@ export const LayoutFooter = () => {
   const t = useTranslations('components.footer')
   return (
     <footer className='p-4'>
-      <div className='flex items-center justify-between gap-4 px-4'>
+      <div className='flex flex-col items-end gap-4 px-4 sm:flex-row sm:items-center sm:justify-between'>
         <LanguageSelector />
         <div className='flex gap-4'>
           <Link href='/imprint'>

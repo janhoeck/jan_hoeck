@@ -31,7 +31,7 @@ export const LanguageSelector = () => {
       </Select.Trigger>
       <Select.Portal>
         <Select.Content
-          className='overflow-hidden rounded-sm bg-white py-2 shadow-md'
+          className='z-10 overflow-hidden rounded-sm bg-white py-2 shadow-md'
           side='bottom'
           position='popper'
         >
