@@ -4,18 +4,17 @@ import { routing } from '../../../i18n/routing'
 import { useLocale, useTranslations } from 'next-intl'
 import { LiaAngleDownSolid, LiaCheckSolid } from 'react-icons/lia'
 import { Button } from '../Button/Button'
-import { redirect, usePathname } from '../../../i18n/navigation'
+import { usePathname, useRouter } from '../../../i18n/navigation'
 
 export const LanguageSelector = () => {
   const t = useTranslations('components.languageSelector')
   const currentLocale = useLocale()
   const pathname = usePathname()
+  const router = useRouter()
 
   const handleValueChange = (locale: string) => {
-    redirect({
-      href: pathname,
-      locale: locale,
-    })
+    router.replace({ pathname }, { locale })
+    router.refresh()
   }
 
   return (
