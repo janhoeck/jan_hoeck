@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.w3.org/TR/xhtml11/xhtml11_schema.html http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/TR/xhtml11/xhtml11_schema.html">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
     <!-- Homepage -->
     <url>
@@ -82,6 +82,7 @@
     <url>
         <loc>https://solymarmenor.com/en</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en"/>
@@ -92,6 +93,7 @@
     <url>
         <loc>https://solymarmenor.com/en/aboutus</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/aboutus"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/aboutus"/>
@@ -101,6 +103,7 @@
     <url>
         <loc>https://solymarmenor.com/en/expose/apartment</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/expose/apartment"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/expose/apartment"/>
@@ -110,6 +113,7 @@
     <url>
         <loc>https://solymarmenor.com/en/expose/house</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/expose/house"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/expose/house"/>
@@ -119,6 +123,7 @@
     <url>
         <loc>https://solymarmenor.com/en/contact</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/contact"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/contact"/>
@@ -128,6 +133,7 @@
     <url>
         <loc>https://solymarmenor.com/en/imprint</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/imprint"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/imprint"/>
@@ -138,6 +144,7 @@
     <url>
         <loc>https://solymarmenor.com/es</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en"/>
@@ -148,6 +155,7 @@
     <url>
         <loc>https://solymarmenor.com/es/aboutus</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/aboutus"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/aboutus"/>
@@ -157,6 +165,7 @@
     <url>
         <loc>https://solymarmenor.com/es/expose/apartment</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/expose/apartment"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/expose/apartment"/>
@@ -166,28 +175,7 @@
     <url>
         <loc>https://solymarmenor.com/es/expose/house</loc>
         <lastmod>2025-06-20T18:22:15+01:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/expose/house"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/expose/house"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/expose/house"/>
-    </url>
-
-    <url>
-        <loc>https://solymarmenor.com/es/contact</loc>
-        <lastmod>2025-06-20T18:22:15+01:00</lastmod>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/contact"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/contact"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/contact"/>
-    </url>
-
-    <url>
-        <loc>https://solymarmenor.com/es/imprint</loc>
-        <lastmod>2025-06-20T18:22:15+01:00</lastmod>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/imprint"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/imprint"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/imprint"/>
-    </url>
-
-</urlset>
+        <xhtml:link rel="alternate" hreflang=
