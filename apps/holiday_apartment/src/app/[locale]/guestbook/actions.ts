@@ -1,7 +1,7 @@
 'use server'
 
 import { GuestbookFormData } from '@/components/shared/GuestbookForm/types'
-import { supabaseServer } from '@/utils/supabase/server'
+import { getSupabaseServer } from '@/utils/supabase/server'
 import { redirect } from '../../../i18n/navigation'
 import { getLocale } from 'next-intl/server'
 
@@ -9,6 +9,7 @@ export async function insertGuestbookEntry(_initialState: any, formData: FormDat
   const guestbookFormData = Object.fromEntries([...formData]) as GuestbookFormData
   const locale = await getLocale()
 
+  const supabaseServer = getSupabaseServer()
   const { data, error } = await supabaseServer
     .from('guestbook')
     .insert({
