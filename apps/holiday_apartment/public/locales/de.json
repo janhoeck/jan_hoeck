@@ -5,6 +5,7 @@
       "about_us": "Über uns",
       "apartment": "Ferienwohnung",
       "house": "Ferienhaus",
+      "guestbook": "Gästebuch",
       "contact": "Kontakt"
     },
     "contactForm": {
@@ -19,6 +20,27 @@
       },
       "phone": {
         "label": "Telefonnummer"
+      },
+      "message": {
+        "label": "Nachricht",
+        "valueMissing": "Bitte geben Sie eine Nachricht an"
+      },
+      "sendButtonLabel": "Abschicken"
+    },
+    "guestbookForm": {
+      "name": {
+        "label": "Name",
+        "valueMissing": "Bitte geben Sie ihren Namen an"
+      },
+      "rating": {
+        "label": "Bewertung",
+        "options": {
+          "1": "Nicht zufrieden",
+          "2": "Eher unzufrieden",
+          "3": "Neutral / Durchschnittlich",
+          "4": "Zufrieden",
+          "5": "Hervorragend"
+        }
       },
       "message": {
         "label": "Nachricht",
@@ -249,6 +271,18 @@
         "9": "Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, haben Sie das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde zu beschweren.",
         "10/headline": "6. Kontakt bezüglich Datenschutz",
         "10": "Für Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten sowie für Auskünfte, Berichtigung, Sperrung oder Löschung von Daten wenden Sie sich bitte an: casas.marmenor@gmx.de"
+      }
+    },
+    "guestbook": {
+      "headline": "Gästebuch",
+      "empty": {
+        "headline": "Noch ist unser Gästebuch leer...",
+        "text": "Aber das muss nicht so bleiben! Wir würden uns sehr freuen, wenn du den ersten Eintrag hinterlässt. Ob ein lieber Gruß, ein nettes Kompliment oder dein Eindruck vom Besuch – dein Beitrag macht den Anfang und schenkt auch anderen ein Lächeln."
+      },
+      "descriptions": {
+        "1/headline": "Wir freuen uns über Ihren Eintrag!",
+        "1": "Haben Sie sich wohlgefühlt? Möchten Sie einen besonderen Moment mit uns teilen oder einfach nur ein paar nette Worte hinterlassen? Dann schreiben Sie uns doch gerne einen Eintrag in unser Gästebuch. Ihr Feedback ist uns wichtig und bereitet nicht nur uns, sondern auch zukünftigen Gästen viel Freude.",
+        "2/headline": "Das sagen unsere Gäste"
       }
     }
   },

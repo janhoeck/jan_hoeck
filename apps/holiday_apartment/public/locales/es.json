@@ -5,6 +5,7 @@
       "about_us": "Sobre Nosotros",
       "apartment": "Apartamento Vacacional",
       "house": "Casa Vacacional",
+      "guestbook": "Libro de visitas",
       "contact": "Contacto"
     },
     "contactForm": {
@@ -23,6 +24,27 @@
       "message": {
         "label": "Mensaje",
         "valueMissing": "Por favor, introduce un mensaje"
+      },
+      "sendButtonLabel": "Enviar"
+    },
+    "guestbookForm": {
+      "name": {
+        "label": "Nombre",
+        "valueMissing": "Por favor, indique su nombre"
+      },
+      "rating": {
+        "label": "Valoración",
+        "options": {
+          "1": "No satisfecho",
+          "2": "Más bien insatisfecho",
+          "3": "Neutral / Regular",
+          "4": "Satisfecho",
+          "5": "Excelente"
+        }
+      },
+      "message": {
+        "label": "Mensaje",
+        "valueMissing": "Por favor, escriba un mensaje"
       },
       "sendButtonLabel": "Enviar"
     },
@@ -249,6 +271,18 @@
         "9": "Si cree que el procesamiento de sus datos viola la ley de protección de datos, tiene derecho a presentar una queja ante la autoridad supervisora de protección de datos competente.",
         "10/headline": "6. Contacto Sobre Protección de Datos",
         "10": "Para preguntas sobre la recopilación, procesamiento o uso de sus datos personales, así como para información, corrección, bloqueo o eliminación de datos, póngase en contacto con: casas.marmenor@gmx.de"
+      }
+    },
+    "guestbook": {
+      "headline": "Libro de visitas",
+      "empty": {
+        "headline": "Nuestro libro de visitas aún está vacío...",
+        "text": "¡Pero no tiene por qué seguir así! Nos alegraría mucho si dejaras la primera entrada. Ya sea un saludo cariñoso, un bonito cumplido o tu impresión de la visita: tu contribución marca el comienzo y también le regala una sonrisa a otros."
+      },
+      "descriptions": {
+        "1/headline": "¡Nos alegramos de su entrada!",
+        "1": "¿Se ha sentido cómodo? ¿Le gustaría compartir un momento especial con nosotros o simplemente dejar algunas palabras bonitas? Entonces, por favor, escríbanos una entrada en nuestro libro de visitas. Sus comentarios son importantes para nosotros y traen mucha alegría no solo a nosotros, sino también a futuros huéspedes.",
+        "2/headline": "Esto dicen nuestros huéspedes"
       }
     }
   },

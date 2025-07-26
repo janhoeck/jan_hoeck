@@ -83,6 +83,17 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/imprint"/>
     </url>
 
+    <url>
+        <loc>https://solymarmenor.com/de/guestbook</loc>
+        <lastmod>2025-07-23T18:22:15+01:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/guestbook"/>
+    </url>
+
     <!-- English Pages -->
     <url>
         <loc>https://solymarmenor.com/en</loc>
@@ -150,6 +161,17 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/imprint"/>
     </url>
 
+    <url>
+        <loc>https://solymarmenor.com/en/guestbook</loc>
+        <lastmod>2025-07-23T18:22:15+01:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/guestbook"/>
+    </url>
+
     <!-- Spanish Pages -->
     <url>
         <loc>https://solymarmenor.com/es</loc>
@@ -215,5 +237,16 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/imprint"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/imprint"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/imprint"/>
+    </url>
+
+    <url>
+        <loc>https://solymarmenor.com/es/guestbook</loc>
+        <lastmod>2025-07-23T18:22:15+01:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/guestbook"/>
     </url>
 </urlset>

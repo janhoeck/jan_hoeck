@@ -20,6 +20,10 @@ export const LayoutNavigation = () => {
           label: t('apartment'),
         },
         {
+          href: '/guestbook',
+          label: t('guestbook'),
+        },
+        {
           href: '/contact',
           label: t('contact'),
         },

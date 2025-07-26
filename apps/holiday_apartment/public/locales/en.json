@@ -5,6 +5,7 @@
       "about_us": "About Us",
       "apartment": "Holiday Apartment",
       "house": "Holiday Home",
+      "guestbook": "Guestbook",
       "contact": "Contact"
     },
     "contactForm": {
@@ -19,6 +20,27 @@
       },
       "phone": {
         "label": "Phone Number"
+      },
+      "message": {
+        "label": "Message",
+        "valueMissing": "Please enter a message"
+      },
+      "sendButtonLabel": "Send"
+    },
+    "guestbookForm": {
+      "name": {
+        "label": "Name",
+        "valueMissing": "Please enter your name"
+      },
+      "rating": {
+        "label": "Rating",
+        "options": {
+          "1": "Not satisfied",
+          "2": "Rather dissatisfied",
+          "3": "Neutral / Average",
+          "4": "Satisfied",
+          "5": "Excellent"
+        }
       },
       "message": {
         "label": "Message",
@@ -249,6 +271,18 @@
         "9": "If you believe that the processing of your data violates data protection law, you have the right to lodge a complaint with the competent data protection supervisory authority.",
         "10/headline": "6. Contact Regarding Data Protection",
         "10": "For questions about the collection, processing or use of your personal data, as well as for information, correction, blocking or deletion of data, please contact: casas.marmenor@gmx.de"
+      }
+    },
+    "guestbook": {
+      "headline": "Guestbook",
+      "empty": {
+        "headline": "Our guestbook is still empty...",
+        "text": "But it doesn't have to stay that way! We would be very happy if you left the first entry. Whether it's a kind greeting, a nice compliment, or your impression of the visit – your contribution marks the beginning and brings a smile to others as well."
+      },
+      "descriptions": {
+        "1/headline": "We look forward to your entry!",
+        "1": "Did you feel comfortable? Would you like to share a special moment with us or simply leave a few kind words? Then please feel free to write us an entry in our guestbook. Your feedback is important to us and brings great joy not only to us, but also to future guests.",
+        "2/headline": "What our guests say"
       }
     }
   },
