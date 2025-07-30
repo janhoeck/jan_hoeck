@@ -3,8 +3,8 @@ import { Select } from 'radix-ui'
 import { routing } from '../../../i18n/routing'
 import { useLocale, useTranslations } from 'next-intl'
 import { LiaAngleDownSolid, LiaCheckSolid } from 'react-icons/lia'
-import { Button } from '../Button/Button'
 import { usePathname, useRouter } from '../../../i18n/navigation'
+import { Button } from '@jan_hoeck/ui'
 
 export const LanguageSelector = () => {
   const t = useTranslations('components.languageSelector')

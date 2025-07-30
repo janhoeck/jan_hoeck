@@ -1,4 +1,3 @@
-'use client'
 import { ComponentProps, ElementType, forwardRef, ReactElement, ReactNode, Ref, useMemo } from 'react'
 import { twMerge } from 'tailwind-merge'
 

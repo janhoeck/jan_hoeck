@@ -1,10 +1,10 @@
 import { Dialog } from 'radix-ui'
 import { ImageCarousel } from '../ImageCarousel'
-import { Button } from '../../../shared/Button/Button'
 import { IoMdClose } from 'react-icons/io'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { Button } from '@jan_hoeck/ui'
 
 export type ImageGalleryDialogContentProps = {
   imageSources: ExposeConfiguration['imageSources']

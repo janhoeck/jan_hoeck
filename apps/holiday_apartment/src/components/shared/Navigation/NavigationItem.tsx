@@ -1,8 +1,8 @@
 'use client'
-import { Button, ButtonProps } from '../Button/Button'
 import { Link } from '../../../i18n/navigation'
 import { twMerge } from 'tailwind-merge'
 import { forwardRef } from 'react'
+import { Button, ButtonProps } from '@jan_hoeck/ui'
 
 export type NavigationItemProps = {
   children: string

@@ -1,6 +1,5 @@
 import { Form } from 'radix-ui'
-import { Typography } from '@jan_hoeck/ui'
-import { Button } from '../Button/Button'
+import { Typography, Button } from '@jan_hoeck/ui'
 import { FormHTMLAttributes } from 'react'
 import { useTranslations } from 'next-intl'
 

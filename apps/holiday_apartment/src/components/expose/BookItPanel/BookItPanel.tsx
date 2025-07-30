@@ -1,6 +1,5 @@
 'use client'
-import { Button } from '@/components/shared/Button/Button'
-import { Typography } from '@jan_hoeck/ui'
+import { Typography, Button } from '@jan_hoeck/ui'
 import { Link } from '../../../i18n/navigation'
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 import { useTranslations } from 'next-intl'
