@@ -92,6 +92,27 @@ export async function generateMetadata(props: MetadataProps): Promise<Metadata> 
       'Ferienhaus reservieren Costa Cálida',
       'Urlaubsunterkunft online buchen',
       'Ferienwohnung direkt buchen',
+
+      // SEO keywords
+      'los alcazares',
+      'mar menor',
+      'holidays to los alcazares',
+      'mar menor spain',
+      'los alcazares beach',
+      'los alcázares',
+      'where is mar menor',
+      'holidays in los alcazares',
+      'los alcarez',
+      'alcazares murcia',
+      'los alcazares holidays',
+      'los alcarzares',
+      'mar menor murcia',
+      'murcia alcazares',
+      'los alcazares spain',
+      'los alcazares mar menor',
+      'los alcázares spain',
+      'mar menor los alcazares',
+      'the mar menor'
     ],
     alternates: {
       canonical: `https://solymarmenor.com/${locale}`,
