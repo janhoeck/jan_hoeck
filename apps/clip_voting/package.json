@@ -1,5 +1,5 @@
 {
-  "name": "holiday_apartment",
+  "name": "clip_voting",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://janhoeck.github.io/jan_hoeck",
@@ -19,11 +19,9 @@
     "@vis.gl/react-google-maps": "^1.6.1",
     "embla-carousel-react": "^8.6.0",
     "next": "^16.0.0",
-    "next-intl": "^4.4.0",
     "radix-ui": "^1.4.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-i18next": "^16.2.0",
     "react-icons": "^5.5.0",
     "resend": "^6.2.2",
     "tailwind-merge": "^3.3.1"

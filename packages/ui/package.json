@@ -26,25 +26,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "tailwind-merge": "^3.3.0",
+    "tailwind-merge": "^3.3.1",
     "clsx": "^2.1.1"
   },
   "devDependencies": {
     "@jan_hoeck/eslint-config": "workspace:*",
     "@jan_hoeck/typescript-config": "workspace:*",
-    "@tailwindcss/vite": "^4.1.8",
-    "@turbo/gen": "^2.5.0",
-    "@types/node": "^22.15.3",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.5",
-    "@vitejs/plugin-react": "^4.5.1",
-    "eslint": "^9.27.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "@tailwindcss/vite": "^4.1.16",
+    "@turbo/gen": "^2.5.8",
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.38.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "rollup-plugin-preserve-directives": "^0.4.0",
-    "tailwindcss": "^4.1.8",
-    "typescript": "5.8.2",
-    "vite": "^6.3.5",
+    "tailwindcss": "^4.1.16",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
     "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
