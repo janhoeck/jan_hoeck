@@ -7,11 +7,11 @@
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "format": "npx prettier --write ./src"
   },
   "dependencies": {
     "@jan_hoeck/ui": "workspace:*",
+    "@jan_hoeck/utils": "workspace:*",
     "@supabase/ssr": "^0.7.0",
     "@supabase/supabase-js": "^2.76.1",
     "@vercel/analytics": "^1.5.0",

@@ -15,7 +15,7 @@ export const ImageGalleryDialogContent = (props: ImageGalleryDialogContentProps)
   return (
     <Dialog.Content
       className={twMerge([
-        'absolute left-1/2 top-1/2 z-30 flex -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-sm bg-white shadow-md',
+        'absolute top-1/2 left-1/2 z-30 flex -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-sm bg-white shadow-md',
         'sm:h-[550px] sm:w-[90vw] md:h-[690px] xl:w-[930px]',
       ])}
     >

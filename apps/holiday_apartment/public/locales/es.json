@@ -102,11 +102,7 @@
         "9": "Los Alcázares combina relajación, salud y actividad en perfecta armonía. Ya sea vacaciones familiares, aventura de deportes acuáticos o descanso de bienestar - descubre por ti mismo por qué Los Alcázares es uno de los destinos de viaje más populares de la Costa Cálida."
       },
       "exposeListSection": {
-        "headline": "Alojamientos",
-        "apartment": {
-          "description": "4 Camas • 1 Baños",
-          "headline": "Apartamento Vacacional Los Alcázares Mar Menor - Apartamento de Lujo Puerto Marina Murcia"
-        }
+        "headline": "Alojamientos"
       }
     },
     "contact": {
@@ -183,6 +179,7 @@
       },
       "propertySummary": {
         "labels": {
+          "pool": "Piscina privada",
           "bed": "Camas",
           "bathroom": "Baños",
           "bedroom": "Dormitorios",
@@ -193,43 +190,6 @@
         "perNight": "por noche",
         "cleaning": "más una tarifa de limpieza única de {cleaning}",
         "contact": "Contactar Proveedor"
-      }
-    },
-    "expose/apartment": {
-      "headline": "Apartamento Vacacional Los Alcázares Mar Menor - Apartamento de Lujo Puerto Marina Murcia",
-      "description": {
-        "1": "El apartamento tiene capacidad para hasta cuatro personas. Cuenta con tres habitaciones, dos dormitorios, una sala de estar, un baño y una cocina de estilo americano. Un punto destacado es el balcón donde puedes disfrutar del sol de la tarde desde las 18:00. El apartamento está completamente equipado con utensilios de cocina, toallas y ropa de cama. Tiene televisión alemana y un Amazon Fire TV Stick. Está ubicado en el primer piso y también es accesible por ascensor.",
-        "2": "El complejo cuenta con una hermosa área interior con tres piscinas, dos de las cuales son accesibles para discapacitados. Las palmeras enmarcan el complejo y crean un ambiente caribeño. El lugar ideal para relajarse.",
-        "3": "Proporcionamos a nuestros huéspedes tumbonas para el uso de la piscina. Solo pedimos que devuelvan las tumbonas al apartamento desde el área de la piscina al final del día. También ten en cuenta que el vidrio en cualquier forma no está permitido en las áreas de la piscina.",
-        "4": "El complejo residencial impresiona con su ubicación central pero tranquila. Como una residencia cerrada, segura y privada, está a solo unos minutos a pie de la playa, tiendas, bares y restaurantes - por lo tanto, no es necesario un coche si prefieres caminar.",
-        "5": "Infraestructura perfecta en las inmediaciones:",
-        "5/1": "Supermercados (Lidl, Aldi, Mercadona): a solo 150 m",
-        "5/2": "Famosa zona peatonal de Los Alcázares con la Plaza 525: 120 m - aquí puedes esperar restaurantes, bares de baile nocturnos, música en vivo y numerosos puestos hippies y de vendedores",
-        "5/3": "Mar con el pintoresco paseo marítimo y diversos restaurantes: 950 m",
-        "6": "Nuestro apartamento vacacional te ofrece el punto de partida ideal para unas vacaciones inolvidables con una atractiva relación calidad-precio.",
-        "7": "Nota importante: No se permiten mascotas en el complejo residencial."
-      },
-      "location": {
-        "description": {
-          "1": "Los Alcázares es un popular resort vacacional en la soleada Costa Cálida en la región española de Murcia. Ubicado directamente en el hermoso Mar Menor, la laguna de agua salada más grande de Europa, el resort ofrece condiciones perfectas para unas vacaciones relajantes y activas en España.",
-          "2": "Con alrededor de 7 kilómetros de playa de arena fina, agua tranquila y poco profunda y un clima suave durante todo el año (promedio de 20°C), Los Alcázares es el destino de viaje ideal para familias, parejas y vacacionistas activos. Particularmente popular es bañarse en el Mar Menor, cuya agua salada rica en yodo es conocida por sus efectos terapéuticos - ideal para problemas de piel, respiratorios y articulares. ¡Un spa natural justo en tu puerta!",
-          "3": "Nuestro apartamento vacacional en Los Alcázares está ubicado a solo unos metros de la playa y es excelentemente accesible: el Aeropuerto Murcia-San Javier está a solo unos kilómetros, el Aeropuerto de Alicante se puede alcanzar en aproximadamente 50 minutos en coche.",
-          "4": "Experimenta una combinación perfecta de relajación, deporte y estilo de vida español en Los Alcázares:",
-          "4/1": "Oportunidades de deportes acuáticos como vela, windsurf, kitesurf, kayak, stand-up paddle",
-          "4/2": "Centros deportivos modernos con tenis, voleibol, squash, fitness, fútbol y mucho más",
-          "4/3": "Especialidades locales de la cocina murciana en numerosos restaurantes y bares de tapas",
-          "4/4": "Sitios históricos y emocionantes destinos de excursión en la zona",
-          "5": "La ciudad ofrece excelente infraestructura con supermercados, farmacias, colegios internacionales, atención médica, campos de golf y un servicio de autobús confiable a lo largo de la costa.",
-          "6": "Para los golfistas, la región es un paraíso: cerca hay más de 15 campos de golf, incluyendo el conocido La Manga Club, uno de los mejores resorts de golf de Europa.",
-          "7": "Ya sea que busques unas vacaciones de playa en España, unas vacaciones de golf activas en la Costa Cálida o simplemente relajación con la familia - Los Alcázares ofrece las mejores condiciones para una estancia inolvidable."
-        }
-      },
-      "houseRules": {
-        "checkIn": "Check-in desde las 15:00",
-        "checkOut": "Check-out antes de las 11:00",
-        "description": {
-          "1": "Según las normas de la casa del complejo Puerto Marina, no está permitido secar toallas en el balcón. Por favor, usa el tendedero disponible en su lugar."
-        }
       }
     },
     "about": {

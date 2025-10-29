@@ -22,7 +22,7 @@ export const LanguageSelector = () => {
       value={currentLocale}
       onValueChange={handleValueChange}
     >
-      <Select.Trigger className='border-1 flex items-center gap-4 rounded-sm border-neutral-300 bg-white px-2 py-1'>
+      <Select.Trigger className='flex items-center gap-4 rounded-sm border-1 border-neutral-300 bg-white px-2 py-1'>
         <Select.Value placeholder={t('placeholder')}>{t(`options.${currentLocale}`)}</Select.Value>
         <Select.Icon className='SelectIcon'>
           <LiaAngleDownSolid />

@@ -22,11 +22,11 @@ export const WelcomeImage = () => {
         className='object-cover saturate-150'
         sizes='100vw'
       />
-      <div className='z-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-teal-700/70 p-2 text-center md:p-4'>
+      <div className='absolute top-1/2 left-1/2 z-1 -translate-x-1/2 -translate-y-1/2 bg-teal-700/70 p-2 text-center md:p-4'>
         <Typography
           variant='heading'
           size={1}
-          className='text-center text-2xl uppercase tracking-wider text-white sm:text-3xl'
+          className='text-center text-2xl tracking-wider text-white uppercase sm:text-3xl'
         >
           {t('welcome')}
         </Typography>

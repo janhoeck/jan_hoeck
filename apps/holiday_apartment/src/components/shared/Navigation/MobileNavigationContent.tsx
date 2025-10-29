@@ -38,14 +38,14 @@ export const MobileNavigationContent = (props: MobileNavigationContentProps) => 
       </Button>
       <div
         className={twMerge([
-          'xs:w-full absolute right-0 top-0 h-dvh w-full bg-white pt-20 shadow-md',
+          'xs:w-full absolute top-0 right-0 h-dvh w-full bg-white pt-20 shadow-md',
           isOpen && 'animate-slide-in-right',
           !isOpen && 'hidden',
         ])}
       >
         <Button
           variant='ghost'
-          className='absolute right-4 top-4'
+          className='absolute top-4 right-4'
           onClick={close}
         >
           <IoMdClose size={25} />

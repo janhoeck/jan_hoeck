@@ -1,7 +1,8 @@
 import { PropsWithChildren } from 'react'
 import { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
 import { GoogleMapsAPIProvider } from '@/components/shared/GoogleMapsAPIProvider/GoogleMapsAPIProvider'
+import { loadExposeConfig } from '../../../../api/loadExposeConfigs'
+import { getTranslation } from '@/components/expose/utils'
 
 type Params = Promise<{ locale: string; slug: string }>
 
@@ -11,16 +12,20 @@ type MetadataProps = {
 
 export async function generateMetadata(props: MetadataProps): Promise<Metadata> {
   const { locale, slug } = await props.params
-  const t = await getTranslations({ locale, namespace: `pages.expose/${slug}` })
+  const expose = loadExposeConfig(slug)
+
+  if (!expose) {
+    return {}
+  }
 
   return {
-    title: t('headline'),
+    title: getTranslation(locale, expose.headline),
     openGraph: {
-      title: t('headline'),
-      url: `https://solymarmenor.com/expose/${slug}`,
+      title: getTranslation(locale, expose.headline),
+      url: `https://solymarmenor.com/expose/${expose.id}`,
       images: [
         {
-          url: 'https://solymarmenor.com/images/apartment/IMG_9806.webp',
+          url: `https://solymarmenor.com/images/${expose.id}/coverPhoto.webp`,
           width: 400,
           height: 400,
         },

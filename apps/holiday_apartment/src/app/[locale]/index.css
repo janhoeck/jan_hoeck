@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@source "../../../node_modules/@jan_hoeck/ui";
+@source '../../../node_modules/@jan_hoeck/ui';
 
 html,
 body {

@@ -8,7 +8,7 @@ export default function AboutUsPage() {
   const t = useTranslations('pages.about')
   return (
     <ContentContainer className='pt-10'>
-      <div className='z-1 relative flex justify-center'>
+      <div className='relative z-1 flex justify-center'>
         <div className='w-full justify-center text-center sm:max-w-[450px] lg:max-w-[650px]'>
           <Section headline={t('headline')}>
             <div className='flex flex-col items-center gap-6'>

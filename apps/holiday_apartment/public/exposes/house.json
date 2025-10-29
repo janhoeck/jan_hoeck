@@ -1,0 +1,238 @@
+{
+  "id": "house",
+  "imageSources": [
+    "/images/house/coverPhoto.webp",
+    "/images/house/IMG_1672.webp",
+    "/images/house/IMG_1673.webp",
+    "/images/house/IMG_1674.webp",
+    "/images/house/IMG_1675.webp",
+    "/images/house/IMG_1677.webp",
+    "/images/house/IMG_1678.webp",
+    "/images/house/IMG_1679.webp",
+    "/images/house/IMG_1680.webp",
+    "/images/house/IMG_1681.webp",
+    "/images/house/IMG_1682.webp",
+    "/images/house/IMG_1683.webp",
+    "/images/house/IMG_1684.webp",
+    "/images/house/IMG_1685.webp",
+    "/images/house/IMG_1686.webp",
+    "/images/house/IMG_1687.webp",
+    "/images/house/IMG_1688.webp",
+    "/images/house/IMG_1689.webp",
+    "/images/house/IMG_1690.webp",
+    "/images/house/IMG_1692.webp",
+    "/images/house/IMG_1695.webp",
+    "/images/house/IMG_1699.webp",
+    "/images/house/IMG_1702.webp",
+    "/images/house/IMG_1704.webp",
+    "/images/house/IMG_1707.webp",
+    "/images/house/IMG_1708.webp",
+    "/images/house/IMG_1709.webp",
+    "/images/house/IMG_1711.webp",
+    "/images/house/IMG_1713.webp",
+    "/images/house/IMG_1717.webp",
+    "/images/house/IMG_1718.webp",
+    "/images/house/IMG_1719.webp",
+    "/images/house/IMG_2170.webp",
+    "/images/house/IMG_2174.webp",
+    "/images/house/IMG_2175.webp",
+    "/images/house/IMG_2065.webp",
+    "/images/house/IMG_2066.webp",
+    "/images/house/IMG_2080.webp",
+    "/images/house/IMG_2081.webp",
+    "/images/house/IMG_2126.webp",
+    "/images/house/IMG_2132.webp",
+    "/images/house/IMG_2133.webp",
+    "/images/house/IMG_2138.webp",
+    "/images/house/IMG_2139.webp",
+    "/images/house/IMG_2140.webp",
+    "/images/house/IMG_2143.webp",
+    "/images/house/IMG_2147.webp",
+    "/images/house/IMG_2150.webp",
+    "/images/house/IMG_2151.webp",
+    "/images/house/IMG_2152.webp",
+    "/images/house/IMG_2154.webp",
+    "/images/house/IMG_2160.webp",
+    "/images/house/IMG_2161.webp",
+    "/images/house/IMG_2163.webp",
+    "/images/house/IMG_2167.webp",
+    "/images/house/IMG_2169.webp",
+    "/images/house/IMG_2176.webp",
+    "/images/house/IMG_2177.webp",
+    "/images/house/IMG_2178.webp",
+    "/images/house/IMG_2179.webp",
+    "/images/house/IMG_2180.webp",
+    "/images/house/IMG_2198.webp",
+    "/images/house/IMG_2199.webp",
+    "/images/house/IMG_2202.webp",
+    "/images/house/IMG_2203.webp",
+    "/images/house/IMG_2204.webp",
+    "/images/house/IMG_2208.webp",
+    "/images/house/IMG_2215.webp"
+  ],
+  "location": {
+    "lat": 37.673871,
+    "lng": -0.826053,
+    "address": {
+      "street": "Calle los Rosales",
+      "houseNumber": "3",
+      "postalCode": "30368",
+      "city": "Los Urrutias",
+      "country": "Spain",
+      "description": {
+        "de": "Bitte beachten Sie: Google Maps zeigt die Adresse gelegentlich nicht korrekt an, wenn sie manuell eingegeben wird. Vergewissern Sie sich daher, dass der Zielort richtig angezeigt wird – oder verwenden Sie alternativ Apple Karten für eine zuverlässige Navigation.",
+        "en": "Please note: Google Maps occasionally displays the address incorrectly when entered manually. Therefore, please ensure that the destination is displayed correctly—or alternatively, use Apple Maps for reliable navigation.",
+        "es": "Tenga en cuenta que Google Maps a veces no muestra correctamente la dirección cuando se introduce manualmente. Por lo tanto, asegúrese de que el destino se muestra correctamente o, como alternativa, utilice Apple Maps para una navegación fiable."
+      }
+    },
+    "description": [
+      {
+        "de": "Das Haus befindet sich in Estrella, einem ruhigen Wohngebiet im Süden von Cartagena, nur eine Gehminute vom Mar Menor entfernt. Die Lage bietet eine perfekte Kombination aus Erholung und Nähe zu wichtigen Annehmlichkeiten. In wenigen Minuten erreichen Sie Strände, Restaurants, kleine Geschäfte und gemütliche Strandbars.",
+        "en": "The house is located in Estrella, a quiet residential area in the south of Cartagena, just a one-minute walk from the Mar Menor. The location offers a perfect combination of relaxation and proximity to important amenities. Within a few minutes you can reach beaches, restaurants, small shops and cozy beach bars.",
+        "es": "La casa está ubicada en Estrella, una tranquila zona residencial al sur de Cartagena, a solo un minuto a pie del Mar Menor. La ubicación ofrece una combinación perfecta de relajación y proximidad a importantes servicios. En pocos minutos se puede llegar a playas, restaurantes, pequeñas tiendas y acogedores chiringuitos."
+      },
+      {
+        "de": "Das Mar Menor mit seinem flachen, warmen Wasser ist ideal zum Baden, Spazierengehen oder für Wassersportaktivitäten. Die Umgebung ist geprägt von mediterranem Flair, Palmen und gepflegten Wegen entlang der Küste.",
+        "en": "The Mar Menor with its shallow, warm water is ideal for swimming, walking or water sports activities. The surroundings are characterized by Mediterranean flair, palm trees and well-maintained paths along the coast.",
+        "es": "El Mar Menor con su agua cálida y poco profunda es ideal para nadar, pasear o realizar actividades de deportes acuáticos. Los alrededores se caracterizan por su ambiente mediterráneo, palmeras y senderos bien cuidados a lo largo de la costa."
+      },
+      {
+        "de": "Durch die gute Anbindung an Cartagena und die Hauptverkehrsstraßen eignet sich der Standort hervorragend für Tagesausflüge in die Altstadt von Cartagena, nach La Manga oder in die umliegenden Naturparks.",
+        "en": "Thanks to the good connection to Cartagena and the main roads, the location is excellent for day trips to the old town of Cartagena, to La Manga or to the surrounding nature parks.",
+        "es": "Gracias a la buena conexión con Cartagena y las carreteras principales, la ubicación es excelente para excursiones de un día al casco antiguo de Cartagena, a La Manga o a los parques naturales de los alrededores."
+      }
+    ]
+  },
+  "headline": {
+    "de": "Luxuriöses Ferienhaus in Estrella del Mar, Los Urrutias – direkt am Mar Menor",
+    "en": "Luxurious Holiday Home in Estrella del Mar, Los Urrutias - directly on the Mar Menor",
+    "es": "Casa de Vacaciones de Lujo en Estrella del Mar, Los Urrutias - directamente en el Mar Menor"
+  },
+  "subHeadline": {
+    "de": "4 Betten • 1 Badezimmer",
+    "en": "4 Beds • 1 Bathrooms",
+    "es": "4 Camas • 1 Baños"
+  },
+  "price": {
+    "perNight": "110€",
+    "cleaning": "85€"
+  },
+  "description": [
+    {
+      "de": "Dieses stilvolle Ferienhaus bietet Platz für 4–5 Personen und verfügt über drei Zimmer: zwei gemütliche Schlafzimmer (mit zwei Einzelbetten und einem Doppelbett), ein helles Wohnzimmer, ein modernes Badezimmer sowie eine großzügig ausgestattete Küche.",
+      "en": "This stylish holiday home accommodates 4-5 people and has three rooms: two cozy bedrooms (with two single beds and one double bed), a bright living room, a modern bathroom and a spacious kitchen.",
+      "es": "Esta elegante casa de vacaciones tiene capacidad para 4-5 personas y cuenta con tres habitaciones: dos acogedores dormitorios (con dos camas individuales y una cama doble), una luminosa sala de estar, un baño moderno y una cocina ampliamente equipada."
+    },
+    {
+      "de": "Das Haus überzeugt mit drei großen Terrassen – eine vor dem Haus, eine hinter dem Haus und eine Dachterrasse mit herrlichem Blick auf das Mar Menor. Ob Sonne oder Schatten – hier genießen Sie den ganzen Tag über pure Entspannung. Ein besonderes Highlight ist der private Pool auf der vorderen Terrasse.",
+      "en": "The house impresses with three large terraces - one in front of the house, one behind the house and a roof terrace with a magnificent view of the Mar Menor. Whether sun or shade - here you can enjoy pure relaxation all day long. A special highlight is the private pool on the front terrace.",
+      "es": "La casa impresiona con tres grandes terrazas: una delante de la casa, otra detrás y una terraza en la azotea con una magnífica vista del Mar Menor. Ya sea sol o sombra, aquí podrás disfrutar de pura relajación durante todo el día. Un punto destacado especial es la piscina privada en la terraza delantera."
+    },
+    {
+      "text": {
+        "de": "Das Ferienhaus ist vollständig eingerichtet und bietet alles, was Sie für einen komfortablen Aufenthalt benötigen:",
+        "en": "The holiday home is fully furnished and offers everything you need for a comfortable stay:",
+        "es": "La casa de vacaciones está completamente amueblada y ofrece todo lo que necesitas para una estancia confortable:"
+      },
+      "bulletpoints": [
+        {
+          "de": "Küche mit Herd, Mikrowelle, Kühlschrank und Gefrierschrank",
+          "en": "Kitchen with stove, microwave, refrigerator and freezer",
+          "es": "Cocina con estufa, microondas, refrigerador y congelador"
+        },
+        {
+          "de": "Waschmaschine, Staubsauger, Klimaanlage und Deckenventilatoren",
+          "en": "Washing machine, vacuum cleaner, air conditioning and ceiling fans",
+          "es": "Lavadora, aspiradora, aire acondicionado y ventiladores de techo"
+        },
+        {
+          "de": "Fernseher mit Amazon Fire TV Stick, Fön, Feuerlöscher und Rauchmelder",
+          "en": "Television with Amazon Fire TV Stick, hair dryer, fire extinguisher and smoke detector",
+          "es": "Televisión con Amazon Fire TV Stick, secador de pelo, extintor y detector de humo"
+        },
+        {
+          "de": "Handtücher und Bettwäsche sind selbstverständlich vorhanden",
+          "en": "Towels and bed linen are of course provided",
+          "es": "Por supuesto, se proporcionan toallas y ropa de cama"
+        }
+      ]
+    },
+    {
+      "de": "Die Lage ist unschlagbar: Das Haus befindet sich in unmittelbarer Nähe zum Mar Menor, nur eine Gehminute vom Strand entfernt – perfekt für erholsame Tage am Meer.",
+      "en": "The location is unbeatable: The house is located in the immediate vicinity of the Mar Menor, just a one-minute walk from the beach - perfect for relaxing days by the sea.",
+      "es": "La ubicación es inmejorable: la casa está situada en las inmediaciones del Mar Menor, a solo un minuto a pie de la playa, perfecta para días relajantes junto al mar."
+    }
+  ],
+  "propertySummary": [
+    {
+      "type": "pool",
+      "amount": 1
+    },
+    {
+      "type": "bathroom",
+      "amount": 1
+    },
+    {
+      "type": "bedroom",
+      "amount": 2
+    },
+    {
+      "type": "bed",
+      "amount": 4
+    },
+    {
+      "type": "group",
+      "amount": 5
+    }
+  ],
+  "equipmentFeatures": {
+    "general": [
+      "parking",
+      "air_conditioner",
+      "wlan",
+      "tv",
+      "barrier_free",
+      "elevator",
+      "fire_extinguisher",
+      "smoke_detector",
+      "vacuum",
+      "washing_rack",
+      "washing_machine"
+    ],
+    "outdoorArea": ["pool", "terrace"],
+    "kitchen": [
+      "cooker",
+      "oven",
+      "dishes",
+      "pots_pans",
+      "coffee_machine",
+      "microwave",
+      "freezer",
+      "refrigerator",
+      "kettle"
+    ],
+    "bedroom": ["bed_linen"],
+    "bathroom": ["hairdryer", "towels", "shower", "bathtub"],
+    "baby": ["high_chair"]
+  },
+  "houseRules": {
+    "checkIn": {
+      "de": "Check-in ab 15:00 Uhr",
+      "en": "Check-in from 3:00 PM",
+      "es": "Check-in desde las 15:00"
+    },
+    "checkOut": {
+      "de": "Check-out vor 11:00 Uhr",
+      "en": "Check-out before 11:00 AM",
+      "es": "Check-out antes de las 11:00"
+    },
+    "rules": ["party", "pet", "smoking"],
+    "description": [
+      {
+        "de": "Gerne ermöglichen wir Ihnen flexible Check-in und Check-out Zeiten nach Absprache.",
+        "en": "We are happy to offer you flexible check-in and check-out times by arrangement.",
+        "es": "Estaremos encantados de ofrecerle horarios flexibles de check-in y check-out previa consulta."
+      }
+    ]
+  }
+}

@@ -33,8 +33,9 @@ export const ExposeCard = (props: EstateCardProps) => {
           fill
           src={imageSrc}
           alt='Estate'
-          className='object-cover'
-          sizes='(max-width: 40rem) 90vw, 350px saturate-150'
+          className='object-cover saturate-150'
+          quality={80}
+          sizes='(max-width: 40rem) 90vw, 350px'
         />
       </div>
       <div style={{ height: descriptionHeight / 2 }} />

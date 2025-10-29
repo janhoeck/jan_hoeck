@@ -102,11 +102,7 @@
         "9": "Los Alcázares combines relaxation, health and activity in perfect harmony. Whether family holiday, water sports adventure or wellness break - discover for yourself why Los Alcázares is one of the most popular travel destinations on the Costa Cálida."
       },
       "exposeListSection": {
-        "headline": "Accommodations",
-        "apartment": {
-          "description": "4 Beds • 1 Bathrooms",
-          "headline": "Holiday Apartment Los Alcázares Mar Menor - Luxury Apartment Puerto Marina Murcia"
-        }
+        "headline": "Accommodations"
       }
     },
     "contact": {
@@ -183,6 +179,7 @@
       },
       "propertySummary": {
         "labels": {
+          "pool": "Private pool",
           "bed": "Beds",
           "bathroom": "Bathrooms",
           "bedroom": "Bedrooms",
@@ -193,43 +190,6 @@
         "perNight": "per night",
         "cleaning": "plus a one-time cleaning fee of {cleaning}",
         "contact": "Contact Provider"
-      }
-    },
-    "expose/apartment": {
-      "headline": "Holiday Apartment Los Alcázares Mar Menor - Luxury Apartment Puerto Marina Murcia",
-      "description": {
-        "1": "The apartment accommodates up to four people. It has three rooms, two bedrooms, a living room, a bathroom and an American-style kitchen. A highlight is the balcony where you can enjoy the evening sun from 6:00 PM. The apartment is fully equipped with kitchen utensils, towels and bed linen. It has German television and an Amazon Fire TV Stick. It is located on the first floor and is also accessible by elevator.",
-        "2": "The complex features a beautiful interior area with three pools, two of which are disabled-accessible. Palm trees frame the complex and create a Caribbean atmosphere. The ideal place to relax.",
-        "3": "We provide our guests with sun loungers for pool use. We only ask that you return the loungers to the apartment from the pool area at the end of the day. Please also note that glass in any form is not allowed in the pool areas.",
-        "4": "The residential complex impresses with its central yet quiet location. As a closed, secure and private residence, it is only a few minutes' walk from the beach, shopping, bars and restaurants - a car is therefore not necessary if you prefer to walk.",
-        "5": "Perfect infrastructure in the immediate vicinity:",
-        "5/1": "Supermarkets (Lidl, Aldi, Mercadona): only 150 m away",
-        "5/2": "Famous pedestrian zone of Los Alcázares with the 525 Plaza: 120 m - here you can expect restaurants, evening dance bars, live music and numerous hippie and vendor stalls",
-        "5/3": "Sea with the picturesque beach promenade and diverse restaurants: 950 m",
-        "6": "Our holiday apartment offers you the ideal starting point for an unforgettable holiday at an attractive price-performance ratio.",
-        "7": "Important note: Pets are not allowed in the residential complex."
-      },
-      "location": {
-        "description": {
-          "1": "Los Alcázares is a popular holiday resort on the sunny Costa Cálida in the Spanish region of Murcia. Located directly on the beautiful Mar Menor, Europe's largest saltwater lagoon, the resort offers perfect conditions for a relaxing and active holiday in Spain.",
-          "2": "With around 7 kilometers of fine sandy beach, calm, shallow water and a mild climate all year round (average 20°C), Los Alcázares is the ideal travel destination for families, couples and active holidaymakers. Particularly popular is bathing in the Mar Menor, whose iodine-rich saltwater is known for its therapeutic effects - ideal for skin, respiratory and joint problems. A natural spa right on your doorstep!",
-          "3": "Our holiday apartment in Los Alcázares is located just a few meters from the beach and is excellently accessible: Murcia-San Javier Airport is only a few kilometers away, Alicante Airport can be reached in about 50 minutes by car.",
-          "4": "Experience a perfect combination of relaxation, sport and Spanish lifestyle in Los Alcázares:",
-          "4/1": "Water sports opportunities such as sailing, windsurfing, kitesurfing, kayaking, stand-up paddling",
-          "4/2": "Modern sports centers with tennis, volleyball, squash, fitness, football and much more",
-          "4/3": "Local specialties from Murcian cuisine in numerous restaurants and tapas bars",
-          "4/4": "Historical sights and exciting excursion destinations in the area",
-          "5": "The city offers excellent infrastructure with supermarkets, pharmacies, international schools, medical care, golf courses and a reliable bus service along the coast.",
-          "6": "For golfers, the region is a paradise: nearby there are over 15 golf courses, including the well-known La Manga Club, one of Europe's best golf resorts.",
-          "7": "Whether you are looking for a beach holiday in Spain, an active golf holiday on the Costa Cálida or simply relaxation with the family - Los Alcázares offers the best conditions for an unforgettable stay."
-        }
-      },
-      "houseRules": {
-        "checkIn": "Check-in from 3:00 PM",
-        "checkOut": "Check-out before 11:00 AM",
-        "description": {
-          "1": "According to the house rules of the Puerto Marina complex, it is not permitted to dry towels on the balcony. Please use the available drying rack instead."
-        }
       }
     },
     "about": {

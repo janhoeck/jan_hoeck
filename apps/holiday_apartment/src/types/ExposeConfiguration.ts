@@ -1,8 +1,15 @@
-import { ContentBlock } from './ContentBlock'
-import { Address } from './Address'
 import { IconType } from './IconType'
 
-export type PropertySummaryType = 'bedroom' | 'bed' | 'bathroom' | 'group'
+export type PropertySummaryType = 'pool' | 'bedroom' | 'bed' | 'bathroom' | 'group'
+
+export type TranslationMap = {
+  de: string
+  en: string
+  es: string
+}
+
+export type DescriptionItem = TranslationMap | { text?: TranslationMap; bulletpoints: TranslationMap[] }
+export type Description = Array<DescriptionItem>
 
 export type EquipmentFeatures = {
   general?: Extract<
@@ -31,28 +38,40 @@ export type EquipmentFeatures = {
 
 export type PropertySummaryItem = {
   type: PropertySummaryType
-  amount: number
+  amount?: number
+}
+
+export type Address = {
+  building: string
+  street: string
+  houseNumber: string
+  floorApartment: string
+  postalCode: string
+  city: string
+  country: string
+  description?: TranslationMap
 }
 
 export type Location = {
   lat: number
   lng: number
   address: Partial<Address>
-  description: ContentBlock
+  description: Description
 }
 
 export type HouseRules = {
-  checkIn: string
-  checkOut: string
+  checkIn: TranslationMap
+  checkOut: TranslationMap
   rules: Extract<IconType, 'pet' | 'party' | 'smoking'>[]
-  description?: ContentBlock
+  description?: Description
 }
 
 export type ExposeConfiguration = {
   id: string
   imageSources: string[]
-  headline: string
-  description: ContentBlock
+  headline: TranslationMap
+  subHeadline: TranslationMap
+  description: Description
   price: {
     perNight: string
     cleaning?: string

@@ -11,7 +11,7 @@ export const MessageBox = (props: MessageBoxProps) => {
   return (
     <div
       className={twMerge([
-        'border-1 rounded-sm p-2',
+        'rounded-sm border-1 p-2',
         type === 'success' && 'border-lime-400 bg-lime-300/30',
         type === 'error' && 'border-red-400 bg-red-300/30',
       ])}

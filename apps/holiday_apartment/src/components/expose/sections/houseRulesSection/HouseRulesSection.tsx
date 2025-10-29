@@ -1,10 +1,11 @@
 import { Section } from '@/components/shared/Section/Section'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { ItemWithIcon } from '@/components/expose/ItemWithIcon/ItemWithIcon'
 import { iconMapping } from '@/components/expose/iconMapping'
 import { twMerge } from 'tailwind-merge'
 import { ContentBlock } from '@/components/shared/ContentBlock/ContentBlock'
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { convertDescription, getTranslation } from '@/components/expose/utils'
 
 export type HouseRulesSectionProps = {
   houseRules: ExposeConfiguration['houseRules']
@@ -14,6 +15,8 @@ export const HouseRulesSection = (props: HouseRulesSectionProps) => {
   const { houseRules } = props
   const { description } = houseRules
   const t = useTranslations('pages.expose.houseRulesSection')
+  const locale = useLocale()
+
   return (
     <Section headline={t('headline')}>
       <div className='flex flex-col gap-4'>
@@ -22,12 +25,12 @@ export const HouseRulesSection = (props: HouseRulesSectionProps) => {
             <ItemWithIcon
               icon={iconMapping['checkin']}
               label={t('itemHeadlines.checkin')}
-              description={houseRules.checkIn}
+              description={getTranslation(locale, houseRules.checkIn)}
             />
             <ItemWithIcon
               icon={iconMapping['checkout']}
               label={t('itemHeadlines.checkout')}
-              description={houseRules.checkOut}
+              description={getTranslation(locale, houseRules.checkOut)}
             />
           </div>
           <div className='flex flex-1 flex-col gap-4'>
@@ -48,7 +51,7 @@ export const HouseRulesSection = (props: HouseRulesSectionProps) => {
             })}
           </div>
         </div>
-        {description && <ContentBlock items={description} />}
+        {description && <ContentBlock items={convertDescription(locale, description)} />}
       </div>
     </Section>
   )

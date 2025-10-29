@@ -1,6 +1,9 @@
 import { GoogleMaps } from './GoogleMaps'
 import { Typography } from '@jan_hoeck/ui'
 import { Location } from '@/types/ExposeConfiguration'
+import { safeJoin } from '@/utils/join'
+import { useLocale } from 'next-intl'
+import { getTranslation } from '@/components/expose/utils'
 
 export type AddressCardProps = {
   lat: number
@@ -10,6 +13,7 @@ export type AddressCardProps = {
 
 export const AddressCard = (props: AddressCardProps) => {
   const { lat, lng, address } = props
+  const locale = useLocale()
 
   return (
     <div className='h-fit w-full rounded-md border border-neutral-300 bg-white sm:min-w-[320px]'>
@@ -21,10 +25,15 @@ export const AddressCard = (props: AddressCardProps) => {
       <div className='p-2'>
         <Typography variant='smallText'>{address.building}</Typography>
         <Typography variant='smallText'>
-          {[[address.street, address.postalCode].join(' '), address.floorApartment].join(', ')}
+          {safeJoin([safeJoin([address.street, address.houseNumber], ' '), address.floorApartment], ', ')}
         </Typography>
         <Typography variant='smallText'>{[address.postalCode, address.city].join(' ')}</Typography>
       </div>
+      {address.description && (
+        <div className='p-2'>
+          <Typography variant='smallText'>{getTranslation(locale, address.description)}</Typography>
+        </div>
+      )}
     </div>
   )
 }

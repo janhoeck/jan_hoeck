@@ -19,7 +19,7 @@ export const EquipmentFeaturesBlock = <T extends IconType>(props: EquipmentFeatu
   }
 
   return (
-    <div className={twMerge(['flex flex-col gap-2', 'sm:grid sm:max-w-[600px] sm:grid-cols-[1fr_1fr]'])}>
+    <div className={twMerge(['flex flex-col gap-2', 'sm:grid sm:max-w-[500px] sm:grid-cols-2'])}>
       <Typography
         variant='heading'
         size={4}

@@ -112,7 +112,7 @@ export async function generateMetadata(props: MetadataProps): Promise<Metadata> 
       'los alcazares mar menor',
       'los alcázares spain',
       'mar menor los alcazares',
-      'the mar menor'
+      'the mar menor',
     ],
     alternates: {
       canonical: `https://solymarmenor.com/${locale}`,
@@ -165,7 +165,7 @@ export default async function Layout(props: LayoutProps) {
       className={geist.className}
     >
       <body className='bg-neutral-100'>
-        <WebVitals/>
+        <WebVitals />
         <NextIntlClientProvider>
           <LayoutNavigation />
           <main className='min-h-[calc(100%-73px-105px)]'>{children}</main>
