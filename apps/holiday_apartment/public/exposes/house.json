@@ -212,7 +212,6 @@
       "wlan",
       "tv",
       "barrier_free",
-      "elevator",
       "fire_extinguisher",
       "smoke_detector",
       "vacuum",
@@ -232,7 +231,7 @@
       "kettle"
     ],
     "bedroom": ["bed_linen"],
-    "bathroom": ["hairdryer", "towels", "shower", "bathtub"],
+    "bathroom": ["hairdryer", "towels", "shower"],
     "baby": ["high_chair"]
   },
   "houseRules": {
