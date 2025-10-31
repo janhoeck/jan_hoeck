@@ -15,9 +15,8 @@ export const ContentBlock = (props: ContentBlockProps) => {
             <Typography
               key={index}
               variant='paragraph'
-            >
-              {item}
-            </Typography>
+              dangerouslySetInnerHTML={{ __html: item }}
+            />
           )
         }
 
@@ -28,15 +27,17 @@ export const ContentBlock = (props: ContentBlockProps) => {
               <Typography
                 key={index}
                 variant='paragraph'
-              >
-                {text}
-              </Typography>
+                dangerouslySetInnerHTML={{ __html: text }}
+              />
             )}
             <ul className='list-disc pl-6'>
               {bulletpoints.map((bulletpoint, index) => {
                 return (
                   <li key={index}>
-                    <Typography variant='paragraph'>{bulletpoint}</Typography>
+                    <Typography
+                      variant='paragraph'
+                      dangerouslySetInnerHTML={{ __html: bulletpoint }}
+                    />
                   </li>
                 )
               })}
