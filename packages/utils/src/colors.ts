@@ -1,8 +1,10 @@
-export function hexToRGB(hex: string): {
+export const hexToRGB = (
+  hex: string
+): {
   red: number
   green: number
   blue: number
-} {
+} => {
   const red = parseInt(hex.slice(1, 3), 16)
   const green = parseInt(hex.slice(3, 5), 16)
   const blue = parseInt(hex.slice(5, 7), 16)
@@ -10,7 +12,7 @@ export function hexToRGB(hex: string): {
   return { red, green, blue }
 }
 
-export function rgbToHex(rgbString: string): string | undefined {
+export const rgbToHex = (rgbString: string): string | undefined => {
   const regex = /rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)/
   const matcher = regex.exec(rgbString)
   if (matcher) {
@@ -22,7 +24,7 @@ export function rgbToHex(rgbString: string): string | undefined {
   }
 }
 
-export function addAlpha(hexOrRGB: string, alpha: number): string {
+export const addAlpha = (hexOrRGB: string, alpha: number): string => {
   const isRGB = hexOrRGB.startsWith('rgb')
   const isHex = hexOrRGB.startsWith('#')
   if (!isRGB && !isHex) {
@@ -51,7 +53,7 @@ export function addAlpha(hexOrRGB: string, alpha: number): string {
  * @param amount
  *  Use positive value to light the color, otherwise negative
  */
-export function shadeColor(hexOrRGB: string, amount: number): string {
+export const shadeColor = (hexOrRGB: string, amount: number): string => {
   const isRGB = hexOrRGB.startsWith('rgb')
   const isHex = hexOrRGB.startsWith('#')
   if (!isRGB && !isHex) {
