@@ -161,10 +161,7 @@
     },
     "about": {
       "headline": "Über uns",
-      "description": {
-        "1": "Wir, Olaf und Tina, hatten schon lange den Traum, nach Spanien auszuwandern. Olaf ist Halbspanier, seine Mutter kommt aus der Region Murcia. Seit Jahren besitzen wir eine Wohnung in Los Urrutias. Im Jahr 2024 haben wir dann den Schritt gewagt, haben alles in Deutschland verkauft und sind ganz nach Spanien ausgewandert. Wir sind hier mit einem kleinen deutschen Service selbstständig und wollen nun auch anderen die Möglichkeit geben, den Flair und das Lebensgefühl dieser Gegend kennenzulernen.",
-        "2": "Wir lieben dieses Land und möchten auch andere dafür begeistern. Uns ist es wichtig, dass wir als Vermieter immer vor Ort sind und als Ansprechpartner zur Verfügung stehen. Die Vermietung wird von uns selbst abgewickelt. Das bedeutet für Sie als unsere Mieter, dass wir eine Endabnahme durchführen (bei Abreise der Mieter), sodass sichergestellt ist, dass Sie bei der Anreise keine böse Überraschung erleben und die Wohnung sich in einem einwandfreien Zustand befindet."
-      }
+      "description": "<root><content><texts><text>Wir, Olaf und Tina, hatten schon lange den Traum, nach Spanien auszuwandern. Olaf ist Halbspanier, seine Mutter kommt aus der Region Murcia. Seit Jahren besitzen wir eine Wohnung in Los Urrutias. Im Jahr 2024 haben wir dann den Schritt gewagt, haben alles in Deutschland verkauft und sind ganz nach Spanien ausgewandert. Wir sind hier mit einem kleinen deutschen Service selbstständig und wollen nun auch anderen die Möglichkeit geben, den Flair und das Lebensgefühl dieser Gegend kennenzulernen.</text><text>Wir lieben dieses Land und möchten auch andere dafür begeistern. Uns ist es wichtig, dass wir als Vermieter immer vor Ort sind und als Ansprechpartner zur Verfügung stehen. Die Vermietung wird von uns selbst abgewickelt. Das bedeutet für Sie als unsere Mieter, dass wir eine Endabnahme durchführen (bei Abreise der Mieter), sodass sichergestellt ist, dass Sie bei der Anreise keine böse Überraschung erleben und die Wohnung sich in einem einwandfreien Zustand befindet.</text></texts></content></root>"
     },
     "privacy": {
       "headline": "Datenschutzerklärung",

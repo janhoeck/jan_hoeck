@@ -1,8 +1,8 @@
 import { Section } from '@/components/shared/Section/Section'
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
 import { useTranslations } from 'next-intl'
-import { ContentBlock } from '@/components/shared/ContentBlock/ContentBlock'
 import Image from 'next/image'
+import { RichText } from '@/components/shared/RichText/RichText'
 
 export default function AboutUsPage() {
   const t = useTranslations('pages.about')
@@ -20,7 +20,7 @@ export default function AboutUsPage() {
                 className='h-auto w-full max-w-full rounded-md object-contain'
               />
               <div className='text-justify'>
-                <ContentBlock items={[t('description.1'), t('description.2')]} />
+                <RichText text={t.raw('description')} />
               </div>
             </div>
           </Section>

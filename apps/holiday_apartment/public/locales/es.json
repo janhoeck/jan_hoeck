@@ -161,10 +161,7 @@
     },
     "about": {
       "headline": "Sobre Nosotros",
-      "description": {
-        "1": "Nosotros, Olaf y Tina, habíamos soñado durante mucho tiempo con emigrar a España. Olaf es medio español, su madre viene de la región de Murcia. Hemos sido propietarios de un apartamento en Los Urrutias durante años. En 2024, entonces dimos el paso, vendimos todo en Alemania y emigramos completamente a España. Somos autónomos aquí con un pequeño servicio alemán y ahora queremos dar a otros la oportunidad de conocer el ambiente y el estilo de vida de esta zona.",
-        "2": "Amamos este país y queremos inspirar a otros sobre él también. Es importante para nosotros que como propietarios estemos siempre en el sitio y disponibles como personas de contacto. El alquiler es manejado por nosotros personalmente. Esto significa para ti como nuestros inquilinos que realizamos una inspección final (cuando los inquilinos se van), para que se asegure que no experimentarás sorpresas desagradables al llegar y el apartamento esté en perfectas condiciones."
-      }
+      "description": "<root><content><texts><text>Nosotros, Olaf y Tina, habíamos soñado durante mucho tiempo con emigrar a España. Olaf es medio español, su madre viene de la región de Murcia. Hemos sido propietarios de un apartamento en Los Urrutias durante años. En 2024, entonces dimos el paso, vendimos todo en Alemania y emigramos completamente a España. Somos autónomos aquí con un pequeño servicio alemán y ahora queremos dar a otros la oportunidad de conocer el ambiente y el estilo de vida de esta zona.</text><text>Amamos este país y queremos inspirar a otros sobre él también. Es importante para nosotros que como propietarios estemos siempre en el sitio y disponibles como personas de contacto. El alquiler es manejado por nosotros personalmente. Esto significa para ti como nuestros inquilinos que realizamos una inspección final (cuando los inquilinos se van), para que se asegure que no experimentarás sorpresas desagradables al llegar y el apartamento esté en perfectas condiciones.</text></texts></content></root>"
     },
     "privacy": {
       "headline": "Política de Privacidad",

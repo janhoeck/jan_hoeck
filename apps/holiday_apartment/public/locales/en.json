@@ -161,10 +161,7 @@
     },
     "about": {
       "headline": "About Us",
-      "description": {
-        "1": "We, Olaf and Tina, had long dreamed of emigrating to Spain. Olaf is half-Spanish, his mother comes from the Murcia region. We have owned an apartment in Los Urrutias for years. In 2024, we then took the plunge, sold everything in Germany and emigrated completely to Spain. We are self-employed here with a small German service and now want to give others the opportunity to get to know the flair and lifestyle of this area.",
-        "2": "We love this country and want to inspire others about it too. It is important to us that we as landlords are always on site and available as contact persons. The rental is handled by us personally. This means for you as our tenants that we carry out a final inspection (when tenants depart), so that it is ensured that you will not experience any unpleasant surprises upon arrival and the apartment is in perfect condition."
-      }
+      "description": "<root><content><texts><text>We, Olaf and Tina, had long dreamed of emigrating to Spain. Olaf is half-Spanish, his mother comes from the Murcia region. We have owned an apartment in Los Urrutias for years. In 2024, we then took the plunge, sold everything in Germany and emigrated completely to Spain. We are self-employed here with a small German service and now want to give others the opportunity to get to know the flair and lifestyle of this area.</text><text>We love this country and want to inspire others about it too. It is important to us that we as landlords are always on site and available as contact persons. The rental is handled by us personally. This means for you as our tenants that we carry out a final inspection (when tenants depart), so that it is ensured that you will not experience any unpleasant surprises upon arrival and the apartment is in perfect condition.</text></texts></content></root>\n"
     },
     "privacy": {
       "headline": "Privacy Policy",
