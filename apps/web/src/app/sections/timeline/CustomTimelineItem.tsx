@@ -18,13 +18,11 @@ export const CustomTimelineItem = (props: CustomTimelineItemProps) => {
         <i>{organization}</i>
       </Typography>
       {tasks && (
-        <Typography className='mt-2'>
-          <ul className='list-inside list-disc'>
-            {tasks.map((task, index) => (
-              <li key={index}>{task}</li>
-            ))}
-          </ul>
-        </Typography>
+        <ul className='mt-2 list-inside list-disc'>
+          {tasks.map((task, index) => (
+            <li key={index}>{task}</li>
+          ))}
+        </ul>
       )}
     </TimelineItem>
   )
