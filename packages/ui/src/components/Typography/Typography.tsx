@@ -23,6 +23,7 @@ const componentMapping: Record<Variant, ElementType | ElementType[]> = {
 }
 
 type BaseTypographyProps<T extends ElementType> = HTMLAttributes<T> & {
+  as?: ElementType
   variant?: Variant
   noWrap?: boolean
 }
@@ -35,7 +36,7 @@ type SizeableTypographyProps<T extends ElementType> = BaseTypographyProps<T> & {
 export type TypographyProps<T extends ElementType> = BaseTypographyProps<T> | SizeableTypographyProps<T>
 
 export const Typography = <T extends ElementType>(props: TypographyProps<T>) => {
-  const { className, children, variant = 'default', noWrap = false, ...otherProps } = props
+  const { className, children, variant = 'default', noWrap = false, as, ...otherProps } = props
 
   const { size = 1, ...restProps } = otherProps as SizeableTypographyProps<T>
 
@@ -76,6 +77,10 @@ export const Typography = <T extends ElementType>(props: TypographyProps<T>) => 
   }, [variant, size])
 
   const Component = useMemo(() => {
+    if (as) {
+      return as
+    }
+
     const mapping = componentMapping[variant]
     const isArray = Array.isArray(mapping)
     if (isArray) {
@@ -86,7 +91,7 @@ export const Typography = <T extends ElementType>(props: TypographyProps<T>) => 
       return item ?? mapping[0]!
     }
     return mapping
-  }, [variant, size])
+  }, [variant, size, as])
 
   return (
     <Component
