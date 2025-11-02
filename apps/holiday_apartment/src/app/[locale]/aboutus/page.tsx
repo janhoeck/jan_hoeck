@@ -1,8 +1,8 @@
-import { Section } from '@/components/shared/Section/Section'
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
+import { RichText } from '@/components/shared/RichText/RichText'
+import { Section } from '@/components/shared/Section/Section'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { RichText } from '@/components/shared/RichText/RichText'
 
 export default function AboutUsPage() {
   const t = useTranslations('pages.about')

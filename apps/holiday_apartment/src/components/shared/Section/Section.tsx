@@ -2,13 +2,13 @@ import { Typography } from '@jan_hoeck/ui'
 import { ReactNode } from 'react'
 
 export type SectionProps = {
-  headline: string
+  title: string
   children: ReactNode
   variant?: 'default' | 'subsection'
 }
 
 export const Section = (props: SectionProps) => {
-  const { headline, variant = 'default', children } = props
+  const { title, variant = 'default', children } = props
   return (
     <section className='z-1'>
       <Typography
@@ -16,7 +16,7 @@ export const Section = (props: SectionProps) => {
         variant='heading'
         size={variant === 'default' ? 2 : 5}
       >
-        {headline}
+        {title}
       </Typography>
       {children}
     </section>

@@ -1,12 +1,23 @@
+import Image from 'next/image'
 import React from 'react'
-import { useTranslations } from 'next-intl'
-import { RichText } from '@/components/shared/RichText/RichText'
+
+import { WelcomeSectionInfo } from './WelcomeSectionInfo'
 
 export const WelcomeSection = () => {
-  const t = useTranslations('pages.home')
   return (
-    <div className='flex flex-col gap-4'>
-      <RichText text={t.raw('description')} />
-    </div>
+    <section className='relative flex min-h-screen items-center justify-center overflow-hidden pt-16 md:pt-20'>
+      <div className='absolute inset-0 z-0'>
+        <Image
+          fill
+          priority
+          src='/images/costacalida.png'
+          alt='Costa calida - murcia'
+          className='h-full w-full object-cover'
+          sizes='100vw'
+        />
+        <div className='to-muted absolute inset-0 bg-gradient-to-b from-black/40 via-black/20' />
+      </div>
+      <WelcomeSectionInfo />
+    </section>
   )
 }

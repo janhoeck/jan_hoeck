@@ -1,5 +1,6 @@
 import { Typography } from '@jan_hoeck/ui'
 import { useLocale } from 'next-intl'
+
 import { StarRating } from './StarRating'
 
 const formatDate = (dateString: string, locale: string) => {

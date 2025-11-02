@@ -1,6 +1,7 @@
+import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+
 import { DesktopImageGrid } from './desktop/DesktopImageGrid'
 import { MobileImageCarousel } from './mobile/MobileImageCarousel'
-import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 
 export type ExposeImagesProps = {
   imageSources: ExposeConfiguration['imageSources']

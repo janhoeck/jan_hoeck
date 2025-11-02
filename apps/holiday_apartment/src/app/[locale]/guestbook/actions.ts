@@ -2,8 +2,9 @@
 
 import { GuestbookFormData } from '@/components/shared/GuestbookForm/types'
 import { getSupabaseServer } from '@/utils/supabase/server'
-import { redirect } from '../../../i18n/navigation'
 import { getLocale } from 'next-intl/server'
+
+import { redirect } from '../../../i18n/navigation'
 
 export async function insertGuestbookEntry(_initialState: any, formData: FormData) {
   const guestbookFormData = Object.fromEntries([...formData]) as GuestbookFormData

@@ -1,7 +1,7 @@
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
-import path from 'path'
-import fs from 'fs'
 import { isDefined } from '@jan_hoeck/utils'
+import fs from 'fs'
+import path from 'path'
 
 export const loadExposeConfigs = (): ExposeConfiguration[] => {
   try {

@@ -1,7 +1,8 @@
 import { Typography } from '@jan_hoeck/ui'
-import { LanguageSelector } from './LanguageSelector/LanguageSelector'
-import { Link } from '../../i18n/navigation'
 import { useTranslations } from 'next-intl'
+
+import { Link } from '../../i18n/navigation'
+import { LanguageSelector } from './LanguageSelector/LanguageSelector'
 
 export const LayoutFooter = () => {
   const t = useTranslations('components.footer')

@@ -1,6 +1,6 @@
 import { Typography } from '@jan_hoeck/ui'
-import { PiEnvelopeOpenLight, PiPhoneCallLight } from 'react-icons/pi'
 import Link from 'next/link'
+import { PiEnvelopeOpenLight, PiPhoneCallLight } from 'react-icons/pi'
 
 export const ContactDetails = () => {
   return (

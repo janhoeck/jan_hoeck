@@ -1,10 +1,12 @@
 'use client'
-import React from 'react'
-import Image from 'next/image'
-import { twMerge } from 'tailwind-merge'
-import { Dialog } from 'radix-ui'
-import { ImageGalleryDialogContent } from './ImageGalleryDialogContent'
+
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import Image from 'next/image'
+import { Dialog } from 'radix-ui'
+import React from 'react'
+import { twMerge } from 'tailwind-merge'
+
+import { ImageGalleryDialogContent } from './ImageGalleryDialogContent'
 
 export type DesktopImageGridProps = {
   imageSources: ExposeConfiguration['imageSources']

@@ -1,13 +1,14 @@
 'use client'
 
-import { Section } from '@/components/shared/Section/Section'
-import { GuestbookCard } from './card/GuestbookCard'
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
-import { useTranslations } from 'next-intl'
 import { GuestbookForm } from '@/components/shared/GuestbookForm/GuestbookForm'
-import { useActionState, useEffect } from 'react'
+import { Section } from '@/components/shared/Section/Section'
 import { Typography } from '@jan_hoeck/ui'
+import { useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
+import { useActionState, useEffect } from 'react'
+
+import { GuestbookCard } from './card/GuestbookCard'
 
 type GuestbookViewProps = {
   serverAction: (state: any, formData: FormData) => void

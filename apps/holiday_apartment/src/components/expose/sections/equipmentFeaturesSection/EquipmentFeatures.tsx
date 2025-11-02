@@ -1,6 +1,7 @@
 import { EquipmentFeatures as EquipmentFeaturesType } from '@/types/ExposeConfiguration'
-import { EquipmentFeaturesBlock } from './EquipmentFeaturesBlock'
 import { useTranslations } from 'next-intl'
+
+import { EquipmentFeaturesBlock } from './EquipmentFeaturesBlock'
 
 export type EquipmentFeaturesProps = {
   features: EquipmentFeaturesType

@@ -1,6 +1,7 @@
-import { getSupabaseServer } from '@/utils/supabase/server'
-import { GuestbookView } from '@/components/guestbook/GuestbookView'
 import { EmptyGuestbookView } from '@/components/guestbook/EmptyGuestbookView'
+import { GuestbookView } from '@/components/guestbook/GuestbookView'
+import { getSupabaseServer } from '@/utils/supabase/server'
+
 import { insertGuestbookEntry } from './actions'
 
 export default async function GuestbookPage() {

@@ -1,6 +1,7 @@
-import { use } from 'react'
 import { ExposeView } from '@/components/expose/ExposeView'
 import { notFound } from 'next/navigation'
+import { use } from 'react'
+
 import { loadExposeConfig } from '../../../../api/loadExposeConfigs'
 
 type Params = Promise<{ slug: string }>

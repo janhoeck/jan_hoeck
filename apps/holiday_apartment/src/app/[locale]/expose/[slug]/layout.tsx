@@ -1,8 +1,9 @@
-import { PropsWithChildren } from 'react'
-import { Metadata } from 'next'
-import { GoogleMapsAPIProvider } from '@/components/shared/GoogleMapsAPIProvider/GoogleMapsAPIProvider'
-import { loadExposeConfig } from '../../../../api/loadExposeConfigs'
 import { getTranslation } from '@/components/expose/utils'
+import { GoogleMapsAPIProvider } from '@/components/shared/GoogleMapsAPIProvider/GoogleMapsAPIProvider'
+import { Metadata } from 'next'
+import { PropsWithChildren } from 'react'
+
+import { loadExposeConfig } from '../../../../api/loadExposeConfigs'
 
 type Params = Promise<{ locale: string; slug: string }>
 
@@ -19,9 +20,9 @@ export async function generateMetadata(props: MetadataProps): Promise<Metadata> 
   }
 
   return {
-    title: getTranslation(locale, expose.headline),
+    title: getTranslation(locale, expose.title),
     openGraph: {
-      title: getTranslation(locale, expose.headline),
+      title: getTranslation(locale, expose.title),
       url: `https://solymarmenor.com/expose/${expose.id}`,
       images: [
         {

@@ -118,15 +118,15 @@
       }
     ]
   },
-  "headline": {
+  "title": {
     "de": "Ferienwohnung Los Alcázares Mar Menor - Luxus Apartment Puerto Marina Murcia",
     "en": "Holiday Apartment Los Alcázares Mar Menor - Luxury Apartment Puerto Marina Murcia",
     "es": "Apartamento Vacacional Los Alcázares Mar Menor - Apartamento de Lujo Puerto Marina Murcia"
   },
-  "subHeadline": {
-    "de": "4 Betten • 1 Badezimmer",
-    "en": "4 Beds • 1 Bathrooms",
-    "es": "4 Camas • 1 Baños"
+  "subtitle": {
+    "de": "Modern ausgestattete Ferienwohnung mit Balkon, Pools und zentraler Lage nahe Strand und Restaurants.",
+    "en": "Modern holiday flat with balcony, swimming pools and central location near the beach and restaurants.",
+    "es": "Apartamento vacacional con equipamiento moderno, balcón, piscinas y ubicación céntrica cerca de la playa y los restaurantes."
   },
   "price": {
     "perNight": "85€",
@@ -220,33 +220,11 @@
       "washing_rack",
       "washing_machine"
     ],
-    "outdoorArea": [
-      "pool",
-      "balcony"
-    ],
-    "kitchen": [
-      "cooker",
-      "oven",
-      "dishes",
-      "coffee_machine",
-      "microwave",
-      "freezer",
-      "refrigerator",
-      "kettle"
-    ],
-    "bedroom": [
-      "bed_linen"
-    ],
-    "bathroom": [
-      "hairdryer",
-      "towels",
-      "shower",
-      "bathtub"
-    ],
-    "baby": [
-      "baby_bed",
-      "high_chair"
-    ]
+    "outdoorArea": ["pool", "balcony"],
+    "kitchen": ["cooker", "oven", "dishes", "coffee_machine", "microwave", "freezer", "refrigerator", "kettle"],
+    "bedroom": ["bed_linen"],
+    "bathroom": ["hairdryer", "towels", "shower", "bathtub"],
+    "baby": ["baby_bed", "high_chair"]
   },
   "houseRules": {
     "checkIn": {
@@ -259,11 +237,7 @@
       "en": "Check-out before 11:00 AM",
       "es": "Check-out antes de las 11:00"
     },
-    "rules": [
-      "party",
-      "pet",
-      "smoking"
-    ],
+    "rules": ["party", "pet", "smoking"],
     "description": [
       {
         "de": "Gemäß der Hausordnung der Puerto-Marina-Anlage ist es nicht gestattet, Handtücher auf dem Balkon zu trocknen. Bitte verwenden Sie stattdessen den verfügbaren Wäscheständer.",

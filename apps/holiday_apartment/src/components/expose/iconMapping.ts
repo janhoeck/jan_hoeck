@@ -1,34 +1,35 @@
 import { IconType as ReactIconType } from 'react-icons'
-import {
-  PiCarSimple,
-  PiOven,
-  PiSwimmingPool,
-  PiTelevision,
-  PiWashingMachine,
-  PiWifiHigh,
-  PiBathtub,
-  PiWheelchair,
-  PiCoffee,
-  PiShower,
-  PiFireExtinguisher,
-  PiTowel,
-  PiBed,
-  PiChair,
-  PiHairDryer,
-  PiWine,
-  PiElevator,
-  PiCigarette,
-  PiArrowRight,
-  PiArrowLeft,
-} from 'react-icons/pi'
-import { GiVacuumCleaner, GiClothesline } from 'react-icons/gi'
-import { TbAirConditioning } from 'react-icons/tb'
+import { FaKitchenSet, FaMattressPillow } from 'react-icons/fa6'
+import { GiClothesline, GiVacuumCleaner } from 'react-icons/gi'
 import { LuMicrowave } from 'react-icons/lu'
 import { LuAlarmSmoke } from 'react-icons/lu'
+import { LuPartyPopper, LuRefrigerator } from 'react-icons/lu'
+import { MdBalcony, MdOutlineDeck, MdOutlinePets } from 'react-icons/md'
+import {
+  PiArrowLeft,
+  PiArrowRight,
+  PiBathtub,
+  PiBed,
+  PiCarSimple,
+  PiChair,
+  PiCigarette,
+  PiCoffee,
+  PiElevator,
+  PiFireExtinguisher,
+  PiHairDryer,
+  PiOven,
+  PiShower,
+  PiSwimmingPool,
+  PiTelevision,
+  PiTowel,
+  PiWashingMachine,
+  PiWheelchair,
+  PiWifiHigh,
+  PiWine,
+} from 'react-icons/pi'
+import { TbAirConditioning } from 'react-icons/tb'
 import { TbCooker, TbTeapot } from 'react-icons/tb'
-import { LuRefrigerator, LuPartyPopper } from 'react-icons/lu'
-import { MdOutlinePets, MdBalcony, MdOutlineDeck } from 'react-icons/md'
-import { FaKitchenSet, FaMattressPillow } from 'react-icons/fa6'
+
 import { IconType } from '../../types/IconType'
 
 export const iconMapping: Record<IconType, ReactIconType> = {

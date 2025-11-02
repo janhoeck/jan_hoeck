@@ -1,6 +1,7 @@
-import { Navigation } from './Navigation/Navigation'
-import React from 'react'
 import { useTranslations } from 'next-intl'
+import React from 'react'
+
+import { Navigation } from './Navigation/Navigation'
 
 export const LayoutNavigation = () => {
   const t = useTranslations('components.navigation')

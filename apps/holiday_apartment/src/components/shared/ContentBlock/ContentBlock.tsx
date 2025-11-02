@@ -1,4 +1,5 @@
 import { Typography } from '@jan_hoeck/ui'
+
 import { ContentBlock as ContentBlockType } from '../../../types/ContentBlock'
 
 export type ContentBlockProps = {

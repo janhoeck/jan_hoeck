@@ -1,14 +1,15 @@
-import { PropertySummary } from './PropertySummary/PropertySummary'
-import { ExposeImages } from './ExposeImages/ExposeImages'
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
-import { MobileOnly } from '@/components/shared/Responsive/MobileOnly'
 import { DesktopOnly } from '@/components/shared/Responsive/DesktopOnly'
-import { LocationDescriptionSection } from './sections/locationDescriptionSection/LocationDescriptionSection'
-import { EquipmentFeaturesSection } from './sections/equipmentFeaturesSection/EquipmentFeaturesSection'
-import { DescriptionSection } from './sections/descriptionSection/DescriptionSection'
-import { BookItPanel } from './BookItPanel/BookItPanel'
-import { HouseRulesSection } from './sections/houseRulesSection/HouseRulesSection'
+import { MobileOnly } from '@/components/shared/Responsive/MobileOnly'
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+
+import { BookItPanel } from './BookItPanel/BookItPanel'
+import { ExposeImages } from './ExposeImages/ExposeImages'
+import { PropertySummary } from './PropertySummary/PropertySummary'
+import { DescriptionSection } from './sections/descriptionSection/DescriptionSection'
+import { EquipmentFeaturesSection } from './sections/equipmentFeaturesSection/EquipmentFeaturesSection'
+import { HouseRulesSection } from './sections/houseRulesSection/HouseRulesSection'
+import { LocationDescriptionSection } from './sections/locationDescriptionSection/LocationDescriptionSection'
 
 export type ExposeViewProps = {
   configuration: ExposeConfiguration
@@ -16,7 +17,7 @@ export type ExposeViewProps = {
 
 export const ExposeView = (props: ExposeViewProps) => {
   const { configuration } = props
-  const { imageSources, headline, description, price, location, houseRules, propertySummary, equipmentFeatures } =
+  const { imageSources, title, description, price, location, houseRules, propertySummary, equipmentFeatures } =
     configuration
 
   return (
@@ -32,7 +33,7 @@ export const ExposeView = (props: ExposeViewProps) => {
           <BookItPanel price={price} />
           {propertySummary && <PropertySummary items={propertySummary} />}
           <DescriptionSection
-            headline={headline}
+            title={title}
             description={description}
           />
           <EquipmentFeaturesSection equipmentFeatures={equipmentFeatures} />

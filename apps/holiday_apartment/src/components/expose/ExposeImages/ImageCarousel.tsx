@@ -1,10 +1,11 @@
 'use client'
-import React, { useEffect } from 'react'
+
+import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
+import React, { useEffect } from 'react'
 import { LiaAngleLeftSolid, LiaAngleRightSolid } from 'react-icons/lia'
 import { twMerge } from 'tailwind-merge'
-import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 
 export type ImageCarouselProps = {
   imageSources: ExposeConfiguration['imageSources']

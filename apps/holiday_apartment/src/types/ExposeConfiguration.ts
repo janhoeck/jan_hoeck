@@ -38,14 +38,14 @@ export type EquipmentFeatures = {
 
 export type PropertySummaryItem = {
   type: PropertySummaryType
-  amount?: number
+  amount: number
 }
 
 export type Address = {
-  building: string
+  building?: string
   street: string
   houseNumber: string
-  floorApartment: string
+  floorApartment?: string
   postalCode: string
   city: string
   country: string
@@ -55,7 +55,7 @@ export type Address = {
 export type Location = {
   lat: number
   lng: number
-  address: Partial<Address>
+  address: Address
   description: Description
 }
 
@@ -69,8 +69,8 @@ export type HouseRules = {
 export type ExposeConfiguration = {
   id: string
   imageSources: string[]
-  headline: TranslationMap
-  subHeadline: TranslationMap
+  title: TranslationMap
+  subtitle: TranslationMap
   description: Description
   price: {
     perNight: string

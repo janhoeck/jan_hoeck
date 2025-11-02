@@ -1,11 +1,11 @@
-import { Section } from '@/components/shared/Section/Section'
-import { useLocale, useTranslations } from 'next-intl'
 import { ItemWithIcon } from '@/components/expose/ItemWithIcon/ItemWithIcon'
 import { iconMapping } from '@/components/expose/iconMapping'
-import { twMerge } from 'tailwind-merge'
-import { ContentBlock } from '@/components/shared/ContentBlock/ContentBlock'
-import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 import { convertDescription, getTranslation } from '@/components/expose/utils'
+import { ContentBlock } from '@/components/shared/ContentBlock/ContentBlock'
+import { Section } from '@/components/shared/Section/Section'
+import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { useLocale, useTranslations } from 'next-intl'
+import { twMerge } from 'tailwind-merge'
 
 export type HouseRulesSectionProps = {
   houseRules: ExposeConfiguration['houseRules']
@@ -18,7 +18,7 @@ export const HouseRulesSection = (props: HouseRulesSectionProps) => {
   const locale = useLocale()
 
   return (
-    <Section headline={t('headline')}>
+    <Section title={t('headline')}>
       <div className='flex flex-col gap-4'>
         <div className={twMerge(['flex max-w-[600px] flex-col gap-2', 'sm:flex-row'])}>
           <div className='flex flex-1 flex-col gap-4'>

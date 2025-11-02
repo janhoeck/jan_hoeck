@@ -1,10 +1,10 @@
 'use client'
 
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
-import { Section } from '@/components/shared/Section/Section'
-import { useTranslations } from 'next-intl'
-import { Typography } from '@jan_hoeck/ui'
 import { GuestbookForm } from '@/components/shared/GuestbookForm/GuestbookForm'
+import { Section } from '@/components/shared/Section/Section'
+import { Typography } from '@jan_hoeck/ui'
+import { useTranslations } from 'next-intl'
 import { useActionState } from 'react'
 
 export type EmptyGuestbookViewProps = {

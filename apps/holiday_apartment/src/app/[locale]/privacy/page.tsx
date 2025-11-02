@@ -1,48 +1,48 @@
-import { ContentContainer } from '@/components/shared/Container/ContentContainer'
-import { Section } from '@/components/shared/Section/Section'
 import { ContactDetails } from '@/components/shared/ContactDetails/ContactDetails'
+import { ContentContainer } from '@/components/shared/Container/ContentContainer'
 import { ContentBlock } from '@/components/shared/ContentBlock/ContentBlock'
+import { Section } from '@/components/shared/Section/Section'
 import { useTranslations } from 'next-intl'
 
 export default function PrivacyPage() {
   const t = useTranslations('pages.privacy')
   return (
     <ContentContainer className='mt-10'>
-      <Section headline={t('headline')}>
+      <Section title={t('headline')}>
         <div className='flex flex-col gap-4'>
           <Section
-            headline={t('descriptions.1/headline')}
+            title={t('descriptions.1/headline')}
             variant='subsection'
           >
             <ContentBlock items={[t('descriptions.1')]} />
           </Section>
           <Section
-            headline={t('descriptions.2/headline')}
+            title={t('descriptions.2/headline')}
             variant='subsection'
           >
             <ContentBlock items={[t('descriptions.2')]} />
             <ContactDetails />
           </Section>
           <Section
-            headline={t('descriptions.3/headline')}
+            title={t('descriptions.3/headline')}
             variant='subsection'
           >
             <ContentBlock items={[t('descriptions.3')]} />
           </Section>
           <Section
-            headline={t('descriptions.4/headline')}
+            title={t('descriptions.4/headline')}
             variant='subsection'
           >
             <ContentBlock items={[t('descriptions.4')]} />
           </Section>
           <Section
-            headline={t('descriptions.5/headline')}
+            title={t('descriptions.5/headline')}
             variant='subsection'
           >
             <ContentBlock items={[t('descriptions.5')]} />
           </Section>
           <Section
-            headline={t('descriptions.6/headline')}
+            title={t('descriptions.6/headline')}
             variant='subsection'
           >
             <ContentBlock
@@ -62,7 +62,7 @@ export default function PrivacyPage() {
             />
           </Section>
           <Section
-            headline={t('descriptions.8/headline')}
+            title={t('descriptions.8/headline')}
             variant='subsection'
           >
             <ContentBlock
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
             />
           </Section>
           <Section
-            headline={t('descriptions.10/headline')}
+            title={t('descriptions.10/headline')}
             variant='subsection'
           >
             <ContentBlock items={[t('descriptions.10')]} />

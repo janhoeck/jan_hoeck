@@ -1,9 +1,10 @@
-import { Typography } from '@jan_hoeck/ui'
-import { iconMapping } from '../../iconMapping'
-import { twMerge } from 'tailwind-merge'
-import { useTranslations } from 'next-intl'
 import { ItemWithIcon } from '@/components/expose/ItemWithIcon/ItemWithIcon'
 import { IconType } from '@/types/IconType'
+import { Typography } from '@jan_hoeck/ui'
+import { useTranslations } from 'next-intl'
+import { twMerge } from 'tailwind-merge'
+
+import { iconMapping } from '../../iconMapping'
 
 export type EquipmentFeaturesBlockProps<T extends IconType> = {
   headline: string

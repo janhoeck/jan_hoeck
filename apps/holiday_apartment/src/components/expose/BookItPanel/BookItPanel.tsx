@@ -1,9 +1,11 @@
 'use client'
-import { Typography, Button } from '@jan_hoeck/ui'
-import { Link } from '../../../i18n/navigation'
+
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { Button, Typography } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import { twMerge } from 'tailwind-merge'
+
+import { Link } from '../../../i18n/navigation'
 
 export type BookItPanelProps = {
   price: ExposeConfiguration['price']

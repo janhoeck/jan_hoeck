@@ -1,9 +1,10 @@
-import { GoogleMaps } from './GoogleMaps'
-import { Typography } from '@jan_hoeck/ui'
+import { getTranslation } from '@/components/expose/utils'
 import { Location } from '@/types/ExposeConfiguration'
 import { safeJoin } from '@/utils/join'
+import { Typography } from '@jan_hoeck/ui'
 import { useLocale } from 'next-intl'
-import { getTranslation } from '@/components/expose/utils'
+
+import { GoogleMaps } from './GoogleMaps'
 
 export type AddressCardProps = {
   lat: number

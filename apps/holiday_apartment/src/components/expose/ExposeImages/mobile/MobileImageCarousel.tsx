@@ -1,6 +1,7 @@
-import React from 'react'
-import { ImageCarousel } from '../ImageCarousel'
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import React from 'react'
+
+import { ImageCarousel } from '../ImageCarousel'
 
 export type MobileImageCarouselProps = {
   imageSources: ExposeConfiguration['imageSources']

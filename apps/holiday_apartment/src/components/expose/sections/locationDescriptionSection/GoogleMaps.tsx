@@ -1,5 +1,6 @@
 'use client'
-import { Map, AdvancedMarker } from '@vis.gl/react-google-maps'
+
+import { AdvancedMarker, Map } from '@vis.gl/react-google-maps'
 
 export type GoogleMapsProps = {
   className?: string

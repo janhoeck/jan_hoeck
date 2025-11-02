@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import { Typography } from '@jan_hoeck/ui'
 import { PropertySummaryType } from '@/types/ExposeConfiguration'
+import { Typography } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 
 const iconMapping: Record<PropertySummaryType, string> = {
