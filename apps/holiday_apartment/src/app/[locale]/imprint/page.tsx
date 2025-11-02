@@ -7,18 +7,18 @@ export default function ImprintPage() {
   return (
     <ContentContainer className='mt-10'>
       <div className='flex flex-col gap-4'>
-        <Section headline='Impressum'>
+        <Section title='Impressum'>
           <Section
-            headline='Angaben gemäß § 5 TMG'
+            title='Angaben gemäß § 5 TMG'
             variant='subsection'
           >
             <ContactDetails />
           </Section>
         </Section>
-        <Section headline='Haftungsausschluss'>
+        <Section title='Haftungsausschluss'>
           <div className='flex flex-col gap-4'>
             <Section
-              headline='Haftung für Inhalte'
+              title='Haftung für Inhalte'
               variant='subsection'
             >
               <ContentBlock
@@ -29,7 +29,7 @@ export default function ImprintPage() {
               />
             </Section>
             <Section
-              headline='Haftung für Links'
+              title='Haftung für Links'
               variant='subsection'
             >
               <ContentBlock
@@ -41,7 +41,7 @@ export default function ImprintPage() {
             </Section>
           </div>
         </Section>
-        <Section headline='Datenschutz'>
+        <Section title='Datenschutz'>
           <ContentBlock
             items={[
               'Diese Website verwendet keine Cookies und erhebt keine personenbezogenen Daten ohne Ihre ausdrückliche Eingabe. Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben. Weitere Hinweise finden Sie ggf. in der Datenschutzerklärung.',

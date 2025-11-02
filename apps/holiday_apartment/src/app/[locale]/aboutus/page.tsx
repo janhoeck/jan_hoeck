@@ -10,7 +10,7 @@ export default function AboutUsPage() {
     <ContentContainer className='pt-10'>
       <div className='relative z-1 flex justify-center'>
         <div className='w-full justify-center text-center sm:max-w-[450px] lg:max-w-[650px]'>
-          <Section headline={t('headline')}>
+          <Section title={t('headline')}>
             <div className='flex flex-col items-center gap-6'>
               <Image
                 src='/images/tina_and_olaf.webp'

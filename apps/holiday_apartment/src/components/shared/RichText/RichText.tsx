@@ -23,7 +23,7 @@ const renderNode = (node: Node): ReactNode => {
       const variant = (element.getAttribute('variant') as SectionProps['variant']) ?? 'default'
       return (
         <Section
-          headline={headline}
+          title={headline}
           variant={variant}
         >
           {Array.from(element.childNodes).map((n, i) => (

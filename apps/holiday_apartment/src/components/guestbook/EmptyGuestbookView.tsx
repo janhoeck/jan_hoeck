@@ -18,10 +18,10 @@ export const EmptyGuestbookView = (props: EmptyGuestbookViewProps) => {
 
   return (
     <ContentContainer className='mt-10'>
-      <Section headline={t('headline')}>
+      <Section title={t('headline')}>
         <div className='flex max-w-[550px] flex-col gap-6'>
           <Section
-            headline={t('empty.headline')}
+            title={t('empty.headline')}
             variant='subsection'
           >
             <Typography>{t('empty.text')}</Typography>

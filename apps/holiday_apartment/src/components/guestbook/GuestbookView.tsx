@@ -39,10 +39,10 @@ export const GuestbookView = (props: GuestbookViewProps) => {
 
   return (
     <ContentContainer className='mt-10'>
-      <Section headline={t('headline')}>
+      <Section title={t('headline')}>
         <div className='flex flex-col gap-6'>
           <Section
-            headline={t('descriptions.1/headline')}
+            title={t('descriptions.1/headline')}
             variant='subsection'
           >
             <div className='flex max-w-[550px] flex-col gap-4'>
@@ -54,7 +54,7 @@ export const GuestbookView = (props: GuestbookViewProps) => {
             </div>
           </Section>
           <Section
-            headline={t('descriptions.2/headline')}
+            title={t('descriptions.2/headline')}
             variant='subsection'
           >
             <div className='flex flex-col gap-6'>
