@@ -1,11 +1,11 @@
 import { type IconType } from 'react-icons'
 
-export type ExposeCardFeatureItemProps = {
+export type PropertyStatisticItemProps = {
   icon: IconType
   text: string
 }
 
-export const ExposeCardFeatureItem = (props: ExposeCardFeatureItemProps) => {
+export const PropertyStatisticItem = (props: PropertyStatisticItemProps) => {
   const { icon: Icon, text } = props
   return (
     <div className='flex items-center gap-2'>

@@ -1,9 +1,7 @@
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
-import { DesktopOnly } from '@/components/shared/Responsive/DesktopOnly'
-import { MobileOnly } from '@/components/shared/Responsive/MobileOnly'
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
 
-import { BookItPanel } from './BookItPanel/BookItPanel'
+import { BookItCard } from './BookItPanel/BookItCard'
 import { ExposeImages } from './ExposeImages/ExposeImages'
 import { PropertySummary } from './PropertySummary/PropertySummary'
 import { DescriptionSection } from './sections/descriptionSection/DescriptionSection'
@@ -22,23 +20,26 @@ export const ExposeView = (props: ExposeViewProps) => {
 
   return (
     <div>
-      <MobileOnly>
-        <ExposeImages imageSources={imageSources} />
-      </MobileOnly>
+      <ExposeImages imageSources={imageSources} />
       <ContentContainer className='pt-10'>
-        <div className='flex flex-col gap-12'>
-          <DesktopOnly>
-            <ExposeImages imageSources={imageSources} />
-          </DesktopOnly>
-          <BookItPanel price={price} />
-          {propertySummary && <PropertySummary items={propertySummary} />}
-          <DescriptionSection
-            title={title}
-            description={description}
-          />
-          <EquipmentFeaturesSection equipmentFeatures={equipmentFeatures} />
-          <HouseRulesSection houseRules={houseRules} />
-          <LocationDescriptionSection location={location} />
+        <div className='grid lg:grid-cols-3 gap-8 md:gap-12'>
+          <div className='lg:col-span-2 space-y-8'>
+            <div className='flex flex-col gap-12'>
+              {propertySummary && <PropertySummary items={propertySummary} />}
+              <DescriptionSection
+                title={title}
+                description={description}
+              />
+              <EquipmentFeaturesSection equipmentFeatures={equipmentFeatures} />
+              <HouseRulesSection houseRules={houseRules} />
+              <LocationDescriptionSection location={location} />
+            </div>
+          </div>
+          <div className='lg:col-span-1'>
+            <div className='sticky top-24 space-y-6'>
+              <BookItCard price={price} />
+            </div>
+          </div>
         </div>
       </ContentContainer>
     </div>

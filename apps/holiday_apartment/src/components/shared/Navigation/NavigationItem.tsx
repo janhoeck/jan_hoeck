@@ -1,24 +1,22 @@
-'use client'
-
-import { twMerge } from 'tailwind-merge'
+import { Button, type ButtonProps } from '@jan_hoeck/ui'
+import Link from 'next/link'
 
 export type NavigationItemProps = {
   children: string
   to: string
-  fullWidth?: boolean
+  fullWidth?: ButtonProps<'a'>['fullWidth']
 }
 
 export const NavigationItem = (props: NavigationItemProps) => {
-  const { children, to, fullWidth = false } = props
+  const { children, to, fullWidth } = props
   return (
-    <a
+    <Button
+      as={Link}
+      fullWidth={fullWidth}
+      variant='ghost'
       href={to}
-      className={twMerge([
-        'text-muted-foreground rounded-md px-4 py-2 text-sm font-medium transition-colors',
-        'hover:text-primary hover:bg-muted',
-      ])}
     >
       {children}
-    </a>
+    </Button>
   )
 }

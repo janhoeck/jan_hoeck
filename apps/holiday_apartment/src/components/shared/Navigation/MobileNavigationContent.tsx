@@ -26,7 +26,7 @@ export const MobileNavigationContent = (props: MobileNavigationContentProps) => 
       </Link>
       <Button
         variant='ghost'
-        className='text-foreground'
+        size='icon'
         onClick={isOpen ? close : open}
       >
         {isOpen ? <IoMdClose size={20} /> : <LiaBarsSolid size={20} />}

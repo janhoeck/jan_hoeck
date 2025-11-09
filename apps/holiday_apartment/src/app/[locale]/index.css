@@ -1,4 +1,9 @@
 @import 'tailwindcss';
+
+@layer components {
+    @import '@jan_hoeck/ui/styles.css';
+}
+
 @source '../../../node_modules/@jan_hoeck/ui';
 
 html,
@@ -11,83 +16,11 @@ body {
 }
 
 @theme {
-  --animate-slide-in-right: slide-in-right 0.2s linear;
-  --animate-fade-in: 0.5s ease-out 0s 1 normal none running fade-in;
+    --animate-slide-in-right: slide-in-right 0.2s linear;
+    --animate-fade-in: 0.5s ease-out 0s 1 normal none running fade-in;
 
-  --color-primary: hsl(196 89% 35%);
-
-  --color-foreground: hsl(210 24% 16%);
-  --color-ocean-deep: hsl(196 89% 35%);
-  --color-ocean-light: hsl(192 81% 50%);
-
-  --color-muted: hsl(210 40% 96.1%);
-  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
-
-  /**
-  --background: 0 0% 100%;
-    --foreground: 210 24% 16%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 210 24% 16%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 24% 16%;
-
-  --primary: 196 89% 35%;
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 28 80% 52%;
-  --secondary-foreground: 0 0% 100%;
-
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-
-  --accent: 35 84% 62%;
-  --accent-foreground: 210 24% 16%;
-
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 100%;
-
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 196 89% 35%;
-
-  --radius: 0.75rem;
-
-  --ocean-deep: 196 89% 35%;
-  --ocean-light: 192 81% 50%;
-  --sand: 35 84% 62%;
-  --terracotta: 24 87% 64%;
-  --warm-white: 36 100% 98%;
-
-  --gradient-ocean: linear-gradient(135deg, hsl(196 89% 35%) 0%, hsl(192 81% 50%) 100%);
-  --gradient-sunset: linear-gradient(135deg, hsl(24 87% 64%) 0%, hsl(35 84% 62%) 100%);
-  --gradient-hero: linear-gradient(180deg, rgba(10, 126, 164, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%);
-
-  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-ocean: 0 10px 30px -10px rgba(10, 126, 164, 0.3);
-
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-fast: all 0.15s ease;
-
-  --sidebar-background: 0 0% 98%;
-
-  --sidebar-foreground: 240 5.3% 26.1%;
-
-  --sidebar-primary: 240 5.9% 10%;
-
-  --sidebar-primary-foreground: 0 0% 98%;
-
-  --sidebar-accent: 240 4.8% 95.9%;
-
-  --sidebar-accent-foreground: 240 5.9% 10%;
-
-  --sidebar-border: 220 13% 91%;
-
-  --sidebar-ring: 217.2 91.2% 59.8%;
-   */
+    --color-ocean-deep: hsl(196 89% 35%);
+    --color-ocean-light: hsl(192 81% 50%);
 
   @keyframes slide-in-right {
     0% {

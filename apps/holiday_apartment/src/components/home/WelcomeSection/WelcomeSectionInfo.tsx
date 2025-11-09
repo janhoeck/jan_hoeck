@@ -1,7 +1,8 @@
+import { Button } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 import React from 'react'
 import { GoChevronRight } from 'react-icons/go'
-import { twMerge } from 'tailwind-merge'
 
 import { InfoCard } from './InfoCard'
 
@@ -22,17 +23,15 @@ export const WelcomeSectionInfo = () => {
           {t('subtitle')}
         </p>
         <div className='flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row'>
-          <a
+          <Button
+            as={Link}
+            size='lg'
             href='#expose-list-section'
-            className={twMerge([
-              'bg-primary shadow-ocean inline-flex h-11 items-center justify-center gap-2 rounded-md px-8 py-6 text-base font-medium whitespace-nowrap text-white transition-all duration-300',
-              'hover:bg-primary/90 hover:scale-105 hover:shadow-md',
-              'md:text-lg',
-            ])}
+            className='transition-all duration-300 hover:bg-primary/90 hover:scale-105 hover:shadow-md'
           >
             {t('discoverAccommodationButtonLabel')}
             <GoChevronRight size={24} />
-          </a>
+          </Button>
         </div>
         <div className='grid grid-cols-1 gap-6 pt-8 sm:grid-cols-3 md:gap-8 md:pt-12'>
           <InfoCard

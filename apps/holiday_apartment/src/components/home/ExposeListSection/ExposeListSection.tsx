@@ -1,9 +1,9 @@
 import { TextWithHeadline } from '@/components/home/TextWithHeadline'
+import { PropertyCard } from '@/components/shared/PropertyCard/PropertyCard'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 
 import { loadExposeConfigs } from '../../../api/loadExposeConfigs'
-import { ExposeCard } from '../../shared/ExposeCard/ExposeCard'
 
 export const ExposeListSection = () => {
   const t = useTranslations('pages.home.exposes')
@@ -21,7 +21,7 @@ export const ExposeListSection = () => {
         />
         <div className='mx-auto grid max-w-6xl gap-8 md:grid-cols-2 md:gap-10'>
           {exposes.map((expose) => (
-            <ExposeCard
+            <PropertyCard
               key={expose.id}
               expose={expose}
             />

@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     },
   },
   images: {
-    qualities: [75, 80],
+    qualities: [75, 80, 100],
   },
 }
 

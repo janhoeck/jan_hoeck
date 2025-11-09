@@ -10,12 +10,13 @@ export const WelcomeSection = () => {
         <Image
           fill
           priority
-          src='/images/costacalida.png'
+          src='/images/costa-calida.webp'
           alt='Costa calida - murcia'
-          className='h-full w-full object-cover'
+          className='object-cover'
           sizes='100vw'
+          quality={100}
         />
-        <div className='to-muted absolute inset-0 bg-gradient-to-b from-black/40 via-black/20' />
+        <div className='to-white absolute inset-0 bg-gradient-to-b from-black/40 via-black/20' />
       </div>
       <WelcomeSectionInfo />
     </section>

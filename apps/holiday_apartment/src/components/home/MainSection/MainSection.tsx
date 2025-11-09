@@ -1,4 +1,5 @@
 import { TextWithHeadline } from '@/components/home/TextWithHeadline'
+import { Card, CardContent, CardDescription, CardTitle } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { IoMdHeartEmpty } from 'react-icons/io'
@@ -39,18 +40,18 @@ export const MainSection = () => {
             description={t('info.general.description')}
           />
         </div>
-        <div className='mt-12 rounded-2xl bg-white p-8 shadow-md md:mt-16 md:p-12'>
+        <Card className='mt-12'>
           <div className='grid gap-8 md:grid-cols-2 md:gap-12'>
-            <div>
-              <h3 className='text-foreground mb-4 text-2xl font-bold'>{t('locations.losAlcazares.title')}</h3>
-              <p className='text-muted-foreground mb-4 leading-relaxed'>{t('locations.losAlcazares.description')}</p>
-            </div>
-            <div>
-              <h3 className='text-foreground mb-4 text-2xl font-bold'>{t('locations.losUrrutias.title')}</h3>
-              <p className='text-muted-foreground mb-4 leading-relaxed'>{t('locations.losUrrutias.description')}</p>
-            </div>
+            <CardContent>
+              <CardTitle>{t('locations.losAlcazares.title')}</CardTitle>
+              <CardDescription>{t('locations.losAlcazares.description')}</CardDescription>
+            </CardContent>
+            <CardContent>
+              <CardTitle>{t('locations.losUrrutias.title')}</CardTitle>
+              <CardDescription>{t('locations.losUrrutias.description')}</CardDescription>
+            </CardContent>
           </div>
-        </div>
+        </Card>
       </div>
     </section>
   )

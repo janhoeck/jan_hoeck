@@ -1,22 +1,21 @@
 import { getTranslation } from '@/components/expose/utils'
 import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { Badge, Button } from '@jan_hoeck/ui'
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GrGroup } from 'react-icons/gr'
-import { LuBed } from 'react-icons/lu'
+import { LuBed, LuMapPin } from 'react-icons/lu'
 import { MdOutlineOpenInNew } from 'react-icons/md'
 import { twMerge } from 'tailwind-merge'
 
-import { ExposeCardFeatureItem } from './ExposeCardFeatureItem'
-import { ExposeCardLocationPin } from './ExposeCardLocationPin'
-import { ExposeCardTag } from './ExposeCardTag'
+import { PropertyStatisticItem } from './PropertyStatisticItem'
 
-export type EstateCardProps = {
+export type PropertyProps = {
   expose: ExposeConfiguration
 }
 
-export const ExposeCard = (props: EstateCardProps) => {
+export const PropertyCard = (props: PropertyProps) => {
   const { expose } = props
   const t = useTranslations('pages.home.exposes.card')
   const locale = useLocale()
@@ -41,9 +40,10 @@ export const ExposeCard = (props: EstateCardProps) => {
           sizes='(max-width: 40rem) 90vw, 350px'
         />
         <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent'></div>
-        <div className='absolute top-4 left-4'>
-          <ExposeCardLocationPin city={expose.location.address.city} />
-        </div>
+        <Badge className='absolute top-4 left-4'>
+          <LuMapPin size={16} />
+          {expose.location.address.city}
+        </Badge>
       </div>
       <div className='p-6 md:p-8'>
         <h3 className='text-foreground group-hover:text-primary mb-2 font-serif text-2xl font-bold transition-colors md:text-3xl'>
@@ -52,26 +52,28 @@ export const ExposeCard = (props: EstateCardProps) => {
         <p className='text-muted-foreground mb-6 leading-relaxed'>{getTranslation(locale, expose.subtitle)}</p>
         <div className='text-muted-foreground mb-6 flex items-center gap-6'>
           {bedPropertySummary && (
-            <ExposeCardFeatureItem
+            <PropertyStatisticItem
               icon={LuBed}
               text={t('beds', { amount: bedPropertySummary.amount })}
             />
           )}
           {groupPropertySummary && (
-            <ExposeCardFeatureItem
+            <PropertyStatisticItem
               icon={GrGroup}
               text={t('guests', { amount: groupPropertySummary.amount })}
             />
           )}
         </div>
         <div className='mb-6 flex flex-wrap gap-2'>
-          <ExposeCardTag text={t('pool')} />
-          <ExposeCardTag text={t('airConditioner')} />
-          <ExposeCardTag text={t('wlan')} />
-          <ExposeCardTag text={t('parking')} />
+          <Badge variant='muted'>{t('pool')}</Badge>
+          <Badge variant='muted'>{t('airConditioner')}</Badge>
+          <Badge variant='muted'>{t('wlan')}</Badge>
+          <Badge variant='muted'>{t('parking')}</Badge>
         </div>
-        <Link
-          className='bg-primary hover:bg-primary/90 shadow-ocean hover:shadow-large group/btn inline-flex h-11 w-full items-center justify-center gap-2 rounded-md px-8 text-sm font-medium whitespace-nowrap text-white transition-all duration-300'
+        <Button
+          fullWidth
+          as={Link}
+          size='lg'
           href={`/expose/${expose.id}`}
         >
           {t('showMe')}
@@ -79,7 +81,7 @@ export const ExposeCard = (props: EstateCardProps) => {
             size={16}
             className='ml-2 transition-transform group-hover/btn:translate-x-1'
           />
-        </Link>
+        </Button>
       </div>
     </div>
   )
