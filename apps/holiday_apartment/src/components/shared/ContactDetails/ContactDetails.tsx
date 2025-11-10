@@ -4,12 +4,12 @@ import { PiEnvelopeOpenLight, PiPhoneCallLight } from 'react-icons/pi'
 
 export const ContactDetails = () => {
   return (
-    <div className='flex flex-col gap-2'>
-      <div>
-        <Typography>Olaf und Tina Asbach</Typography>
-        <Typography>Calle Fernando Dodero 12</Typography>
-        <Typography>30368 Los Urrutias</Typography>
-        <Typography>Murcia</Typography>
+    <div className='flex flex-col gap-2 text-foreground'>
+      <div className='flex flex-col'>
+        <span className='font-bold'>Olaf und Tina Asbach</span>
+        <span>Calle Fernando Dodero 12</span>
+        <span>30368 Los Urrutias</span>
+        <span>Murcia</span>
       </div>
       <div className='flex items-center gap-4'>
         <PiPhoneCallLight size={30} />

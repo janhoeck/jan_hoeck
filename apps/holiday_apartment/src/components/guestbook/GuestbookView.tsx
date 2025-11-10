@@ -46,7 +46,7 @@ export const GuestbookView = (props: GuestbookViewProps) => {
             variant='subsection'
           >
             <div className='flex max-w-[550px] flex-col gap-4'>
-              <Typography>{t('descriptions.1')}</Typography>
+              <span className='text-foreground'>{t('descriptions.1')}</span>
               <GuestbookForm
                 action={formAction}
                 isPending={isPending}

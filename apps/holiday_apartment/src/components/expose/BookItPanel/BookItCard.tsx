@@ -1,12 +1,12 @@
 'use client'
 
-import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 import { Button, Card, CardContent } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
-import { IoMailOutline } from 'react-icons/io5'
+import { PiEnvelopeOpenLight, PiPhoneCallLight } from 'react-icons/pi'
 
 export type BookItPanelProps = {
-  price: ExposeConfiguration['price']
+  price: PropertyConfiguration['price']
 }
 
 export const BookItCard = (props: BookItPanelProps) => {
@@ -26,7 +26,7 @@ export const BookItCard = (props: BookItPanelProps) => {
         </div>
         <div className='space-y-4'>
           <Button fullWidth>
-            <IoMailOutline size={16} />
+            <PiEnvelopeOpenLight size={16} />
             Anfrage
           </Button>
         </div>
@@ -34,51 +34,25 @@ export const BookItCard = (props: BookItPanelProps) => {
           <h3 className='font-semibold text-foreground'>Kontakt</h3>
           <div className='space-y-3 text-sm'>
             <a
-              href='mailto:info@solymarmenor.com'
+              href='mailto:casas.marmenor@gmx.de'
               className='flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors'
             >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                stroke-width='2'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                className='lucide lucide-mail w-4 h-4'
-              >
-                <rect
-                  width='20'
-                  height='16'
-                  x='2'
-                  y='4'
-                  rx='2'
-                ></rect>
-                <path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'></path>
-              </svg>
-              info@solymarmenor.com
+              <PiEnvelopeOpenLight size={20} />
+              casas.marmenor@gmx.de
             </a>
             <a
-              href='tel:+34123456789'
+              href='tel:+34 604 482 002'
               className='flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors'
             >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                stroke-width='2'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                className='lucide lucide-phone w-4 h-4'
-              >
-                <path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'></path>
-              </svg>
-              +34 123 456 789
+              <PiPhoneCallLight size={20} />
+              +34 604 482 002
+            </a>
+            <a
+              href='tel:+49 176 47 36 7 18'
+              className='flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors'
+            >
+              <PiPhoneCallLight size={20} />
+              +49 176 47 36 7 18
             </a>
           </div>
         </div>

@@ -1,6 +1,4 @@
-@import "tailwindcss";
-
-@theme {
+@theme static {
     /* colors */
     --color-border: #e2e8f0;
 

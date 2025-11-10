@@ -1,19 +1,19 @@
-import { ItemWithIcon } from '@/components/expose/ItemWithIcon/ItemWithIcon'
+import { IconWithText } from '@/components/expose/IconWithText/IconWithText'
 import { iconMapping } from '@/components/expose/iconMapping'
 import { convertDescription, getTranslation } from '@/components/expose/utils'
 import { ContentBlock } from '@/components/shared/ContentBlock/ContentBlock'
 import { Section } from '@/components/shared/Section/Section'
-import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 import { useLocale, useTranslations } from 'next-intl'
 import { twMerge } from 'tailwind-merge'
 
 export type HouseRulesSectionProps = {
-  houseRules: ExposeConfiguration['houseRules']
+  propertyConfig: PropertyConfiguration
 }
 
 export const HouseRulesSection = (props: HouseRulesSectionProps) => {
-  const { houseRules } = props
-  const { description } = houseRules
+  const { propertyConfig } = props
+  const { houseRules } = propertyConfig
   const t = useTranslations('pages.expose.houseRulesSection')
   const locale = useLocale()
 
@@ -22,12 +22,12 @@ export const HouseRulesSection = (props: HouseRulesSectionProps) => {
       <div className='flex flex-col gap-4'>
         <div className={twMerge(['flex max-w-[600px] flex-col gap-2', 'sm:flex-row'])}>
           <div className='flex flex-1 flex-col gap-4'>
-            <ItemWithIcon
+            <IconWithText
               icon={iconMapping['checkin']}
               label={t('itemHeadlines.checkin')}
               description={getTranslation(locale, houseRules.checkIn)}
             />
-            <ItemWithIcon
+            <IconWithText
               icon={iconMapping['checkout']}
               label={t('itemHeadlines.checkout')}
               description={getTranslation(locale, houseRules.checkOut)}
@@ -40,8 +40,7 @@ export const HouseRulesSection = (props: HouseRulesSectionProps) => {
               const description = t(`descriptions.${rule}`)
 
               return (
-                <ItemWithIcon
-                  strikeThrough
+                <IconWithText
                   key={rule}
                   icon={icon}
                   label={label}
@@ -51,7 +50,7 @@ export const HouseRulesSection = (props: HouseRulesSectionProps) => {
             })}
           </div>
         </div>
-        {description && <ContentBlock items={convertDescription(locale, description)} />}
+        {houseRules.description && <ContentBlock items={convertDescription(locale, houseRules.description)} />}
       </div>
     </Section>
   )

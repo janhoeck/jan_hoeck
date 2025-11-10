@@ -1,8 +1,9 @@
 import { getTranslation } from '@/components/expose/utils'
-import { Location } from '@/types/ExposeConfiguration'
+import { Location } from '@/types/PropertyConfiguration'
 import { safeJoin } from '@/utils/join'
-import { Typography } from '@jan_hoeck/ui'
+import { Card, CardContent, Typography } from '@jan_hoeck/ui'
 import { useLocale } from 'next-intl'
+import { LuBed, LuMapPin } from 'react-icons/lu'
 
 import { GoogleMaps } from './GoogleMaps'
 
@@ -17,24 +18,29 @@ export const AddressCard = (props: AddressCardProps) => {
   const locale = useLocale()
 
   return (
-    <div className='h-fit w-full rounded-md border border-neutral-300 bg-white sm:min-w-[320px]'>
+    <Card className='h-fit'>
       <GoogleMaps
         className='h-[320px] w-full overflow-hidden rounded-t-md'
         lat={lat}
         lng={lng}
       />
-      <div className='p-2'>
-        <Typography variant='smallText'>{address.building}</Typography>
-        <Typography variant='smallText'>
-          {safeJoin([safeJoin([address.street, address.houseNumber], ' '), address.floorApartment], ', ')}
-        </Typography>
-        <Typography variant='smallText'>{[address.postalCode, address.city].join(' ')}</Typography>
-      </div>
-      {address.description && (
-        <div className='p-2'>
-          <Typography variant='smallText'>{getTranslation(locale, address.description)}</Typography>
+      <CardContent>
+        <div className='flex items-start gap-3'>
+          <LuMapPin
+            size={20}
+            className='text-primary mt-0.5'
+          />
+          <div>
+            <div className='font-semibold'>
+              {safeJoin([safeJoin([address.street, address.houseNumber], ' '), address.floorApartment], ', ')}
+            </div>
+            <div className='text-sm text-muted-foreground'>{[address.postalCode, address.city].join(' ')}</div>
+          </div>
         </div>
-      )}
-    </div>
+        {address.description && (
+          <Typography variant='smallText'>{getTranslation(locale, address.description)}</Typography>
+        )}
+      </CardContent>
+    </Card>
   )
 }

@@ -124,9 +124,9 @@
     ]
   },
   "title": {
-    "de": "Luxuriöses Ferienhaus in Estrella del Mar, Los Urrutias – direkt am Mar Menor",
-    "en": "Luxurious Holiday Home in Estrella del Mar, Los Urrutias - directly on the Mar Menor",
-    "es": "Casa de Vacaciones de Lujo en Estrella del Mar, Los Urrutias - directamente en el Mar Menor"
+    "de": "Luxuriöses Ferienhaus in Estrella del Mar, Los Urrutias",
+    "en": "Luxurious Holiday Home in Estrella del Mar, Los Urrutias ",
+    "es": "Casa de Vacaciones de Lujo en Estrella del Mar, Los Urrutias"
   },
   "subtitle": {
     "de": "Charmantes Ferienhaus mit privatem Pool und Garten. Ruhige Lage, perfekt für Familien und Paare.",
@@ -183,29 +183,65 @@
       "es": "La ubicación es inmejorable: la casa está situada en las inmediaciones del Mar Menor, a solo un minuto a pie de la playa, perfecta para días relajantes junto al mar."
     }
   ],
-  "propertySummary": [
-    {
-      "type": "pool",
-      "amount": 1
-    },
-    {
-      "type": "bathroom",
-      "amount": 1
-    },
-    {
-      "type": "bedroom",
-      "amount": 2
-    },
+  "propertyDetails": [
     {
       "type": "bed",
-      "amount": 4
+      "amount": 4,
+      "title": {
+        "de": "Schlafzimmer",
+        "en": "",
+        "es": ""
+      },
+      "subtitle": {
+        "de": "4 Betten",
+        "en": "",
+        "es": ""
+      }
+    },
+    {
+      "type": "bathtub",
+      "amount": 1,
+      "title": {
+        "de": "Badezimmer",
+        "en": "",
+        "es": ""
+      },
+      "subtitle": {
+        "de": "1 Bad",
+        "en": "",
+        "es": ""
+      }
     },
     {
       "type": "group",
-      "amount": 5
+      "amount": 5,
+      "title": {
+        "de": "Gäste",
+        "en": "",
+        "es": ""
+      },
+      "subtitle": {
+        "de": "Bis zu 5",
+        "en": "",
+        "es": ""
+      }
+    },
+    {
+      "type": "area_size",
+      "amount": 95,
+      "title": {
+        "de": "Fläche",
+        "en": "",
+        "es": ""
+      },
+      "subtitle": {
+        "de": "95m²",
+        "en": "95m²",
+        "es": "95m²"
+      }
     }
   ],
-  "equipmentFeatures": {
+  "amenities": {
     "general": [
       "parking",
       "air_conditioner",

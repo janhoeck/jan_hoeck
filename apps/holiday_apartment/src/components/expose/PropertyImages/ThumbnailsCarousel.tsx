@@ -1,4 +1,4 @@
-import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 import { EmblaViewportRefType } from 'embla-carousel-react'
 import Image from 'next/image'
 import React from 'react'
@@ -7,7 +7,7 @@ import { twMerge } from 'tailwind-merge'
 export type ThumbnailsCarouselProps = {
   emblaRef: EmblaViewportRefType
   selectedIndex: number
-  imageSources: ExposeConfiguration['imageSources']
+  imageSources: PropertyConfiguration['imageSources']
   onThumbClick: (index: number) => void
 }
 

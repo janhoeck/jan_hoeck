@@ -1,7 +1,7 @@
 'use client'
 
 import { DesktopOnly } from '@/components/shared/Responsive/DesktopOnly'
-import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import React, { useCallback, useEffect, useState } from 'react'
@@ -9,10 +9,10 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { ThumbnailsCarousel } from './ThumbnailsCarousel'
 
 export type ExposeImagesProps = {
-  imageSources: ExposeConfiguration['imageSources']
+  imageSources: PropertyConfiguration['imageSources']
 }
 
-export const ExposeImages = ({ imageSources }: ExposeImagesProps) => {
+export const PropertyImages = ({ imageSources }: ExposeImagesProps) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   const [emblaRef, emblaApi] = useEmblaCarousel({

@@ -1,5 +1,3 @@
-import { Typography } from '@jan_hoeck/ui'
-
 import { ContentBlock as ContentBlockType } from '../../../types/ContentBlock'
 
 export type ContentBlockProps = {
@@ -9,13 +7,13 @@ export type ContentBlockProps = {
 export const ContentBlock = (props: ContentBlockProps) => {
   const { items } = props
   return (
-    <div className='flex flex-col gap-2'>
+    <div className='flex flex-col gap-4 prose max-w-none'>
       {items.map((item, index) => {
         if (typeof item === 'string') {
           return (
-            <Typography
+            <p
               key={index}
-              variant='paragraph'
+              className='text-muted-foreground'
               dangerouslySetInnerHTML={{ __html: item }}
             />
           )
@@ -25,18 +23,21 @@ export const ContentBlock = (props: ContentBlockProps) => {
         return (
           <div key={index}>
             {text && (
-              <Typography
+              <p
                 key={index}
-                variant='paragraph'
+                className='text-muted-foreground'
                 dangerouslySetInnerHTML={{ __html: text }}
               />
             )}
             <ul className='list-disc pl-6'>
               {bulletpoints.map((bulletpoint, index) => {
                 return (
-                  <li key={index}>
-                    <Typography
-                      variant='paragraph'
+                  <li
+                    key={index}
+                    className='text-muted-foreground'
+                  >
+                    <p
+                      key={index}
                       dangerouslySetInnerHTML={{ __html: bulletpoint }}
                     />
                   </li>

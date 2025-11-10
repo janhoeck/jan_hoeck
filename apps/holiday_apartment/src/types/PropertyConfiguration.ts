@@ -1,17 +1,22 @@
 import { IconType } from './IconType'
 
-export type PropertySummaryType = 'pool' | 'bedroom' | 'bed' | 'bathroom' | 'group'
-
 export type TranslationMap = {
   de: string
   en: string
   es: string
 }
 
+export type PropertyDetailItem = {
+  type: IconType
+  amount: number
+  title: TranslationMap
+  subtitle: TranslationMap
+}
+
 export type DescriptionItem = TranslationMap | { text?: TranslationMap; bulletpoints: TranslationMap[] }
 export type Description = Array<DescriptionItem>
 
-export type EquipmentFeatures = {
+export type Amenities = {
   general?: Extract<
     IconType,
     | 'barrier_free'
@@ -34,11 +39,6 @@ export type EquipmentFeatures = {
   bathroom?: Extract<IconType, 'shower' | 'bathtub' | 'hairdryer' | 'towels'>[]
   bedroom?: Extract<IconType, 'bed_linen'>[]
   baby?: Extract<IconType, 'baby_bed' | 'high_chair'>[]
-}
-
-export type PropertySummaryItem = {
-  type: PropertySummaryType
-  amount: number
 }
 
 export type Address = {
@@ -66,7 +66,7 @@ export type HouseRules = {
   description?: Description
 }
 
-export type ExposeConfiguration = {
+export type PropertyConfiguration = {
   id: string
   imageSources: string[]
   title: TranslationMap
@@ -77,7 +77,7 @@ export type ExposeConfiguration = {
     cleaning?: string
   }
   location: Location
-  propertySummary: PropertySummaryItem[]
-  equipmentFeatures: EquipmentFeatures
+  propertyDetails: PropertyDetailItem[]
+  amenities: Amenities
   houseRules: HouseRules
 }

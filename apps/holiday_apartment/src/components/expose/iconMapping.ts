@@ -3,7 +3,7 @@ import { FaKitchenSet, FaMattressPillow } from 'react-icons/fa6'
 import { GiClothesline, GiVacuumCleaner } from 'react-icons/gi'
 import { LuMicrowave } from 'react-icons/lu'
 import { LuAlarmSmoke } from 'react-icons/lu'
-import { LuPartyPopper, LuRefrigerator } from 'react-icons/lu'
+import { LuMaximize, LuPartyPopper, LuRefrigerator } from 'react-icons/lu'
 import { MdBalcony, MdOutlineDeck, MdOutlinePets } from 'react-icons/md'
 import {
   PiArrowLeft,
@@ -27,14 +27,18 @@ import {
   PiWifiHigh,
   PiWine,
 } from 'react-icons/pi'
+import { RiGroupLine } from 'react-icons/ri'
 import { TbAirConditioning } from 'react-icons/tb'
 import { TbCooker, TbTeapot } from 'react-icons/tb'
 
 import { IconType } from '../../types/IconType'
 
 export const iconMapping: Record<IconType, ReactIconType> = {
+  area_size: LuMaximize,
+  group: RiGroupLine,
   air_conditioner: TbAirConditioning,
   baby_bed: PiBed,
+  bed: PiBed,
   balcony: MdBalcony,
   barrier_free: PiWheelchair,
   elevator: PiElevator,

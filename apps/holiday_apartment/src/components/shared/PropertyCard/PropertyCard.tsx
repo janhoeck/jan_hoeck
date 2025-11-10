@@ -1,5 +1,5 @@
 import { getTranslation } from '@/components/expose/utils'
-import { ExposeConfiguration } from '@/types/ExposeConfiguration'
+import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 import { Badge, Button } from '@jan_hoeck/ui'
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -12,7 +12,7 @@ import { twMerge } from 'tailwind-merge'
 import { PropertyStatisticItem } from './PropertyStatisticItem'
 
 export type PropertyProps = {
-  expose: ExposeConfiguration
+  expose: PropertyConfiguration
 }
 
 export const PropertyCard = (props: PropertyProps) => {
@@ -20,8 +20,8 @@ export const PropertyCard = (props: PropertyProps) => {
   const t = useTranslations('pages.home.exposes.card')
   const locale = useLocale()
 
-  const groupPropertySummary = expose.propertySummary.find((item) => item.type === 'group')
-  const bedPropertySummary = expose.propertySummary.find((item) => item.type === 'bed')
+  const groupPropertySummary = expose.propertyDetails.find((item) => item.type === 'group')
+  const bedPropertySummary = expose.propertyDetails.find((item) => item.type === 'bed')
 
   return (
     <div

@@ -1,5 +1,5 @@
 import { ContentBlock } from '@/types/ContentBlock'
-import { Description, DescriptionItem, TranslationMap } from '@/types/ExposeConfiguration'
+import { Description, DescriptionItem, TranslationMap } from '@/types/PropertyConfiguration'
 
 /**
  * Type guard to check if a content item is a simple TranslatedText.

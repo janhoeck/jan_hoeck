@@ -119,9 +119,9 @@
     ]
   },
   "title": {
-    "de": "Ferienwohnung Los Alcázares Mar Menor - Luxus Apartment Puerto Marina Murcia",
-    "en": "Holiday Apartment Los Alcázares Mar Menor - Luxury Apartment Puerto Marina Murcia",
-    "es": "Apartamento Vacacional Los Alcázares Mar Menor - Apartamento de Lujo Puerto Marina Murcia"
+    "de": "Ferienwohnung Los Alcázares Mar Menor",
+    "en": "Holiday Apartment Los Alcázares Mar Menor",
+    "es": "Apartamento Vacacional Los Alcázares Mar Menor"
   },
   "subtitle": {
     "de": "Modern ausgestattete Ferienwohnung mit Balkon, Pools und zentraler Lage nahe Strand und Restaurants.",
@@ -188,25 +188,65 @@
       "es": "Nota importante: No se permiten mascotas en el complejo residencial."
     }
   ],
-  "propertySummary": [
-    {
-      "type": "bathroom",
-      "amount": 1
-    },
-    {
-      "type": "bedroom",
-      "amount": 2
-    },
+  "propertyDetails": [
     {
       "type": "bed",
-      "amount": 4
+      "amount": 4,
+      "title": {
+        "de": "Schlafzimmer",
+        "en": "",
+        "es": ""
+      },
+      "subtitle": {
+        "de": "4 Betten",
+        "en": "",
+        "es": ""
+      }
+    },
+    {
+      "type": "bathtub",
+      "amount": 1,
+      "title": {
+        "de": "Badezimmer",
+        "en": "",
+        "es": ""
+      },
+      "subtitle": {
+        "de": "1 Bad",
+        "en": "",
+        "es": ""
+      }
     },
     {
       "type": "group",
-      "amount": 4
+      "amount": 5,
+      "title": {
+        "de": "Gäste",
+        "en": "",
+        "es": ""
+      },
+      "subtitle": {
+        "de": "Bis zu 5",
+        "en": "",
+        "es": ""
+      }
+    },
+    {
+      "type": "area_size",
+      "amount": 95,
+      "title": {
+        "de": "Fläche",
+        "en": "",
+        "es": ""
+      },
+      "subtitle": {
+        "de": "95m²",
+        "en": "95m²",
+        "es": "95m²"
+      }
     }
   ],
-  "equipmentFeatures": {
+  "amenities": {
     "general": [
       "parking",
       "air_conditioner",
