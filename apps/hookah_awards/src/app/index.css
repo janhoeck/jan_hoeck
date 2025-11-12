@@ -1,0 +1,50 @@
+@import '@jan_hoeck/ui/theme.css';
+@import '@jan_hoeck/ui/styles.css';
+@import 'tailwindcss';
+
+@source '../../../node_modules/@jan_hoeck/ui';
+/* #3C096C, #5A189A, #9D4EDD, #FFC880, #FF9100 */
+:root {
+    --color-background: #25343B;
+    --color-foreground: #eaeaea;
+
+    /* button overwrites */
+    --radius-btn: calc(infinity * 1px);
+
+    --color-btn-primary-bg: #9FFFCB;
+    --color-btn-primary-fg: #1C1C1C;
+    --color-btn-primary-hover-bg: #9FFFCB80;
+    --color-btn-primary-hover-fg: #1C1C1C;
+
+    --color-btn-outlined-bg: transparent;
+    --color-btn-outlined-fg: #9FFFCB;
+    --color-btn-outlined-hover-bg: #9FFFCB80;
+    --color-btn-outlined-hover-fg: hsl(0 0% 100%);
+    --color-btn-outlined-border: #9FFFCB;
+    --color-btn-outlined-hover-border: #9FFFCB;
+
+    /* card overwrite */
+    --color-card-bg: #2B2B2B;
+    --color-card-fg: #eaeaea;
+    --color-card-border: #eaeaea;
+    --color-card: #1C1C1C;
+}
+
+@theme {
+    --font-maragsa: var(--font-maragsa);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+    background-image: linear-gradient(
+            to top,
+            #1C1C1C,
+            #2B2B2B
+    );
+}

@@ -49,12 +49,12 @@ export const ClipCard = ({ clip }: ClipCardProps) => {
   }, [hovered, clipImageSources.length])
 
   return (
-    <Card
-      className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer'
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      <div className='aspect-video relative'>
+    <Card className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer'>
+      <div
+        className='aspect-video relative'
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
         {clipImageSources.map((imgSrc, index) => (
           <Image
             key={imgSrc}
