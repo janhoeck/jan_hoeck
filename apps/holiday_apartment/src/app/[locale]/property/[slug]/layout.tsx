@@ -12,20 +12,20 @@ type MetadataProps = {
 
 export async function generateMetadata(props: MetadataProps): Promise<Metadata> {
   const { locale, slug } = await props.params
-  const expose = loadPropertyConfig(slug)
+  const propertyConfiguration = loadPropertyConfig(slug)
 
-  if (!expose) {
+  if (!propertyConfiguration) {
     return {}
   }
 
   return {
-    title: getTranslation(locale, expose.title),
+    title: getTranslation(locale, propertyConfiguration.title),
     openGraph: {
-      title: getTranslation(locale, expose.title),
-      url: `https://solymarmenor.com/expose/${expose.id}`,
+      title: getTranslation(locale, propertyConfiguration.title),
+      url: `https://solymarmenor.com/property/${propertyConfiguration.id}`,
       images: [
         {
-          url: `https://solymarmenor.com/images/${expose.id}/coverPhoto.webp`,
+          url: `https://solymarmenor.com/images/${propertyConfiguration.id}/coverPhoto.webp`,
           width: 400,
           height: 400,
         },

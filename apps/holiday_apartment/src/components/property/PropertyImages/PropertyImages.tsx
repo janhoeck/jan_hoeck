@@ -8,11 +8,11 @@ import React, { useCallback, useEffect, useState } from 'react'
 
 import { ThumbnailsCarousel } from './ThumbnailsCarousel'
 
-export type ExposeImagesProps = {
+export type PropertyImagesProps = {
   imageSources: PropertyConfiguration['imageSources']
 }
 
-export const PropertyImages = ({ imageSources }: ExposeImagesProps) => {
+export const PropertyImages = ({ imageSources }: PropertyImagesProps) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   const [emblaRef, emblaApi] = useEmblaCarousel({

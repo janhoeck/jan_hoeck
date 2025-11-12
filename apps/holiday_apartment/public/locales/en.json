@@ -108,7 +108,7 @@
           }
         }
       },
-      "exposes": {
+      "properties": {
         "title": "Accommodations",
         "subtitle": "Choose your perfect accommodation for an unforgettable holiday at the Costa Cálida",
         "card": {
@@ -132,7 +132,7 @@
         "errorMessage": "Your inquiry could not be sent."
       }
     },
-    "expose": {
+    "property": {
       "locationDescriptionSection": {
         "headline": "Location"
       },

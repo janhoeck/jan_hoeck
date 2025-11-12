@@ -13,7 +13,7 @@ export type LocationDescriptionSectionProps = {
 export const LocationDescriptionSection = (props: LocationDescriptionSectionProps) => {
   const { propertyConfig } = props
   const { address, lat, lng, description } = propertyConfig.location
-  const t = useTranslations('pages.expose.locationDescriptionSection')
+  const t = useTranslations('pages.property.locationDescriptionSection')
   const locale = useLocale()
 
   return (

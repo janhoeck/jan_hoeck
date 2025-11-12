@@ -11,7 +11,7 @@ export type EquipmentFeaturesSectionProps = {
 export const AmenitiesSection = (props: EquipmentFeaturesSectionProps) => {
   const { propertyConfig } = props
   const { amenities } = propertyConfig
-  const t = useTranslations('pages.expose.equipmentFeaturesSection')
+  const t = useTranslations('pages.property.equipmentFeaturesSection')
   return (
     <Section title={t('headline')}>
       <div className='grid grid-cols-2 gap-10'>

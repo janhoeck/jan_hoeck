@@ -5,7 +5,7 @@ import { use } from 'react'
 
 type Params = Promise<{ slug: string }>
 
-export default function ExposePage({ params }: { params: Params }) {
+export default function PropertyPage({ params }: { params: Params }) {
   const { slug: id } = use(params)
 
   const propertyConfiguration = loadPropertyConfig(id)

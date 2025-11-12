@@ -103,67 +103,6 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  apps/clip_voting:
-    dependencies:
-      '@jan_hoeck/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      '@supabase/ssr':
-        specifier: ^0.7.0
-        version: 0.7.0(@supabase/supabase-js@2.76.1)
-      '@supabase/supabase-js':
-        specifier: ^2.76.1
-        version: 2.76.1
-      better-auth:
-        specifier: ^1.3.34
-        version: 1.3.34(next@16.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.93.2))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      next:
-        specifier: ^16.0.0
-        version: 16.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.93.2)
-      react:
-        specifier: ^19.2.0
-        version: 19.2.0
-      react-dom:
-        specifier: ^19.2.0
-        version: 19.2.0(react@19.2.0)
-      react-icons:
-        specifier: ^5.5.0
-        version: 5.5.0(react@19.2.0)
-      tailwind-merge:
-        specifier: ^3.3.1
-        version: 3.3.1
-    devDependencies:
-      '@jan_hoeck/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@jan_hoeck/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
-      '@tailwindcss/postcss':
-        specifier: ^4.1.16
-        version: 4.1.16
-      '@types/node':
-        specifier: ^22.15.24
-        version: 22.15.29
-      '@types/react':
-        specifier: ^19.2.2
-        version: 19.2.2
-      '@types/react-dom':
-        specifier: ^19.2.2
-        version: 19.2.2(@types/react@19.2.2)
-      postcss:
-        specifier: ^8.5.6
-        version: 8.5.6
-      tailwindcss:
-        specifier: ^4.1.16
-        version: 4.1.16
-      turbo:
-        specifier: ^2.5.8
-        version: 2.5.8
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-
   apps/holiday_apartment:
     dependencies:
       '@jan_hoeck/ui':
@@ -217,6 +156,67 @@ importers:
       resend:
         specifier: ^6.2.2
         version: 6.2.2(@react-email/render@1.1.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
+      tailwind-merge:
+        specifier: ^3.3.1
+        version: 3.3.1
+    devDependencies:
+      '@jan_hoeck/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@jan_hoeck/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+      '@tailwindcss/postcss':
+        specifier: ^4.1.16
+        version: 4.1.16
+      '@types/node':
+        specifier: ^22.15.24
+        version: 22.15.29
+      '@types/react':
+        specifier: ^19.2.2
+        version: 19.2.2
+      '@types/react-dom':
+        specifier: ^19.2.2
+        version: 19.2.2(@types/react@19.2.2)
+      postcss:
+        specifier: ^8.5.6
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^4.1.16
+        version: 4.1.16
+      turbo:
+        specifier: ^2.5.8
+        version: 2.5.8
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  apps/hookah_awards:
+    dependencies:
+      '@jan_hoeck/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@supabase/ssr':
+        specifier: ^0.7.0
+        version: 0.7.0(@supabase/supabase-js@2.76.1)
+      '@supabase/supabase-js':
+        specifier: ^2.76.1
+        version: 2.76.1
+      better-auth:
+        specifier: ^1.3.34
+        version: 1.3.34(next@16.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.93.2))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      next:
+        specifier: ^16.0.0
+        version: 16.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.93.2)
+      react:
+        specifier: ^19.2.0
+        version: 19.2.0
+      react-dom:
+        specifier: ^19.2.0
+        version: 19.2.0(react@19.2.0)
+      react-icons:
+        specifier: ^5.5.0
+        version: 5.5.0(react@19.2.0)
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -6547,7 +6547,7 @@ snapshots:
     dependencies:
       '@jridgewell/set-array': 1.2.1
       '@jridgewell/sourcemap-codec': 1.5.0
-      '@jridgewell/trace-mapping': 0.3.31
+      '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/remapping@2.3.5':
     dependencies:

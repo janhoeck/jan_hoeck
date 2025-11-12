@@ -11,17 +11,17 @@ import { twMerge } from 'tailwind-merge'
 
 import { PropertyStatisticItem } from './PropertyStatisticItem'
 
-export type PropertyProps = {
-  expose: PropertyConfiguration
+export type PropertyCardProps = {
+  propertyConfiguration: PropertyConfiguration
 }
 
-export const PropertyCard = (props: PropertyProps) => {
-  const { expose } = props
-  const t = useTranslations('pages.home.exposes.card')
+export const PropertyCard = (props: PropertyCardProps) => {
+  const { propertyConfiguration } = props
+  const t = useTranslations('pages.home.properties.card')
   const locale = useLocale()
 
-  const groupPropertySummary = expose.propertyDetails.find((item) => item.type === 'group')
-  const bedPropertySummary = expose.propertyDetails.find((item) => item.type === 'bed')
+  const groupPropertySummary = propertyConfiguration.propertyDetails.find((item) => item.type === 'group')
+  const bedPropertySummary = propertyConfiguration.propertyDetails.find((item) => item.type === 'bed')
 
   return (
     <div
@@ -33,7 +33,7 @@ export const PropertyCard = (props: PropertyProps) => {
       <div className={twMerge(['relative h-64 overflow-hidden', 'md:h-80'])}>
         <Image
           fill
-          src={`/images/${expose.id}/coverPhoto.webp`}
+          src={`/images/${propertyConfiguration.id}/coverPhoto.webp`}
           alt='Estate'
           className='object-cover transition-transform duration-700 group-hover:scale-110'
           quality={80}
@@ -42,14 +42,16 @@ export const PropertyCard = (props: PropertyProps) => {
         <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent'></div>
         <Badge className='absolute top-4 left-4'>
           <LuMapPin size={16} />
-          {expose.location.address.city}
+          {propertyConfiguration.location.address.city}
         </Badge>
       </div>
       <div className='p-6 md:p-8'>
         <h3 className='text-foreground group-hover:text-primary mb-2 font-serif text-2xl font-bold transition-colors md:text-3xl'>
-          {getTranslation(locale, expose.title)}
+          {getTranslation(locale, propertyConfiguration.title)}
         </h3>
-        <p className='text-muted-foreground mb-6 leading-relaxed'>{getTranslation(locale, expose.subtitle)}</p>
+        <p className='text-muted-foreground mb-6 leading-relaxed'>
+          {getTranslation(locale, propertyConfiguration.subtitle)}
+        </p>
         <div className='text-muted-foreground mb-6 flex items-center gap-6'>
           {bedPropertySummary && (
             <PropertyStatisticItem
@@ -74,7 +76,7 @@ export const PropertyCard = (props: PropertyProps) => {
           fullWidth
           as={Link}
           size='lg'
-          href={`/expose/${expose.id}`}
+          href={`/property/${propertyConfiguration.id}`}
         >
           {t('showMe')}
           <MdOutlineOpenInNew
