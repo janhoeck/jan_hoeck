@@ -11,4 +11,5 @@ export const auth = betterAuth({
       clientSecret: process.env.TWITCH_CLIENT_SECRET! as string,
     },
   },
+  secret: process.env.BETTER_AUTH_SECRET! as string,
 })
