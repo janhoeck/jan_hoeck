@@ -1,4 +1,4 @@
-import { getTranslation } from '@/components/expose/utils'
+import { getTranslation } from '@/components/property/utils'
 import { Location } from '@/types/PropertyConfiguration'
 import { safeJoin } from '@/utils/join'
 import { Card, CardContent, Typography } from '@jan_hoeck/ui'

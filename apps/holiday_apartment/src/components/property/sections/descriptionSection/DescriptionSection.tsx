@@ -1,4 +1,4 @@
-import { convertDescription } from '@/components/expose/utils'
+import { convertDescription } from '@/components/property/utils'
 import { ContentBlock } from '@/components/shared/ContentBlock/ContentBlock'
 import { Section } from '@/components/shared/Section/Section'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'

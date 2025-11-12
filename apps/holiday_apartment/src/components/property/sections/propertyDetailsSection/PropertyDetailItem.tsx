@@ -1,6 +1,6 @@
-import { IconWithText } from '@/components/expose/IconWithText/IconWithText'
-import { iconMapping } from '@/components/expose/iconMapping'
-import { getTranslation } from '@/components/expose/utils'
+import { IconWithText } from '@/components/property/IconWithText/IconWithText'
+import { iconMapping } from '@/components/property/iconMapping'
+import { getTranslation } from '@/components/property/utils'
 import { PropertyDetailItem as PropertyDetailItemType } from '@/types/PropertyConfiguration'
 import { useLocale } from 'next-intl'
 

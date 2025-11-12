@@ -1,5 +1,5 @@
-import { PropertyDetailItem } from '@/components/expose/sections/propertyDetailsSection/PropertyDetailItem'
-import { getTranslation } from '@/components/expose/utils'
+import { PropertyDetailItem } from '@/components/property/sections/propertyDetailsSection/PropertyDetailItem'
+import { getTranslation } from '@/components/property/utils'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 import { Badge } from '@jan_hoeck/ui'
 import { useLocale } from 'next-intl'

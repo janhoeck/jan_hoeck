@@ -1,6 +1,6 @@
+import { PropertyListSection } from '@/components/home/PropertyListSection/PropertyListSection'
 import React from 'react'
 
-import { ExposeListSection } from './ExposeListSection/ExposeListSection'
 import { MainSection } from './MainSection/MainSection'
 import { WelcomeSection } from './WelcomeSection/WelcomeSection'
 
@@ -9,7 +9,7 @@ export const HomeView = () => {
     <div className='flex flex-col'>
       <WelcomeSection />
       <MainSection />
-      <ExposeListSection />
+      <PropertyListSection />
     </div>
   )
 }

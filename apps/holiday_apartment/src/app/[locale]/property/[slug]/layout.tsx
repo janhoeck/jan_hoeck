@@ -1,9 +1,8 @@
-import { getTranslation } from '@/components/expose/utils'
+import { getTranslation } from '@/components/property/utils'
 import { GoogleMapsAPIProvider } from '@/components/shared/GoogleMapsAPIProvider/GoogleMapsAPIProvider'
+import { loadPropertyConfig } from '@/lib/load-property-configs'
 import { Metadata } from 'next'
 import { PropsWithChildren } from 'react'
-
-import { loadExposeConfig } from '../../../../api/loadExposeConfigs'
 
 type Params = Promise<{ locale: string; slug: string }>
 
@@ -13,7 +12,7 @@ type MetadataProps = {
 
 export async function generateMetadata(props: MetadataProps): Promise<Metadata> {
   const { locale, slug } = await props.params
-  const expose = loadExposeConfig(slug)
+  const expose = loadPropertyConfig(slug)
 
   if (!expose) {
     return {}

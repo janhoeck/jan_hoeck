@@ -1,4 +1,4 @@
-import { AmenityFeatureItem } from '@/components/expose/sections/amenitiesSection/AmenityFeatureItem'
+import { AmenityFeatureItem } from '@/components/property/sections/amenitiesSection/AmenityFeatureItem'
 import { IconType } from '@/types/IconType'
 import { Typography } from '@jan_hoeck/ui'
 import { twMerge } from 'tailwind-merge'

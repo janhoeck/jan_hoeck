@@ -1,5 +1,5 @@
-import { IconWithText } from '@/components/expose/IconWithText/IconWithText'
-import { iconMapping } from '@/components/expose/iconMapping'
+import { IconWithText } from '@/components/property/IconWithText/IconWithText'
+import { iconMapping } from '@/components/property/iconMapping'
 import { IconType } from '@/types/IconType'
 import { useTranslations } from 'next-intl'
 

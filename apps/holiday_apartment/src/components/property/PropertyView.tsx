@@ -1,5 +1,5 @@
-import { PropertyImages } from '@/components/expose/PropertyImages/PropertyImages'
-import { AmenitiesSection } from '@/components/expose/sections/amenitiesSection/AmenitiesSection'
+import { PropertyImages } from '@/components/property/PropertyImages/PropertyImages'
+import { AmenitiesSection } from '@/components/property/sections/amenitiesSection/AmenitiesSection'
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 
@@ -9,11 +9,11 @@ import { HouseRulesSection } from './sections/houseRulesSection/HouseRulesSectio
 import { LocationDescriptionSection } from './sections/locationDescriptionSection/LocationDescriptionSection'
 import { PropertyDetailsSection } from './sections/propertyDetailsSection/PropertyDetailsSection'
 
-export type ExposeViewProps = {
+export type PropertyViewProps = {
   configuration: PropertyConfiguration
 }
 
-export const ExposeView = (props: ExposeViewProps) => {
+export const PropertyView = (props: PropertyViewProps) => {
   const { configuration } = props
 
   return (

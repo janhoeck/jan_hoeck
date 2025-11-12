@@ -1,4 +1,4 @@
-import { getTranslation } from '@/components/expose/utils'
+import { getTranslation } from '@/components/property/utils'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 import { Badge, Button } from '@jan_hoeck/ui'
 import { useLocale, useTranslations } from 'next-intl'

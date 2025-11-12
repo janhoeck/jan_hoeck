@@ -1,23 +1,23 @@
-@import "tailwindcss";
-@source "../../node_modules/@jan_hoeck/ui";
+@import 'tailwindcss';
+@source '../../node_modules/@jan_hoeck/ui';
 
 html {
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    margin: 0;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
