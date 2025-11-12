@@ -67,9 +67,9 @@ export const ClipCard = ({ clip }: ClipCardProps) => {
           />
         ))}
       </div>
-      <CardContent>
-        <p className='text-xl font-bold'>{clip.title}</p>
-        <Button>Auswählen</Button>
+      <CardContent className='flex flex-col space-y-4'>
+        <p className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</p>
+        <Button className='mt-auto'>Auswählen</Button>
       </CardContent>
     </Card>
   )
