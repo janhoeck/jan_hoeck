@@ -1,13 +1,5 @@
 import { betterAuth } from 'better-auth'
 
-console.log('RUNTIME ENV CHECK', {
-  url: process.env.BETTER_AUTH_URL,
-  secret: process.env.BETTER_AUTH_SECRET,
-  twitchId: process.env.TWITCH_CLIENT_ID,
-  twitchSecret: process.env.TWITCH_CLIENT_SECRET,
-  runtime: process.env.NEXT_RUNTIME,
-})
-
 export const runtime = 'nodejs'
 
 export const auth = betterAuth({
