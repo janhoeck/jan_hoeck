@@ -26,7 +26,7 @@ export const WelcomeSectionInfo = () => {
           <Button
             as={Link}
             size='lg'
-            href='#expose-list-section'
+            href='#property-list-section'
             className='transition-all duration-300 hover:bg-primary/90 hover:scale-105 hover:shadow-md'
           >
             {t('discoverAccommodationButtonLabel')}

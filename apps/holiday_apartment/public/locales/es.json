@@ -108,7 +108,7 @@
           }
         }
       },
-      "exposes": {
+      "properties": {
         "title": "Alojamientos",
         "subtitle": "Elija su alojamiento perfecto para unas vacaciones inolvidables en la Costa Cálida",
         "card": {
@@ -132,7 +132,7 @@
         "errorMessage": "Tu consulta no pudo ser enviada."
       }
     },
-    "expose": {
+    "property": {
       "locationDescriptionSection": {
         "headline": "Ubicación"
       },

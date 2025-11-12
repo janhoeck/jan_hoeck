@@ -5,6 +5,8 @@ import { Button, Card, CardContent } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import { PiEnvelopeOpenLight, PiPhoneCallLight } from 'react-icons/pi'
 
+import { Link } from '../../../i18n/navigation'
+
 export type BookItPanelProps = {
   price: PropertyConfiguration['price']
 }
@@ -12,7 +14,7 @@ export type BookItPanelProps = {
 export const BookItCard = (props: BookItPanelProps) => {
   const { price } = props
   const { perNight, cleaning } = price
-  const t = useTranslations('pages.expose.bookIt')
+  const t = useTranslations('pages.property.bookIt')
 
   return (
     <Card withBorder>
@@ -20,18 +22,21 @@ export const BookItCard = (props: BookItPanelProps) => {
         <div>
           <div className='text-3xl font-bold text-foreground mb-2'>
             {perNight}
-            <span className='text-lg font-normal text-muted-foreground'> / Nacht</span>
+            <span className='text-lg font-normal text-muted-foreground'> / {t('perNight')}</span>
           </div>
-          <div className='text-sm text-muted-foreground'>Einmalige Reinigungskosten: {cleaning}</div>
+          <div className='text-sm text-muted-foreground'>{t('cleaning', { cleaning: cleaning ?? '' })}</div>
         </div>
         <div className='space-y-4'>
-          <Button fullWidth>
+          <Button
+            fullWidth
+            as={Link}
+            href='/contact'
+          >
             <PiEnvelopeOpenLight size={16} />
-            Anfrage
+            {t('contact')}
           </Button>
         </div>
         <div className='pt-6 border-t border-border space-y-4'>
-          <h3 className='font-semibold text-foreground'>Kontakt</h3>
           <div className='space-y-3 text-sm'>
             <a
               href='mailto:casas.marmenor@gmx.de'

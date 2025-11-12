@@ -9,7 +9,7 @@ export type AmenityFeatureItemProps = {
 
 export const AmenityFeatureItem = (props: AmenityFeatureItemProps) => {
   const { type } = props
-  const t = useTranslations('pages.expose.equipmentFeaturesSection')
+  const t = useTranslations('pages.property.equipmentFeaturesSection')
 
   const Icon = iconMapping[type]
 

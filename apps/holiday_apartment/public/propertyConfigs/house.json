@@ -189,13 +189,13 @@
       "amount": 4,
       "title": {
         "de": "Schlafzimmer",
-        "en": "",
-        "es": ""
+        "en": "Bedroom",
+        "es": "Dormitorio"
       },
       "subtitle": {
         "de": "4 Betten",
-        "en": "",
-        "es": ""
+        "en": "4 beds",
+        "es": "4 camas"
       }
     },
     {
@@ -203,13 +203,13 @@
       "amount": 1,
       "title": {
         "de": "Badezimmer",
-        "en": "",
-        "es": ""
+        "en": "Bathroom",
+        "es": "Baño"
       },
       "subtitle": {
         "de": "1 Bad",
-        "en": "",
-        "es": ""
+        "en": "1 bathroom",
+        "es": "1 baño"
       }
     },
     {
@@ -217,13 +217,13 @@
       "amount": 5,
       "title": {
         "de": "Gäste",
-        "en": "",
-        "es": ""
+        "en": "Guests",
+        "es": "Huéspedes"
       },
       "subtitle": {
         "de": "Bis zu 5",
-        "en": "",
-        "es": ""
+        "en": "Up to 5",
+        "es": "Hasta 5"
       }
     },
     {
@@ -231,8 +231,8 @@
       "amount": 95,
       "title": {
         "de": "Fläche",
-        "en": "",
-        "es": ""
+        "en": "Area",
+        "es": "Superficie"
       },
       "subtitle": {
         "de": "95m²",

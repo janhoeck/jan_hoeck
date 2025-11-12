@@ -17,7 +17,7 @@ export const GoogleMaps = (props: GoogleMapsProps) => {
       className={className}
       defaultCenter={position}
       defaultZoom={18}
-      mapId='expose-location-map'
+      mapId='property-location-map'
       mapTypeId='satellite'
     >
       <AdvancedMarker position={position} />

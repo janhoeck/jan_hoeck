@@ -108,7 +108,7 @@
           }
         }
       },
-      "exposes": {
+      "properties": {
         "title": "Unterkünfte",
         "subtitle": "Wählen Sie Ihre perfekte Unterkunft für einen unvergesslichen Urlaub an der Costa Cálida",
         "card": {
@@ -132,7 +132,7 @@
         "errorMessage": "Ihre Anfrage konnte nicht verschickt werden."
       }
     },
-    "expose": {
+    "property": {
       "locationDescriptionSection": {
         "headline": "Lage"
       },

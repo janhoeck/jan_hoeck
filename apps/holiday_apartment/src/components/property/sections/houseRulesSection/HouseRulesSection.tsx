@@ -14,7 +14,7 @@ export type HouseRulesSectionProps = {
 export const HouseRulesSection = (props: HouseRulesSectionProps) => {
   const { propertyConfig } = props
   const { houseRules } = propertyConfig
-  const t = useTranslations('pages.expose.houseRulesSection')
+  const t = useTranslations('pages.property.houseRulesSection')
   const locale = useLocale()
 
   return (
