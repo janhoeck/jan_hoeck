@@ -1,19 +1,17 @@
-import './index.css'
-
-import React from 'react'
-import { Geist } from 'next/font/google'
+import { LayoutFooter } from '@/components/shared/LayoutFooter'
+import { LayoutNavigation } from '@/components/shared/LayoutNavigation'
+import { WebVitals } from '@/components/shared/WebVitals'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-
-import { hasLocale, NextIntlClientProvider } from 'next-intl'
-import { routing } from '../../i18n/routing'
-import { notFound } from 'next/navigation'
-
-import { LayoutNavigation } from '@/components/shared/LayoutNavigation'
-import { LayoutFooter } from '@/components/shared/LayoutFooter'
-import { getTranslations } from 'next-intl/server'
 import { Metadata } from 'next'
-import { WebVitals } from '@/components/shared/WebVitals'
+import { NextIntlClientProvider, hasLocale } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
+import { Geist } from 'next/font/google'
+import { notFound } from 'next/navigation'
+import React from 'react'
+
+import { routing } from '../../i18n/routing'
+import './index.css'
 
 const geist = Geist({
   subsets: ['latin'],
@@ -164,7 +162,7 @@ export default async function Layout(props: LayoutProps) {
       lang={locale}
       className={geist.className}
     >
-      <body className='bg-neutral-100'>
+      <body className='bg-muted/30'>
         <WebVitals />
         <NextIntlClientProvider>
           <LayoutNavigation />

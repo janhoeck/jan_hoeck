@@ -1,55 +1,59 @@
-import { ComponentProps, ElementType, forwardRef, ReactElement, ReactNode, Ref, useMemo } from 'react'
+import { type VariantProps, cva } from 'class-variance-authority'
+import { ButtonHTMLAttributes, ComponentProps, ElementType, ReactElement, Ref, forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-export type Variant = 'ghost' | 'basic'
+const buttonVariants = cva(
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-btn text-sm font-medium transition-colors cursor-pointer disabled:pointer-events-none disabled:opacity-50',
+  {
+    variants: {
+      variant: {
+        primary:
+          'bg-btn-primary-bg text-btn-primary-fg hover:bg-btn-primary-hover-bg hover:text-color-btn-primary-hover-fg',
+        secondary:
+          'bg-btn-secondary-bg text-btn-secondary-fg hover:btn-secondary-hover-bg hover:btn-secondary-hover-fg',
+        outline:
+          'border border-btn-outlined-border bg-btn-outlined-bg text-btn-outlined-fg hover:bg-btn-outlined-hover-bg hover:text-btn-outlined-hover-fg hover:border-btn-outlined-hover-border',
+        ghost: 'text-btn-ghost-fg bg-btn-ghost-bg hover:bg-btn-ghost-hover-bg hover:text-btn-ghost-hover-fg',
+      },
+      fullWidth: {
+        true: 'w-full',
+        false: null,
+      },
+      size: {
+        default: 'h-10 px-4 py-2',
+        sm: 'h-9 px-3',
+        lg: 'h-11 px-8',
+        icon: 'h-10 w-10',
+      },
+    },
+    defaultVariants: {
+      variant: 'primary',
+      size: 'default',
+      fullWidth: false,
+    },
+  }
+)
 
-export type ButtonProps<T extends ElementType> = ComponentProps<T> & {
-  as?: T
-  variant?: Variant
-  className?: string
-  rounded?: boolean
-  fullWidth?: boolean
-  centerText?: boolean
-  children: ReactNode
-}
+export type ButtonProps<T extends ElementType> = ComponentProps<T> &
+  ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants> & {
+    as?: T
+  }
 
-const ButtonInner = <T extends ElementType>(props: ButtonProps<T>, ref?: Ref<T>) => {
-  const {
-    as = 'button',
-    children,
-    className,
-    variant = 'basic',
-    rounded = true,
-    fullWidth = false,
-    centerText = false,
-    disabled = false,
-    ...restProps
-  } = props
-
-  const styles = useMemo(() => {
-    return twMerge([
-      'whitespace-nowrap cursor-pointer w-fit py-2 px-4 transition-colors flex gap-2 items-center h-[40px]',
-      rounded && 'rounded-sm',
-      fullWidth && 'w-full',
-      centerText && 'justify-center',
-      variant === 'ghost' && 'text-neutral-800 hover:bg-neutral-100',
-      variant === 'basic' && 'bg-teal-600 text-white hover:bg-teal-700',
-      disabled && variant === 'basic' && 'bg-neutral-200 text-neutral-300',
-    ])
-  }, [variant, rounded, fullWidth, centerText, disabled])
-
+const ButtonInner = <T extends ElementType>(props: ButtonProps<T>, ref: Ref<T>) => {
+  const { className, variant, size, as = 'button', fullWidth, ...restProps } = props
   const Component = as
+
   return (
     <Component
+      className={twMerge(buttonVariants({ variant, size, fullWidth, className }))}
       ref={ref}
-      className={twMerge(styles, className)}
-      disabled={disabled}
       {...restProps}
-    >
-      {children}
-    </Component>
+    />
   )
 }
+
+ButtonInner.displayName = 'Button'
 
 export const Button = forwardRef(ButtonInner) as <T extends ElementType>(
   props: ButtonProps<T>,

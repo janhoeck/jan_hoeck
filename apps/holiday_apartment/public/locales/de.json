@@ -65,11 +65,61 @@
   },
   "pages": {
     "home": {
-      "welcome": "Urlaub an der Costa Cálida",
-      "headline": "<section headline=''>Mar Menor - Ihr perfektes Urlaubsziel an der Costa Cálida</section>",
-      "description": "<root><section headline=\"Ferienwohnungen am Mar Menor – Sonne, Meer & Erholung an der Costa Cálida\"><content><texts><text>Erleben Sie unvergessliche Urlaubstage in unseren komfortablen <b>Ferienwohnungen in Los Alcázares und Los Urrutias</b>, zwei charmanten Küstenorten an der sonnigen Costa Cálida in der Region Murcia. Beide Orte liegen direkt am <b>Mar Menor</b>, Europas größter Salzwasserlagune, und bieten ideale Bedingungen für Erholung, Wassersport und mediterranes Lebensgefühl.</text></texts></content></section><section headline=\"Traumhafte Lage und Klima – 320 Sonnentage im Jahr\" variant=\"subsection\"><content><bulletpoints text=\"Die <b>Costa Cálida</b> ist bekannt für ihr mildes Klima und über 320 Sonnentage jährlich. Mit ganzjährigen Durchschnittstemperaturen um die 20 °C genießen Sie hier Sonne und Meer zu jeder Jahreszeit – perfekt für Badeurlaub, Familienferien oder einen erholsamen Winteraufenthalt.\"><bulletpoint><b>25 Minuten</b> vom Flughafen Corvera (Murcia)</bulletpoint><bulletpoint><b>50 Minuten</b> vom Flughafen Alicante</bulletpoint></bulletpoints></content></section><section headline=\"Los Alcázares – Lebensfreude direkt am Meer\" variant=\"subsection\"><content><texts><text>Los Alcázares begeistert mit seinen <b>7 Kilometern feinem Sandstrand</b>, flachem Wasser und einer wunderschönen Strandpromenade mit gemütlichen Cafés und Restaurants. Hier treffen spanische Lebensfreude, kulinarischer Genuss und maritimes Flair aufeinander.</text><text>Ob <b>Schwimmen, Segeln, Kitesurfen oder Stand-Up-Paddling</b> – das ruhige Wasser des Mar Menor ist ideal für Einsteiger und Familien. Abends laden Tapas-Bars und Strandlokale zum Verweilen ein, während Sie den Sonnenuntergang über der Lagune genießen.</text></texts></content></section><section headline=\"Los Urrutias – Entspannung und Natur pur\" variant=\"subsection\"><content><texts><text>Nur wenige Minuten entfernt liegt <b>Los Urrutias</b>, ein ruhiger, authentischer Küstenort mit breiten Stränden und herrlichem Blick auf La Manga. Hier finden Sie Ruhe und Erholung abseits des Touristenrummels – ideal für Paare und Naturliebhaber.</text><text>In unmittelbarer Nähe erwarten Sie zahlreiche <b>Natur- und Wandergebiete</b>, wie das Naturschutzgebiet Calblanque, das mit unberührten Buchten, Dünenlandschaften und türkisblauem Wasser begeistert.</text></texts></content></section><section headline=\"Gesundheit & Wellness – Das natürliche Spa des Mar Menor\" variant=\"subsection\"><content><bulletpoints text=\"Das <b>jodhaltige, mineralreiche Salzwasser</b> des Mar Menor ist bekannt für seine heilende Wirkung:\"><bulletpoint>Linderung bei <b>rheumatischen und dermatologischen Beschwerden</b></bulletpoint><bulletpoint>Förderung der <b>Atemwege und Durchblutung</b></bulletpoint><bulletpoint>Natürliche <b>Hautpflege</b> durch mineralhaltigen Schlamm</bulletpoint></bulletpoints><texts><text>Ein Bad im Mar Menor ist somit nicht nur Erholung, sondern auch eine Wohltat für Körper und Geist.</text></texts></content></section><section headline=\"Freizeit & Aktivitäten für jeden Geschmack\" variant=\"subsection\"><content><bulletpoints text=\"Neben Strand und Meer bietet die Region ein vielseitiges Freizeitangebot:\"><bulletpoint><b>15 Golfplätze</b> in unmittelbarer Umgebung, darunter der renommierte <b>La Manga Club</b></bulletpoint><bulletpoint>Moderne <b>Sportzentren</b> mit Tennis, Padel, Fußball und Fitness</bulletpoint><bulletpoint><b>Radtouren</b> und Wanderungen durch malerische Landschaften</bulletpoint><bulletpoint><b>Bootsausflüge</b> und Tagestrips auf das Mittelmeer</bulletpoint></bulletpoints></content></section><section headline=\"Kultur & Ausflüge – Entdecken Sie die Region Murcia\" variant=\"subsection\"><content><bulletpoints><bulletpoint><b>Cartagena</b> – Historische Hafenstadt mit römischen Ruinen, Museen und Kreuzfahrtflair</bulletpoint><bulletpoint><b>Murcia</b> – Lebendige Hauptstadt mit beeindruckender Kathedrale und Altstadt</bulletpoint><bulletpoint><b>La Manga del Mar Menor</b> – Die berühmte Landzunge zwischen Lagune und Mittelmeer</bulletpoint><bulletpoint><b>Mula</b> – Entspannung pur in den natürlichen Thermalquellen</bulletpoint></bulletpoints></content></section><section headline=\"Ihr Traumurlaub am Mar Menor\" variant=\"subsection\"><content><texts><text>Ob <b></b>Familienurlaub, Aktivurlaub oder romantische Auszeit</b> – in unseren Ferienwohnungen in Los Alcázares und Los Urrutias erleben Sie mediterrane Lebensfreude, Entspannung und Sonne pur.</text></texts></content></section></root>",
-      "exposeListSection": {
-        "headline": "Unterkünfte"
+      "welcome": {
+        "location": "Costa Cálida, Spanien",
+        "title": "Urlaub an der Costa Cálida",
+        "subtitle": "Ferienwohnungen am Mar Menor – Sonne, Meer & Erholung an der Costa Cálida",
+        "discoverAccommodationButtonLabel": "Unterknüfte entdecken",
+        "generalInfo": {
+          "sunnyDaysPerYear": "Sonnentage im Jahr",
+          "charmingCoastalTowns": "Charmante Küstenorte",
+          "averageTemperature": "Durchschnittstemperatur"
+        }
+      },
+      "main": {
+        "title": "Ferienwohnungen am Mar Menor",
+        "subtitle": "Erleben Sie unvergessliche Urlaubstage in unseren komfortablen Ferienwohnungen in Los Alcázares und Los Urrutas, zwei charmanten Küstenorten an der sonnigen Costa Cálida.",
+        "info": {
+          "sunnyDaysPerYear": {
+            "title": "320 Sonnentage im Jahr",
+            "description": "Mildes Klima und ganzjährig angenehme Temperaturen um 20°C"
+          },
+          "marMenor": {
+            "title": "Am Mar Menor",
+            "description": "Europas größte Salzwasserlagune mit ruhigem, flachem Wasser"
+          },
+          "location": {
+            "title": "Perfekte Lage",
+            "description": "25 Minuten vom Flughafen Murcia, 50 Minuten von Alicante"
+          },
+          "general": {
+            "title": "Für jeden Geschmack",
+            "description": "Perfekt für Badeurlaub, Familienferien oder erholsamen Winteraufenthalt"
+          }
+        },
+        "locations": {
+          "losAlcazares": {
+            "title": "Los Alcázares – Lebensfreude direkt am Meer",
+            "description": "Los Alcázares begeistert mit 7 Kilometern Sandstrand, flachem Wasser und einer wunderschönen Strandpromenade mit gemütlichen Cafés und Restaurants. Hier treffen spanische Lebensfreude, kulinarischer Genuss und maritimes Flair aufeinander. Ob Schwimmen, Segeln, Kitesurfen oder Stand-Up-Paddling – das ruhige Wasser des Mar Menor ist ideal für Einsteiger und Familien."
+          },
+          "losUrrutias": {
+            "title": "Los Urrutias – Entspannung und Natur pur",
+            "description": "Nur wenige Minuten entfernt liegt Los Urrutias, ein ruhiger, authentischer Küstenort mit breiten Stränden und herrlichem Blick auf La Manga. Hier finden Sie Ruhe und Erholung abseits des Trubels – ideal für Naturliebhaber.  In unmittelbarer Nähe erwarten Sie zahlreiche Natur- und Wandergebiete, wie das Naturschutzgebiet Calblanque, mit unberührten Buchten und türkisblauem Wasser."
+          }
+        }
+      },
+      "exposes": {
+        "title": "Unterkünfte",
+        "subtitle": "Wählen Sie Ihre perfekte Unterkunft für einen unvergesslichen Urlaub an der Costa Cálida",
+        "card": {
+          "showMe": "Details ansehen",
+          "guests": "{amount} Gäste",
+          "beds": "{amount} Betten",
+          "pool": "Pool",
+          "airConditioner": "Klimaanlage",
+          "wlan": "WLAN",
+          "parking": "Parkplatz"
+        }
       }
     },
     "contact": {

@@ -1,4 +1,6 @@
 export type IconType =
+  | 'area_size'
+  | 'group'
   | 'pool'
   | 'parking'
   | 'air_conditioner'
@@ -23,6 +25,7 @@ export type IconType =
   | 'washing_machine'
   | 'washing_rack'
   | 'baby_bed'
+  | 'bed'
   | 'high_chair'
   | 'terrace'
   | 'balcony'

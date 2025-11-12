@@ -1,7 +1,7 @@
-import React, { Fragment, ReactNode, useMemo } from 'react'
-import { Section, SectionProps } from '@/components/shared/Section/Section'
 import { ContentBlock, ContentBlockProps } from '@/components/shared/ContentBlock/ContentBlock'
-import { parse, Node, HTMLElement, NodeType } from 'node-html-parser'
+import { Section, SectionProps } from '@/components/shared/Section/Section'
+import { HTMLElement, Node, NodeType, parse } from 'node-html-parser'
+import React, { Fragment, ReactNode, useMemo } from 'react'
 
 const renderNode = (node: Node): ReactNode => {
   if (node.nodeType === NodeType.TEXT_NODE) {
@@ -23,7 +23,7 @@ const renderNode = (node: Node): ReactNode => {
       const variant = (element.getAttribute('variant') as SectionProps['variant']) ?? 'default'
       return (
         <Section
-          headline={headline}
+          title={headline}
           variant={variant}
         >
           {Array.from(element.childNodes).map((n, i) => (

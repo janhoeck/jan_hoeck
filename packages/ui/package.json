@@ -17,28 +17,36 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./styles.css": "./dist/assets/ui.css"
+    "./styles.css": "./dist/styles.css",
+    "./theme.css": "./dist/theme.css"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run build:js && npm run build:css && npm run copy:theme",
+    "build:js": "tsc && vite build",
+    "build:css": "postcss src/styles.css -o dist/styles.css",
+    "copy:theme": "copyfiles -f src/theme.css dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "tailwind-merge": "^3.3.1",
-    "clsx": "^2.1.1"
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@jan_hoeck/eslint-config": "workspace:*",
     "@jan_hoeck/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.16",
     "@tailwindcss/vite": "^4.1.16",
     "@turbo/gen": "^2.5.8",
     "@types/node": "^24.9.1",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.1.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^9.38.0",
+    "postcss-cli": "^11.0.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "rollup-plugin-preserve-directives": "^0.4.0",

@@ -1,8 +1,8 @@
-import { Section } from '@/components/shared/Section/Section'
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
+import { RichText } from '@/components/shared/RichText/RichText'
+import { Section } from '@/components/shared/Section/Section'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { RichText } from '@/components/shared/RichText/RichText'
 
 export default function AboutUsPage() {
   const t = useTranslations('pages.about')
@@ -10,7 +10,7 @@ export default function AboutUsPage() {
     <ContentContainer className='pt-10'>
       <div className='relative z-1 flex justify-center'>
         <div className='w-full justify-center text-center sm:max-w-[450px] lg:max-w-[650px]'>
-          <Section headline={t('headline')}>
+          <Section title={t('headline')}>
             <div className='flex flex-col items-center gap-6'>
               <Image
                 src='/images/tina_and_olaf.webp'

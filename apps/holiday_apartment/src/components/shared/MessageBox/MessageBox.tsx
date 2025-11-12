@@ -1,5 +1,5 @@
-import { twMerge } from 'tailwind-merge'
 import { Typography } from '@jan_hoeck/ui'
+import { twMerge } from 'tailwind-merge'
 
 export type MessageBoxProps = {
   type: 'success' | 'error'

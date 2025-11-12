@@ -65,11 +65,61 @@
   },
   "pages": {
     "home": {
-      "welcome": "Vacaciones en la Costa Cálida",
-      "headline": "Los Alcázares - Tu Destino Vacacional Perfecto en la Costa Cálida",
-      "description": "<root><section headline=\"Apartamentos vacacionales en el Mar Menor – Sol, mar y descanso en la Costa Cálida\"><content><texts><text>Viva días de vacaciones inolvidables en nuestros cómodos <b>apartamentos vacacionales en Los Alcázares y Los Urrutias</b>, dos encantadores pueblos costeros en la soleada Costa Cálida de la Región de Murcia. Ambos lugares se encuentran directamente en el <b>Mar Menor</b>, la laguna de agua salada más grande de Europa, y ofrecen condiciones ideales para el descanso, los deportes acuáticos y el estilo de vida mediterráneo.</text></texts></content></section><section headline=\"Ubicación de ensueño y clima – 320 días de sol al año\" variant=\"subsection\"><content><bulletpoints text=\"La <b>Costa Cálida</b> es conocida por su clima suave y más de 320 días de sol al año. Con temperaturas medias anuales de alrededor de 20 °C, aquí disfrutará del sol y el mar en cualquier época del año, perfecto para vacaciones de playa, vacaciones en familia o una estancia invernal relajante.\"><bulletpoint><b>15 minutos</b> del aeropuerto de Corvera (Murcia)</bulletpoint><bulletpoint><b>50 minutos</b> del aeropuerto de Alicante</bulletpoint></bulletpoints></content></section><section headline=\"Los Alcázares – Alegría de vivir directamente junto al mar\" variant=\"subsection\"><content><texts><text>Los Alcázares entusiasma con sus <b>7 kilómetros de playa de arena fina</b>, aguas poco profundas y un hermoso paseo marítimo con acogedores cafés y restaurantes. Aquí se encuentran la alegría de vivir española, el placer culinario y el ambiente marítimo.</text><text>Ya sea <b>natación, vela, kitesurf o paddle surf</b>, las tranquilas aguas del Mar Menor son ideales para principiantes y familias. Por la noche, los bares de tapas y los chiringuitos invitan a quedarse mientras disfruta de la puesta de sol sobre la laguna.</text></texts></content></section><section headline=\"Los Urrutias – Relajación y naturaleza pura\" variant=\"subsection\"><content><texts><text>A pocos minutos se encuentra <b>Los Urrutias</b>, un pueblo costero tranquilo y auténtico con amplias playas y magníficas vistas a La Manga. Aquí encontrará paz y descanso lejos del bullicio turístico, ideal para parejas y amantes de la naturaleza.</text><text>En las inmediaciones le esperan numerosas <b>áreas naturales y de senderismo</b>, como la reserva natural de Calblanque, que fascina con calas vírgenes, paisajes dunares y aguas turquesas.</text></texts></content></section><section headline=\"Salud y bienestar – El spa natural del Mar Menor\" variant=\"subsection\"><content><bulletpoints text=\"El <b>agua salada rica en yodo y minerales</b> del Mar Menor es conocida por su efecto curativo:\"><bulletpoint>Alivio de <b>dolencias reumáticas y dermatológicas</b></bulletpoint><bulletpoint>Promoción de las <b>vías respiratorias y la circulación sanguínea</b></bulletpoint><bulletpoint><b>Cuidado natural de la piel</b> mediante lodo rico en minerales</bulletpoint></bulletpoints><texts><text>Un baño en el Mar Menor no es solo descanso, sino también un beneficio para el cuerpo y la mente.</text></texts></content></section><section headline=\"Ocio y actividades para todos los gustos\" variant=\"subsection\"><content><bulletpoints text=\"Además de playa y mar, la región ofrece una variada oferta de ocio:\"><bulletpoint><b>15 campos de golf</b> en las inmediaciones, incluido el renombrado <b>La Manga Club</b></bulletpoint><bulletpoint><b>Centros deportivos</b> modernos con tenis, pádel, fútbol y fitness</bulletpoint><bulletpoint><b>Rutas en bicicleta</b> y senderismo por paisajes pintorescos</bulletpoint><bulletpoint><b>Excursiones en barco</b> y viajes de un día al Mediterráneo</bulletpoint></bulletpoints></content></section><section headline=\"Cultura y excursiones – Descubra la Región de Murcia\" variant=\"subsection\"><content><bulletpoints><bulletpoint><b>Cartagena</b> – Ciudad portuaria histórica con ruinas romanas, museos y ambiente de cruceros</bulletpoint><bulletpoint><b>Murcia</b> – Capital animada con impresionante catedral y casco antiguo</bulletpoint><bulletpoint><b>La Manga del Mar Menor</b> – La famosa lengua de tierra entre la laguna y el Mediterráneo</bulletpoint><bulletpoint><b>Mula</b> – Relajación pura en las fuentes termales naturales</bulletpoint></bulletpoints></content></section><section headline=\"Sus vacaciones de ensueño en el Mar Menor\" variant=\"subsection\"><content><texts><text>Ya sean <b>vacaciones en familia, vacaciones activas o escapada romántica</b>, en nuestros apartamentos vacacionales en Los Alcázares y Los Urrutias vivirá la alegría de vivir mediterránea, el descanso y el sol puro.</text></texts></content></section></root>",
-      "exposeListSection": {
-        "headline": "Alojamientos"
+      "welcome": {
+        "location": "Costa Cálida, España",
+        "title": "Vacaciones en la Costa Cálida",
+        "subtitle": "Apartamentos Vacacionales en el Mar Menor – Sol, Mar y Relax en la Costa Cálida",
+        "discoverAccommodationButtonLabel": "Descubrir Alojamientos",
+        "generalInfo": {
+          "sunnyDaysPerYear": "Días de Sol al Año",
+          "charmingCoastalTowns": "Encantadores Pueblos Costeros",
+          "averageTemperature": "Temperatura Media"
+        }
+      },
+      "main": {
+        "title": "Apartamentos Vacacionales en el Mar Menor",
+        "subtitle": "Disfrute de unas vacaciones inolvidables en nuestros confortables apartamentos vacacionales en Los Alcázares y Los Urrutias, dos encantadores pueblos costeros en la soleada Costa Cálida.",
+        "info": {
+          "sunnyDaysPerYear": {
+            "title": "320 Días de Sol al Año",
+            "description": "Clima templado y temperaturas agradables durante todo el año alrededor de 20°C"
+          },
+          "marMenor": {
+            "title": "En el Mar Menor",
+            "description": "La laguna de agua salada más grande de Europa con aguas tranquilas y poco profundas"
+          },
+          "location": {
+            "title": "Ubicación Perfecta",
+            "description": "A 25 minutos del aeropuerto de Murcia, a 50 minutos de Alicante"
+          },
+          "general": {
+            "title": "Para Todos los Gustos",
+            "description": "Perfecto para vacaciones de playa, vacaciones familiares o estancias relajantes de invierno"
+          }
+        },
+        "locations": {
+          "losAlcazares": {
+            "title": "Los Alcázares – Alegría de Vivir junto al Mar",
+            "description": "Los Alcázares cautiva con 7 kilómetros de playa de arena, aguas poco profundas y un hermoso paseo marítimo con acogedores cafés y restaurantes. Aquí se unen la alegría de vivir española, el placer culinario y el ambiente marinero. Ya sea nadar, navegar, hacer kitesurf o paddle surf – las aguas tranquilas del Mar Menor son ideales para principiantes y familias."
+          },
+          "losUrrutias": {
+            "title": "Los Urrutias – Relajación y Naturaleza Pura",
+            "description": "A pocos minutos se encuentra Los Urrutias, un tranquilo y auténtico pueblo costero con amplias playas y magníficas vistas de La Manga. Aquí encontrará paz y relajación lejos del bullicio – ideal para los amantes de la naturaleza. En las inmediaciones le esperan numerosas zonas naturales y de senderismo, como la Reserva Natural de Calblanque, con calas vírgenes y aguas color turquesa."
+          }
+        }
+      },
+      "exposes": {
+        "title": "Alojamientos",
+        "subtitle": "Elija su alojamiento perfecto para unas vacaciones inolvidables en la Costa Cálida",
+        "card": {
+          "showMe": "Ver Detalles",
+          "guests": "{amount} Huéspedes",
+          "beds": "{amount} Camas",
+          "pool": "Piscina",
+          "airConditioner": "Aire Acondicionado",
+          "wlan": "Wi-Fi",
+          "parking": "Aparcamiento"
+        }
       }
     },
     "contact": {

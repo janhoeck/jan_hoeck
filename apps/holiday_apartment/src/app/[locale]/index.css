@@ -1,4 +1,6 @@
+@import '@jan_hoeck/ui/theme.css';
 @import 'tailwindcss';
+
 @source '../../../node_modules/@jan_hoeck/ui';
 
 html,
@@ -12,6 +14,10 @@ body {
 
 @theme {
   --animate-slide-in-right: slide-in-right 0.2s linear;
+  --animate-fade-in: 0.5s ease-out 0s 1 normal none running fade-in;
+
+  --color-ocean-deep: hsl(196 89% 35%);
+  --color-ocean-light: hsl(192 81% 50%);
 
   @keyframes slide-in-right {
     0% {
@@ -21,6 +27,18 @@ body {
 
     100% {
       transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
     }
   }
 }

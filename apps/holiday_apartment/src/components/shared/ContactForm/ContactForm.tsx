@@ -1,7 +1,7 @@
-import { Form } from 'radix-ui'
-import { Typography, Button } from '@jan_hoeck/ui'
-import { FormHTMLAttributes } from 'react'
+import { Button, Typography } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
+import { Form } from 'radix-ui'
+import { FormHTMLAttributes } from 'react'
 
 export type ContactFormProps = {
   action: FormHTMLAttributes<HTMLFormElement>['action']
