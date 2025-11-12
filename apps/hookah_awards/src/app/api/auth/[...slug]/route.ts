@@ -1,5 +1,3 @@
-'use server'
-
 import { toNextJsHandler } from 'better-auth/next-js'
 
 async function getHandlers() {

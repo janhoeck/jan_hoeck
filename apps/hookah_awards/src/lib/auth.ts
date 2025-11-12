@@ -1,9 +1,14 @@
 import { betterAuth } from 'better-auth'
 
-console.log('auth-url', process.env.NEXT_PUBLIC_BETTER_AUTH_URL)
-console.log('twitch-client-id', process.env.TWITCH_CLIENT_ID)
-console.log('twitch-client-secret', process.env.TWITCH_CLIENT_SECRET)
-console.log('secret', process.env.BETTER_AUTH_SECRET)
+console.log('RUNTIME ENV CHECK', {
+  url: process.env.BETTER_AUTH_URL,
+  secret: process.env.BETTER_AUTH_SECRET,
+  twitchId: process.env.TWITCH_CLIENT_ID,
+  twitchSecret: process.env.TWITCH_CLIENT_SECRET,
+  runtime: process.env.NEXT_RUNTIME,
+})
+
+export const runtime = 'nodejs'
 
 export const auth = betterAuth({
   baseURL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL! as string,
