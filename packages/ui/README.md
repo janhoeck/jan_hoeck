@@ -13,7 +13,7 @@ A React component library built with Tailwind CSS v4, providing reusable UI comp
 ## Installation
 
 ```bash
-npm install @jan_hoeck/ui
+pnpm add @jan_hoeck/ui
 ```
 
 ## Quick Start
@@ -46,17 +46,24 @@ Create or update your main CSS file (e.g., `src/styles.css` or `src/app.css`):
 
 @source '../../../node_modules/@jan_hoeck/ui';
 
-/* Your custom theme variables */
+/* Override specific UI library colors if needed */
+:root {
+    --color-primary: #13110a;
+}
+
+/* Add your custom theme variables */
 @theme {
-  --color-ocean-deep: hsl(196 89% 35%);
-  --color-ocean-light: hsl(192 81% 50%);
+    --color-ocean-deep: hsl(196 89% 35%);
+    --color-ocean-light: hsl(192 81% 50%);
 }
 ```
 
 **Important:** The order of imports matters:
-1. First import `theme.css` (contains theme definitions)
+1. First import `theme.css` (contains theme definitions in `:root`)
 2. Then import `styles.css` (contains compiled Tailwind utilities)
 3. Finally import `tailwindcss` (for generating your own utilities)
+4. Use `:root` to override specific library colors
+5. Use `@theme` to add your own custom colors
 
 ### 3. Import CSS in Your Entry File
 
@@ -114,22 +121,51 @@ Once you've imported the theme, you can use these colors with Tailwind utilities
 
 ### Customizing the Theme
 
-You can override theme colors in your project's CSS:
+You can override specific theme colors from the UI library using a `:root` selector. The UI library's `theme.css` defines colors in `:root`, and you can override them using CSS cascade.
 
 ```css
 @import '@jan_hoeck/ui/theme.css';
 @import '@jan_hoeck/ui/styles.css';
 @import 'tailwindcss';
 
-@theme {
-  /* Override UI library colors */
-  --color-primary: hsl(220 90% 50%);
+@source '../../../node_modules/@jan_hoeck/ui';
+
+/* Override specific UI library colors */
+:root {
+  --color-primary: #13110a;
+  --color-secondary: hsl(220 70% 50%);
   --color-accent: hsl(45 90% 60%);
-  
-  /* Add your own colors */
-  --color-brand: hsl(280 85% 55%);
-  --color-custom: hsl(160 70% 45%);
 }
+
+@theme {
+  /* Add your own custom colors */
+  --color-brand: hsl(280 85% 55%);
+  --color-ocean-deep: hsl(196 89% 35%);
+  --color-ocean-light: hsl(192 81% 50%);
+  
+  /* Your custom animations */
+  @keyframes slide-in {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+}
+```
+
+**How it works:**
+1. `theme.css` is imported and defines colors in `:root`
+2. Your `:root` block overrides specific colors (CSS cascade)
+3. `@theme` block adds your own custom colors for Tailwind utilities
+4. All colors (original, overridden, and custom) are available as utility classes
+
+**Example usage:**
+```tsx
+<div className="bg-primary text-primary-foreground">
+  {/* Uses your overridden --color-primary */}
+</div>
+
+<div className="bg-ocean-deep text-white">
+  {/* Uses your custom --color-ocean-deep */}
+</div>
 ```
 
 ## Architecture
@@ -152,12 +188,17 @@ This approach ensures that:
 
 ```
 @jan_hoeck/ui/
+├── dist/
+│   ├── index.js          # Main entry point
+│   ├── index.d.ts        # TypeScript definitions
+│   ├── styles.css        # Compiled Tailwind utilities
+│   ├── theme.css         # Uncompiled theme definitions
+│   └── components/       # Individual component files
 ├── src/
-│   ├── index.ts          # Exports all components and hooks
+│   ├── index.ts          # Exports all components
 │   ├── theme.css         # Theme definitions
 │   ├── styles.css        # Main styles with Tailwind
 │   └── components/       # Component source files
-│   └── hooks/            # Hook source files
 └── package.json
 ```
 
@@ -208,6 +249,25 @@ npm run lint
 @import 'tailwindcss';
 
 @source '../../../node_modules/@jan_hoeck/ui';
+```
+
+### Overriding theme colors doesn't work
+
+**Problem:** When you override colors in `:root`, the changes aren't reflected in your components.
+
+**Solution:** Make sure your `:root` block comes AFTER the `@import '@jan_hoeck/ui/theme.css'` statement:
+
+```css
+@import '@jan_hoeck/ui/theme.css';
+@import '@jan_hoeck/ui/styles.css';
+@import 'tailwindcss';
+
+@source '../../../node_modules/@jan_hoeck/ui';
+
+/* This override works because it comes after theme.css import */
+:root {
+  --color-primary: #13110a;
+}
 ```
 
 ### CSS not loading

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @theme static {
     /* colors */
     --color-border: #e2e8f0;
@@ -15,8 +17,36 @@
     --color-destructive: hsl(0 84.2% 60.2%);
     --color-destructive-foreground: hsl(0 0% 100%);
 
-    --color-card: hsl(0 0% 100%);
-    --color-card-foreground: hsl(210 24% 16%);
+    /* button */
+    --radius-btn: var(--radius-md);
+
+    --color-btn-primary-bg: hsl(196 89% 35%);
+    --color-btn-primary-fg: hsl(0 0% 100%);
+    --color-btn-primary-hover-bg: hsla(196, 89%, 35%, 0.9);
+    --color-btn-primary-hover-fg: hsl(0 0% 100%);
+
+    --color-btn-secondary-bg: hsl(28 80% 52%);
+    --color-btn-secondary-fg: hsl(0 0% 100%);
+    --color-btn-secondary-hover-bg: hsla(28, 80%, 52%, 0.9);
+    --color-btn-secondary-hover-fg: hsl(0 0% 100%);
+
+    --color-btn-outlined-bg: transparent;
+    --color-btn-outlined-fg: hsl(196 89% 35%);
+    --color-btn-outlined-hover-bg: hsla(196, 89%, 35%, 0.5);
+    --color-btn-outlined-hover-fg: hsl(0 0% 100%);
+    --color-btn-outlined-border: hsl(196 89% 35%);
+    --color-btn-outlined-hover-border: hsl(196 89% 35%);
+
+    --color-btn-ghost-bg: transparent;
+    --color-btn-ghost-fg: hsl(196 89% 35%);
+    --color-btn-ghost-hover-bg: transparent;
+    --color-btn-ghost-hover-fg: hsla(196, 89%, 35%, 0.8);
+
+    /* card */
+    --color-card-bg: hsl(0 0% 100%);
+    --color-card-fg: hsl(210 24% 16%);
+    --color-card-border: #e2e8f0;
+    --color-card: #0000001a; /* shadow */
 
     /* animations */
     --animate-shake: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;

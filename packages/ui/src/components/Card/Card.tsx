@@ -3,10 +3,10 @@ import clsx from 'clsx'
 import * as React from 'react'
 import { HTMLAttributes, forwardRef } from 'react'
 
-const cardVariants = cva('rounded-lg bg-card text-card-foreground shadow-sm', {
+const cardVariants = cva('rounded-lg bg-card-bg text-card-fg shadow-md shadow-card', {
   variants: {
     withBorder: {
-      true: 'border border-border',
+      true: 'border border-card-border',
       false: null,
     },
   },
@@ -41,7 +41,7 @@ export const CardDescription = forwardRef<HTMLParagraphElement, HTMLAttributes<H
   ({ className, ...props }, ref) => (
     <p
       ref={ref}
-      className={clsx('leading-relaxed text-muted-foreground', className)}
+      className={clsx('leading-relaxed text-card-fg', className)}
       {...props}
     />
   )

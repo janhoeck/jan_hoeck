@@ -1,18 +1,19 @@
 import { type VariantProps, cva } from 'class-variance-authority'
-import clsx from 'clsx'
 import { ButtonHTMLAttributes, ComponentProps, ElementType, ReactElement, Ref, forwardRef } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors cursor-pointer disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-btn text-sm font-medium transition-colors cursor-pointer disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-        ghost: 'text-muted-foreground hover:bg-muted hover:text-primary',
-        link: 'text-primary underline-offset-4 hover:underline',
+        primary:
+          'bg-btn-primary-bg text-btn-primary-fg hover:bg-btn-primary-hover-bg hover:text-color-btn-primary-hover-fg',
+        secondary:
+          'bg-btn-secondary-bg text-btn-secondary-fg hover:btn-secondary-hover-bg hover:btn-secondary-hover-fg',
+        outline:
+          'border border-btn-outlined-border bg-btn-outlined-bg text-btn-outlined-fg hover:bg-btn-outlined-hover-bg hover:text-btn-outlined-hover-fg hover:border-btn-outlined-hover-border',
+        ghost: 'text-btn-ghost-fg bg-btn-ghost-bg hover:bg-btn-ghost-hover-bg hover:text-btn-ghost-hover-fg',
       },
       fullWidth: {
         true: 'w-full',
@@ -20,13 +21,13 @@ const buttonVariants = cva(
       },
       size: {
         default: 'h-10 px-4 py-2',
-        sm: 'h-9 rounded-md px-3',
-        lg: 'h-11 rounded-md px-8',
+        sm: 'h-9 px-3',
+        lg: 'h-11 px-8',
         icon: 'h-10 w-10',
       },
     },
     defaultVariants: {
-      variant: 'default',
+      variant: 'primary',
       size: 'default',
       fullWidth: false,
     },
@@ -45,7 +46,7 @@ const ButtonInner = <T extends ElementType>(props: ButtonProps<T>, ref: Ref<T>) 
 
   return (
     <Component
-      className={clsx(buttonVariants({ variant, size, fullWidth, className }))}
+      className={twMerge(buttonVariants({ variant, size, fullWidth, className }))}
       ref={ref}
       {...restProps}
     />
