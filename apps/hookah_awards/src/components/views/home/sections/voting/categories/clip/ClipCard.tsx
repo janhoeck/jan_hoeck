@@ -5,7 +5,7 @@ import { Button, Card, CardContent } from '@jan_hoeck/ui'
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
-import { Category, Clip } from '../../../../../../../types'
+import { Clip } from '../../../../../../../types'
 
 export type ClipCardProps = {
   clip: Clip

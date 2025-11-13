@@ -1,11 +1,11 @@
 import fs from 'fs'
 import path from 'path'
 
-import { Categories } from '../../../../types'
+import { Category } from '../../../../types'
 
 const loadCategories = () => {
   const filePath = path.join(process.cwd(), 'public/data', `categories.json`)
-  return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as Categories
+  return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as Category
 }
 
 export const GET = () => {
