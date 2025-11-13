@@ -1,10 +1,11 @@
+export type CategoryType = 'clip' | 'survey'
+
 export type Category = {
   id: string
+  type: CategoryType
   title: string
   description: string
 }
-
-export type Categories = Category[]
 
 export type Clip = {
   id: string
@@ -14,10 +15,13 @@ export type Clip = {
   description: string | undefined | null
 }
 
-export type Clips = Clip[]
-
-export type CategoryWithClips = Category & {
-  clips: Clips
+export type Survey = {
+  id: string
+  categoryId: Category['id']
+  title: string
+  description: string | undefined | null
 }
 
-export type CategoriesWithClips = CategoryWithClips[]
+export type CategoryWithClips = Category & {
+  clips: Clip[]
+}

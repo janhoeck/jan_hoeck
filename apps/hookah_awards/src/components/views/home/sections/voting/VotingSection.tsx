@@ -1,24 +1,33 @@
+import { Suspense } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-import { CategoriesWithClips } from '../../../../../types'
-import { VotingCategory } from './VotingCategory'
+import { Category } from '../../../../../types'
+import { ClipVotingCategory } from './categories/clip/ClipVotingCategory'
+import { SurveyVotingSection } from './categories/survey/SurveyVotingSection'
 
 export type VotingSectionProps = {
   className?: string
-  categoriesWithVideos: CategoriesWithClips
 }
 
-export const VotingSection = (props: VotingSectionProps) => {
-  const { className, categoriesWithVideos } = props
+export const VotingSection = async (props: VotingSectionProps) => {
+  const { className } = props
 
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/data/categories`)
+  if (!response.ok) {
+    return null
+  }
+
+  const categories: Category[] = await response.json()
   return (
-    <section className={twMerge(className)}>
-      {categoriesWithVideos.map((category) => (
-        <VotingCategory
+    <section className={twMerge('flex flex-col space-y-40', className)}>
+      {categories.map((category) => (
+        <Suspense
           key={category.id}
-          category={category}
-          clips={category.clips}
-        />
+          fallback={null}
+        >
+          {category.type === 'clip' && <ClipVotingCategory category={category} />}
+          {category.type === 'survey' && <SurveyVotingSection category={category} />}
+        </Suspense>
       ))}
     </section>
   )

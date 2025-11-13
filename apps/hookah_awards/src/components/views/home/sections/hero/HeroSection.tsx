@@ -1,3 +1,5 @@
+'use client'
+
 import { twMerge } from 'tailwind-merge'
 
 import { TwitchAccountButton } from './TwitchAccountButton'
@@ -8,6 +10,7 @@ export type HeroSectionProps = {
 
 export const HeroSection = (props: HeroSectionProps) => {
   const { className } = props
+
   return (
     <section className={twMerge(['flex flex-col items-center', className])}>
       <div className='max-w-2xl'>

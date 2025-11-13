@@ -7,7 +7,7 @@ import { FaTwitch } from 'react-icons/fa'
 
 export const TwitchAccountButton = () => {
   const { data } = useSession()
-  console.log(data)
+
   // If data is present, the user is logged in
   if (data) {
     return (

@@ -30,6 +30,9 @@
 
 @theme {
   --font-maragsa: var(--font-maragsa);
+  --font-arimo: var(--font-arimo);
+
+  --color-dialog-backdrop: rgba(28, 28, 28, 0.6);
 }
 
 html,

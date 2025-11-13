@@ -1,28 +1,25 @@
 'use client'
 
+import { extractYoutubeId } from '@/utils/extract-youtube-id'
 import { Button, Card, CardContent } from '@jan_hoeck/ui'
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
-import { Clip } from '../../../../../types'
+import { Category, Clip } from '../../../../../../../types'
 
 export type ClipCardProps = {
   clip: Clip
   selected?: boolean
+  onClickAction: (clip: Clip) => void
 }
 
-export const ClipCard = ({ clip }: ClipCardProps) => {
+export const ClipCard = (props: ClipCardProps) => {
+  const { clip, onClickAction } = props
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [hovered, setHovered] = useState(false)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
-  const clipYouTubeId = useMemo(() => {
-    const url = new URL(clip.link)
-    if (url.searchParams.has('v')) {
-      return url.searchParams.get('v')!
-    }
-    return url.pathname.substring(1, url.pathname.length)
-  }, [clip])
+  const clipYouTubeId = extractYoutubeId(clip.link)
 
   const clipImageSources = useMemo(() => {
     const variants = ['0', 'hq1', 'hq2', 'hq3']
@@ -44,12 +41,17 @@ export const ClipCard = ({ clip }: ClipCardProps) => {
     }
 
     return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current)
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+      }
     }
   }, [hovered, clipImageSources.length])
 
   return (
-    <Card className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer'>
+    <Card
+      className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer'
+      onClick={() => onClickAction(clip)}
+    >
       <div
         className='aspect-video relative'
         onMouseEnter={() => setHovered(true)}
@@ -57,13 +59,15 @@ export const ClipCard = ({ clip }: ClipCardProps) => {
       >
         {clipImageSources.map((imgSrc, index) => (
           <Image
-            key={imgSrc}
             fill
+            key={imgSrc}
+            loading='lazy'
             className={`object-cover transition-opacity duration-300 ${
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             }`}
             src={imgSrc}
             alt={clip.title}
+            sizes='(max-width: 768px) 100vw, 384px'
           />
         ))}
       </div>

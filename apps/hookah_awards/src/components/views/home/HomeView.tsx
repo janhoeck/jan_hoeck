@@ -1,18 +1,15 @@
-import { VotingSection } from '@/components/views/home/sections/voting/VotingSection'
+import { Suspense } from 'react'
 
-import { CategoriesWithClips } from '../../../types'
 import { HeroSection } from './sections/hero/HeroSection'
+import { VotingSection } from './sections/voting/VotingSection'
 
-export type HomeViewProps = {
-  categoriesWithVideos: CategoriesWithClips
-}
-
-export const HomeView = (props: HomeViewProps) => {
-  const { categoriesWithVideos } = props
+export const HomeView = () => {
   return (
     <div>
-      <HeroSection className='mb-40' />
-      <VotingSection categoriesWithVideos={categoriesWithVideos} />
+      <HeroSection className='mb-30' />
+      <Suspense fallback={null}>
+        <VotingSection />
+      </Suspense>
     </div>
   )
 }
