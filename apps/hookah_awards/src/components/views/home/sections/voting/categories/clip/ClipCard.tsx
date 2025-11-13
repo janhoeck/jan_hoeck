@@ -47,6 +47,10 @@ export const ClipCard = (props: ClipCardProps) => {
     }
   }, [hovered, clipImageSources.length])
 
+  const handleVoteButtonClick = (event: MouseEvent) => {
+    event.stopPropagation()
+  }
+
   return (
     <Card
       className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer'
@@ -73,7 +77,12 @@ export const ClipCard = (props: ClipCardProps) => {
       </div>
       <CardContent className='flex flex-col space-y-4'>
         <p className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</p>
-        <Button className='mt-auto'>Auswählen</Button>
+        <Button
+          className='mt-auto'
+          onClick={handleVoteButtonClick}
+        >
+          Auswählen
+        </Button>
       </CardContent>
     </Card>
   )
