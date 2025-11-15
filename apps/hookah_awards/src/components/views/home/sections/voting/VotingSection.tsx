@@ -13,6 +13,7 @@ export const VotingSection = async (props: VotingSectionProps) => {
   const { className } = props
 
   const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/categories`)
+  console.log('categories', response)
   if (!response.ok) {
     return null
   }
