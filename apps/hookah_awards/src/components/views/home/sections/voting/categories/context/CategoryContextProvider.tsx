@@ -68,6 +68,7 @@ export const CategoryContextProvider = (props: CategoryContextProviderProps) => 
       categoryId,
       referenceId,
       referenceType: type,
+      createdAt: new Date(),
     })
   }
 
