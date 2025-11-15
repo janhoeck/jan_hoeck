@@ -9,7 +9,7 @@ export type SurveyVotingSectionProps = {
 export const SurveyVotingSection = async (props: SurveyVotingSectionProps) => {
   const { category } = props
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/data/surveys/${category.id}`)
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/surveys/${category.id}`)
   if (!response.ok) {
     return null
   }

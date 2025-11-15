@@ -19,3 +19,10 @@ export type Clip = BaseCategoryItem & {
 }
 
 export type Survey = BaseCategoryItem
+
+export type Vote = {
+  userId: string
+  categoryId: Category['id']
+  referenceId: Survey['id'] | Clip['id']
+  referenceType: CategoryType
+}

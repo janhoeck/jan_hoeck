@@ -18,6 +18,6 @@
       "persistent": true
     }
   },
-  "globalEnv": ["BETTER_AUTH_SECRET", "TWITCH_CLIENT_ID", "TWITCH_CLIENT_SECRET"],
+  "globalEnv": ["BETTER_AUTH_SECRET", "TWITCH_CLIENT_ID", "TWITCH_CLIENT_SECRET", "DATABASE_URL"],
   "globalDependencies": ["**/.env"]
 }

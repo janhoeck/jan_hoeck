@@ -12,7 +12,7 @@ export type VotingSectionProps = {
 export const VotingSection = async (props: VotingSectionProps) => {
   const { className } = props
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/data/categories`)
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/categories`)
   if (!response.ok) {
     return null
   }

@@ -1,6 +1,5 @@
-import { Button } from '@jan_hoeck/ui'
-
 import { Survey } from '../../../../../../../types'
+import { VoteButton } from '../VoteButton'
 
 export type SurveyItemProps = {
   survey: Survey
@@ -9,12 +8,11 @@ export type SurveyItemProps = {
 export const SurveyItem = (props: SurveyItemProps) => {
   const { survey } = props
   return (
-    <Button
-      variant='outline'
-      size='lg'
+    <VoteButton
       className='w-full transition-all duration-300'
-    >
-      {survey.title}
-    </Button>
+      referenceId={survey.id}
+      type='survey'
+      label={survey.title}
+    />
   )
 }

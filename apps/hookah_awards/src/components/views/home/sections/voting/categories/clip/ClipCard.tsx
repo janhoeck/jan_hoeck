@@ -2,22 +2,24 @@
 
 import { useSession } from '@/lib/auth-client'
 import { extractYoutubeId } from '@/utils/extract-youtube-id'
-import { Button, Card, CardContent, useIsMounted } from '@jan_hoeck/ui'
+import { Card, CardContent, useIsMounted } from '@jan_hoeck/ui'
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 import { Clip } from '../../../../../../../types'
+import { VoteButton } from '../VoteButton'
 
 export type ClipCardProps = {
   clip: Clip
-  selected?: boolean
   onClickAction: (clip: Clip) => void
 }
 
 export const ClipCard = (props: ClipCardProps) => {
   const { clip, onClickAction } = props
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [hovered, setHovered] = useState(false)
+
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
+  const [hovered, setHovered] = useState<boolean>(false)
+
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
   const isMounted = useIsMounted()
@@ -51,10 +53,6 @@ export const ClipCard = (props: ClipCardProps) => {
     }
   }, [hovered, clipImageSources.length])
 
-  const handleVoteButtonClick = (event: MouseEvent) => {
-    event.stopPropagation()
-  }
-
   return (
     <Card
       className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer'
@@ -81,13 +79,13 @@ export const ClipCard = (props: ClipCardProps) => {
       </div>
       <CardContent className='flex flex-col space-y-4'>
         <p className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</p>
-        <Button
+        <VoteButton
           className='mt-auto'
+          referenceId={clip.id}
+          type='clip'
           disabled={!isMounted || !data}
-          onClick={handleVoteButtonClick}
-        >
-          Auswählen
-        </Button>
+          label='Auswählen'
+        />
       </CardContent>
     </Card>
   )

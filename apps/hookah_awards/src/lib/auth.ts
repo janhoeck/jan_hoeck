@@ -1,4 +1,5 @@
 import { betterAuth } from 'better-auth'
+import { nextCookies } from 'better-auth/next-js'
 import { Pool } from 'pg'
 
 export const runtime = 'nodejs'
@@ -18,4 +19,5 @@ export const auth = betterAuth({
     },
   },
   secret: process.env.BETTER_AUTH_SECRET as string,
+  plugins: [nextCookies()],
 })
