@@ -84,7 +84,7 @@ export const ClipCard = (props: ClipCardProps) => {
           referenceId={clip.id}
           type='clip'
           disabled={!isMounted || !data}
-          label='Auswählen'
+          label={(voted) => (voted ? 'Ausgewählt' : 'Auswählen ')}
         />
       </CardContent>
     </Card>

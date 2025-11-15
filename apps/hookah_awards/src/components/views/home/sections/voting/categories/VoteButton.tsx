@@ -9,7 +9,7 @@ export type VoteButtonProps = {
   disabled?: boolean
   referenceId: Clip['id'] | Survey['id']
   type: CategoryType
-  label: string
+  label: (selected: boolean) => string
 }
 
 export const VoteButton = (props: VoteButtonProps) => {
@@ -26,14 +26,16 @@ export const VoteButton = (props: VoteButtonProps) => {
     setVotePending(false)
   }
 
+  const voted = vote?.referenceId === referenceId
+
   return (
     <Button
       className={className}
-      variant={vote?.referenceId === referenceId ? 'primary' : 'outline'}
+      variant={voted ? 'primary' : 'outline'}
       disabled={disabled || isLoading || isVotePending}
       onClick={handleVoteButtonClick}
     >
-      {label}
+      {label(voted)}
     </Button>
   )
 }

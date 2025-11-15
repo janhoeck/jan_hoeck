@@ -12,7 +12,7 @@ export const SurveyItem = (props: SurveyItemProps) => {
       className='w-full transition-all duration-300'
       referenceId={survey.id}
       type='survey'
-      label={survey.title}
+      label={() => survey.title}
     />
   )
 }
