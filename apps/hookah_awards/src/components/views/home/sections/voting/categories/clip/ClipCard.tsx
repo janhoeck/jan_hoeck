@@ -1,7 +1,8 @@
 'use client'
 
+import { useSession } from '@/lib/auth-client'
 import { extractYoutubeId } from '@/utils/extract-youtube-id'
-import { Button, Card, CardContent } from '@jan_hoeck/ui'
+import { Button, Card, CardContent, useIsMounted } from '@jan_hoeck/ui'
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
@@ -18,6 +19,9 @@ export const ClipCard = (props: ClipCardProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [hovered, setHovered] = useState(false)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
+
+  const isMounted = useIsMounted()
+  const { data } = useSession()
 
   const clipYouTubeId = extractYoutubeId(clip.link)
 
@@ -79,6 +83,7 @@ export const ClipCard = (props: ClipCardProps) => {
         <p className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</p>
         <Button
           className='mt-auto'
+          disabled={!isMounted || !data}
           onClick={handleVoteButtonClick}
         >
           Auswählen

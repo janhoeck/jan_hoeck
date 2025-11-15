@@ -7,21 +7,15 @@ export type Category = {
   description: string
 }
 
-export type Clip = {
+export type BaseCategoryItem = {
   id: string
   categoryId: Category['id']
+  title: string
+  description: string | undefined | null
+}
+
+export type Clip = BaseCategoryItem & {
   link: string
-  title: string
-  description: string | undefined | null
 }
 
-export type Survey = {
-  id: string
-  categoryId: Category['id']
-  title: string
-  description: string | undefined | null
-}
-
-export type CategoryWithClips = Category & {
-  clips: Clip[]
-}
+export type Survey = BaseCategoryItem

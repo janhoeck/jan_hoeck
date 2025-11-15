@@ -13,13 +13,11 @@ export const VotingSection = async (props: VotingSectionProps) => {
   const { className } = props
 
   const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/data/categories`)
-  console.log(response)
   if (!response.ok) {
     return null
   }
 
   const categories: Category[] = await response.json()
-  console.log('categores', categories)
   return (
     <section className={twMerge('flex flex-col space-y-40', className)}>
       {categories.map((category) => (

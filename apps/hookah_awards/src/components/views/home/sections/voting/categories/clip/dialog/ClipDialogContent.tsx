@@ -20,7 +20,7 @@ export const ClipDialogContent = (props: ClipDialogContentProps) => {
   return (
     <DialogContent className='fixed top-0 left-0 w-full h-full text-foreground p-10 flex flex-col items-center space-y-10'>
       <DialogTitle className='text-4xl font-maragsa font-extrabold uppercase text-center'>{category.title}</DialogTitle>
-      <h3 className='text-xl font-bold'>{clip.title}</h3>
+      <h3 className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</h3>
       <DialogClose
         asChild
         className='absolute top-6 right-6'
@@ -38,8 +38,10 @@ export const ClipDialogContent = (props: ClipDialogContentProps) => {
           <NextClipButton onClick={onNextClick} />
         </DesktopOnly>
         <MobileOnly>
-          <PreviousClipButton onClick={onPrevClick} />
-          <NextClipButton onClick={onNextClick} />
+          <div className='flex justify-between'>
+            <PreviousClipButton onClick={onPrevClick} />
+            <NextClipButton onClick={onNextClick} />
+          </div>
         </MobileOnly>
       </div>
       {clip.description && (

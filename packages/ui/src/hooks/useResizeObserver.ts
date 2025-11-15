@@ -1,6 +1,8 @@
 'use client'
+
 import { useEffect, useRef, useState } from 'react'
 import type { RefObject } from 'react'
+
 import { useIsMounted } from './useIsMounted'
 
 /** The size of the observed element. */
@@ -77,7 +79,7 @@ export function useResizeObserver<T extends HTMLElement = HTMLElement>(options: 
         if (onResize.current) {
           onResize.current(newSize)
         } else {
-          if (isMounted()) {
+          if (isMounted) {
             setSize(newSize)
           }
         }

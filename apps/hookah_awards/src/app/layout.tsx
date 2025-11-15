@@ -1,3 +1,4 @@
+import { Footer } from '@/components/shared/Footer/Footer'
 import localFont from 'next/font/local'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -41,6 +42,7 @@ export default async function Layout(props: LayoutProps) {
     <html>
       <body className={twMerge(maragsaFont.variable, arimoFont.className)}>
         <main className='container mx-auto px-4 mt-8 mb-16'>{children}</main>
+        <Footer />
       </body>
     </html>
   )
