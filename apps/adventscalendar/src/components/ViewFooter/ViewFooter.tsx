@@ -1,5 +1,5 @@
-import React from 'react'
 import { getImageProps } from 'next/image'
+import React from 'react'
 
 const { props: imageProps } = getImageProps({ alt: 'footer', width: 100, height: 100, src: 'images/footer.png' })
 

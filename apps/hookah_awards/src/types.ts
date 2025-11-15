@@ -25,4 +25,5 @@ export type Vote = {
   categoryId: Category['id']
   referenceId: Survey['id'] | Clip['id']
   referenceType: CategoryType
+  createdAt: Date
 }

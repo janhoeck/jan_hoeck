@@ -1,6 +1,7 @@
 import React from 'react'
-import { useSectionsScrollerContext } from './SectionsScrollerContext'
 import { twMerge } from 'tailwind-merge'
+
+import { useSectionsScrollerContext } from './SectionsScrollerContext'
 
 const SECTION_INDICATOR_DIMENSION_CONFIG = {
   default: {

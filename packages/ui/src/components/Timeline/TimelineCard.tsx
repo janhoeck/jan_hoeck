@@ -1,5 +1,6 @@
-import { twMerge } from 'tailwind-merge'
 import React from 'react'
+import { twMerge } from 'tailwind-merge'
+
 import { useTimelineTheme } from './TimelineThemeContext'
 
 export type TimelineCardProps = {

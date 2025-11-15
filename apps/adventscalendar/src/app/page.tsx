@@ -1,16 +1,18 @@
 'use client'
+
+import { useRouter, useSearchParams } from 'next/navigation'
 import React, { useRef } from 'react'
+
+import { calendarTilesConfiguration } from '../../public/configuration/calendarTilesConfiguration'
 import { CalendarItemGrid, CalendarItemGridRef } from '../components/CalendarItem/CalendarItemGrid'
+import { InnerContent } from '../components/InnerContent/InnerContent'
+import { MainContent } from '../components/MainContent/MainContent'
+import { ViewFooter } from '../components/ViewFooter/ViewFooter'
+import { ViewHeader } from '../components/ViewHeader/ViewHeader'
+import { useCalendarContext } from '../tools/context/CalendarContext'
+import { useItemDatabase } from '../tools/context/ItemsDatabaseContext'
 import CalendarTilesConfiguration from '../tools/types/CalendarTileConfiguration'
 import { ADMIN_QUERY_PARAM, canAccessDay } from '../tools/utils/AdventsCalendarUtil'
-import { ViewHeader } from '../components/ViewHeader/ViewHeader'
-import { InnerContent } from '../components/InnerContent/InnerContent'
-import { ViewFooter } from '../components/ViewFooter/ViewFooter'
-import { MainContent } from '../components/MainContent/MainContent'
-import { useItemDatabase } from '../tools/context/ItemsDatabaseContext'
-import { calendarTilesConfiguration } from '../../public/configuration/calendarTilesConfiguration'
-import { useRouter, useSearchParams } from 'next/navigation'
-import { useCalendarContext } from '../tools/context/CalendarContext'
 
 const items = calendarTilesConfiguration
 

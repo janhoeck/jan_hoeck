@@ -1,6 +1,8 @@
 'use client'
+
 import React, { forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
+
 import { useSectionScrollerRegistration } from '../SectionsScroller/useSectionScrollerRegistration'
 
 export interface SectionProps {

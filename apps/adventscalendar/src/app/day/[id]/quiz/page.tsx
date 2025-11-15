@@ -1,15 +1,16 @@
+import { notFound } from 'next/navigation'
 import React from 'react'
-import { QuizViewContent } from './content'
+
 import {
   calendarTilesConfiguration,
   findItemByDay,
 } from '../../../../../public/configuration/calendarTilesConfiguration'
-import styles from './page.module.scss'
-import { ViewHeader } from '../../../../components/ViewHeader/ViewHeader'
 import { InnerContent } from '../../../../components/InnerContent/InnerContent'
-import { ViewFooter } from '../../../../components/ViewFooter/ViewFooter'
 import { MainContent } from '../../../../components/MainContent/MainContent'
-import { notFound } from 'next/navigation'
+import { ViewFooter } from '../../../../components/ViewFooter/ViewFooter'
+import { ViewHeader } from '../../../../components/ViewHeader/ViewHeader'
+import { QuizViewContent } from './content'
+import styles from './page.module.scss'
 
 type Params = Promise<{ id: string }>
 

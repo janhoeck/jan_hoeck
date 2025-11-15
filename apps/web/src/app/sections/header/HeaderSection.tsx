@@ -1,10 +1,12 @@
 'use client'
-import React from 'react'
+
 import { Section } from '@/components'
-import { CgMouse } from 'react-icons/cg'
-import { Socials } from './components/Socials'
-import { motion } from 'framer-motion'
 import { Typography } from '@jan_hoeck/ui'
+import { motion } from 'framer-motion'
+import React from 'react'
+import { CgMouse } from 'react-icons/cg'
+
+import { Socials } from './components/Socials'
 
 export const HeaderSection = () => {
   return (

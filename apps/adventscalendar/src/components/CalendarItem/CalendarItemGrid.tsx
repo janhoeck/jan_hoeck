@@ -1,9 +1,11 @@
 'use client'
-import React, { useCallback, useMemo, useRef, forwardRef, useImperativeHandle } from 'react'
+
+import { Shaker, ShakerRef } from '@jan_hoeck/ui'
+import React, { forwardRef, useCallback, useImperativeHandle, useMemo, useRef } from 'react'
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+
 import CalendarTilesConfiguration from '../../tools/types/CalendarTileConfiguration'
 import { CalendarItem } from './CalendarItem'
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
-import { Shaker, ShakerRef } from '@jan_hoeck/ui'
 
 export interface CalendarItemGridProps {
   className?: string

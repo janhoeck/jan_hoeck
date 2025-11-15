@@ -13,7 +13,7 @@ export const CategoryContainer = (props: CategoryContainerProps) => {
   return (
     <div className='flex flex-col items-center'>
       <div className='max-w-2xl mb-10'>
-        <h2 className='text-center text-foreground text-3xl font-extrabold mb-4 font-maragsa uppercase tracking-wide'>
+        <h2 className='text-center text-foreground text-3xl font-extrabold mb-4 font-sans-pro uppercase tracking-wide'>
           {category.title}
         </h2>
         <p className='text-foreground text-lg text-center'>{category.description}</p>

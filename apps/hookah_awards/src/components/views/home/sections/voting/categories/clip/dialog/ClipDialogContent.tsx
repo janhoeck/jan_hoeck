@@ -19,7 +19,9 @@ export const ClipDialogContent = (props: ClipDialogContentProps) => {
 
   return (
     <DialogContent className='fixed top-0 left-0 w-full h-full text-foreground p-10 flex flex-col items-center space-y-10'>
-      <DialogTitle className='text-4xl font-maragsa font-extrabold uppercase text-center'>{category.title}</DialogTitle>
+      <DialogTitle className='text-4xl font-sans-pro font-extrabold uppercase text-center'>
+        {category.title}
+      </DialogTitle>
       <h3 className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</h3>
       <DialogClose
         asChild

@@ -1,5 +1,6 @@
-import React from 'react'
 import { Section, SectionCaption } from '@/components'
+import React from 'react'
+
 import { AdventscalendarReference, SlotReference, WorkingTimeReference } from './components/references/specific'
 
 export const ReferenceSection = () => {

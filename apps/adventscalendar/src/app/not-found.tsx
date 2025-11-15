@@ -1,8 +1,9 @@
-import { ViewHeader } from '../components/ViewHeader/ViewHeader'
-import { InnerContent } from '../components/InnerContent/InnerContent'
-import { ViewFooter } from '../components/ViewFooter/ViewFooter'
-import { MainContent } from '../components/MainContent/MainContent'
 import React from 'react'
+
+import { InnerContent } from '../components/InnerContent/InnerContent'
+import { MainContent } from '../components/MainContent/MainContent'
+import { ViewFooter } from '../components/ViewFooter/ViewFooter'
+import { ViewHeader } from '../components/ViewHeader/ViewHeader'
 
 export default function NotFoundView() {
   return (

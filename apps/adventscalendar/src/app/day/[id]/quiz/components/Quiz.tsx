@@ -1,10 +1,12 @@
 'use client'
-import React, { useState, useMemo, useRef } from 'react'
-import styles from './quiz.module.scss'
-import { CheckboxQuizType, InputQuizType, QuizType } from '../../../../../tools/types/CalendarTileConfiguration'
-import { InputQuiz } from './InputQuiz/InputQuiz'
-import { CheckboxQuiz } from './CheckboxQuiz/CheckboxQuiz'
+
 import { Shaker, ShakerRef } from '@jan_hoeck/ui'
+import React, { useMemo, useRef, useState } from 'react'
+
+import { CheckboxQuizType, InputQuizType, QuizType } from '../../../../../tools/types/CalendarTileConfiguration'
+import { CheckboxQuiz } from './CheckboxQuiz/CheckboxQuiz'
+import { InputQuiz } from './InputQuiz/InputQuiz'
+import styles from './quiz.module.scss'
 
 export interface QuizProps {
   quiz: QuizType

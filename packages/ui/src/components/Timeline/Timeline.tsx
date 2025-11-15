@@ -1,6 +1,7 @@
 import React, { Children, HTMLAttributes, cloneElement } from 'react'
-import { TimelineItemProps } from './TimelineItem'
 import { twMerge } from 'tailwind-merge'
+
+import { TimelineItemProps } from './TimelineItem'
 import { TimelineThemeContextProvider, TimelineThemeContextType } from './TimelineThemeContext'
 
 export type TimelineProps = HTMLAttributes<HTMLDivElement> & {

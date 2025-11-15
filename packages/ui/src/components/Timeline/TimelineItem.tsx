@@ -1,6 +1,7 @@
 import React from 'react'
-import { TimelineCard } from './TimelineCard'
 import { twMerge } from 'tailwind-merge'
+
+import { TimelineCard } from './TimelineCard'
 import { useTimelineTheme } from './TimelineThemeContext'
 
 export interface TimelineItemProps {

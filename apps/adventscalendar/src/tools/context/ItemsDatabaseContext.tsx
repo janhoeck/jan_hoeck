@@ -1,4 +1,5 @@
 'use client'
+
 import React, { PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react'
 
 const KEY = 'adventscalendar:opened_items'

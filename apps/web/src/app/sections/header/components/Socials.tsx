@@ -1,6 +1,6 @@
 import React from 'react'
-import { FiGithub } from 'react-icons/fi'
 import { AiOutlineMail } from 'react-icons/ai'
+import { FiGithub } from 'react-icons/fi'
 import { twMerge } from 'tailwind-merge'
 
 export interface SocialProps {

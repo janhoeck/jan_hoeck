@@ -1,9 +1,11 @@
 'use client'
+
+import { SectionType, SectionsScrollerContextProvider, useSectionsScrollerContext } from '@/components'
 import React, { Children } from 'react'
-import { SectionIndicator } from './SectionIndicator'
-import { SectionsScrollerContextProvider, SectionType, useSectionsScrollerContext } from '@/components'
-import { SectionsScrollerItem } from './SectionsScrollerItem'
 import { twMerge } from 'tailwind-merge'
+
+import { SectionIndicator } from './SectionIndicator'
+import { SectionsScrollerItem } from './SectionsScrollerItem'
 
 export interface SectionsScrollerProps {
   className?: string

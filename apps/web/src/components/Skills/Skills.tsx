@@ -1,6 +1,7 @@
 import React from 'react'
-import { SkillProps } from './Skill'
 import { twMerge } from 'tailwind-merge'
+
+import { SkillProps } from './Skill'
 
 export interface SkillsProps {
   className?: string

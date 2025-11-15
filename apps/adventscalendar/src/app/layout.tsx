@@ -1,11 +1,12 @@
 'use client'
+
 import localFont from 'next/font/local'
 import React from 'react'
 import Snowfall from 'react-snowfall'
+
+import { CalendarContextProvider } from '../tools/context/CalendarContext'
 import { ItemsDatabaseContextProvider } from '../tools/context/ItemsDatabaseContext'
 import { QuizContextProvider } from '../tools/context/QuizContext'
-import { CalendarContextProvider } from '../tools/context/CalendarContext'
-
 import './index.css'
 
 const christmasFont = localFont({

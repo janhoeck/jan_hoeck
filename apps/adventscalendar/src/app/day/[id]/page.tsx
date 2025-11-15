@@ -1,12 +1,13 @@
-import React from 'react'
-import { calendarTilesConfiguration, findItemByDay } from '../../../../public/configuration/calendarTilesConfiguration'
-import { DayViewContent } from './content'
 import { notFound } from 'next/navigation'
-import styles from './page.module.scss'
-import { ViewHeader } from '../../../components/ViewHeader/ViewHeader'
-import { ViewFooter } from '../../../components/ViewFooter/ViewFooter'
-import { MainContent } from '../../../components/MainContent/MainContent'
+import React from 'react'
+
+import { calendarTilesConfiguration, findItemByDay } from '../../../../public/configuration/calendarTilesConfiguration'
 import { InnerContent } from '../../../components/InnerContent/InnerContent'
+import { MainContent } from '../../../components/MainContent/MainContent'
+import { ViewFooter } from '../../../components/ViewFooter/ViewFooter'
+import { ViewHeader } from '../../../components/ViewHeader/ViewHeader'
+import { DayViewContent } from './content'
+import styles from './page.module.scss'
 
 type Params = Promise<{ id: string }>
 

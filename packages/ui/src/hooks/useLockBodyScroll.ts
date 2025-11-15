@@ -1,4 +1,5 @@
 'use client'
+
 import { useLayoutEffect } from 'react'
 
 export const useLockBodyScroll = (enable: boolean = true) => {

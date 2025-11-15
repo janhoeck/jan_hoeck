@@ -1,7 +1,8 @@
 'use client'
-import React, { forwardRef, useImperativeHandle, useRef, useState, Ref } from 'react'
-import { twMerge } from 'tailwind-merge'
+
 import clsx from 'clsx'
+import React, { Ref, forwardRef, useImperativeHandle, useRef, useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export type ShakerProps<T = object> = {
   item?: T

@@ -1,10 +1,12 @@
 'use client'
+
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useQuizContext } from '../../../../tools/context/QuizContext'
-import styles from './page.module.scss'
-import { Quiz } from './components/Quiz'
 import React from 'react'
+
+import { useQuizContext } from '../../../../tools/context/QuizContext'
 import CalendarTilesConfiguration from '../../../../tools/types/CalendarTileConfiguration'
+import { Quiz } from './components/Quiz'
+import styles from './page.module.scss'
 
 export type QuizViewContentProps = {
   item: CalendarTilesConfiguration

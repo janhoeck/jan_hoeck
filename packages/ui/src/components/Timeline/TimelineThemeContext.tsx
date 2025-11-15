@@ -1,5 +1,6 @@
 'use client'
-import { createContext, PropsWithChildren, useContext } from 'react'
+
+import { PropsWithChildren, createContext, useContext } from 'react'
 
 export type TimelineThemeContextType = {
   cardColor: `bg-${string}`

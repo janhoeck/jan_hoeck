@@ -14,7 +14,7 @@ export const HeroSection = (props: HeroSectionProps) => {
   return (
     <section className={twMerge(['flex flex-col items-center', className])}>
       <div className='max-w-2xl'>
-        <h1 className='text-6xl font-bold text-center mx-2 text-foreground text-shadow-3d mb-4 font-maragsa uppercase'>
+        <h1 className='text-6xl font-bold text-center mx-2 text-foreground text-shadow-3d mb-4 font-sans-pro uppercase'>
           Hookah Awards
         </h1>
         <p className='mb-2 text-foreground text-lg'>

@@ -1,5 +1,7 @@
 'use client'
+
 import React, { useState } from 'react'
+
 import { ConfirmButton } from '../../../../../../components/ConfirmButton/ConfirmButton'
 import { InputQuizType } from '../../../../../../tools/types/CalendarTileConfiguration'
 import styles from './inputQuiz.module.scss'

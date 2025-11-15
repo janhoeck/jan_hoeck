@@ -1,12 +1,14 @@
 'use client'
-import { useQuizContext } from '../../../tools/context/QuizContext'
+
+import Image from 'next/image'
 import { useRouter, useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
-import styles from './page.module.scss'
+
 import { CalendarItem } from '../../../components/CalendarItem/CalendarItem'
 import { ConfirmButton } from '../../../components/ConfirmButton/ConfirmButton'
-import Image from 'next/image'
+import { useQuizContext } from '../../../tools/context/QuizContext'
 import CalendarTilesConfiguration from '../../../tools/types/CalendarTileConfiguration'
+import styles from './page.module.scss'
 
 export type DayViewContentProps = {
   item: CalendarTilesConfiguration

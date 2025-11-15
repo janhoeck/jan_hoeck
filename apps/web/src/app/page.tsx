@@ -1,10 +1,10 @@
-import React from 'react'
-import { HeaderSection } from './sections/header'
-import { AboutMeSection } from './sections/aboutMe'
-import { TimelineSection } from './sections/timeline'
-import { ReferenceSection } from './sections/references'
-
 import { SectionsScroller } from '@/components'
+import React from 'react'
+
+import { AboutMeSection } from './sections/aboutMe'
+import { HeaderSection } from './sections/header'
+import { ReferenceSection } from './sections/references'
+import { TimelineSection } from './sections/timeline'
 
 function App() {
   return (

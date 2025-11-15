@@ -1,4 +1,5 @@
 'use client'
+
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
 export type SectionsScrollerContextType = ReturnType<typeof useStore>

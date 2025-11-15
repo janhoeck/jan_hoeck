@@ -1,5 +1,7 @@
 'use client'
+
 import React, { PropsWithChildren } from 'react'
+
 import { useCurrentDate } from '../useCurrentDate'
 
 const CalendarContext = React.createContext<ReturnType<typeof useStore>>({} as any)

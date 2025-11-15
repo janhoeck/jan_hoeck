@@ -5,22 +5,24 @@
 @source '../../../node_modules/@jan_hoeck/ui';
 /* #3C096C, #5A189A, #9D4EDD, #FFC880, #FF9100 */
 :root {
-    --color-foreground: #eaeaea;
-    --color-muted-foreground: #ffffff50;
-    /* button overwrites */
+  --color-foreground: #eaeaea;
+  --color-muted-foreground: #ffffff50;
+  /* button overwrites */
   --radius-btn: calc(infinity * 1px);
 
-  --color-btn-primary-bg: #D4AF37;
+  --color-primary: #d4af37;
+
+  --color-btn-primary-bg: #d4af37;
   --color-btn-primary-fg: #1c1c1c;
   --color-btn-primary-hover-bg: #f8cd40;
   --color-btn-primary-hover-fg: #1c1c1c;
 
   --color-btn-outlined-bg: transparent;
-  --color-btn-outlined-fg: #D4AF37;
-  --color-btn-outlined-hover-bg: #D4AF3780;
+  --color-btn-outlined-fg: #d4af37;
+  --color-btn-outlined-hover-bg: #d4af3780;
   --color-btn-outlined-hover-fg: hsl(0 0% 100%);
-  --color-btn-outlined-border: #D4AF37;
-  --color-btn-outlined-hover-border: #D4AF37;
+  --color-btn-outlined-border: #d4af37;
+  --color-btn-outlined-hover-border: #d4af37;
 
   /* card overwrite */
   --color-card-bg: #2b2b2b;
@@ -30,11 +32,10 @@
 }
 
 @theme {
-  --font-maragsa: var(--font-maragsa);
   --font-arimo: var(--font-arimo);
+  --font-sans-pro: var(--font-sans-pro), sans-serif;
 
   --color-dialog-backdrop: rgba(28, 28, 28, 0.6);
-
 }
 
 html,

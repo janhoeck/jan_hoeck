@@ -1,6 +1,6 @@
+import { Typography } from '@jan_hoeck/ui'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
-import { Typography } from '@jan_hoeck/ui'
 
 export interface ReferenceCardProps {
   className?: string

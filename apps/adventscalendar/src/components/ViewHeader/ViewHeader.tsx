@@ -1,5 +1,5 @@
-import React from 'react'
 import { Typography } from '@jan_hoeck/ui'
+import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
 export interface ViewHeaderProps {

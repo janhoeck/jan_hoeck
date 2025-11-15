@@ -1,8 +1,9 @@
-import React from 'react'
-import { MeImage } from './components/MeImage'
-import { Section, Skills, Skill } from '@/components'
-import { twMerge } from 'tailwind-merge'
+import { Section, Skill, Skills } from '@/components'
 import { Typography } from '@jan_hoeck/ui'
+import React from 'react'
+import { twMerge } from 'tailwind-merge'
+
+import { MeImage } from './components/MeImage'
 
 export const AboutMeSection = () => {
   return (

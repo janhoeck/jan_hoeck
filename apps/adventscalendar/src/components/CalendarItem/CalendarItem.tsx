@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import React, { HTMLAttributes } from 'react'
+
 import CalendarTilesConfiguration from '../../tools/types/CalendarTileConfiguration'
 import styles from './calendarItem.module.scss'
 

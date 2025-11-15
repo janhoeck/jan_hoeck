@@ -1,6 +1,8 @@
 'use client'
-import React from 'react'
+
 import { Timeline } from '@jan_hoeck/ui'
+import React from 'react'
+
 import { Section, SectionCaption } from '../../../components'
 import { CustomTimelineItem } from './CustomTimelineItem'
 
