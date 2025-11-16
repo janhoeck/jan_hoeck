@@ -18,7 +18,7 @@ export const ClipDialogContent = (props: ClipDialogContentProps) => {
   const { clip, category, onNextClick, onPrevClick } = props
 
   return (
-    <DialogContent className='fixed top-0 left-0 w-full h-full text-foreground p-10 flex flex-col items-center space-y-10'>
+    <DialogContent className='fixed top-0 left-0 w-full h-full text-foreground p-10 flex flex-col items-center space-y-10 overflow-auto'>
       <DialogTitle className='text-4xl font-sans-pro font-extrabold uppercase text-center'>
         {category.title}
       </DialogTitle>
