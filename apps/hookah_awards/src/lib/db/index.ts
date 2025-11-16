@@ -3,5 +3,6 @@ import postgres from 'postgres'
 
 import * as schema from './schema'
 
-const client = postgres(process.env.DATABASE_URL!, { prepare: false })
+console.log('DB Connection', process.env.DATABASE_URL)
+const client = postgres(process.env.DATABASE_URL as string, { prepare: false })
 export const db = drizzle(client, { schema })
