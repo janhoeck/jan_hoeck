@@ -39,6 +39,7 @@ export const MobileNavigationContent = (props: MobileNavigationContentProps) => 
                 fullWidth
                 key={item.href}
                 to={item.href}
+                onClick={close}
               >
                 {item.label}
               </NavigationItem>

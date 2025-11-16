@@ -75,7 +75,6 @@ export const PropertyCard = (props: PropertyCardProps) => {
         <Button
           fullWidth
           as={Link}
-          size='lg'
           href={`/property/${propertyConfiguration.id}`}
         >
           {t('showMe')}

@@ -5,16 +5,18 @@ export type NavigationItemProps = {
   children: string
   to: string
   fullWidth?: ButtonProps<'a'>['fullWidth']
+  onClick?: () => void
 }
 
 export const NavigationItem = (props: NavigationItemProps) => {
-  const { children, to, fullWidth } = props
+  const { children, to, fullWidth, onClick } = props
   return (
     <Button
       as={Link}
       fullWidth={fullWidth}
       variant='ghost'
       href={to}
+      onClick={onClick}
     >
       {children}
     </Button>

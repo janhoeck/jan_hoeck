@@ -25,7 +25,6 @@ export const WelcomeSectionInfo = () => {
         <div className='flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row'>
           <Button
             as={Link}
-            size='lg'
             href='#property-list-section'
             className='transition-all duration-300 hover:bg-primary/90 hover:scale-105 hover:shadow-md'
           >
