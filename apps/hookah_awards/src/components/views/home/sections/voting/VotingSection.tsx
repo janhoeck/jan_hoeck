@@ -13,10 +13,7 @@ export type VotingSectionProps = {
 export const VotingSection = async (props: VotingSectionProps) => {
   const { className } = props
 
-  const categories = await unstable_cache(() => getCategories(), ['categories'], {
-    revalidate: 14400, // 4 hours
-    tags: ['categories'],
-  })()
+  const categories = await getCategories()
 
   return (
     <section className={twMerge('flex flex-col space-y-40', className)}>

@@ -12,10 +12,7 @@ export type SurveyVotingSectionProps = {
 export const SurveyVotingSection = async (props: SurveyVotingSectionProps) => {
   const { category } = props
 
-  const surveys = await unstable_cache(() => getSurveysByCategoryId(category.id), ['surveys', category.id], {
-    revalidate: 14400, // 4 hours
-    tags: ['surveys'],
-  })()
+  const surveys = await getSurveysByCategoryId(category.id)
 
   return (
     <CategoryContainer category={category}>
