@@ -8,16 +8,13 @@ export type ClipVotingCategoryContentProps = {
   category: Category
 }
 
-const getCachedClipsByCategoryId = (categoryId: Category['id']) =>
-  unstable_cache(() => getClipsByCategoryId(categoryId), [categoryId], {
-    revalidate: 14400, // 4 hours
-    tags: ['clips'],
-  })()
-
 export const ClipVotingCategoryContent = async (props: ClipVotingCategoryContentProps) => {
   const { category } = props
 
-  const clips = await getCachedClipsByCategoryId(category.id)
+  const clips = await unstable_cache(() => getClipsByCategoryId(category.id), ['clips', category.id], {
+    revalidate: 14400, // 4 hours
+    tags: ['clips'],
+  })()
 
   return (
     <ClipCardGrid
