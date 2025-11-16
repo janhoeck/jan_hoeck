@@ -2,7 +2,7 @@
 
 import { useSession } from '@/lib/auth-client'
 import { extractYoutubeId } from '@/utils/extract-youtube-id'
-import { Card, CardContent, useIsMounted } from '@jan_hoeck/ui'
+import { Card, CardContent, useIsMobile, useIsMounted } from '@jan_hoeck/ui'
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
@@ -21,6 +21,7 @@ export const ClipCard = (props: ClipCardProps) => {
   const [hovered, setHovered] = useState<boolean>(false)
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const isMobile = useIsMobile()
 
   const isMounted = useIsMounted()
   const { data } = useSession()
@@ -60,8 +61,8 @@ export const ClipCard = (props: ClipCardProps) => {
     >
       <div
         className='aspect-video relative'
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        onMouseEnter={isMobile ? undefined : () => setHovered(true)}
+        onMouseLeave={isMobile ? undefined : () => setHovered(false)}
       >
         {clipImageSources.map((imgSrc, index) => (
           <Image
@@ -80,7 +81,7 @@ export const ClipCard = (props: ClipCardProps) => {
       <CardContent className='flex flex-col space-y-4'>
         <p className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</p>
         <VoteButton
-          className='mt-auto'
+          className='mt-auto w-full'
           referenceId={clip.id}
           type='clip'
           disabled={!isMounted || !data}

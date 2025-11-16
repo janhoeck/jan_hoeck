@@ -8,4 +8,4 @@ export { Card, type CardProps, CardTitle, CardFooter, CardDescription, CardConte
 export { DesktopOnly, MobileOnly } from './components/Responsive'
 
 // Hooks
-export { useIsClient, useOpenState, useLockBodyScroll, useIsMounted, useResizeObserver } from './hooks'
+export { useIsClient, useOpenState, useLockBodyScroll, useIsMounted, useResizeObserver, useIsMobile } from './hooks'

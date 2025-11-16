@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 import { Category } from '../../../../../types'
-import { ClipVotingCategory } from './categories/clip/ClipVotingCategory'
+import ClipVotingCategory from './categories/clip/ClipVotingCategory'
 import { SurveyVotingSection } from './categories/survey/SurveyVotingSection'
 
 export type VotingSectionProps = {

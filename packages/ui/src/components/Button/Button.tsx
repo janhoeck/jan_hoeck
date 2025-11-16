@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes, ComponentProps, ElementType, ReactElement, Ref, f
 import { twMerge } from 'tailwind-merge'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 rounded-btn text-sm font-medium transition-colors cursor-pointer disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center gap-2 rounded-btn text-sm font-medium transition-colors cursor-pointer disabled:opacity-50 disabled:pointer-events-none',
   {
     variants: {
       variant: {
@@ -41,15 +41,18 @@ export type ButtonProps<T extends ElementType> = ComponentProps<T> &
   }
 
 const ButtonInner = <T extends ElementType>(props: ButtonProps<T>, ref: Ref<T>) => {
-  const { className, variant, size, as = 'button', fullWidth, ...restProps } = props
+  const { className, variant, size, as = 'button', fullWidth, disabled, ...restProps } = props
   const Component = as
 
   return (
-    <Component
-      className={twMerge(buttonVariants({ variant, size, fullWidth, className }))}
-      ref={ref}
-      {...restProps}
-    />
+    <div className={twMerge(disabled && 'cursor-not-allowed', fullWidth && 'w-full')}>
+      <Component
+        className={twMerge(buttonVariants({ variant, size, fullWidth, className }))}
+        disabled={disabled}
+        ref={ref}
+        {...restProps}
+      />
+    </div>
   )
 }
 

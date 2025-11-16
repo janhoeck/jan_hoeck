@@ -1,9 +1,11 @@
 'use client'
 
+import { useSession } from '@/lib/auth-client'
+import { useIsMounted } from '@jan_hoeck/ui'
 import { Variants, motion, stagger } from 'motion/react'
 
 import { Survey } from '../../../../../../../types'
-import { SurveyItem } from './SurveyItem'
+import { VoteButton } from '../VoteButton'
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -32,6 +34,11 @@ type SurveyItemGridProps = {
 
 export const SurveyItemGrid = (props: SurveyItemGridProps) => {
   const { surveys } = props
+
+  const isMounted = useIsMounted()
+  const { data } = useSession()
+  const disabled = !isMounted || !data
+
   return (
     <motion.div
       className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'
@@ -44,13 +51,23 @@ export const SurveyItemGrid = (props: SurveyItemGridProps) => {
         <motion.div
           key={survey.id}
           variants={item}
-          whileHover={{
-            scale: 1.04,
-            transition: { type: 'spring', stiffness: 300, damping: 15 },
-          }}
-          whileTap={{ scale: 0.98 }}
+          whileHover={
+            disabled
+              ? undefined
+              : {
+                  scale: 1.04,
+                  transition: { type: 'spring', stiffness: 300, damping: 15 },
+                }
+          }
+          whileTap={disabled ? undefined : { scale: 0.98 }}
         >
-          <SurveyItem survey={survey} />
+          <VoteButton
+            className='w-full transition-all duration-300'
+            referenceId={survey.id}
+            type='survey'
+            label={() => survey.title}
+            disabled={disabled}
+          />
         </motion.div>
       ))}
     </motion.div>

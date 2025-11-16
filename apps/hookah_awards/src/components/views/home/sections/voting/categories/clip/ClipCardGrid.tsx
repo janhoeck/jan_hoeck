@@ -1,6 +1,5 @@
 'use client'
 
-import { findVotedClipId } from '@/utils/votes'
 import { Variants, motion, stagger } from 'motion/react'
 import { useMemo, useState } from 'react'
 
