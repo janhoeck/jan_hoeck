@@ -14,15 +14,15 @@ export const TwitchAccountButton = () => {
       <Button
         fullWidth
         variant='primary'
-        className='h-12 text-xl pointer-events-none shadow-sm'
+        className='text-xl pointer-events-none shadow-sm'
       >
         {data.user.image && (
-          <div className='relative h-8 w-8 rounded-full overflow-hidden'>
+          <div className='relative h-8 w-8 rounded-full overflow-hidden flex-shrink-0'>
             <Image
-              width={150}
-              height={150}
+              fill
               src={data.user.image}
               alt={data.user.name}
+              sizes='32px'
             />
           </div>
         )}

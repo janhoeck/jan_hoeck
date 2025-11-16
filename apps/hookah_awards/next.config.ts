@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'static-cdn.jtvnw.net',
-        pathname: '/user-default-pictures-uv/**',
+        pathname: '/**',
       },
     ],
   },
