@@ -1,4 +1,7 @@
-import { Category, Survey } from '../../../../../../../types'
+import { getSurveysByCategoryId } from '@/lib/db/api/surveys'
+import { unstable_cache } from 'next/cache'
+
+import { Category } from '../../../../../../../types'
 import { CategoryContainer } from '../CategoryContainer'
 import { SurveyItemGrid } from './SurveyItemGrid'
 
@@ -6,15 +9,16 @@ export type SurveyVotingSectionProps = {
   category: Category
 }
 
+const getCachedSurveysByCategoryId = (categoryId: Category['id']) =>
+  unstable_cache(() => getSurveysByCategoryId(categoryId), [categoryId], {
+    revalidate: 14400, // 4 hours
+    tags: ['surveys'],
+  })()
+
 export const SurveyVotingSection = async (props: SurveyVotingSectionProps) => {
   const { category } = props
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/surveys/${category.id}`)
-  if (!response.ok) {
-    return null
-  }
-
-  const surveys: Survey[] = await response.json()
+  const surveys = await getCachedSurveysByCategoryId(category.id)
 
   return (
     <CategoryContainer category={category}>

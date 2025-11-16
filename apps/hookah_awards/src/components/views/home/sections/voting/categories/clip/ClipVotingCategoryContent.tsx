@@ -1,21 +1,23 @@
-import { ErrorBanner } from '@/components/shared/ErrorBanner'
+import { getClipsByCategoryId } from '@/lib/db/api/clips'
+import { unstable_cache } from 'next/cache'
 
-import { Category, Clip } from '../../../../../../../types'
+import { Category } from '../../../../../../../types'
 import ClipCardGrid from './ClipCardGrid'
 
 export type ClipVotingCategoryContentProps = {
   category: Category
 }
 
+const getCachedClipsByCategoryId = (categoryId: Category['id']) =>
+  unstable_cache(() => getClipsByCategoryId(categoryId), [categoryId], {
+    revalidate: 14400, // 4 hours
+    tags: ['clips'],
+  })()
+
 export const ClipVotingCategoryContent = async (props: ClipVotingCategoryContentProps) => {
   const { category } = props
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/clips/${category.id}`)
-  const clips: Clip[] = response.ok ? await response.json() : []
-
-  if (!response.ok) {
-    return <ErrorBanner />
-  }
+  const clips = await getCachedClipsByCategoryId(category.id)
 
   return (
     <ClipCardGrid
