@@ -30,6 +30,8 @@ const useStore = (initialData: InitialStoreData) => {
 
   const removeCategory = (categoryId: Category['id']) => {
     setCategories(remove(categoryId))
+    setClips((prevClips) => prevClips.filter((clip) => clip.categoryId !== categoryId))
+    setSurveys((prevSurveys) => prevSurveys.filter((survey) => survey.categoryId !== categoryId))
   }
 
   const addClip = (clip: Clip) => {
