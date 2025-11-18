@@ -1,5 +1,4 @@
 import { getCategories } from '@/lib/db/api/categories'
-import { unstable_cache } from 'next/cache'
 import { Suspense } from 'react'
 import { twMerge } from 'tailwind-merge'
 
@@ -10,15 +9,10 @@ export type VotingSectionProps = {
   className?: string
 }
 
-const getCachedCategories = unstable_cache(async () => getCategories(), ['categories'], {
-  revalidate: 14400, // 4 hours
-  tags: ['categories'],
-})
-
 export const VotingSection = async (props: VotingSectionProps) => {
   const { className } = props
 
-  const categories = await getCachedCategories()
+  const categories = await getCategories()
 
   return (
     <section className={twMerge('flex flex-col space-y-40', className)}>

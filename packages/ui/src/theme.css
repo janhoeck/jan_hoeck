@@ -48,6 +48,19 @@
   --color-card-border: #e2e8f0;
   --color-card: #0000001a; /* shadow */
 
+  /* dialog */
+  --color-dialog-backdrop: rgba(28, 28, 28, 0.6);
+  --color-dialog-background: #2b2b2b;
+  --color-dialog-border: #ffffff50;
+  --color-dialog-foreground: #eaeaea;
+
+  /* inputs */
+  --color-input-fg: #eaeaea;
+  --color-input-placeholder-fg: #ffffff50;
+  --color-input-bg: #363636;
+  --color-input-border: #4a4a4a;
+  --color-input-focus-border: #d4af37;
+
   /* animations */
   --animate-shake: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 

@@ -3,6 +3,9 @@ import { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   basePath: '',
+  experimental: {
+    authInterrupts: true,
+  },
   images: {
     remotePatterns: [
       {

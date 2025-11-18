@@ -4,26 +4,20 @@ import { eq } from 'drizzle-orm'
 
 import { Category } from '../../../types'
 
-export const getCategories = async (): Promise<Category[]> => {
+export const getCategories = async (): Promise<(typeof categories.$inferSelect)[]> => {
   try {
-    const result = await db.select().from(categories)
-    return result as Category[]
+    return await db.select().from(categories)
   } catch (error) {
     console.error('Failed to execute getCategories:', error)
     return []
   }
 }
 
-export const getCategoryById = async (categoryId: Category['id']): Promise<Category | null> => {
-  try {
-    const result = await db.select().from(categories).where(eq(categories.id, categoryId))
-    if (result.length === 0) {
-      return null
-    }
+export const deleteCategoryById = async (categoryId: Category['id']): Promise<void> => {
+  await db.delete(categories).where(eq(categories.id, categoryId))
+}
 
-    return result[0] as Category
-  } catch (error) {
-    console.error('Failed to execute getCategoryById:', error)
-    return null
-  }
+export const insertCategory = async (category: typeof categories.$inferInsert) => {
+  const createdCategories = await db.insert(categories).values(category).returning()
+  return createdCategories[0]
 }

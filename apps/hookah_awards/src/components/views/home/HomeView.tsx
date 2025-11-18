@@ -6,11 +6,11 @@ import { VotingSectionSkeleton } from './sections/voting/VotingSectionSkeleton'
 
 export const HomeView = async () => {
   return (
-    <div>
+    <>
       <HeroSection className='mb-30' />
       <Suspense fallback={<VotingSectionSkeleton />}>
         <VotingSection />
       </Suspense>
-    </div>
+    </>
   )
 }
