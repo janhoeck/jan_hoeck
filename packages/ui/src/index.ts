@@ -7,6 +7,7 @@ export { Badge, type BadgeProps } from './components/Badge'
 export { Card, type CardProps, CardTitle, CardFooter, CardDescription, CardContent } from './components/Card'
 export { DesktopOnly, MobileOnly } from './components/Responsive'
 export { Dialog, DialogPortal, DialogTrigger, DialogOverlay, DialogContent } from './components/Dialog'
+export { Divider, type DividerProps } from './components/Divider'
 export {
   Form,
   FormInput,

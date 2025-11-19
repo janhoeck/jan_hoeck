@@ -1,5 +1,13 @@
 'use client'
 
+import {
+  Table,
+  TableBody,
+  TableBodyCell,
+  TableBodyRow,
+  TableHead,
+  TableHeadCell,
+} from '@/components/shared/Table/Table'
 import { Button, Card } from '@jan_hoeck/ui'
 import { FaRegTrashAlt } from 'react-icons/fa'
 
@@ -11,25 +19,20 @@ export const CategoryTable = () => {
 
   return (
     <Card>
-      <table className='w-full table-auto'>
-        <thead className='bg-[#2b2b2b] border-b border-[#eaeaea]'>
-          <tr>
-            <th className='px-6 py-4 text-left text-sm font-semibold text-foreground'>Title</th>
-            <th className='px-6 py-4 text-left text-sm font-semibold text-foreground'>Beschreibung</th>
-            <th className='px-6 py-4 text-left text-sm font-semibold text-foreground'>Typ</th>
-            <th className='w-32' />
-          </tr>
-        </thead>
-        <tbody className='bg-[#1c1c1c] divide-y divide-[#ffffff20]'>
+      <Table>
+        <TableHead>
+          <TableHeadCell variant='default'>Title</TableHeadCell>
+          <TableHeadCell variant='default'>Beschreibung</TableHeadCell>
+          <TableHeadCell variant='default'>Typ</TableHeadCell>
+          <TableHeadCell variant='action' />
+        </TableHead>
+        <TableBody>
           {categories.map((category) => (
-            <tr
-              key={category.id}
-              className='hover:bg-[#2b2b2b] transition-colors duration-150'
-            >
-              <td className='px-6 py-4 text-sm text-foreground'>{category.title}</td>
-              <td className='px-6 py-4 text-sm text-foreground'>{category.description}</td>
-              <td className='px-6 py-4 text-sm text-foreground'>{category.type === 'clip' ? 'Clip' : 'Umfrage'}</td>
-              <td className='px-6 py-4'>
+            <TableBodyRow key={category.id}>
+              <TableBodyCell variant='default'>{category.title}</TableBodyCell>
+              <TableBodyCell variant='default'>{category.description}</TableBodyCell>
+              <TableBodyCell variant='default'>{category.type === 'clip' ? 'Clip' : 'Umfrage'}</TableBodyCell>
+              <TableBodyCell variant='action'>
                 <Button
                   variant='outline'
                   onClick={async () => {
@@ -40,11 +43,11 @@ export const CategoryTable = () => {
                   <FaRegTrashAlt size={16} />
                   Löschen
                 </Button>
-              </td>
-            </tr>
+              </TableBodyCell>
+            </TableBodyRow>
           ))}
-        </tbody>
-      </table>
+        </TableBody>
+      </Table>
     </Card>
   )
 }

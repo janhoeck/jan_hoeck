@@ -1,9 +1,27 @@
 'use client'
 
-import { PropsWithChildren, useState } from 'react'
+import { Dispatch, PropsWithChildren, SetStateAction, useState } from 'react'
 
 import { Category, Clip, Survey } from '../../../types'
 import { DataContext } from './DataContext'
+
+type Any = Category | Clip | Survey
+
+function useStateFactory<T extends Any>(
+  initialData: T[]
+): [T[], (item: T) => void, (itemId: T['id']) => void, Dispatch<SetStateAction<T[]>>] {
+  const [items, setItems] = useState<T[]>(initialData)
+
+  const remove = (itemId: T['id']) => {
+    setItems((currItems: T[]) => currItems.filter((currItem) => currItem.id !== itemId))
+  }
+
+  const add = (item: T) => {
+    setItems((currItems: T[]) => [...currItems, item])
+  }
+
+  return [items, add, remove, setItems]
+}
 
 type InitialStoreData = {
   categories: Category[]
@@ -11,56 +29,25 @@ type InitialStoreData = {
   surveys: Survey[]
 }
 
-function remove<T extends { id: string }>(elementId: string) {
-  return (prevElements: T[]) => prevElements.filter((prevElement) => prevElement.id !== elementId)
-}
-
-function add<T>(element: T) {
-  return (prevElements: T[]) => [...prevElements, element]
-}
-
 const useStore = (initialData: InitialStoreData) => {
-  const [categories, setCategories] = useState<Category[]>(initialData.categories)
-  const [clips, setClips] = useState<Clip[]>(initialData.clips)
-  const [surveys, setSurveys] = useState<Survey[]>(initialData.surveys)
+  const [categories, addCategory, _removeCategory] = useStateFactory<Category>(initialData.categories)
+  const [clips, addClip, removeClip, setClips] = useStateFactory<Clip>(initialData.clips)
+  const [surveys, addSurvey, removeSurvey, setSurveys] = useStateFactory<Survey>(initialData.surveys)
 
-  const addCategory = (category: Category) => {
-    setCategories(add(category))
-  }
-
-  const removeCategory = (categoryId: Category['id']) => {
-    setCategories(remove(categoryId))
+  const removeCategory: typeof _removeCategory = (categoryId) => {
+    _removeCategory(categoryId)
     setClips((prevClips) => prevClips.filter((clip) => clip.categoryId !== categoryId))
     setSurveys((prevSurveys) => prevSurveys.filter((survey) => survey.categoryId !== categoryId))
-  }
-
-  const addClip = (clip: Clip) => {
-    setClips(add(clip))
-  }
-
-  const removeClip = (clipId: Clip['id']) => {
-    setClips(remove(clipId))
-  }
-
-  const addSurvey = (survey: Survey) => {
-    setSurveys(add(survey))
-  }
-
-  const removeSurvey = (surveyId: Survey['id']) => {
-    setSurveys(remove(surveyId))
   }
 
   return {
     categories,
     clips,
     surveys,
-
     addCategory,
     removeCategory,
-
     addClip,
     removeClip,
-
     addSurvey,
     removeSurvey,
   }

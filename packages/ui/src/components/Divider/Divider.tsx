@@ -4,8 +4,8 @@ export type DividerProps = {
 
 export const Divider = ({ align = 'horizontal' }: DividerProps) => {
   if (align === 'vertical') {
-    return <div className='w-px bg-muted-foreground mx-10 h-full' />
+    return <div className='w-px bg-divider mx-10 h-full' />
   }
 
-  return <hr className='text-muted-foreground my-10' />
+  return <hr className='text-divider my-10' />
 }

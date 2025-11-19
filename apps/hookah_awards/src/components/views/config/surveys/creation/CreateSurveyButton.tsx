@@ -26,6 +26,7 @@ export const CreateSurveyButton = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const availableCategories = categories.filter((category) => category.type === 'survey')
+  const hasSurveyCategories = availableCategories.length !== 0
 
   return (
     <Dialog
@@ -33,7 +34,7 @@ export const CreateSurveyButton = () => {
       onOpenChange={setIsOpen}
     >
       <DialogTrigger asChild>
-        <Button>
+        <Button disabled={!hasSurveyCategories}>
           <FaPlus size={16} />
           Erstellen
         </Button>

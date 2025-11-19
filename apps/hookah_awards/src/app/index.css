@@ -48,6 +48,9 @@
   --color-input-bg: #363636;
   --color-input-border: #4a4a4a;
   --color-input-focus-border: #d4af37;
+
+  /* divider */
+  --color-divider: #ffffff50;
 }
 
 @theme {

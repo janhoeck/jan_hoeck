@@ -1,4 +1,4 @@
-import { Divider } from '@/components/shared/Divider'
+import { Divider } from '@jan_hoeck/ui'
 
 import { GeneralStatisticSection } from './GeneralStatisticSection'
 import { VoteStatisticSection } from './vote/VoteStatisticSection'

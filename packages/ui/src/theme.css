@@ -64,6 +64,9 @@
   /* animations */
   --animate-shake: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 
+  /* divider */
+  --color-divider: hsl(215.4 16.3% 46.9%);
+
   @keyframes shake {
     10%,
     90% {

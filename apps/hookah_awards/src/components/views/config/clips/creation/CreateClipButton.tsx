@@ -26,6 +26,7 @@ export const CreateClipButton = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const availableCategories = categories.filter((category) => category.type === 'clip')
+  const hasClipCategories = availableCategories.length !== 0
 
   return (
     <Dialog
@@ -33,7 +34,7 @@ export const CreateClipButton = () => {
       onOpenChange={setIsOpen}
     >
       <DialogTrigger asChild>
-        <Button>
+        <Button disabled={!hasClipCategories}>
           <FaPlus size={16} />
           Erstellen
         </Button>
