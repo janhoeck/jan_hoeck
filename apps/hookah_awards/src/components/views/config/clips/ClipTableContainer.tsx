@@ -1,6 +1,7 @@
 'use client'
 
-import { useDataContext } from '../DataContext'
+import { useDataContext } from '@/components/contexts/data/DataContext'
+
 import { ClipTable } from './ClipTable'
 
 export const ClipTableContainer = () => {

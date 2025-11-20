@@ -2,12 +2,13 @@
 
 import { createContext, useContext } from 'react'
 
-import { Category, Clip, Survey } from '../../../types'
+import { Category, Clip, Survey, Vote } from '../../../types'
 
 export type DataContextType = {
   categories: Category[]
   clips: Clip[]
   surveys: Survey[]
+  votes: Vote[]
 
   addCategory: (category: Category) => void
   removeCategory: (categoryId: Category['id']) => void
@@ -25,6 +26,7 @@ export const DataContext = createContext<DataContextType>({
   categories: [],
   clips: [],
   surveys: [],
+  votes: [],
 
   addCategory: noop,
   removeCategory: noop,

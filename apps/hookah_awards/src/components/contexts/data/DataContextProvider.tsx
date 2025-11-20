@@ -2,7 +2,7 @@
 
 import { Dispatch, PropsWithChildren, SetStateAction, useState } from 'react'
 
-import { Category, Clip, Survey } from '../../../types'
+import { Category, Clip, Survey, Vote } from '../../../types'
 import { DataContext } from './DataContext'
 
 type Any = Category | Clip | Survey
@@ -27,12 +27,14 @@ type InitialStoreData = {
   categories: Category[]
   clips: Clip[]
   surveys: Survey[]
+  votes: Vote[]
 }
 
 const useStore = (initialData: InitialStoreData) => {
   const [categories, addCategory, _removeCategory] = useStateFactory<Category>(initialData.categories)
   const [clips, addClip, removeClip, setClips] = useStateFactory<Clip>(initialData.clips)
   const [surveys, addSurvey, removeSurvey, setSurveys] = useStateFactory<Survey>(initialData.surveys)
+  const [votes] = useState<Vote[]>(initialData.votes)
 
   const removeCategory: typeof _removeCategory = (categoryId) => {
     _removeCategory(categoryId)
@@ -44,6 +46,7 @@ const useStore = (initialData: InitialStoreData) => {
     categories,
     clips,
     surveys,
+    votes,
     addCategory,
     removeCategory,
     addClip,
@@ -57,9 +60,12 @@ export type DataContextProviderProps = PropsWithChildren<{
   categories: Category[]
   clips: Clip[]
   surveys: Survey[]
+  votes: Vote[]
 }>
 
-export const DataContextProvider = ({ children, categories, clips, surveys }: DataContextProviderProps) => {
-  const store = useStore({ categories, clips, surveys })
+export const DataContextProvider = (props: DataContextProviderProps) => {
+  const { children, categories, clips, surveys, votes } = props
+  const store = useStore({ categories, clips, surveys, votes })
+
   return <DataContext.Provider value={store}>{children}</DataContext.Provider>
 }

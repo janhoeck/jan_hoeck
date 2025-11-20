@@ -1,6 +1,7 @@
 'use client'
 
-import { useDataContext } from '../DataContext'
+import { useDataContext } from '@/components/contexts/data/DataContext'
+
 import { CategoryTable } from './CategoryTable'
 
 export const CategoryTableContainer = () => {

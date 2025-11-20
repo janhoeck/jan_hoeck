@@ -1,5 +1,6 @@
 'use client'
 
+import { useDataContext } from '@/components/contexts/data/DataContext'
 import {
   Button,
   Dialog,
@@ -16,7 +17,6 @@ import {
 import { useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
 
-import { useDataContext } from '../../DataContext'
 import { createSurvey } from './actions'
 
 export const CreateSurveyButton = () => {

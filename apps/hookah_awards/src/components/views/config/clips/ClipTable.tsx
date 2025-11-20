@@ -1,5 +1,6 @@
 'use client'
 
+import { useDataContext } from '@/components/contexts/data/DataContext'
 import {
   Table,
   TableBody,
@@ -13,7 +14,6 @@ import { Button, Card } from '@jan_hoeck/ui'
 import Image from 'next/image'
 import { FaRegTrashAlt } from 'react-icons/fa'
 
-import { useDataContext } from '../DataContext'
 import { deleteClip } from './actions'
 
 export const ClipTable = () => {

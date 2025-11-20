@@ -1,6 +1,7 @@
 import { Divider } from '@jan_hoeck/ui'
 
-import { GeneralStatisticSection } from './GeneralStatisticSection'
+import { GeneralStatisticSection } from './general/GeneralStatisticSection'
+import { MostVotedSection } from './mostVoted/MostVotedSection'
 import { VoteStatisticSection } from './vote/VoteStatisticSection'
 
 export const DashboardView = () => {
@@ -11,7 +12,7 @@ export const DashboardView = () => {
       <Divider />
       <VoteStatisticSection />
       <Divider />
-      <VoteStatisticSection />
+      <MostVotedSection />
     </div>
   )
 }

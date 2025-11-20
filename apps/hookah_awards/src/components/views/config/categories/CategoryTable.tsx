@@ -1,5 +1,6 @@
 'use client'
 
+import { useDataContext } from '@/components/contexts/data/DataContext'
 import {
   Table,
   TableBody,
@@ -11,7 +12,6 @@ import {
 import { Button, Card } from '@jan_hoeck/ui'
 import { FaRegTrashAlt } from 'react-icons/fa'
 
-import { useDataContext } from '../DataContext'
 import { deleteCategory } from './actions'
 
 export const CategoryTable = () => {

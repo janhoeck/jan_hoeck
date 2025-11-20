@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   // Check if route should be protected
-  const isProtectedRoute = pathname.startsWith('/dashboard') || pathname.startsWith('/config')
+  const isProtectedRoute = pathname.startsWith('/admin')
 
   if (!isProtectedRoute) {
     return NextResponse.next()
@@ -48,6 +48,7 @@ export function middleware(request: NextRequest) {
       return NextResponse.next()
     }
   } catch (error) {
+    console.error(error)
     return new NextResponse('Invalid authorization format', {
       status: 401,
       headers: {
@@ -67,5 +68,5 @@ export function middleware(request: NextRequest) {
 
 // Configure which routes the middleware runs on
 export const config = {
-  matcher: ['/dashboard/:path*', '/config/:path*'],
+  matcher: ['/admin/:path*'],
 }
