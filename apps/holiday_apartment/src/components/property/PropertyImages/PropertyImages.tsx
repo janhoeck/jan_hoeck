@@ -1,10 +1,11 @@
 'use client'
 
-import { DesktopOnly } from '@/components/shared/Responsive/DesktopOnly'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
+import { Button, DesktopOnly } from '@jan_hoeck/ui'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import React, { useCallback, useEffect, useState } from 'react'
+import { MdOutlineChevronLeft, MdOutlineChevronRight } from 'react-icons/md'
 
 import { ThumbnailsCarousel } from './ThumbnailsCarousel'
 
@@ -74,6 +75,13 @@ export const PropertyImages = ({ imageSources }: PropertyImagesProps) => {
 
   return (
     <div className='relative w-screen h-[70vh]'>
+      <Button
+        className='absolute left-6 top-1/2 z-1'
+        size='icon'
+        onClick={() => emblaApi?.scrollPrev()}
+      >
+        <MdOutlineChevronLeft size={20} />
+      </Button>
       <div
         ref={emblaRef}
         className='overflow-hidden h-full'
@@ -100,6 +108,13 @@ export const PropertyImages = ({ imageSources }: PropertyImagesProps) => {
           ))}
         </div>
       </div>
+      <Button
+        className='absolute right-6 top-1/2 z-1'
+        size='icon'
+        onClick={() => emblaApi?.scrollNext()}
+      >
+        <MdOutlineChevronRight size={20} />
+      </Button>
 
       <DesktopOnly>
         <div className='absolute bottom-10 left-0 right-0'>
@@ -112,7 +127,7 @@ export const PropertyImages = ({ imageSources }: PropertyImagesProps) => {
         </div>
       </DesktopOnly>
 
-      <div className='absolute left-4 top-4 rounded-lg bg-foreground text-muted px-4 py-2'>
+      <div className='absolute left-6 top-6 rounded-lg bg-foreground text-muted px-4 py-2'>
         {selectedIndex + 1}/{imageSources.length}
       </div>
     </div>

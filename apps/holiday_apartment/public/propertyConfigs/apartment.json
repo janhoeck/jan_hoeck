@@ -129,7 +129,10 @@
     "es": "Apartamento vacacional con equipamiento moderno, balcón, piscinas y ubicación céntrica cerca de la playa y los restaurantes."
   },
   "price": {
-    "perNight": "85€",
+    "perNight": {
+      "discount": "50€",
+      "normal": "110€"
+    },
     "cleaning": "85€"
   },
   "description": [
@@ -219,16 +222,16 @@
     },
     {
       "type": "group",
-      "amount": 5,
+      "amount": 4,
       "title": {
         "de": "Gäste",
         "en": "Guests",
         "es": "Huéspedes"
       },
       "subtitle": {
-        "de": "Bis zu 5",
-        "en": "Up to 5",
-        "es": "Hasta 5"
+        "de": "Bis zu 4",
+        "en": "Up to 4",
+        "es": "Hasta 4"
       }
     },
     {

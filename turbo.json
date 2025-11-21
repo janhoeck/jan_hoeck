@@ -18,6 +18,13 @@
       "persistent": true
     }
   },
-  "globalEnv": ["BETTER_AUTH_SECRET", "TWITCH_CLIENT_ID", "TWITCH_CLIENT_SECRET", "DATABASE_URL"],
+  "globalEnv": [
+    "SUPABASE_SERVICE_ROLE_KEY",
+    "SUPABASE_URL",
+    "BETTER_AUTH_SECRET",
+    "TWITCH_CLIENT_ID",
+    "TWITCH_CLIENT_SECRET",
+    "DATABASE_URL"
+  ],
   "globalDependencies": ["**/.env"]
 }

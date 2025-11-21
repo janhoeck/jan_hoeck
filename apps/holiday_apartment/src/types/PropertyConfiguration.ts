@@ -66,16 +66,21 @@ export type HouseRules = {
   description?: Description
 }
 
+export type PriceConfig = {
+  perNight: {
+    discount: string
+    normal: string
+  }
+  cleaning?: string
+}
+
 export type PropertyConfiguration = {
   id: string
   imageSources: string[]
   title: TranslationMap
   subtitle: TranslationMap
   description: Description
-  price: {
-    perNight: string
-    cleaning?: string
-  }
+  price: PriceConfig
   location: Location
   propertyDetails: PropertyDetailItem[]
   amenities: Amenities

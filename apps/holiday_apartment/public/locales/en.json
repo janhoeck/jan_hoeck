@@ -206,6 +206,7 @@
       "bookIt": {
         "perNight": "per night",
         "cleaning": "plus a one-time cleaning fee of {cleaning}",
+        "discountInfo": "Discounted price from October to the end of March",
         "contact": "Contact Provider"
       }
     },

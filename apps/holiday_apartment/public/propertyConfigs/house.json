@@ -134,14 +134,17 @@
     "es": "Encantadora casa de vacaciones con piscina privada y jardín. Ubicación tranquila, perfecta para familias y parejas.s"
   },
   "price": {
-    "perNight": "110€",
+    "perNight": {
+      "discount": "60€",
+      "normal": "110"
+    },
     "cleaning": "85€"
   },
   "description": [
     {
-      "de": "Dieses stilvolle Ferienhaus bietet Platz für 4–5 Personen und verfügt über drei Zimmer: zwei gemütliche Schlafzimmer (mit zwei Einzelbetten und einem Doppelbett), ein helles Wohnzimmer, ein modernes Badezimmer sowie eine großzügig ausgestattete Küche.",
-      "en": "This stylish holiday home accommodates 4-5 people and has three rooms: two cozy bedrooms (with two single beds and one double bed), a bright living room, a modern bathroom and a spacious kitchen.",
-      "es": "Esta elegante casa de vacaciones tiene capacidad para 4-5 personas y cuenta con tres habitaciones: dos acogedores dormitorios (con dos camas individuales y una cama doble), una luminosa sala de estar, un baño moderno y una cocina ampliamente equipada."
+      "de": "Dieses stilvolle Ferienhaus bietet Platz für 4 Personen und verfügt über drei Zimmer: zwei gemütliche Schlafzimmer (mit zwei Einzelbetten und einem Doppelbett), ein helles Wohnzimmer, ein modernes Badezimmer sowie eine großzügig ausgestattete Küche.",
+      "en": "This stylish holiday home accommodates 4 people and has three rooms: two cozy bedrooms (with two single beds and one double bed), a bright living room, a modern bathroom and a spacious kitchen.",
+      "es": "Esta elegante casa de vacaciones tiene capacidad para 4 personas y cuenta con tres habitaciones: dos acogedores dormitorios (con dos camas individuales y una cama doble), una luminosa sala de estar, un baño moderno y una cocina ampliamente equipada."
     },
     {
       "de": "Das Haus überzeugt mit drei großen Terrassen – eine vor dem Haus, eine hinter dem Haus und eine Dachterrasse mit herrlichem Blick auf das Mar Menor. Ob Sonne oder Schatten – hier genießen Sie den ganzen Tag über pure Entspannung. Ein besonderes Highlight ist der private Pool auf der vorderen Terrasse.",
@@ -214,16 +217,16 @@
     },
     {
       "type": "group",
-      "amount": 5,
+      "amount": 4,
       "title": {
         "de": "Gäste",
         "en": "Guests",
         "es": "Huéspedes"
       },
       "subtitle": {
-        "de": "Bis zu 5",
-        "en": "Up to 5",
-        "es": "Hasta 5"
+        "de": "Bis zu 4",
+        "en": "Up to 4",
+        "es": "Hasta 4"
       }
     },
     {

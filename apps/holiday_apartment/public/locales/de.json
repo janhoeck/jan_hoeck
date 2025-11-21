@@ -206,6 +206,7 @@
       "bookIt": {
         "perNight": "pro Nacht",
         "cleaning": "zuzüglich einer Reinigungsgebühr von einmalig {cleaning}",
+        "discountInfo": "Ermäßigter Preis von Oktober bis Ende März",
         "contact": "Anbieter kontaktieren"
       }
     },
