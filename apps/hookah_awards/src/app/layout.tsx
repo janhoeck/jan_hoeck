@@ -1,4 +1,5 @@
 import { Footer } from '@/components/shared/Footer/Footer'
+import { Analytics } from '@vercel/analytics/next'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
@@ -17,6 +18,7 @@ export default async function Layout(props: LayoutProps) {
       <body className={twMerge(sourceSansPro.variable, arimoFont.className)}>
         <main className='container mx-auto px-4 mt-8 mb-16'>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
