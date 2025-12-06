@@ -31,9 +31,9 @@ export const ReferenceCard = (props: ReferenceCardProps) => {
         >
           <div className='absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center'>
             <Typography className='text-white'>{title}</Typography>
-            <div className='flex flex-wrap gap-4'>
+            <div className='flex flex-wrap gap-4 text-white'>
               <a
-                className='text-white underline'
+                className='underline'
                 href={githubUrl}
                 target='_blank'
                 rel='noreferrer'
@@ -42,7 +42,7 @@ export const ReferenceCard = (props: ReferenceCardProps) => {
               </a>
               {liveDemoUrl && (
                 <a
-                  className='text-white underline'
+                  className='underline'
                   href={liveDemoUrl}
                   target='_blank'
                   rel='noreferrer'

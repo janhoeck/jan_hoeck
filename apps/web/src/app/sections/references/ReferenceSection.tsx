@@ -1,7 +1,12 @@
 import { Section, SectionCaption } from '@/components'
 import React from 'react'
 
-import { AdventscalendarReference, SlotReference, WorkingTimeReference } from './components/references/specific'
+import {
+  AdventscalendarReference,
+  SlotReference,
+  SolymarmenorReference,
+  WorkingTimeReference,
+} from './components/references/specific'
 
 export const ReferenceSection = () => {
   return (
@@ -20,6 +25,7 @@ export const ReferenceSection = () => {
         <AdventscalendarReference />
         <SlotReference />
         <WorkingTimeReference />
+        <SolymarmenorReference />
       </div>
     </Section>
   )

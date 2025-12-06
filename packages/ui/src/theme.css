@@ -67,6 +67,11 @@
   /* divider */
   --color-divider: hsl(215.4 16.3% 46.9%);
 
+    /* timeline */
+    --color-timeline-card-bg: var(--color-zinc-700);
+    --color-timeline-item-dot: var(--color-pink-400);
+    --color-timeline-item-line: var(--color-zinc-700);
+
   @keyframes shake {
     10%,
     90% {

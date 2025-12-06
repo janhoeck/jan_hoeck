@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ReferenceCard } from '../../ReferenceCard'
+import { ReferenceCard } from '../ReferenceCard'
 
 export const AdventscalendarReference = () => {
   return (

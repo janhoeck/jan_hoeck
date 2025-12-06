@@ -20,11 +20,7 @@ export const TimelineSection = () => {
         Lebenslauf
       </SectionCaption>
       <div className='mt-8 p-0 text-indigo-100 sm:mt-10 sm:p-2 md:mt-12 md:p-4 xl:mt-14 xl:p-6'>
-        <Timeline
-          cardColor='bg-zinc-700'
-          dotColor='bg-pink-400'
-          lineColor='bg-zinc-700'
-        >
+        <Timeline>
           <CustomTimelineItem
             timePeriod='Juli 2012 - Juli 2014'
             jobTitle='Fachabitur im Bereich Informatik'

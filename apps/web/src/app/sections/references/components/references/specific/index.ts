@@ -1,3 +1,4 @@
-export * from './adventscalendar'
-export * from './slot'
-export * from './workingtime'
+export * from './AdventscalendarReference'
+export * from './SlotReference'
+export * from './WorkingTimeReference'
+export * from './SolymarmenorReference'
