@@ -26,7 +26,7 @@ export const Footer = () => {
       <p className='text-muted-foreground'>
         <span>All rights reserved</span>
         <span> - </span>
-        <Link href='/impressum'>Impressum</Link>
+        <Link href='/imprint'>Impressum</Link>
       </p>
     </footer>
   )
