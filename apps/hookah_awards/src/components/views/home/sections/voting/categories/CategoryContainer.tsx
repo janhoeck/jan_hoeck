@@ -16,7 +16,7 @@ export const CategoryContainer = (props: CategoryContainerProps) => {
         <h2 className='text-center text-foreground text-3xl font-extrabold mb-4 font-sans-pro uppercase tracking-wide'>
           {category.title}
         </h2>
-        <p className='text-foreground text-lg text-center'>{category.description}</p>
+        <p className='text-foreground text-center'>{category.description}</p>
       </div>
       <CategoryContextProvider categoryId={category.id}>{children}</CategoryContextProvider>
     </div>

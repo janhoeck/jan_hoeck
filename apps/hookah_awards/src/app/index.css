@@ -8,26 +8,27 @@
   --color-foreground: #eaeaea;
   --color-muted-foreground: #ffffff50;
 
+  --color-primary-plain: 212, 175, 55;
+  --color-primary: rgb(var(--color-primary-plain));
+
   /* button overwrites */
   --radius-btn: calc(infinity * 1px);
 
-  --color-primary: #d4af37;
-
-  --color-btn-primary-bg: #d4af37;
+  --color-btn-primary-bg: var(--color-primary);
   --color-btn-primary-fg: #1c1c1c;
   --color-btn-primary-hover-bg: #f8cd40;
   --color-btn-primary-hover-fg: #1c1c1c;
 
   --color-btn-outlined-bg: transparent;
-  --color-btn-outlined-fg: #d4af37;
-  --color-btn-outlined-hover-bg: #d4af3780;
+  --color-btn-outlined-fg: var(--color-primary);
+  --color-btn-outlined-hover-bg: rgba(var(--color-primary-plain), 0.2);
   --color-btn-outlined-hover-fg: hsl(0 0% 100%);
-  --color-btn-outlined-border: #d4af37;
-  --color-btn-outlined-hover-border: #d4af37;
+  --color-btn-outlined-border: var(--color-primary);
+  --color-btn-outlined-hover-border: var(--color-primary);
 
   --color-btn-ghost-fg: #eaeaea;
   --color-btn-ghost-bg: transparent;
-  --color-btn-ghost-hover-bg: #d4af3780;
+  --color-btn-ghost-hover-bg: rgba(var(--color-primary-plain), 0.2);
   --color-btn-ghost-hover-fg: #eaeaea;
 
   /* dialog overwrites */
@@ -47,7 +48,7 @@
   --color-input-placeholder-fg: #ffffff50;
   --color-input-bg: #363636;
   --color-input-border: #4a4a4a;
-  --color-input-focus-border: #d4af37;
+  --color-input-focus-border: var(--color-primary);
 
   /* divider */
   --color-divider: #ffffff50;
