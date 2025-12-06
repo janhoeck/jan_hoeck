@@ -117,6 +117,10 @@ export const AboutMeSection = () => {
               tooltip='TailwindCSS'
             />
             <Skill
+              imageSrc='/assets/frameworks/RadixUI.svg'
+              tooltip='Radix UI'
+            />
+            <Skill
               imageSrc='/assets/frameworks/NextJSLogo.svg'
               tooltip='NextJS'
             />
