@@ -16,8 +16,10 @@ export default async function Layout(props: LayoutProps) {
   return (
     <html>
       <body className={twMerge(sourceSansPro.variable, arimoFont.className)}>
-        <main className='container mx-auto px-4 mt-8 mb-16'>{children}</main>
-        <Footer />
+        <div className='flex flex-col min-h-screen'>
+          <main className='container mx-auto px-4 mt-8 mb-16 flex-1'>{children}</main>
+          <Footer />
+        </div>
         <Analytics />
       </body>
     </html>
