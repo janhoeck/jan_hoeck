@@ -4,6 +4,7 @@ import { updateSurvey } from '@/lib/db/api/surveys'
 import { z } from 'zod'
 
 import { Survey } from '../../../../../types'
+import { revalidatePath } from 'next/cache'
 
 const surveySchema = z.object({
   title: z.string(),
@@ -21,10 +22,12 @@ export async function updateSurveyAction(surveyId: Survey['id'], formData: FormD
   }
 
   try {
-    return await updateSurvey({
+    const survey = await updateSurvey({
       id: surveyId,
       ...data,
     })
+    revalidatePath('/', 'layout')
+    return survey
   } catch (error) {
     console.error(error)
   }

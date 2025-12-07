@@ -4,6 +4,7 @@ import { insertClip } from '@/lib/db/api/clips'
 import { z } from 'zod'
 
 import { Clip } from '../../../../../types'
+import { revalidatePath } from 'next/cache'
 
 const clipSchema = z.object({
   title: z.string(),
@@ -22,7 +23,9 @@ export async function createClipAction(formData: FormData) {
   }
 
   try {
-    return await insertClip(data)
+    const clip = await insertClip(data)
+    revalidatePath('/', 'layout')
+    return clip
   } catch (error) {
     console.error(error)
   }

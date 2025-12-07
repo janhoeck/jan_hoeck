@@ -4,13 +4,14 @@ import { updateCategory } from '@/lib/db/api/categories'
 import { z } from 'zod'
 
 import { Category } from '../../../../../types'
+import { revalidatePath } from 'next/cache'
 
 const categorySchema = z.object({
   title: z.string(),
   description: z.string(),
 })
 
-export async function updateCategoryAction(categoryId: Category['id'], formData: FormData) {
+export async function updateCategoryAction(categoryId: string, formData: FormData) {
   const categoryFormData = Object.fromEntries([...formData]) as Omit<Category, 'id'>
   const { success, data, error } = categorySchema.safeParse(categoryFormData)
 
@@ -20,10 +21,12 @@ export async function updateCategoryAction(categoryId: Category['id'], formData:
   }
 
   try {
-    return await updateCategory({
+    const category = await updateCategory({
       id: categoryId,
       ...data,
     })
+    revalidatePath('/', 'layout')
+    return category
   } catch (error) {
     console.error(error)
   }

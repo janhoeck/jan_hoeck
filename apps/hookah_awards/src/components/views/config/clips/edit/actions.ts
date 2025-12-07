@@ -4,6 +4,7 @@ import { updateClip } from '@/lib/db/api/clips'
 import { z } from 'zod'
 
 import { Clip } from '../../../../../types'
+import { revalidatePath } from 'next/cache'
 
 const clipSchema = z.object({
   title: z.string(),
@@ -22,10 +23,12 @@ export async function updateClipAction(clipId: Clip['id'], formData: FormData) {
   }
 
   try {
-    return await updateClip({
+    const clip =  await updateClip({
       id: clipId,
       ...data,
     })
+    revalidatePath('/', 'layout')
+    return clip
   } catch (error) {
     console.error(error)
   }

@@ -4,6 +4,7 @@ import { insertCategory } from '@/lib/db/api/categories'
 import { z } from 'zod'
 
 import { Category } from '../../../../../types'
+import { revalidatePath } from 'next/cache'
 
 const categorySchema = z.object({
   title: z.string(),
@@ -21,7 +22,9 @@ export async function createCategoryAction(formData: FormData) {
   }
 
   try {
-    return await insertCategory(data)
+    const category = await insertCategory(data)
+    revalidatePath('/', 'layout')
+    return category
   } catch (error) {
     console.error(error)
   }
