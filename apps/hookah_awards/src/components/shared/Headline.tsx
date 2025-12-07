@@ -1,12 +1,8 @@
 import { PropsWithChildren } from 'react'
-import { twMerge } from 'tailwind-merge'
 
-export type HeadlineProps = PropsWithChildren<{
-  className?: string
-}>
-
-export const Headline = ({ children, className }: HeadlineProps) => (
-  <h1 className={twMerge('text-6xl font-extrabold font-sans-pro uppercase mb-12 text-center', className)}>
-    {children}
-  </h1>
+export const Headline = ({ children }: PropsWithChildren) => (
+  <div className='space-y-2 mb-10 text-center'>
+    <h1 className='font-bebas-neue text-6xl md:text-8xl tracking-wider text-primary'>{children}</h1>
+    <div className='h-1 w-32 mx-auto bg-gradient-to-r from-transparent via-primary to-transparent rounded-full' />
+  </div>
 )

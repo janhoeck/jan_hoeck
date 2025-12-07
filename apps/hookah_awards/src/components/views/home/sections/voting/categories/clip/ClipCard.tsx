@@ -5,6 +5,8 @@ import { extractYoutubeId } from '@/utils/extract-youtube-id'
 import { Card, CardContent, useIsMobile, useIsMounted } from '@jan_hoeck/ui'
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { FaCheck } from 'react-icons/fa6'
+import { twMerge } from 'tailwind-merge'
 
 import { Clip } from '../../../../../../../types'
 import { VoteButton } from '../VoteButton'
@@ -56,7 +58,7 @@ export const ClipCard = (props: ClipCardProps) => {
 
   return (
     <Card
-      className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer'
+      className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer glass-card'
       onClick={() => onClickAction(clip)}
     >
       <div
@@ -69,9 +71,10 @@ export const ClipCard = (props: ClipCardProps) => {
             fill
             key={imgSrc}
             loading='lazy'
-            className={`object-cover transition-opacity duration-300 ${
+            className={twMerge(
+              'object-cover transition-opacity duration-300',
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            )}
             src={imgSrc}
             alt={clip.title}
             sizes='(max-width: 768px) 100vw, 384px'
@@ -85,7 +88,16 @@ export const ClipCard = (props: ClipCardProps) => {
           referenceId={clip.id}
           type='clip'
           disabled={!isMounted || !data}
-          label={(voted) => (voted ? 'Ausgewählt' : 'Auswählen ')}
+          label={(voted) =>
+            voted ? (
+              <>
+                <FaCheck />
+                Ausgewählt
+              </>
+            ) : (
+              'Auswählen'
+            )
+          }
         />
       </CardContent>
     </Card>

@@ -6,7 +6,7 @@ export const VoteStatisticSection = async () => {
   return (
     <section>
       <h2 className='text-2xl text-foreground mb-6'>Vote Statistik</h2>
-      <Card>
+      <Card className='glass-card'>
         <CardContent>
           <VotesByDayChart />
         </CardContent>

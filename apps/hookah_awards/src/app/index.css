@@ -5,19 +5,23 @@
 @source '../../../node_modules/@jan_hoeck/ui';
 
 :root {
-  --color-foreground: #eaeaea;
-  --color-muted-foreground: #ffffff50;
+  --color-foreground: hsl(45 100% 96%);
+  --color-muted-foreground: hsl(45 30% 60);
 
   --color-primary-plain: 212, 175, 55;
   --color-primary: rgb(var(--color-primary-plain));
+  --color-primary-foreground: hsl(20 10% 5%);
+
+  --border-plain: 42 40% 20%;
+  --border: hsl(var(--border-plain));
 
   /* button overwrites */
-  --radius-btn: calc(infinity * 1px);
+  --radius-btn: 0.75rem;
 
   --color-btn-primary-bg: var(--color-primary);
-  --color-btn-primary-fg: #1c1c1c;
+  --color-btn-primary-fg: hsl(20 10% 5%);
   --color-btn-primary-hover-bg: #f8cd40;
-  --color-btn-primary-hover-fg: #1c1c1c;
+  --color-btn-primary-hover-fg: hsl(20 10% 5%);
 
   --color-btn-outlined-bg: transparent;
   --color-btn-outlined-fg: var(--color-primary);
@@ -41,7 +45,7 @@
   --color-card-bg: #2b2b2b;
   --color-card-fg: #eaeaea;
   --color-card-border: #eaeaea;
-  --color-card: #1c1c1c;
+  --color-card: hsl(20 10% 5%);
 
   /* input overwrites */
   --color-input-fg: #eaeaea;
@@ -51,14 +55,16 @@
   --color-input-focus-border: var(--color-primary);
 
   /* divider */
-  --color-divider: #ffffff50;
+  --color-divider: var(--border);
 }
 
 @theme {
-  --font-arimo: var(--font-arimo);
-  --font-sans-pro: var(--font-sans-pro), sans-serif;
+  --font-bebas-neue: var(--font-bebas-neue), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
 
   --color-dialog-backdrop: rgba(28, 28, 28, 0.6);
+
+  --color-gradient-primary: linear-gradient(135deg, hsl(42 100% 50%), hsl(35 100% 40%));
 }
 
 html,
@@ -69,6 +75,16 @@ body {
   width: 100%;
   overflow-x: hidden;
 
-  background-image: linear-gradient(to top, #1c1c1c, #2b2b2b);
-  color: var(--color-foreground);
+  background: hsl(20 10% 5%);
+}
+
+.glass-card {
+    background: linear-gradient(145deg, hsl(20 15% 12% / 0.6), hsl(20 10% 6% / 0.8));
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border-plain) / 0.3);
+}
+
+.glow-primary {
+    box-shadow: 0 0 20px hsl(42 100% 50% / 0.3),
+    0 0 40px hsl(42 100% 50% / 0.15);
 }

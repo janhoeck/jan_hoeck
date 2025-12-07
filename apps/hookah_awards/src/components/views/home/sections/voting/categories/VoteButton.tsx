@@ -9,7 +9,7 @@ export type VoteButtonProps = {
   disabled?: boolean
   referenceId: Clip['id'] | Survey['id']
   type: CategoryType
-  label: (selected: boolean) => string
+  label: (selected: boolean) => React.ReactNode
 }
 
 export const VoteButton = (props: VoteButtonProps) => {

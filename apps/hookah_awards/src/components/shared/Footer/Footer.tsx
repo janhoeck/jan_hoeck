@@ -23,11 +23,14 @@ export const Footer = () => {
           icon={FaYoutube}
         />
       </div>
-      <p className='text-muted-foreground'>
-        <span>All rights reserved</span>
-        <span> - </span>
-        <Link href='/imprint'>Impressum</Link>
-      </p>
+      <div className='text-muted-foreground text-center space-y-2'>
+        <p>
+          <span>All rights reserved</span>
+          <span> - </span>
+          <Link href='/imprint'>Impressum</Link>
+        </p>
+        <p className='text-sm'>Made with ❤️ for the Community</p>
+      </div>
     </footer>
   )
 }

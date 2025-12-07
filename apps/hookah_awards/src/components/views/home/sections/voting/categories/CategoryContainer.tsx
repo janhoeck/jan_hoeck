@@ -12,11 +12,14 @@ export const CategoryContainer = (props: CategoryContainerProps) => {
 
   return (
     <div className='flex flex-col items-center'>
-      <div className='max-w-2xl mb-10'>
-        <h2 className='text-center text-foreground text-3xl font-extrabold mb-4 font-sans-pro uppercase tracking-wide'>
-          {category.title}
-        </h2>
-        <p className='text-foreground text-center'>{category.description}</p>
+      {/* Category Header */}
+      <div className='text-center mb-8 space-y-3'>
+        <div className='flex items-center justify-center gap-3'>
+          <div className='w-2 h-2 rounded-full bg-primary animate-glow-pulse' />
+          <h2 className='font-bebas-neue text-3xl md:text-4xl tracking-wider text-primary'>{category.title}</h2>
+          <div className='w-2 h-2 rounded-full bg-primary animate-glow-pulse' />
+        </div>
+        <p className='text-muted-foreground max-w-2xl mx-auto'>{category.description}</p>
       </div>
       <CategoryContextProvider categoryId={category.id}>{children}</CategoryContextProvider>
     </div>

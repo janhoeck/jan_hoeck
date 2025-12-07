@@ -19,7 +19,7 @@ export const ClipDialogContent = (props: ClipDialogContentProps) => {
 
   return (
     <DialogContent className='fixed top-0 left-0 w-full h-full text-foreground p-10 flex flex-col items-center space-y-10 overflow-auto'>
-      <DialogTitle className='text-4xl font-sans-pro font-extrabold uppercase text-center'>
+      <DialogTitle className='text-4xl md:text-6xl font-bebas-neue tracking-wider uppercase text-center text-primary'>
         {category.title}
       </DialogTitle>
       <h3 className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</h3>
@@ -47,7 +47,7 @@ export const ClipDialogContent = (props: ClipDialogContentProps) => {
         </MobileOnly>
       </div>
       {clip.description && (
-        <Card className='max-w-3xl'>
+        <Card className='max-w-3xl glass-card'>
           <CardContent className='inline-flex flex-row space-x-4'>
             <div className='flex-shrink-0 mt-0.5'>
               <GoInfo size={20} />

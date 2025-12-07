@@ -9,7 +9,7 @@ export const GeneralStatisticSection = () => {
     <section>
       <h2 className='text-2xl text-foreground mb-6'>Allgemeine Statistik</h2>
       <div className='grid grid-cols-3 space-x-4'>
-        <Card>
+        <Card className='glass-card'>
           <CardContent className='text-center'>
             <div className='flex flex-col'>
               <span className='text-4xl font-bold text-primary'>{categories.length}</span>
@@ -17,7 +17,7 @@ export const GeneralStatisticSection = () => {
             </div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className='glass-card'>
           <CardContent className='text-center'>
             <div className='flex flex-col'>
               <span className='text-4xl font-bold text-primary'>{clips.length}</span>
@@ -25,7 +25,7 @@ export const GeneralStatisticSection = () => {
             </div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className='glass-card'>
           <CardContent className='text-center'>
             <div className='flex flex-col'>
               <span className='text-4xl font-bold text-primary'>{votes.length}</span>
