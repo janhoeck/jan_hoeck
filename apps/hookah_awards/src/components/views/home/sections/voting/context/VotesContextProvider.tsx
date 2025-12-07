@@ -1,7 +1,7 @@
 'use client'
 
 import { useSession } from '@/lib/auth-client'
-import React, { useEffect, useState } from 'react'
+import React, { startTransition, useEffect, useOptimistic, useState } from 'react'
 
 import { CategoryType, Vote } from '../../../../../../types'
 import { VotesContext } from './VotesContext'
@@ -16,6 +16,11 @@ export const VotesContextProvider = (props: VotesContextProviderProps) => {
   const [isLoading, setLoading] = useState<boolean>(true)
   const [votes, setVotes] = useState<Vote[]>([])
   const { data } = useSession()
+
+  const [optimisticVotes, addOptimisticVote] = useOptimistic(votes, (state, newVote: Vote) => {
+    const filtered = state.filter((v) => v.categoryId !== newVote.categoryId)
+    return [...filtered, newVote]
+  })
 
   useEffect(() => {
     if (!data) {
@@ -48,43 +53,46 @@ export const VotesContextProvider = (props: VotesContextProviderProps) => {
       return
     }
 
-    const alreadyVotedForReference = votes.some((vote) => vote.referenceId === referenceId)
+    const alreadyVotedForReference = optimisticVotes.some((vote) => vote.referenceId === referenceId)
     // Check to prevent voting for the same reference id again
     if (alreadyVotedForReference) {
       return
     }
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/categories/${categoryId}/vote`, {
-      method: 'POST',
-      body: JSON.stringify({ referenceId, referenceType: type }),
-    })
-
-    if (!response.ok) {
-      return
+    // 1. Optimistic Update: Update the state immediately
+    const optimisticVote: Vote = {
+      userId: data.user.id,
+      categoryId,
+      referenceId,
+      referenceType: type,
+      createdAt: new Date(),
     }
 
-    setVotes((prevVotes) => {
-      const voteIndex = prevVotes.findIndex((vote) => vote.categoryId === categoryId)
+    startTransition(async () => {
+      addOptimisticVote(optimisticVote)
 
-      if (voteIndex !== -1) {
-        // Update existing vote for the same category
-        const updatedVotes = [...prevVotes]
-        updatedVotes[voteIndex]!.referenceId = referenceId
-        return updatedVotes
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/categories/${categoryId}/vote`, {
+          method: 'POST',
+          body: JSON.stringify({ referenceId, referenceType: type }),
+        })
+
+        if (!response.ok) {
+          throw new Error('Vote failed')
+        }
+
+        setVotes((prevVotes) => {
+          // Remove already existing votes for this category
+          const filtered = prevVotes.filter((v) => v.categoryId !== categoryId)
+          return [...filtered, optimisticVote]
+        })
+      } catch (error) {
+        console.error('Failed to submit vote:', error)
       }
-
-      return [
-        ...prevVotes,
-        {
-          userId: data.user.id,
-          categoryId,
-          referenceId,
-          referenceType: type,
-          createdAt: new Date(),
-        },
-      ]
     })
   }
 
-  return <VotesContext.Provider value={{ votes, isLoading, createVote }}>{children}</VotesContext.Provider>
+  return (
+    <VotesContext.Provider value={{ votes: optimisticVotes, isLoading, createVote }}>{children}</VotesContext.Provider>
+  )
 }
