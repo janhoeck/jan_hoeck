@@ -1,8 +1,6 @@
-const isDevelopment = process.env.NODE_ENV === 'development'
-console.log('isDevelopment', isDevelopment)
+import { NextConfig } from 'next'
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   basePath: '',
   /**
