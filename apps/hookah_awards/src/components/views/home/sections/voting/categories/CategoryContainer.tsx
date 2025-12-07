@@ -1,7 +1,6 @@
 import { PropsWithChildren } from 'react'
 
 import { Category } from '../../../../../../types'
-import { CategoryContextProvider } from './context/CategoryContextProvider'
 
 export type CategoryContainerProps = PropsWithChildren<{
   category: Category
@@ -21,7 +20,7 @@ export const CategoryContainer = (props: CategoryContainerProps) => {
         </div>
         <p className='text-muted-foreground max-w-2xl mx-auto'>{category.description}</p>
       </div>
-      <CategoryContextProvider categoryId={category.id}>{children}</CategoryContextProvider>
+      {children}
     </div>
   )
 }

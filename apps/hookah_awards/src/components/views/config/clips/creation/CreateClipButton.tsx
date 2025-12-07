@@ -17,7 +17,7 @@ import {
 import { useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
 
-import { createClip } from './actions'
+import { createClipAction } from './actions'
 
 export const CreateClipButton = () => {
   const { categories, addClip } = useDataContext()
@@ -44,7 +44,7 @@ export const CreateClipButton = () => {
         <Form
           action={async (formData: FormData) => {
             setPending(true)
-            const response = await createClip(formData)
+            const response = await createClipAction(formData)
             setPending(false)
 
             if (response) {

@@ -63,6 +63,7 @@ export const SurveyItemGrid = (props: SurveyItemGridProps) => {
         >
           <VoteButton
             className='w-full transition-all duration-300'
+            categoryId={survey.categoryId}
             referenceId={survey.id}
             type='survey'
             label={() => survey.title}

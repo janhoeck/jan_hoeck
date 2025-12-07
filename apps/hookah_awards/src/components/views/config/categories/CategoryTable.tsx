@@ -12,7 +12,8 @@ import {
 import { Button, Card } from '@jan_hoeck/ui'
 import { FaRegTrashAlt } from 'react-icons/fa'
 
-import { deleteCategory } from './actions'
+import { deleteCategoryAction } from './actions'
+import { EditCategoryButton } from './edit/EditCategoryButton'
 
 export const CategoryTable = () => {
   const { categories, removeCategory } = useDataContext()
@@ -33,16 +34,18 @@ export const CategoryTable = () => {
               <TableBodyCell variant='default'>{category.description}</TableBodyCell>
               <TableBodyCell variant='default'>{category.type === 'clip' ? 'Clip' : 'Umfrage'}</TableBodyCell>
               <TableBodyCell variant='action'>
-                <Button
-                  variant='outline'
-                  onClick={async () => {
-                    await deleteCategory(category)
-                    removeCategory(category.id)
-                  }}
-                >
-                  <FaRegTrashAlt size={16} />
-                  Löschen
-                </Button>
+                <div className='flex flex-row space-x-2'>
+                  <EditCategoryButton category={category} />
+                  <Button
+                    variant='outline'
+                    onClick={async () => {
+                      await deleteCategoryAction(category)
+                      removeCategory(category.id)
+                    }}
+                  >
+                    <FaRegTrashAlt size={16} />
+                  </Button>
+                </div>
               </TableBodyCell>
             </TableBodyRow>
           ))}

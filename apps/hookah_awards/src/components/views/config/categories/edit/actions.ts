@@ -1,6 +1,6 @@
 'use server'
 
-import { insertCategory } from '@/lib/db/api/categories'
+import { updateCategory } from '@/lib/db/api/categories'
 import { z } from 'zod'
 
 import { Category } from '../../../../../types'
@@ -8,10 +8,9 @@ import { Category } from '../../../../../types'
 const categorySchema = z.object({
   title: z.string(),
   description: z.string(),
-  type: z.enum(['clip', 'survey']),
 })
 
-export async function createCategoryAction(formData: FormData) {
+export async function updateCategoryAction(categoryId: Category['id'], formData: FormData) {
   const categoryFormData = Object.fromEntries([...formData]) as Omit<Category, 'id'>
   const { success, data, error } = categorySchema.safeParse(categoryFormData)
 
@@ -21,7 +20,10 @@ export async function createCategoryAction(formData: FormData) {
   }
 
   try {
-    return await insertCategory(data)
+    return await updateCategory({
+      id: categoryId,
+      ...data,
+    })
   } catch (error) {
     console.error(error)
   }

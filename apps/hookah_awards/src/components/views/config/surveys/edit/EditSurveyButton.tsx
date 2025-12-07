@@ -15,15 +15,23 @@ import {
   SelectItem,
 } from '@jan_hoeck/ui'
 import { useState } from 'react'
-import { FaPlus } from 'react-icons/fa'
+import { FaPen } from 'react-icons/fa'
 
-import { createCategoryAction } from './actions'
+import { Survey } from '../../../../../types'
+import { updateSurveyAction } from './actions'
 
-export const CreateCategoryButton = () => {
-  const { addCategory } = useDataContext()
+export type EditSurveyButtonProps = {
+  survey: Survey
+}
+
+export const EditSurveyButton = (props: EditSurveyButtonProps) => {
+  const { survey } = props
+  const { categories, updateSurvey } = useDataContext()
 
   const [isPending, setPending] = useState<boolean>(false)
   const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const availableCategories = categories.filter((category) => category.type === 'survey')
 
   return (
     <Dialog
@@ -31,9 +39,8 @@ export const CreateCategoryButton = () => {
       onOpenChange={setIsOpen}
     >
       <DialogTrigger asChild>
-        <Button>
-          <FaPlus size={16} />
-          Erstellen
+        <Button variant='outline'>
+          <FaPen size={16} />
         </Button>
       </DialogTrigger>
       <DialogPortal>
@@ -41,21 +48,21 @@ export const CreateCategoryButton = () => {
         <Form
           action={async (formData: FormData) => {
             setPending(true)
-            const response = await createCategoryAction(formData)
+            const response = await updateSurveyAction(survey.id, formData)
             setPending(false)
 
             if (response) {
-              addCategory(response)
+              updateSurvey(survey.id, response)
               setIsOpen(false)
             }
           }}
         >
           <DialogContent
-            title='Kategorie erstellen'
+            title='Umfrage editieren'
             primaryAction={{
               disabled: isPending,
               type: 'submit',
-              label: 'Erstellen',
+              label: 'Aktualisieren',
             }}
           >
             <div className='flex flex-col gap-6'>
@@ -63,7 +70,8 @@ export const CreateCategoryButton = () => {
                 required
                 label='Titel'
                 name='title'
-                placeholder='Der Titel der Kategorie'
+                placeholder='Der Titel des Items der Umfrage'
+                defaultValue={survey.title}
                 validation={[
                   {
                     match: 'valueMissing',
@@ -72,16 +80,30 @@ export const CreateCategoryButton = () => {
                 ]}
               />
               <FormSelect
-                name='type'
-                label='Art der Kategorie'
-                defaultValue='clip'
+                required
+                name='categoryId'
+                label='Kategorie'
+                defaultValue={survey.categoryId}
+                validation={[
+                  {
+                    match: 'valueMissing',
+                    message: 'Du musst eine Kategorie zuordnen',
+                  },
+                ]}
               >
-                <SelectItem value='clip'>Clip</SelectItem>
-                <SelectItem value='survey'>Umfrage</SelectItem>
+                {availableCategories.map((category) => (
+                  <SelectItem
+                    key={category.id}
+                    value={category.id}
+                  >
+                    {category.title}
+                  </SelectItem>
+                ))}
               </FormSelect>
               <FormTextarea
                 label='Beschreibung'
                 name='description'
+                defaultValue={survey.description ?? ''}
               />
             </div>
           </DialogContent>

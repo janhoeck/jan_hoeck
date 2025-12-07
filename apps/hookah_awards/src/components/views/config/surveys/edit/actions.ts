@@ -1,6 +1,6 @@
 'use server'
 
-import { insertSurvey } from '@/lib/db/api/surveys'
+import { updateSurvey } from '@/lib/db/api/surveys'
 import { z } from 'zod'
 
 import { Survey } from '../../../../../types'
@@ -11,7 +11,7 @@ const surveySchema = z.object({
   categoryId: z.string(),
 })
 
-export async function createSurveyAction(formData: FormData) {
+export async function updateSurveyAction(surveyId: Survey['id'], formData: FormData) {
   const surveyFormData = Object.fromEntries([...formData]) as Omit<Survey, 'id'>
   const { success, data, error } = surveySchema.safeParse(surveyFormData)
 
@@ -21,7 +21,10 @@ export async function createSurveyAction(formData: FormData) {
   }
 
   try {
-    return await insertSurvey(data)
+    return await updateSurvey({
+      id: surveyId,
+      ...data,
+    })
   } catch (error) {
     console.error(error)
   }

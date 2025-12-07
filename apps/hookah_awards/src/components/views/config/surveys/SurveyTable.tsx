@@ -12,7 +12,8 @@ import {
 import { Button, Card } from '@jan_hoeck/ui'
 import { FaRegTrashAlt } from 'react-icons/fa'
 
-import { deleteSurvey } from './actions'
+import { deleteSurveyAction } from './actions'
+import { EditSurveyButton } from './edit/EditSurveyButton'
 
 export const SurveyTable = () => {
   const { surveys, categories, removeSurvey } = useDataContext()
@@ -35,16 +36,18 @@ export const SurveyTable = () => {
                 <TableBodyCell variant='default'>{survey.description}</TableBodyCell>
                 <TableBodyCell variant='default'>{category?.title}</TableBodyCell>
                 <TableBodyCell variant='action'>
-                  <Button
-                    variant='outline'
-                    onClick={async () => {
-                      await deleteSurvey(survey)
-                      removeSurvey(survey.id)
-                    }}
-                  >
-                    <FaRegTrashAlt size={16} />
-                    Löschen
-                  </Button>
+                  <div className='flex flex-row space-x-2'>
+                    <EditSurveyButton survey={survey} />
+                    <Button
+                      variant='outline'
+                      onClick={async () => {
+                        await deleteSurveyAction(survey)
+                        removeSurvey(survey.id)
+                      }}
+                    >
+                      <FaRegTrashAlt size={16} />
+                    </Button>
+                  </div>
                 </TableBodyCell>
               </TableBodyRow>
             )

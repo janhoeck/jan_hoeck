@@ -1,32 +1,33 @@
 import { Button } from '@jan_hoeck/ui'
 import { useState } from 'react'
 
-import { CategoryType, Clip, Survey } from '../../../../../../types'
-import { useCategoryContext } from './context/CategoryContext'
+import { CategoryType } from '../../../../../../types'
+import { useVotesContext } from '../context/VotesContext'
 
 export type VoteButtonProps = {
   className?: string
   disabled?: boolean
-  referenceId: Clip['id'] | Survey['id']
+  categoryId: string
+  referenceId: string
   type: CategoryType
   label: (selected: boolean) => React.ReactNode
 }
 
 export const VoteButton = (props: VoteButtonProps) => {
-  const { className, disabled, referenceId, type, label } = props
+  const { className, disabled, categoryId, referenceId, type, label } = props
 
   const [isVotePending, setVotePending] = useState<boolean>(false)
-  const { vote, isLoading, createVote } = useCategoryContext()
+  const { votes, isLoading, createVote } = useVotesContext()
 
   const handleVoteButtonClick = async (event: MouseEvent) => {
     event.stopPropagation()
 
     setVotePending(true)
-    await createVote(referenceId, type)
+    await createVote(categoryId, referenceId, type)
     setVotePending(false)
   }
 
-  const voted = vote?.referenceId === referenceId
+  const voted = votes.some((vote) => vote.referenceId === referenceId)
 
   return (
     <Button

@@ -1,18 +1,19 @@
+import { InferSelectModel } from 'drizzle-orm'
 import { pgTable, primaryKey, text, timestamp, uuid } from 'drizzle-orm/pg-core'
 
-import { categories, categoryType } from './categories'
-import { user } from './users'
+import { categorySchema, categoryType } from './categorySchema'
+import { userSchema } from './userSchema'
 
-export const votes = pgTable(
+export const voteSchema = pgTable(
   'votes',
   {
     userId: text('user_id')
       .notNull()
-      .references(() => user.id, { onDelete: 'cascade' }),
+      .references(() => userSchema.id, { onDelete: 'cascade' }),
 
     categoryId: uuid('category_id')
       .notNull()
-      .references(() => categories.id, { onDelete: 'cascade' }),
+      .references(() => categorySchema.id, { onDelete: 'cascade' }),
 
     referenceId: uuid('reference_id').notNull(), // Clip oder Survey ID
     referenceType: categoryType('reference_type').notNull(), // 'clip' | 'survey'
@@ -23,3 +24,5 @@ export const votes = pgTable(
     pk: primaryKey({ columns: [table.userId, table.categoryId] }),
   })
 )
+
+export type VoteSchema = InferSelectModel<typeof voteSchema>

@@ -16,7 +16,7 @@ export const ResponsiveYouTubeVideo = (props: ResponsiveYouTubeVideoProps) => {
       <div className='w-full pb-[56.25%] relative'>
         <iframe
           className='absolute top-0 left-0 w-full h-full'
-          src={`https://www.youtube.com/embed/${youTubeId}?controls=0`}
+          src={`https://www.youtube.com/embed/${youTubeId}?controls=1`}
           title={clip.title}
           allowFullScreen
         />

@@ -1,9 +1,9 @@
 'use server'
 
-import { deleteClipById } from '@/lib/db/api/clips'
+import { deleteSurveyById } from '@/lib/db/api/surveys'
 
 import { Survey } from '../../../../types'
 
-export async function deleteSurvey(survey: Survey) {
-  await deleteClipById(survey.id)
+export async function deleteSurveyAction(survey: Survey) {
+  await deleteSurveyById(survey.id)
 }

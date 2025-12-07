@@ -6,21 +6,30 @@ import { Category, Clip, Survey, Vote } from '../../../types'
 import { DataContext } from './DataContext'
 
 type Any = Category | Clip | Survey
+type UseStateFactoryReturn<T extends Any> = [
+  T[],
+  (item: T) => void,
+  (itemId: T['id'], item: T) => void,
+  (itemId: T['id']) => void,
+  Dispatch<SetStateAction<T[]>>,
+]
 
-function useStateFactory<T extends Any>(
-  initialData: T[]
-): [T[], (item: T) => void, (itemId: T['id']) => void, Dispatch<SetStateAction<T[]>>] {
+function useStateFactory<T extends Any>(initialData: T[]): UseStateFactoryReturn<T> {
   const [items, setItems] = useState<T[]>(initialData)
 
   const remove = (itemId: T['id']) => {
     setItems((currItems: T[]) => currItems.filter((currItem) => currItem.id !== itemId))
   }
 
+  const update: (itemId: T['id'], item: T) => void = (itemId, item) => {
+    setItems((currItems: T[]) => currItems.map((currItem) => (currItem.id === itemId ? item : currItem)))
+  }
+
   const add = (item: T) => {
     setItems((currItems: T[]) => [...currItems, item])
   }
 
-  return [items, add, remove, setItems]
+  return [items, add, update, remove, setItems]
 }
 
 type InitialStoreData = {
@@ -31,9 +40,9 @@ type InitialStoreData = {
 }
 
 const useStore = (initialData: InitialStoreData) => {
-  const [categories, addCategory, _removeCategory] = useStateFactory<Category>(initialData.categories)
-  const [clips, addClip, removeClip, setClips] = useStateFactory<Clip>(initialData.clips)
-  const [surveys, addSurvey, removeSurvey, setSurveys] = useStateFactory<Survey>(initialData.surveys)
+  const [categories, addCategory, updateCategory, _removeCategory] = useStateFactory<Category>(initialData.categories)
+  const [clips, addClip, updateClip, removeClip, setClips] = useStateFactory<Clip>(initialData.clips)
+  const [surveys, addSurvey, updateSurvey, removeSurvey, setSurveys] = useStateFactory<Survey>(initialData.surveys)
   const [votes] = useState<Vote[]>(initialData.votes)
 
   const removeCategory: typeof _removeCategory = (categoryId) => {
@@ -48,10 +57,13 @@ const useStore = (initialData: InitialStoreData) => {
     surveys,
     votes,
     addCategory,
+    updateCategory,
     removeCategory,
     addClip,
+    updateClip,
     removeClip,
     addSurvey,
+    updateSurvey,
     removeSurvey,
   }
 }

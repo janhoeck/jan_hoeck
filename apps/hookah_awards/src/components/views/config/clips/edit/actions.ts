@@ -1,6 +1,6 @@
 'use server'
 
-import { insertClip } from '@/lib/db/api/clips'
+import { updateClip } from '@/lib/db/api/clips'
 import { z } from 'zod'
 
 import { Clip } from '../../../../../types'
@@ -12,7 +12,7 @@ const clipSchema = z.object({
   categoryId: z.string(),
 })
 
-export async function createClipAction(formData: FormData) {
+export async function updateClipAction(clipId: Clip['id'], formData: FormData) {
   const clipFormData = Object.fromEntries([...formData]) as Omit<Clip, 'id'>
   const { success, data, error } = clipSchema.safeParse(clipFormData)
 
@@ -22,7 +22,10 @@ export async function createClipAction(formData: FormData) {
   }
 
   try {
-    return await insertClip(data)
+    return await updateClip({
+      id: clipId,
+      ...data,
+    })
   } catch (error) {
     console.error(error)
   }

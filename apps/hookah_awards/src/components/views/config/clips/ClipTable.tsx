@@ -15,6 +15,7 @@ import Image from 'next/image'
 import { FaRegTrashAlt } from 'react-icons/fa'
 
 import { deleteClip } from './actions'
+import { EditClipButton } from './edit/EditClipButton'
 
 export const ClipTable = () => {
   const { clips, categories, removeClip } = useDataContext()
@@ -54,16 +55,18 @@ export const ClipTable = () => {
                   </div>
                 </TableBodyCell>
                 <TableBodyCell variant='action'>
-                  <Button
-                    variant='outline'
-                    onClick={async () => {
-                      await deleteClip(clip)
-                      removeClip(clip.id)
-                    }}
-                  >
-                    <FaRegTrashAlt size={16} />
-                    Löschen
-                  </Button>
+                  <div className='flex flex-row space-x-2'>
+                    <EditClipButton clip={clip} />
+                    <Button
+                      variant='outline'
+                      onClick={async () => {
+                        await deleteClip(clip)
+                        removeClip(clip.id)
+                      }}
+                    >
+                      <FaRegTrashAlt size={16} />
+                    </Button>
+                  </div>
                 </TableBodyCell>
               </TableBodyRow>
             )

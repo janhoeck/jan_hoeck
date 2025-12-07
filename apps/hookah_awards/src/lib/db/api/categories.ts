@@ -1,23 +1,30 @@
 import { db } from '@/lib/db'
-import { categories } from '@/lib/db/schema'
+import { CategorySchema, categorySchema } from '@/lib/db/schema'
 import { eq } from 'drizzle-orm'
 
-import { Category } from '../../../types'
-
-export const getCategories = async (): Promise<(typeof categories.$inferSelect)[]> => {
+export const getCategories = async (): Promise<(typeof categorySchema.$inferSelect)[]> => {
   try {
-    return await db.select().from(categories)
+    return await db.select().from(categorySchema).orderBy(categorySchema.createdAt)
   } catch (error) {
     console.error('Failed to execute getCategories:', error)
     return []
   }
 }
 
-export const deleteCategoryById = async (categoryId: Category['id']): Promise<void> => {
-  await db.delete(categories).where(eq(categories.id, categoryId))
+export const deleteCategoryById = async (categoryId: CategorySchema['id']): Promise<void> => {
+  await db.delete(categorySchema).where(eq(categorySchema.id, categoryId))
 }
 
-export const insertCategory = async (category: typeof categories.$inferInsert) => {
-  const createdCategories = await db.insert(categories).values(category).returning()
+export const insertCategory = async (category: typeof categorySchema.$inferInsert) => {
+  const createdCategories = await db.insert(categorySchema).values(category).returning()
   return createdCategories[0]
+}
+
+export const updateCategory = async (category: Omit<CategorySchema, 'type' | 'createdAt'>) => {
+  const updatedCategories = await db
+    .update(categorySchema)
+    .set(category)
+    .where(eq(categorySchema.id, category.id))
+    .returning()
+  return updatedCategories[0]
 }

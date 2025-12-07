@@ -10,17 +10,21 @@ import {
   DialogTrigger,
   Form,
   FormInput,
-  FormSelect,
   FormTextarea,
-  SelectItem,
 } from '@jan_hoeck/ui'
 import { useState } from 'react'
-import { FaPlus } from 'react-icons/fa'
+import { FaPen } from 'react-icons/fa'
 
-import { createCategoryAction } from './actions'
+import { Category } from '../../../../../types'
+import { updateCategoryAction } from './actions'
 
-export const CreateCategoryButton = () => {
-  const { addCategory } = useDataContext()
+export type EditCategoryButtonProps = {
+  category: Category
+}
+
+export const EditCategoryButton = (props: EditCategoryButtonProps) => {
+  const { category } = props
+  const { updateCategory } = useDataContext()
 
   const [isPending, setPending] = useState<boolean>(false)
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -31,9 +35,8 @@ export const CreateCategoryButton = () => {
       onOpenChange={setIsOpen}
     >
       <DialogTrigger asChild>
-        <Button>
-          <FaPlus size={16} />
-          Erstellen
+        <Button variant='outline'>
+          <FaPen size={16} />
         </Button>
       </DialogTrigger>
       <DialogPortal>
@@ -41,21 +44,21 @@ export const CreateCategoryButton = () => {
         <Form
           action={async (formData: FormData) => {
             setPending(true)
-            const response = await createCategoryAction(formData)
+            const response = await updateCategoryAction(category.id, formData)
             setPending(false)
 
             if (response) {
-              addCategory(response)
+              updateCategory(category.id, response)
               setIsOpen(false)
             }
           }}
         >
           <DialogContent
-            title='Kategorie erstellen'
+            title='Kategorie editieren'
             primaryAction={{
               disabled: isPending,
               type: 'submit',
-              label: 'Erstellen',
+              label: 'Aktualisieren',
             }}
           >
             <div className='flex flex-col gap-6'>
@@ -64,6 +67,7 @@ export const CreateCategoryButton = () => {
                 label='Titel'
                 name='title'
                 placeholder='Der Titel der Kategorie'
+                defaultValue={category.title}
                 validation={[
                   {
                     match: 'valueMissing',
@@ -71,17 +75,10 @@ export const CreateCategoryButton = () => {
                   },
                 ]}
               />
-              <FormSelect
-                name='type'
-                label='Art der Kategorie'
-                defaultValue='clip'
-              >
-                <SelectItem value='clip'>Clip</SelectItem>
-                <SelectItem value='survey'>Umfrage</SelectItem>
-              </FormSelect>
               <FormTextarea
                 label='Beschreibung'
                 name='description'
+                defaultValue={category.description}
               />
             </div>
           </DialogContent>

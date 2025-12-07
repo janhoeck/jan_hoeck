@@ -43,6 +43,13 @@
       "when": 1763402319278,
       "tag": "0005_worthless_dazzler",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1765119314037,
+      "tag": "0006_nice_living_tribunal",
+      "breakpoints": true
     }
   ]
 }

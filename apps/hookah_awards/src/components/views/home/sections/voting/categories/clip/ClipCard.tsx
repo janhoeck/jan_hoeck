@@ -85,6 +85,7 @@ export const ClipCard = (props: ClipCardProps) => {
         <p className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</p>
         <VoteButton
           className='mt-auto w-full'
+          categoryId={clip.categoryId}
           referenceId={clip.id}
           type='clip'
           disabled={!isMounted || !data}

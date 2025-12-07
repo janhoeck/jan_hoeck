@@ -38,7 +38,7 @@ export const MostVotedSection = () => {
                     ))}
                   </div>
                 </TableBodyCell>
-                <TableBodyCell variant='default'>{amount}</TableBodyCell>
+                <TableBodyCell variant='default'>{amount ?? '--'}</TableBodyCell>
               </TableBodyRow>
             )
           })}

@@ -3,7 +3,7 @@ import { boolean, pgTable, text, timestamp } from 'drizzle-orm/pg-core'
 // =======================
 // USER
 // =======================
-export const user = pgTable('user', {
+export const userSchema = pgTable('user', {
   id: text('id').notNull().primaryKey(),
   name: text('name').notNull(),
   email: text('email').notNull().unique(),
@@ -16,7 +16,7 @@ export const user = pgTable('user', {
 // =======================
 // SESSION
 // =======================
-export const session = pgTable('session', {
+export const sessionSchema = pgTable('session', {
   id: text('id').notNull().primaryKey(),
   expiresAt: timestamp('expiresAt', { withTimezone: true }).notNull(),
   token: text('token').notNull().unique(),
@@ -26,19 +26,19 @@ export const session = pgTable('session', {
   userAgent: text('userAgent'),
   userId: text('userId')
     .notNull()
-    .references(() => user.id, { onDelete: 'cascade' }),
+    .references(() => userSchema.id, { onDelete: 'cascade' }),
 })
 
 // =======================
 // ACCOUNT
 // =======================
-export const account = pgTable('account', {
+export const accountSchema = pgTable('account', {
   id: text('id').notNull().primaryKey(),
   accountId: text('accountId').notNull(),
   providerId: text('providerId').notNull(),
   userId: text('userId')
     .notNull()
-    .references(() => user.id, { onDelete: 'cascade' }),
+    .references(() => userSchema.id, { onDelete: 'cascade' }),
   accessToken: text('accessToken'),
   refreshToken: text('refreshToken'),
   idToken: text('idToken'),
@@ -57,7 +57,7 @@ export const account = pgTable('account', {
 // =======================
 // VERIFICATION
 // =======================
-export const verification = pgTable('verification', {
+export const verificationSchema = pgTable('verification', {
   id: text('id').notNull().primaryKey(),
   identifier: text('identifier').notNull(),
   value: text('value').notNull(),
