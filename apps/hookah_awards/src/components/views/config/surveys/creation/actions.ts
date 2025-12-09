@@ -1,10 +1,10 @@
 'use server'
 
 import { insertSurvey } from '@/lib/db/api/surveys'
+import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 
 import { Survey } from '../../../../../types'
-import { revalidatePath } from 'next/cache'
 
 const surveySchema = z.object({
   title: z.string(),

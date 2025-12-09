@@ -13,46 +13,46 @@ body {
 }
 
 :root {
-    /* colors */
-    --color-border: #e2e8f0;
+  /* colors */
+  --color-border: #e2e8f0;
 
-    --color-background: hsl(0 0% 100%);
-    --color-foreground: hsl(210 24% 16%);
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(210 24% 16%);
 
-    /* button */
-    --radius-btn: var(--radius-md);
+  /* button */
+  --radius-btn: var(--radius-md);
 
-    --color-btn-primary-bg: hsl(196 89% 35%);
-    --color-btn-primary-fg: hsl(0 0% 100%);
-    --color-btn-primary-hover-bg: hsla(196, 89%, 35%, 0.9);
-    --color-btn-primary-hover-fg: hsl(0 0% 100%);
+  --color-btn-primary-bg: hsl(196 89% 35%);
+  --color-btn-primary-fg: hsl(0 0% 100%);
+  --color-btn-primary-hover-bg: hsla(196, 89%, 35%, 0.9);
+  --color-btn-primary-hover-fg: hsl(0 0% 100%);
 
-    --color-btn-ghost-bg: transparent;
-    --color-btn-ghost-fg: hsl(210 24% 16%);
-    --color-btn-ghost-hover-bg: hsla(210, 24%, 16%, 0.01);
-    --color-btn-ghost-hover-fg: hsla(196, 89%, 35%, 0.8);
+  --color-btn-ghost-bg: transparent;
+  --color-btn-ghost-fg: hsl(210 24% 16%);
+  --color-btn-ghost-hover-bg: hsla(210, 24%, 16%, 0.01);
+  --color-btn-ghost-hover-fg: hsla(196, 89%, 35%, 0.8);
 
-    /* card */
-    --color-card-bg: hsl(0 0% 100%);
-    --color-card-fg: hsl(210 24% 16%);
-    --color-card-border: #e2e8f0;
-    --color-card: #0000001a; /* shadow */
+  /* card */
+  --color-card-bg: hsl(0 0% 100%);
+  --color-card-fg: hsl(210 24% 16%);
+  --color-card-border: #e2e8f0;
+  --color-card: #0000001a; /* shadow */
 
-    /* dialog */
-    --color-dialog-backdrop: rgba(28, 28, 28, 0.6);
-    --color-dialog-background: #2b2b2b;
-    --color-dialog-border: #ffffff50;
-    --color-dialog-foreground: #eaeaea;
+  /* dialog */
+  --color-dialog-backdrop: rgba(28, 28, 28, 0.6);
+  --color-dialog-background: #2b2b2b;
+  --color-dialog-border: #ffffff50;
+  --color-dialog-foreground: #eaeaea;
 
-    /* inputs */
-    --color-input-fg: #eaeaea;
-    --color-input-placeholder-fg: #ffffff50;
-    --color-input-bg: #363636;
-    --color-input-border: #4a4a4a;
-    --color-input-focus-border: #d4af37;
+  /* inputs */
+  --color-input-fg: #eaeaea;
+  --color-input-placeholder-fg: #ffffff50;
+  --color-input-bg: #363636;
+  --color-input-border: #4a4a4a;
+  --color-input-focus-border: #d4af37;
 
-    /* divider */
-    --color-divider: hsl(215.4 16.3% 46.9%);
+  /* divider */
+  --color-divider: hsl(215.4 16.3% 46.9%);
 }
 
 @theme {

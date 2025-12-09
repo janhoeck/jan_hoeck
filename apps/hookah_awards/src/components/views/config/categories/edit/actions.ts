@@ -1,10 +1,10 @@
 'use server'
 
 import { updateCategory } from '@/lib/db/api/categories'
+import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 
 import { Category } from '../../../../../types'
-import { revalidatePath } from 'next/cache'
 
 const categorySchema = z.object({
   title: z.string(),

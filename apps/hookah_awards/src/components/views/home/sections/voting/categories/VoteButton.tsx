@@ -1,3 +1,4 @@
+import { checkVote } from '@/utils/check-vote'
 import { Button } from '@jan_hoeck/ui'
 import { useState } from 'react'
 
@@ -27,7 +28,7 @@ export const VoteButton = (props: VoteButtonProps) => {
     setVotePending(false)
   }
 
-  const voted = votes.some((vote) => vote.referenceId === referenceId)
+  const voted = checkVote(votes, referenceId)
 
   return (
     <Button

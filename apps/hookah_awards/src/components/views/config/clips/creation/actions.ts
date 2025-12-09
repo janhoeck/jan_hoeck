@@ -1,10 +1,10 @@
 'use server'
 
 import { insertClip } from '@/lib/db/api/clips'
+import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 
 import { Clip } from '../../../../../types'
-import { revalidatePath } from 'next/cache'
 
 const clipSchema = z.object({
   title: z.string(),

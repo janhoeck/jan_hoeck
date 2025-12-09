@@ -1,14 +1,14 @@
 'use client'
 
 import { useSession } from '@/lib/auth-client'
+import { checkVote } from '@/utils/check-vote'
 import { extractYoutubeId } from '@/utils/extract-youtube-id'
-import { Card, CardContent, useIsMobile, useIsMounted } from '@jan_hoeck/ui'
+import { Card, CardContent, useIsMounted } from '@jan_hoeck/ui'
 import Image from 'next/image'
-import { useEffect, useMemo, useRef, useState } from 'react'
 import { FaCheck } from 'react-icons/fa6'
-import { twMerge } from 'tailwind-merge'
 
 import { Clip } from '../../../../../../../types'
+import { useVotesContext } from '../../context/VotesContext'
 import { VoteButton } from '../VoteButton'
 
 export type ClipCardProps = {
@@ -18,68 +18,35 @@ export type ClipCardProps = {
 
 export const ClipCard = (props: ClipCardProps) => {
   const { clip, onClickAction } = props
-
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
-  const [hovered, setHovered] = useState<boolean>(false)
-
-  const intervalRef = useRef<NodeJS.Timeout | null>(null)
-  const isMobile = useIsMobile()
+  const { votes } = useVotesContext()
 
   const isMounted = useIsMounted()
   const { data } = useSession()
 
   const clipYouTubeId = extractYoutubeId(clip.link)
+  const clipThumbnailUrl = `https://i.ytimg.com/vi/${clipYouTubeId}/0.jpg`
 
-  const clipImageSources = useMemo(() => {
-    const variants = ['0', 'hq1', 'hq2', 'hq3']
-    return variants.map((variant) => `https://i.ytimg.com/vi/${clipYouTubeId}/${variant}.jpg`)
-  }, [clipYouTubeId])
-
-  useEffect(() => {
-    if (hovered) {
-      let index = 0
-      intervalRef.current = setInterval(() => {
-        index = (index + 1) % clipImageSources.length
-        setCurrentImageIndex(index)
-      }, 400)
-    } else {
-      setCurrentImageIndex(0)
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current)
-      }
-    }
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current)
-      }
-    }
-  }, [hovered, clipImageSources.length])
+  const voted = checkVote(votes, clip.id)
 
   return (
     <Card
-      className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer glass-card'
+      className='overflow-hidden w-96 max-w-full mx-auto cursor-pointer glass-card group'
       onClick={() => onClickAction(clip)}
     >
-      <div
-        className='aspect-video relative'
-        onMouseEnter={isMobile ? undefined : () => setHovered(true)}
-        onMouseLeave={isMobile ? undefined : () => setHovered(false)}
-      >
-        {clipImageSources.map((imgSrc, index) => (
-          <Image
-            fill
-            key={imgSrc}
-            loading='lazy'
-            className={twMerge(
-              'object-cover transition-opacity duration-300',
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            )}
-            src={imgSrc}
-            alt={clip.title}
-            sizes='(max-width: 768px) 100vw, 384px'
-          />
-        ))}
+      <div className='aspect-video relative overflow-hidden'>
+        {voted && (
+          <div className='text-center text-xs bg-primary text-primary-foreground rounded-xl px-2 py-1 absolute top-1 right-1 z-10'>
+            Ausgewählt
+          </div>
+        )}
+        <Image
+          fill
+          loading='lazy'
+          className='object-cover group-hover:scale-110 transition-all duration-300'
+          src={clipThumbnailUrl}
+          alt={clip.title}
+          sizes='(max-width: 768px) 100vw, 384px'
+        />
       </div>
       <CardContent className='flex flex-col space-y-4'>
         <p className='text-xl font-bold h-15 line-clamp-2'>{clip.title}</p>
