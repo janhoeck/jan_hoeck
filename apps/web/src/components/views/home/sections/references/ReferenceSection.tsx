@@ -1,4 +1,4 @@
-import { Section, SectionCaption } from '@/components'
+import { Section, SectionCaption } from '@/components/shared'
 import React from 'react'
 
 import {

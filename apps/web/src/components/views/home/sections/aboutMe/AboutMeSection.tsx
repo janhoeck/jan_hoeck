@@ -1,4 +1,4 @@
-import { Section, Skill, Skills } from '@/components'
+import { Section, Skill, Skills } from '@/components/shared'
 import { Typography } from '@jan_hoeck/ui'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'

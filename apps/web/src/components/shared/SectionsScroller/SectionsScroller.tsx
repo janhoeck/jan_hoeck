@@ -1,6 +1,6 @@
 'use client'
 
-import { SectionType, SectionsScrollerContextProvider, useSectionsScrollerContext } from '@/components'
+import { SectionType, SectionsScrollerContextProvider, useSectionsScrollerContext } from '@/components/shared'
 import React, { Children } from 'react'
 import { twMerge } from 'tailwind-merge'
 

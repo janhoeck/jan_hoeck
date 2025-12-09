@@ -1,6 +1,6 @@
 'use client'
 
-import { Section } from '@/components'
+import { Section } from '@/components/shared'
 import { Typography } from '@jan_hoeck/ui'
 import { motion } from 'framer-motion'
 import React from 'react'

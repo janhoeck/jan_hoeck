@@ -1,9 +1,9 @@
 'use client'
 
+import { Section, SectionCaption } from '@/components/shared'
 import { Timeline } from '@jan_hoeck/ui'
 import React from 'react'
 
-import { Section, SectionCaption } from '../../../components'
 import { CustomTimelineItem } from './CustomTimelineItem'
 
 export const TimelineSection = () => {
