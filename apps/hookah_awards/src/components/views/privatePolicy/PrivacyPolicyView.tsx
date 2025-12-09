@@ -3,7 +3,7 @@ import { Headline } from '@/components/shared/Headline'
 export const PrivacyPolicyView = () => {
   return (
     <div className='container mx-auto max-w-6xl text-muted-foreground'>
-      <Headline>Datenschutzerklärung</Headline>
+      <Headline>Datenschutz</Headline>
 
       <div className='space-y-4'>
         <section>
