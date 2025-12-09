@@ -1,9 +1,8 @@
 'use client'
 
+import { SectionType, useSectionsScrollerContext } from '@/components/shared'
 import React, { TouchEvent, WheelEvent, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
-
-import { SectionType, useSectionsScrollerContext } from './SectionsScrollerContext'
 
 export interface SectionsScrollerItemProps {
   className?: string
