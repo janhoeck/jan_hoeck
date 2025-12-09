@@ -7,8 +7,8 @@ export const ImprintView = () => {
       <div className='space-y-2'>
         <div>Aykut_Hookah - Aykut Sakarkaya</div>
         <div>c/o Online-Impressum.de #5231</div>
-        <div>Europaring 90 53757</div>
-        <div>Sankt Augustin</div>
+        <div>Europaring 90</div>
+        <div>53757 Sankt Augustin</div>
       </div>
       <br />
       <div>E-Mail: aykut-hookah@mail.online-impressum.de</div>
