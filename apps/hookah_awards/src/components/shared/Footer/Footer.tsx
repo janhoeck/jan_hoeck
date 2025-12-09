@@ -28,6 +28,8 @@ export const Footer = () => {
           <span>All rights reserved</span>
           <span> - </span>
           <Link href='/imprint'>Impressum</Link>
+          <span> - </span>
+          <Link href='/privacy'>Datenschutz</Link>
         </p>
         <p className='text-sm'>Made with ❤️ for the Community</p>
       </div>
