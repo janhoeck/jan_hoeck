@@ -139,7 +139,7 @@ export async function generateMetadata(props: MetadataProps): Promise<Metadata> 
       siteName: 'Home',
       images: [
         {
-          url: 'https://solymarmenor.com/images/costa-calida.webp',
+          url: 'https://solymarmenor.com/favicon.ico',
           width: 800,
           height: 800,
         },
