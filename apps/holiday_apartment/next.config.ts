@@ -4,6 +4,9 @@ import createNextIntlPlugin from 'next-intl/plugin'
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   basePath: '',
+  experimental: {
+    scrollRestoration: true,
+  },
   turbopack: {
     resolveAlias: {
       handlebars: 'handlebars/dist/handlebars.js',

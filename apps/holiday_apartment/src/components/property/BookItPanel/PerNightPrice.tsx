@@ -15,11 +15,13 @@ export const PerNightPrice = (props: PerNightPriceProps) => {
 
   if (isDiscountPeriod) {
     return (
-      <div className='text-3xl font-bold text-foreground mb-2'>
-        <span>
-          <span className='line-through'>{normalPrice}</span> <span>{discountPrice}</span>
+      <div className='text-3xl font-bold text-foreground mb-2 flex items-baseline gap-2'>
+        <span className='line-through'>{normalPrice}</span>
+        <span>{discountPrice}</span>
+        <span className='text-lg font-normal text-muted-foreground'>
+          {' / '}
+          {t('perNight')}
         </span>
-        <span className='text-lg font-normal text-muted-foreground'> / {t('perNight')}</span>
       </div>
     )
   }
