@@ -8,11 +8,11 @@ import {
   DialogOverlay as RadixDialogOverlay,
   DialogTitle as RadixDialogTitle,
 } from '@radix-ui/react-dialog'
-import React from 'react'
+import React, { ComponentProps } from 'react'
 import { GoX } from 'react-icons/go'
 import { twMerge } from 'tailwind-merge'
 
-import { Button, ButtonProps } from '../Button'
+import { Button } from '../ui'
 
 const DialogOverlay = () => <RadixDialogOverlay className='bg-dialog-backdrop backdrop-blur-sm fixed inset-0' />
 
@@ -20,7 +20,7 @@ export type DialogContentProps = RadixDialogContentProps & {
   title?: string | React.ReactNode
   primaryAction?: {
     label: string
-  } & Omit<ButtonProps<'button'>, 'variant' | 'children'>
+  } & Omit<ComponentProps<typeof Button>, 'variant' | 'children'>
 }
 
 const DialogContent = (props: DialogContentProps) => {
@@ -49,7 +49,7 @@ const DialogContent = (props: DialogContentProps) => {
         {primaryAction && (
           <div className='flex flex-row space-x-6 justify-end h-16 items-center px-6'>
             <Button
-              variant='primary'
+              variant='default'
               {...restPrimaryAction}
             >
               {primaryActionLabel}

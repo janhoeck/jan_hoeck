@@ -1,10 +1,32 @@
 // Components
 export { Typography, type TypographyProps } from './components/Typography'
-export { Timeline, type TimelineProps, TimelineItem, type TimelineItemProps } from './components/Timeline'
 export { Shaker, type ShakerProps, type ShakerRef } from './components/Shaker'
-export { Button, type ButtonProps } from './components/Button'
-export { Badge, type BadgeProps } from './components/Badge'
-export { Card, type CardProps, CardTitle, CardFooter, CardDescription, CardContent } from './components/Card'
+export {
+  Button,
+  buttonVariants,
+  Card,
+  CardContent,
+  CardFooter,
+  CardDescription,
+  CardTitle,
+  CardAction,
+  CardHeader,
+  Badge,
+  badgeVariants,
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+  Popover,
+  PopoverAnchor,
+  PopoverContent,
+  PopoverTrigger,
+} from './components/ui'
+export { cn } from './lib/utils'
 export { DesktopOnly, MobileOnly } from './components/Responsive'
 export { Dialog, DialogPortal, DialogTrigger, DialogOverlay, DialogContent } from './components/Dialog'
 export { Divider, type DividerProps } from './components/Divider'

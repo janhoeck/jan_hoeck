@@ -1,8 +1,10 @@
 /// <reference types="vite/client" />
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { glob } from 'glob'
 import { fileURLToPath } from 'node:url'
 import { extname, relative, resolve } from 'path'
+import path from 'path'
 import preserveDirectives from 'rollup-plugin-preserve-directives'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
@@ -32,10 +34,15 @@ export default defineConfig({
       },
     },
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   plugins: [
     preserveDirectives(),
     react(),
-    // tailwindcss() wird NICHT mehr hier verwendet
+    tailwindcss(),
     dts({
       rollupTypes: true,
       insertTypesEntry: true,

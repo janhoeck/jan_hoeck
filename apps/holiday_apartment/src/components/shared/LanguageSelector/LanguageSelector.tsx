@@ -42,10 +42,7 @@ export const LanguageSelector = () => {
               key={locale}
               value={locale}
             >
-              <Button
-                fullWidth
-                variant='ghost'
-              >
+              <Button variant='ghost'>
                 {t(`options.${locale}`)}
                 {locale === currentLocale && <LiaCheckSolid />}
               </Button>

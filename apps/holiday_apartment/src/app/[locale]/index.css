@@ -1,5 +1,5 @@
-@import '@jan_hoeck/ui/theme.css';
 @import 'tailwindcss';
+@import '@jan_hoeck/ui/styles.css';
 
 @source '../../../node_modules/@jan_hoeck/ui';
 
@@ -18,19 +18,6 @@ body {
 
   --color-background: hsl(0 0% 100%);
   --color-foreground: hsl(210 24% 16%);
-
-  /* button */
-  --radius-btn: var(--radius-md);
-
-  --color-btn-primary-bg: hsl(196 89% 35%);
-  --color-btn-primary-fg: hsl(0 0% 100%);
-  --color-btn-primary-hover-bg: hsla(196, 89%, 35%, 0.9);
-  --color-btn-primary-hover-fg: hsl(0 0% 100%);
-
-  --color-btn-ghost-bg: transparent;
-  --color-btn-ghost-fg: hsl(210 24% 16%);
-  --color-btn-ghost-hover-bg: hsla(210, 24%, 16%, 0.01);
-  --color-btn-ghost-hover-fg: hsla(196, 89%, 35%, 0.8);
 
   /* card */
   --color-card-bg: hsl(0 0% 100%);
