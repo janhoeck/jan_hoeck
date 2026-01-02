@@ -136,6 +136,9 @@
       "locationDescriptionSection": {
         "headline": "Location"
       },
+      "descriptionSection": {
+        "headline": "Description"
+      },
       "equipmentFeaturesSection": {
         "headline": "Equipment Features",
         "subHeadlines": {

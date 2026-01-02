@@ -162,7 +162,7 @@ export default async function Layout(props: LayoutProps) {
       lang={locale}
       className={geist.className}
     >
-      <body className='bg-muted/30'>
+      <body className='bg-muted'>
         <WebVitals />
         <NextIntlClientProvider>
           <LayoutNavigation />

@@ -2,6 +2,7 @@ import { PropertyImages } from '@/components/property/PropertyImages/PropertyIma
 import { AmenitiesSection } from '@/components/property/sections/amenitiesSection/AmenitiesSection'
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
+import { Separator } from '@jan_hoeck/ui'
 
 import { BookItCard } from './BookItPanel/BookItCard'
 import { DescriptionSection } from './sections/descriptionSection/DescriptionSection'
@@ -24,6 +25,7 @@ export const PropertyView = (props: PropertyViewProps) => {
           <div className='lg:col-span-2 space-y-8'>
             <div className='flex flex-col gap-12'>
               <PropertyDetailsSection propertyConfig={configuration} />
+              <Separator />
               <DescriptionSection propertyConfig={configuration} />
               <AmenitiesSection propertyConfig={configuration} />
               <HouseRulesSection propertyConfig={configuration} />

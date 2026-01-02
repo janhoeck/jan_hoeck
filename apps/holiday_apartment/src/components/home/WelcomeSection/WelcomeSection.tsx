@@ -11,13 +11,26 @@ export const WelcomeSection = () => {
           fill
           priority
           src='/images/costa-calida.webp'
-          alt='Costa calida - murcia'
+          alt='Costa Calida – Murcia'
           className='object-cover'
+          /**
+           * Explizit sagen: Das Bild ist IMMER Viewport-breit.
+           * Dadurch wählt Next.js auch auf großen Screens
+           * ausreichend große Bildvarianten.
+           */
           sizes='100vw'
-          quality={100}
+          /**
+           * 85–90 ist der Sweet Spot:
+           * sichtbar gleich scharf wie 100,
+           * aber deutlich effizienter.
+           */
+          quality={90}
         />
-        <div className='to-white absolute inset-0 bg-gradient-to-b from-black/40 via-black/20' />
+
+        {/* Optionales Overlay – OK, solange kein Blur/Scale */}
+        <div className='absolute inset-0 gradient-overlay' />
       </div>
+
       <WelcomeSectionInfo />
     </section>
   )

@@ -17,17 +17,15 @@ export const PropertyDetailsSection = (props: PropertyDetailsSectionProps) => {
 
   return (
     <div className='flex flex-col gap-4'>
-      <div>
-        <Badge>
-          <LuMapPin size={16} />
-          {location.address.city}
-        </Badge>
-      </div>
+      <Badge>
+        <LuMapPin size={16} />
+        {location.address.city}
+      </Badge>
       <h1 className='font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground'>
         {getTranslation(locale, title)}
       </h1>
       <p className='text-xl text-muted-foreground'>{getTranslation(locale, subtitle)}</p>
-      <div className='flex flex-wrap gap-6 pb-6 border-b border-border mt-4'>
+      <div className='flex flex-wrap gap-6 mt-4'>
         {propertyDetails.map((detail) => (
           <PropertyDetailItem
             key={detail.type}

@@ -12,3 +12,16 @@ export {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from './navigation-menu'
+export {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+} from './select'
+export { Separator } from './separator'

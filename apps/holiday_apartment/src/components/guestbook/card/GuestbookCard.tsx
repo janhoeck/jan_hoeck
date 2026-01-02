@@ -27,7 +27,7 @@ export const GuestbookCard = (props: GuestbookCardProps) => {
       <CardContent>
         <div className='flex flex-row justify-between gap-2'>
           <StarRating rating={rating} />
-          <Typography variant='smallText'>{formattedDate}</Typography>
+          <span className='text-muted-foreground text-xs'>{formattedDate}</span>
         </div>
         <div className='flex flex-col gap-1'>
           <Typography

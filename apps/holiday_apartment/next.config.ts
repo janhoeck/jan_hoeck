@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     qualities: [75, 80, 100],
+    formats: ['image/avif', 'image/webp'],
   },
 }
 

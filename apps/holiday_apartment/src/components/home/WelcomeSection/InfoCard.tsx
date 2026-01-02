@@ -11,8 +11,8 @@ export const InfoCard = (props: InfoCardProps) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardTitle className='text-primary font-serif text-3xl font-bold md:text-4xl'>{title}</CardTitle>
+        <CardDescription className='text-muted-foreground mt-1 text-sm md:text-base'>{description}</CardDescription>
       </CardHeader>
     </Card>
   )
