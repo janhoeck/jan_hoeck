@@ -13,17 +13,7 @@ export const WelcomeSection = () => {
           src='/images/costa-calida.webp'
           alt='Costa Calida – Murcia'
           className='object-cover'
-          /**
-           * Explizit sagen: Das Bild ist IMMER Viewport-breit.
-           * Dadurch wählt Next.js auch auf großen Screens
-           * ausreichend große Bildvarianten.
-           */
           sizes='100vw'
-          /**
-           * 85–90 ist der Sweet Spot:
-           * sichtbar gleich scharf wie 100,
-           * aber deutlich effizienter.
-           */
           quality={90}
         />
 
