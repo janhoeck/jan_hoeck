@@ -1,18 +1,30 @@
-import { Button, Typography } from '@jan_hoeck/ui'
+import { Button, Input, Textarea, Typography, toast } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import { Form } from 'radix-ui'
-import { FormHTMLAttributes } from 'react'
+import { useActionState, useEffect, useState } from 'react'
 
-export type ContactFormProps = {
-  action: FormHTMLAttributes<HTMLFormElement>['action']
-  isPending: boolean
+import { sendMail } from './actions'
+import { FormState } from './types'
+
+const INITIAL_FORM_STATE: FormState = {
+  success: undefined,
 }
 
-export const ContactForm = (props: ContactFormProps) => {
-  const { action, isPending } = props
+export const ContactForm = () => {
   const t = useTranslations('components.contactForm')
 
-  const inputClassName = 'w-full p-1 border-1 rounded-sm border-neutral-300 text-slate-800 bg-white'
+  const [initialFormState, setInitialFormState] = useState(INITIAL_FORM_STATE)
+  const [formState, action, isPending] = useActionState(sendMail, initialFormState)
+
+  useEffect(() => {
+    if (formState.success === true) {
+      toast.success(t('success'))
+      setInitialFormState(INITIAL_FORM_STATE)
+    } else if (formState.success === false) {
+      toast.error(t('error'))
+    }
+  }, [t, formState, toast])
+
   const fieldClassName = 'flex flex-col gap-1'
 
   return (
@@ -33,10 +45,7 @@ export const ContactForm = (props: ContactFormProps) => {
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <input
-            required
-            className={inputClassName}
-          />
+          <Input required />
         </Form.Control>
       </Form.Field>
       <Form.Field
@@ -55,10 +64,9 @@ export const ContactForm = (props: ContactFormProps) => {
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <input
+          <Input
             required
             type='email'
-            className={inputClassName}
           />
         </Form.Control>
       </Form.Field>
@@ -70,10 +78,7 @@ export const ContactForm = (props: ContactFormProps) => {
           <Typography>{t('phone.label')}</Typography>
         </Form.Label>
         <Form.Control asChild>
-          <input
-            type='tel'
-            className={inputClassName}
-          />
+          <Input type='tel' />
         </Form.Control>
       </Form.Field>
       <Form.Field
@@ -89,10 +94,7 @@ export const ContactForm = (props: ContactFormProps) => {
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <textarea
-            required
-            className={inputClassName}
-          />
+          <Textarea required />
         </Form.Control>
       </Form.Field>
       <Form.Submit asChild>

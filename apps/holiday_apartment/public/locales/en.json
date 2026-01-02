@@ -9,6 +9,8 @@
       "contact": "Contact"
     },
     "contactForm": {
+      "success": "Your inquiry has been sent successfully.",
+      "error": "Your inquiry could not be sent.",
       "name": {
         "label": "Name",
         "valueMissing": "Please enter your name"
@@ -28,6 +30,8 @@
       "sendButtonLabel": "Send"
     },
     "guestbookForm": {
+      "success": "Your rating has been saved. Thank you!",
+      "error": "An error occurred while saving the rating.",
       "name": {
         "label": "Name",
         "valueMissing": "Please enter your name"
@@ -127,9 +131,7 @@
         "headline": "Contact"
       },
       "enquiry": {
-        "headline": "Inquiry",
-        "successMessage": "Your inquiry has been sent successfully.",
-        "errorMessage": "Your inquiry could not be sent."
+        "headline": "Inquiry"
       }
     },
     "property": {

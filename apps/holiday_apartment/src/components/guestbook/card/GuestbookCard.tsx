@@ -5,7 +5,11 @@ import { StarRating } from './StarRating'
 
 const formatDate = (dateString: string, locale: string) => {
   const date = new Date(dateString)
-  return date.toLocaleDateString(locale)
+  return date.toLocaleDateString(locale, {
+    month: '2-digit',
+    day: '2-digit',
+    year: 'numeric',
+  })
 }
 
 type GuestbookCardProps = {
@@ -25,7 +29,7 @@ export const GuestbookCard = (props: GuestbookCardProps) => {
   return (
     <Card id={`guestbook_entry_${id}`}>
       <CardContent>
-        <div className='flex flex-row justify-between gap-2'>
+        <div className='flex flex-row justify-between gap-2 mb-2'>
           <StarRating rating={rating} />
           <span className='text-muted-foreground text-xs'>{formattedDate}</span>
         </div>

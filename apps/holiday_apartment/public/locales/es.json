@@ -9,6 +9,8 @@
       "contact": "Contacto"
     },
     "contactForm": {
+      "success": "Tu consulta ha sido enviada con éxito.",
+      "error": "Tu consulta no pudo ser enviada.",
       "name": {
         "label": "Nombre",
         "valueMissing": "Por favor, introduce tu nombre"
@@ -28,6 +30,8 @@
       "sendButtonLabel": "Enviar"
     },
     "guestbookForm": {
+      "success": "Tu valoración ha sido guardada. ¡Gracias!",
+      "error": "Se produjo un error al guardar la valoración.",
       "name": {
         "label": "Nombre",
         "valueMissing": "Por favor, indique su nombre"
@@ -127,9 +131,7 @@
         "headline": "Contacto"
       },
       "enquiry": {
-        "headline": "Consulta",
-        "successMessage": "Tu consulta ha sido enviada con éxito.",
-        "errorMessage": "Tu consulta no pudo ser enviada."
+        "headline": "Consulta"
       }
     },
     "property": {

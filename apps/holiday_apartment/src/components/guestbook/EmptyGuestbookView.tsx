@@ -5,16 +5,9 @@ import { GuestbookForm } from '@/components/shared/GuestbookForm/GuestbookForm'
 import { Section } from '@/components/shared/Section/Section'
 import { Typography } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
-import { useActionState } from 'react'
 
-export type EmptyGuestbookViewProps = {
-  serverAction: (state: any, formData: FormData) => void
-}
-
-export const EmptyGuestbookView = (props: EmptyGuestbookViewProps) => {
-  const { serverAction } = props
+export const EmptyGuestbookView = () => {
   const t = useTranslations('pages.guestbook')
-  const [, formAction, isPending] = useActionState(serverAction, null)
 
   return (
     <ContentContainer className='mt-10'>
@@ -26,10 +19,7 @@ export const EmptyGuestbookView = (props: EmptyGuestbookViewProps) => {
           >
             <Typography>{t('empty.text')}</Typography>
           </Section>
-          <GuestbookForm
-            action={formAction}
-            isPending={isPending}
-          />
+          <GuestbookForm />
         </div>
       </Section>
     </ContentContainer>

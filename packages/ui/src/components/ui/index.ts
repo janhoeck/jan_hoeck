@@ -25,3 +25,6 @@ export {
   SelectScrollUpButton,
 } from './select'
 export { Separator } from './separator'
+export { Input } from './input'
+export { Textarea } from './textarea'
+export { Toaster, toast } from './sonner'

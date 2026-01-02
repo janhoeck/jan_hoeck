@@ -1,6 +1,7 @@
 import { LayoutFooter } from '@/components/shared/LayoutFooter'
 import { LayoutNavigation } from '@/components/shared/LayoutNavigation'
 import { WebVitals } from '@/components/shared/WebVitals'
+import { Toaster } from '@jan_hoeck/ui'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Metadata } from 'next'
@@ -162,13 +163,17 @@ export default async function Layout(props: LayoutProps) {
       lang={locale}
       className={geist.className}
     >
-      <body className='bg-muted'>
+      <body>
         <WebVitals />
         <NextIntlClientProvider>
           <LayoutNavigation />
           <main className='min-h-[calc(100%-73px-105px)]'>{children}</main>
           <LayoutFooter />
         </NextIntlClientProvider>
+        <Toaster
+          richColors
+          position='top-center'
+        />
         <Analytics />
         <SpeedInsights />
       </body>
