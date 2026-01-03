@@ -28,3 +28,15 @@ export { Separator } from './separator'
 export { Input } from './input'
 export { Textarea } from './textarea'
 export { Toaster, toast } from './sonner'
+export {
+  Dialog,
+  DialogDescription,
+  DialogClose,
+  DialogTitle,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogOverlay,
+  DialogPortal,
+  DialogTrigger,
+} from './dialog'

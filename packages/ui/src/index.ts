@@ -40,11 +40,19 @@ export {
   Textarea,
   Toaster,
   toast,
+  Dialog,
+  DialogDescription,
+  DialogClose,
+  DialogTitle,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogOverlay,
+  DialogPortal,
+  DialogTrigger,
 } from './components/ui'
 export { cn } from './lib/utils'
 export { DesktopOnly, MobileOnly } from './components/Responsive'
-export { Dialog, DialogPortal, DialogTrigger, DialogOverlay, DialogContent } from './components/Dialog'
-export { Divider, type DividerProps } from './components/Divider'
 
 // Hooks
 export { useIsClient, useOpenState, useLockBodyScroll, useIsMounted, useResizeObserver, useIsMobile } from './hooks'

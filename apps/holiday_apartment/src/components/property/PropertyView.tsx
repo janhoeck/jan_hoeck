@@ -1,10 +1,10 @@
-import { PropertyImages } from '@/components/property/PropertyImages/PropertyImages'
-import { AmenitiesSection } from '@/components/property/sections/amenitiesSection/AmenitiesSection'
-import { ContentContainer } from '@/components/shared/Container/ContentContainer'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 import { Separator } from '@jan_hoeck/ui'
 
+import { ContentContainer } from '../shared/Container/ContentContainer'
 import { BookItCard } from './BookItPanel/BookItCard'
+import { PropertyImageGrid } from './PropertyImages/PropertyImageGrid'
+import { AmenitiesSection } from './sections/amenitiesSection/AmenitiesSection'
 import { DescriptionSection } from './sections/descriptionSection/DescriptionSection'
 import { HouseRulesSection } from './sections/houseRulesSection/HouseRulesSection'
 import { LocationDescriptionSection } from './sections/locationDescriptionSection/LocationDescriptionSection'
@@ -19,9 +19,9 @@ export const PropertyView = (props: PropertyViewProps) => {
 
   return (
     <div>
-      <PropertyImages imageSources={configuration.imageSources} />
-      <ContentContainer className='pt-10'>
-        <div className='grid lg:grid-cols-3 gap-8 md:gap-12'>
+      <ContentContainer>
+        <PropertyImageGrid imageSources={configuration.imageSources} />
+        <div className='grid lg:grid-cols-3 gap-8 md:gap-12 mt-10'>
           <div className='lg:col-span-2 space-y-8'>
             <div className='flex flex-col gap-12'>
               <PropertyDetailsSection propertyConfig={configuration} />
