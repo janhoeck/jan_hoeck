@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography } from '@jan_hoeck/ui'
+import { Card, CardContent, P, Small } from '@jan_hoeck/ui'
 import { useLocale } from 'next-intl'
 
 import { StarRating } from './StarRating'
@@ -31,16 +31,11 @@ export const GuestbookCard = (props: GuestbookCardProps) => {
       <CardContent>
         <div className='flex flex-row justify-between gap-2 mb-2'>
           <StarRating rating={rating} />
-          <span className='text-muted-foreground text-xs'>{formattedDate}</span>
+          <Small className='text-muted-foreground'>{formattedDate}</Small>
         </div>
         <div className='flex flex-col gap-1'>
-          <Typography
-            variant='heading'
-            size={5}
-          >
-            {name}
-          </Typography>
-          <p className='whitespace-pre-wrap text-foreground'>{message}</p>
+          <P className='font-semibold'>{name}</P>
+          <P className='whitespace-pre-wrap'>{message}</P>
         </div>
       </CardContent>
     </Card>

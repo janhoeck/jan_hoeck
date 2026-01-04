@@ -20,7 +20,7 @@ export const HouseRulesSection = (props: HouseRulesSectionProps) => {
   return (
     <Section title={t('headline')}>
       <div className='flex flex-col gap-4'>
-        <div className={twMerge(['flex max-w-[600px] flex-col gap-2', 'sm:flex-row'])}>
+        <div className={twMerge(['flex flex-col gap-2', 'sm:flex-row'])}>
           <div className='flex flex-1 flex-col gap-4'>
             <IconWithText
               icon={iconMapping['checkin']}

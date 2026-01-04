@@ -40,3 +40,4 @@ export {
   DialogPortal,
   DialogTrigger,
 } from './dialog'
+export { H1, List, H2, H3, H4, P, Lead, Large, Muted, Quote, Small, InlineCode, MultilineCode } from './typography'

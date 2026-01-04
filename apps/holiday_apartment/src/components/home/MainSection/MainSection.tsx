@@ -12,7 +12,7 @@ import { InfoCard } from './InfoCard'
 export const MainSection = () => {
   const t = useTranslations('pages.home.main')
   return (
-    <section className='py-16 md:py-24'>
+    <section className='pt-16 md:pt-24'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <TextWithHeadline
           title={t('title')}

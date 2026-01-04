@@ -17,15 +17,13 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./styles.css": "./dist/styles.css",
-    "./theme.css": "./dist/theme.css"
+    "./styles.css": "./dist/styles.css"
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:js && npm run build:css && npm run copy:theme",
+    "build": "npm run build:js && npm run copy:css",
     "build:js": "tsc && vite build",
-    "build:css": "postcss src/styles.css -o dist/styles.css",
-    "copy:theme": "copyfiles -f src/theme.css dist",
+    "copy:css": "copyfiles -f src/styles.css dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

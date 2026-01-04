@@ -1,7 +1,7 @@
 import { getTranslation } from '@/components/property/utils'
 import { Location } from '@/types/PropertyConfiguration'
 import { safeJoin } from '@/utils/join'
-import { Card, CardContent } from '@jan_hoeck/ui'
+import { Card, CardContent, Muted } from '@jan_hoeck/ui'
 import { useLocale } from 'next-intl'
 import { LuMapPin } from 'react-icons/lu'
 
@@ -37,9 +37,7 @@ export const AddressCard = (props: AddressCardProps) => {
             <div className='text-sm text-muted-foreground'>{[address.postalCode, address.city].join(' ')}</div>
           </div>
         </div>
-        {address.description && (
-          <span className='text-sm text-muted-foreground'>{getTranslation(locale, address.description)}</span>
-        )}
+        {address.description && <Muted>{getTranslation(locale, address.description)}</Muted>}
       </CardContent>
     </Card>
   )

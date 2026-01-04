@@ -1,3 +1,4 @@
+import { Muted, P } from '@jan_hoeck/ui'
 import { IconType } from 'react-icons'
 
 export type ItemWithIconProps = {
@@ -17,8 +18,8 @@ export const IconWithText = (props: ItemWithIconProps) => {
         />
       </div>
       <div className='flex flex-col'>
-        <span className='text-sm text-muted-foreground'>{label}</span>
-        <span className='font-semibold'>{description}</span>
+        <Muted>{label}</Muted>
+        <P className='font-semibold'>{description}</P>
       </div>
     </div>
   )

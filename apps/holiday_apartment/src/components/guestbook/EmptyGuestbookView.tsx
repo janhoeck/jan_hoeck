@@ -3,7 +3,7 @@
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
 import { GuestbookForm } from '@/components/shared/GuestbookForm/GuestbookForm'
 import { Section } from '@/components/shared/Section/Section'
-import { Typography } from '@jan_hoeck/ui'
+import { P } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 
 export const EmptyGuestbookView = () => {
@@ -17,7 +17,7 @@ export const EmptyGuestbookView = () => {
             title={t('empty.headline')}
             variant='subsection'
           >
-            <Typography>{t('empty.text')}</Typography>
+            <P>{t('empty.text')}</P>
           </Section>
           <GuestbookForm />
         </div>

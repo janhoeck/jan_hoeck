@@ -11,9 +11,24 @@ export const LayoutFooter = () => {
       <div className='flex flex-col items-end gap-4 px-4 sm:flex-row sm:items-center sm:justify-between'>
         <LanguageSelector />
         <div className='flex gap-4 text-sm text-muted-foreground'>
-          <Link href='/imprint'>{t('imprint')}</Link>
-          <Link href='/privacy'>{t('privacy')}</Link>
-          <Link href='/contact'>{t('contact')}</Link>
+          <Link
+            href='/imprint'
+            className='hover:text-primary transition-colors'
+          >
+            {t('imprint')}
+          </Link>
+          <Link
+            href='/privacy'
+            className='hover:text-primary transition-colors'
+          >
+            {t('privacy')}
+          </Link>
+          <Link
+            href='/contact'
+            className='hover:text-primary transition-colors'
+          >
+            {t('contact')}
+          </Link>
         </div>
       </div>
       <Separator className='my-4' />

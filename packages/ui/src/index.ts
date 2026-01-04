@@ -1,5 +1,4 @@
 // Components
-export { Typography, type TypographyProps } from './components/Typography'
 export { Shaker, type ShakerProps, type ShakerRef } from './components/Shaker'
 export {
   Button,
@@ -50,6 +49,19 @@ export {
   DialogOverlay,
   DialogPortal,
   DialogTrigger,
+  H1,
+  List,
+  H2,
+  H3,
+  H4,
+  P,
+  Lead,
+  Large,
+  Muted,
+  Quote,
+  Small,
+  InlineCode,
+  MultilineCode,
 } from './components/ui'
 export { cn } from './lib/utils'
 export { DesktopOnly, MobileOnly } from './components/Responsive'

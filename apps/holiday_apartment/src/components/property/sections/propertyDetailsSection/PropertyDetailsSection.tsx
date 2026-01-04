@@ -1,7 +1,7 @@
 import { PropertyDetailItem } from '@/components/property/sections/propertyDetailsSection/PropertyDetailItem'
 import { getTranslation } from '@/components/property/utils'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
-import { Badge } from '@jan_hoeck/ui'
+import { Badge, H1, P } from '@jan_hoeck/ui'
 import { useLocale } from 'next-intl'
 import { LuMapPin } from 'react-icons/lu'
 
@@ -21,10 +21,10 @@ export const PropertyDetailsSection = (props: PropertyDetailsSectionProps) => {
         <LuMapPin size={16} />
         {location.address.city}
       </Badge>
-      <h1 className='font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground'>
+      <H1 className='font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground'>
         {getTranslation(locale, title)}
-      </h1>
-      <p className='text-xl text-muted-foreground'>{getTranslation(locale, subtitle)}</p>
+      </H1>
+      <P className='text-muted-foreground'>{getTranslation(locale, subtitle)}</P>
       <div className='flex flex-wrap gap-6 mt-4'>
         {propertyDetails.map((detail) => (
           <PropertyDetailItem

@@ -19,7 +19,7 @@ export const InfoCard = (props: InfoCardProps) => {
         </div>
       </CardContent>
       <CardHeader>
-        <CardTitle className='text-2xl'>{title}</CardTitle>
+        <CardTitle className='text-xl'>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
     </Card>

@@ -1,6 +1,6 @@
 import { getTranslation } from '@/components/property/utils'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
-import { Badge, Button, Card, CardContent, CardFooter, CardHeader } from '@jan_hoeck/ui'
+import { Badge, Button, Card, CardContent, CardFooter, CardHeader, H3, Muted } from '@jan_hoeck/ui'
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -42,13 +42,9 @@ export const PropertyCard = (props: PropertyCardProps) => {
       </CardHeader>
 
       <CardContent>
-        <h3 className='font-serif text-2xl md:text-3xl font-bold mb-2 transition-colors group-hover:text-primary'>
-          {getTranslation(locale, propertyConfiguration.title)}
-        </h3>
-        <p className='text-muted-foreground leading-relaxed mb-6'>
-          {getTranslation(locale, propertyConfiguration.subtitle)}
-        </p>
-        <div className='flex items-center gap-6 text-muted-foreground mb-6'>
+        <H3 className='line-clamp-2'>{getTranslation(locale, propertyConfiguration.title)}</H3>
+        <Muted>{getTranslation(locale, propertyConfiguration.subtitle)}</Muted>
+        <div className='flex items-center gap-6 text-muted-foreground mb-6 mt-6'>
           {bedPropertySummary && (
             <PropertyStatisticItem
               icon={LuBed}

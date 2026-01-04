@@ -8,8 +8,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
+  Small,
   Textarea,
-  Typography,
   toast,
 } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
@@ -52,11 +52,9 @@ export const GuestbookForm = () => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('name.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('name.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('name.valueMissing')}</Typography>
+            <Small>{t('name.valueMissing')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -68,9 +66,7 @@ export const GuestbookForm = () => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('rating.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('rating.label')}</Form.Label>
         </div>
         <Form.Control asChild>
           <Select
@@ -95,11 +91,9 @@ export const GuestbookForm = () => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('message.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('message.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('message.valueMissing')}</Typography>
+            <Small>{t('message.valueMissing')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>

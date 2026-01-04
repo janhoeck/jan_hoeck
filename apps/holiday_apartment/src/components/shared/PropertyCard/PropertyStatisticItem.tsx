@@ -1,3 +1,4 @@
+import { Muted } from '@jan_hoeck/ui'
 import { type IconType } from 'react-icons'
 
 export type PropertyStatisticItemProps = {
@@ -9,11 +10,8 @@ export const PropertyStatisticItem = (props: PropertyStatisticItemProps) => {
   const { icon: Icon, text } = props
   return (
     <div className='flex items-center gap-2'>
-      <Icon
-        size={20}
-        className='text-primary'
-      />
-      <span className='text-sm font-medium'>{text}</span>
+      <Icon size={20} />
+      <Muted>{text}</Muted>
     </div>
   )
 }

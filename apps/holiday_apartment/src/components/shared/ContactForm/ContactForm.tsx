@@ -1,4 +1,4 @@
-import { Button, Input, Textarea, Typography, toast } from '@jan_hoeck/ui'
+import { Button, Input, Small, Textarea, toast } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import { Form } from 'radix-ui'
 import { useActionState, useEffect, useState } from 'react'
@@ -37,11 +37,9 @@ export const ContactForm = () => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('name.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('name.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('name.valueMissing')}</Typography>
+            <Small>{t('name.valueMissing')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -53,14 +51,12 @@ export const ContactForm = () => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('email.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('email.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('email.valueMissing')}</Typography>
+            <Small>{t('email.valueMissing')}</Small>
           </Form.Message>
           <Form.Message match='typeMismatch'>
-            <Typography variant='smallText'>{t('email.typeMismatch')}</Typography>
+            <Small>{t('email.typeMismatch')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -74,9 +70,7 @@ export const ContactForm = () => {
         name='phone'
         className={fieldClassName}
       >
-        <Form.Label>
-          <Typography>{t('phone.label')}</Typography>
-        </Form.Label>
+        <Form.Label>{t('phone.label')}</Form.Label>
         <Form.Control asChild>
           <Input type='tel' />
         </Form.Control>
@@ -86,11 +80,9 @@ export const ContactForm = () => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('message.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('message.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('message.valueMissing')}</Typography>
+            <Small>{t('message.valueMissing')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>

@@ -1,4 +1,4 @@
-import { Typography } from '@jan_hoeck/ui'
+import { H2, H3 } from '@jan_hoeck/ui'
 import { ReactNode } from 'react'
 
 export type SectionProps = {
@@ -12,9 +12,9 @@ export const Section = (props: SectionProps) => {
   return (
     <section className='z-1'>
       {variant === 'default' ? (
-        <h2 className='text-2xl font-serif font-bold text-foreground mb-4'>{title}</h2>
+        <H2 className='font-serif mb-4'>{title}</H2>
       ) : (
-        <h3 className='text-xl font-serif font-bold text-foreground mb-2'>{title}</h3>
+        <H3 className='font-serif mb-2'>{title}</H3>
       )}
       {children}
     </section>
