@@ -210,7 +210,7 @@
       },
       "bookIt": {
         "night": "Nacht",
-        "currentPrice": "Aktuelle Preis",
+        "currentPrice": "Aktueller Preis",
         "mwst": "inkl. MwSt.",
         "mainSeason": {
           "title": "Hauptsaison",
