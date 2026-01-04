@@ -17,25 +17,30 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./styles.css": "./dist/styles.css",
-    "./theme.css": "./dist/theme.css"
+    "./styles.css": "./dist/styles.css"
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:js && npm run build:css && npm run copy:theme",
+    "build": "npm run build:js && npm run copy:css",
     "build:js": "tsc && vite build",
-    "build:css": "postcss src/styles.css -o dist/styles.css",
-    "copy:theme": "copyfiles -f src/theme.css dist",
+    "copy:css": "copyfiles -f src/styles.css dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-form": "^0.1.8",
+    "@radix-ui/react-navigation-menu": "^1.2.14",
+    "@radix-ui/react-popover": "^1.1.15",
     "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.562.0",
+    "next-themes": "^0.4.6",
     "react-icons": "^5.5.0",
+    "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
@@ -55,6 +60,7 @@
     "react-dom": "^19.2.3",
     "rollup-plugin-preserve-directives": "^0.4.0",
     "tailwindcss": "^4.1.18",
+    "tw-animate-css": "^1.4.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.0",
     "vite-plugin-dts": "^4.5.4"

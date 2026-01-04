@@ -3,39 +3,18 @@
 import { ContentContainer } from '@/components/shared/Container/ContentContainer'
 import { GuestbookForm } from '@/components/shared/GuestbookForm/GuestbookForm'
 import { Section } from '@/components/shared/Section/Section'
-import { Typography } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
-import { useSearchParams } from 'next/navigation'
-import { useActionState, useEffect } from 'react'
 
+import { GuestbookEntry } from '../shared/GuestbookForm/types'
 import { GuestbookCard } from './card/GuestbookCard'
 
 type GuestbookViewProps = {
-  serverAction: (state: any, formData: FormData) => void
-  entries: {
-    id: number
-    created_at: string
-    name: string
-    message: string
-    rating: number
-  }[]
+  entries: GuestbookEntry[]
 }
 
 export const GuestbookView = (props: GuestbookViewProps) => {
-  const { entries, serverAction } = props
+  const { entries } = props
   const t = useTranslations('pages.guestbook')
-
-  const [, formAction, isPending] = useActionState(serverAction, null)
-
-  const searchParams = useSearchParams()
-  const id = searchParams.get('id')
-
-  useEffect(() => {
-    if (id) {
-      const element = document.getElementById(`guestbook_entry_${id}`)
-      element?.scrollIntoView({ behavior: 'smooth' })
-    }
-  }, [id])
 
   return (
     <ContentContainer className='mt-10'>
@@ -47,10 +26,7 @@ export const GuestbookView = (props: GuestbookViewProps) => {
           >
             <div className='flex max-w-[550px] flex-col gap-4'>
               <span className='text-foreground'>{t('descriptions.1')}</span>
-              <GuestbookForm
-                action={formAction}
-                isPending={isPending}
-              />
+              <GuestbookForm />
             </div>
           </Section>
           <Section

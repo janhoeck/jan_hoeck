@@ -1,24 +1,21 @@
-import { Button, type ButtonProps } from '@jan_hoeck/ui'
+import { Button } from '@jan_hoeck/ui'
 import Link from 'next/link'
 
 export type NavigationItemProps = {
   children: string
   to: string
-  fullWidth?: ButtonProps<'a'>['fullWidth']
   onClick?: () => void
 }
 
 export const NavigationItem = (props: NavigationItemProps) => {
-  const { children, to, fullWidth, onClick } = props
+  const { children, to, onClick } = props
   return (
     <Button
-      as={Link}
-      fullWidth={fullWidth}
+      asChild
       variant='ghost'
-      href={to}
       onClick={onClick}
     >
-      {children}
+      <Link href={to}>{children}</Link>
     </Button>
   )
 }

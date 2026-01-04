@@ -1,5 +1,5 @@
 import { TextWithHeadline } from '@/components/home/TextWithHeadline'
-import { Card, CardContent, CardDescription, CardTitle } from '@jan_hoeck/ui'
+import { Card, CardDescription, CardHeader, CardTitle } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { IoMdHeartEmpty } from 'react-icons/io'
@@ -12,7 +12,7 @@ import { InfoCard } from './InfoCard'
 export const MainSection = () => {
   const t = useTranslations('pages.home.main')
   return (
-    <section className='py-16 md:py-24'>
+    <section className='pt-16 md:pt-24'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <TextWithHeadline
           title={t('title')}
@@ -42,14 +42,14 @@ export const MainSection = () => {
         </div>
         <Card className='mt-12'>
           <div className='grid gap-8 md:grid-cols-2 md:gap-12'>
-            <CardContent>
-              <CardTitle>{t('locations.losAlcazares.title')}</CardTitle>
+            <CardHeader>
+              <CardTitle className='text-2xl leading-none'>{t('locations.losAlcazares.title')}</CardTitle>
               <CardDescription>{t('locations.losAlcazares.description')}</CardDescription>
-            </CardContent>
-            <CardContent>
-              <CardTitle>{t('locations.losUrrutias.title')}</CardTitle>
+            </CardHeader>
+            <CardHeader>
+              <CardTitle className='text-2xl leading-none'>{t('locations.losUrrutias.title')}</CardTitle>
               <CardDescription>{t('locations.losUrrutias.description')}</CardDescription>
-            </CardContent>
+            </CardHeader>
           </div>
         </Card>
       </div>

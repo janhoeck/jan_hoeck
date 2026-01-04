@@ -1,4 +1,4 @@
-import { Typography } from '@jan_hoeck/ui'
+import { Separator } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 
 import { Link } from '../../i18n/navigation'
@@ -10,22 +10,29 @@ export const LayoutFooter = () => {
     <footer className='p-4'>
       <div className='flex flex-col items-end gap-4 px-4 sm:flex-row sm:items-center sm:justify-between'>
         <LanguageSelector />
-        <div className='flex gap-4'>
-          <Link href='/imprint'>
-            <Typography variant='smallText'>{t('imprint')}</Typography>
+        <div className='flex gap-4 text-sm text-muted-foreground'>
+          <Link
+            href='/imprint'
+            className='hover:text-primary transition-colors'
+          >
+            {t('imprint')}
           </Link>
-          <Link href='/privacy'>
-            <Typography variant='smallText'>{t('privacy')}</Typography>
+          <Link
+            href='/privacy'
+            className='hover:text-primary transition-colors'
+          >
+            {t('privacy')}
           </Link>
-          <Link href='/contact'>
-            <Typography variant='smallText'>{t('contact')}</Typography>
+          <Link
+            href='/contact'
+            className='hover:text-primary transition-colors'
+          >
+            {t('contact')}
           </Link>
         </div>
       </div>
-      <hr className='my-4 text-neutral-300' />
-      <div className='w-full text-center'>
-        <Typography variant='smallText'>{t('allRightsReserved')}</Typography>
-      </div>
+      <Separator className='my-4' />
+      <div className='w-full text-center text-sm text-muted-foreground'>{t('allRightsReserved')}</div>
     </footer>
   )
 }

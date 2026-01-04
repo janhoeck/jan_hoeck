@@ -9,6 +9,8 @@
       "contact": "Kontakt"
     },
     "contactForm": {
+      "success": "Ihre Anfrage wurde erfolgreich verschickt.",
+      "error": "Ihre Anfrage konnte nicht verschickt werden.",
       "name": {
         "label": "Name",
         "valueMissing": "Bitte geben Sie ihren Namen an"
@@ -28,6 +30,8 @@
       "sendButtonLabel": "Abschicken"
     },
     "guestbookForm": {
+      "success": "Deine Bewertung wurde gespeichert. Danke!",
+      "error": "Beim Speichern der Bewertung ist ein Fehler aufgetreten.",
       "name": {
         "label": "Name",
         "valueMissing": "Bitte geben Sie ihren Namen an"
@@ -127,14 +131,15 @@
         "headline": "Kontakt"
       },
       "enquiry": {
-        "headline": "Anfrage",
-        "successMessage": "Ihre Anfrage wurde erfolgreich verschickt.",
-        "errorMessage": "Ihre Anfrage konnte nicht verschickt werden."
+        "headline": "Anfrage"
       }
     },
     "property": {
       "locationDescriptionSection": {
         "headline": "Lage"
+      },
+      "descriptionSection": {
+        "headline": "Beschreibung"
       },
       "equipmentFeaturesSection": {
         "headline": "Ausstattungsmerkmale",

@@ -1,16 +1,23 @@
 'use server'
 
-import { ContactFormData } from '@/components/shared/ContactForm/types'
 import { Resend } from 'resend'
 
 import { ContactEmailTemplate } from './ContactMailTemplate'
+import { ContactFormData, FormState, schema } from './types'
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
 
-export async function sendMail(_initialState: any, formData: FormData) {
+export async function sendMail(_prevState: FormState, formData: FormData): Promise<FormState> {
   try {
     const contactFormData = Object.fromEntries([...formData]) as ContactFormData
     contactFormData.message = contactFormData.message.replaceAll(' ', '&nbsp;').replace(/\r\n|\r|\n/g, '<br />')
+
+    const { success } = schema.safeParse(contactFormData)
+    if (!success) {
+      return {
+        success: false,
+      }
+    }
 
     const { data, error } = await resend.emails.send({
       from: process.env.NEXT_PUBLIC_CONTACT_MAIL_FROM as string,
@@ -20,14 +27,23 @@ export async function sendMail(_initialState: any, formData: FormData) {
     })
 
     if (error) {
-      return false
+      return {
+        success: false,
+      }
     }
 
     if (data) {
-      return true
+      return {
+        success: true,
+      }
     }
   } catch (error) {
-    console.error(error)
+    return {
+      success: false,
+    }
   }
-  return false
+
+  return {
+    success: false,
+  }
 }

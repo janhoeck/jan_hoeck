@@ -1,9 +1,7 @@
 'use client'
 
-import { Button } from '@jan_hoeck/ui'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@jan_hoeck/ui'
 import { useLocale, useTranslations } from 'next-intl'
-import { Select } from 'radix-ui'
-import { LiaAngleDownSolid, LiaCheckSolid } from 'react-icons/lia'
 
 import { usePathname, useRouter } from '../../../i18n/navigation'
 import { routing } from '../../../i18n/routing'
@@ -20,39 +18,23 @@ export const LanguageSelector = () => {
   }
 
   return (
-    <Select.Root
+    <Select
       value={currentLocale}
       onValueChange={handleValueChange}
     >
-      <Select.Trigger className='flex items-center gap-4 rounded-sm border-1 border-neutral-300 bg-white px-2 py-1'>
-        <Select.Value placeholder={t('placeholder')}>{t(`options.${currentLocale}`)}</Select.Value>
-        <Select.Icon className='SelectIcon'>
-          <LiaAngleDownSolid />
-        </Select.Icon>
-      </Select.Trigger>
-      <Select.Portal>
-        <Select.Content
-          className='z-10 overflow-hidden rounded-sm bg-white py-2 shadow-md'
-          side='bottom'
-          position='popper'
-        >
-          {routing.locales.map((locale) => (
-            <Select.Item
-              asChild
-              key={locale}
-              value={locale}
-            >
-              <Button
-                fullWidth
-                variant='ghost'
-              >
-                {t(`options.${locale}`)}
-                {locale === currentLocale && <LiaCheckSolid />}
-              </Button>
-            </Select.Item>
-          ))}
-        </Select.Content>
-      </Select.Portal>
-    </Select.Root>
+      <SelectTrigger>
+        <SelectValue placeholder={t('placeholder')}>{t(`options.${currentLocale}`)}</SelectValue>
+      </SelectTrigger>
+      <SelectContent>
+        {routing.locales.map((locale) => (
+          <SelectItem
+            key={locale}
+            value={locale}
+          >
+            {t(`options.${locale}`)}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   )
 }

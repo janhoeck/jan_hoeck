@@ -31,12 +31,11 @@ export const MobileNavigationContent = (props: MobileNavigationContentProps) => 
       >
         {isOpen ? <IoMdClose size={20} /> : <LiaBarsSolid size={20} />}
       </Button>
-      <div className={twMerge(['absolute top-16 left-0 w-full bg-white/95 py-4 shadow-md', !isOpen && 'hidden'])}>
+      <div className={twMerge(['absolute top-16 left-0 w-full bg-card py-4 shadow-md', !isOpen && 'hidden'])}>
         <div className='animate-fade-in container mx-auto flex flex-col gap-4'>
           {configuration.map((item) => {
             return (
               <NavigationItem
-                fullWidth
                 key={item.href}
                 to={item.href}
                 onClick={close}

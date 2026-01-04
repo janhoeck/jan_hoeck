@@ -1,13 +1,12 @@
 import { getTranslation } from '@/components/property/utils'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
-import { Badge, Button } from '@jan_hoeck/ui'
+import { Badge, Button, Card, CardContent, CardFooter, CardHeader, H3, Muted } from '@jan_hoeck/ui'
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GrGroup } from 'react-icons/gr'
 import { LuBed, LuMapPin } from 'react-icons/lu'
 import { MdOutlineOpenInNew } from 'react-icons/md'
-import { twMerge } from 'tailwind-merge'
 
 import { PropertyStatisticItem } from './PropertyStatisticItem'
 
@@ -24,35 +23,28 @@ export const PropertyCard = (props: PropertyCardProps) => {
   const bedPropertySummary = propertyConfiguration.propertyDetails.find((item) => item.type === 'bed')
 
   return (
-    <div
-      className={twMerge([
-        'text-card-foreground group shadow-medium overflow-hidden rounded-lg border-0 bg-white shadow-sm transition-all duration-500',
-        'hover:shadow-large hover:-translate-y-2',
-      ])}
-    >
-      <div className={twMerge(['relative h-64 overflow-hidden', 'md:h-80'])}>
-        <Image
-          fill
-          src={`/images/${propertyConfiguration.id}/coverPhoto.webp`}
-          alt='Estate'
-          className='object-cover transition-transform duration-700 group-hover:scale-110'
-          quality={80}
-          sizes='(max-width: 40rem) 90vw, 350px'
-        />
-        <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent'></div>
-        <Badge className='absolute top-4 left-4'>
-          <LuMapPin size={16} />
-          {propertyConfiguration.location.address.city}
-        </Badge>
-      </div>
-      <div className='p-6 md:p-8'>
-        <h3 className='text-foreground group-hover:text-primary mb-2 font-serif text-2xl font-bold transition-colors md:text-3xl'>
-          {getTranslation(locale, propertyConfiguration.title)}
-        </h3>
-        <p className='text-muted-foreground mb-6 leading-relaxed'>
-          {getTranslation(locale, propertyConfiguration.subtitle)}
-        </p>
-        <div className='text-muted-foreground mb-6 flex items-center gap-6'>
+    <Card className='overflow-hidden transition-all duration-500 hover:shadow-lg hover:-translate-y-2 py-0 pb-6'>
+      <CardHeader className='p-0'>
+        <div className='relative h-64 md:h-80 overflow-hidden'>
+          <Image
+            fill
+            src={`/images/${propertyConfiguration.id}/coverPhoto.webp`}
+            alt='Estate'
+            className='object-cover transition-transform duration-700 group-hover:scale-110'
+            quality={80}
+            sizes='(max-width: 40rem) 90vw, 350px'
+          />
+          <Badge className='absolute top-4 left-4'>
+            <LuMapPin size={16} />
+            {propertyConfiguration.location.address.city}
+          </Badge>
+        </div>
+      </CardHeader>
+
+      <CardContent>
+        <H3 className='line-clamp-2'>{getTranslation(locale, propertyConfiguration.title)}</H3>
+        <Muted>{getTranslation(locale, propertyConfiguration.subtitle)}</Muted>
+        <div className='flex items-center gap-6 text-muted-foreground mb-6 mt-6'>
           {bedPropertySummary && (
             <PropertyStatisticItem
               icon={LuBed}
@@ -66,24 +58,25 @@ export const PropertyCard = (props: PropertyCardProps) => {
             />
           )}
         </div>
-        <div className='mb-6 flex flex-wrap gap-2'>
-          <Badge variant='muted'>{t('pool')}</Badge>
-          <Badge variant='muted'>{t('airConditioner')}</Badge>
-          <Badge variant='muted'>{t('wlan')}</Badge>
-          <Badge variant='muted'>{t('parking')}</Badge>
+        <div className='flex flex-wrap gap-2'>
+          <Badge variant='secondary'>{t('pool')}</Badge>
+          <Badge variant='secondary'>{t('airConditioner')}</Badge>
+          <Badge variant='secondary'>{t('wlan')}</Badge>
+          <Badge variant='secondary'>{t('parking')}</Badge>
         </div>
-        <Button
-          fullWidth
-          as={Link}
-          href={`/property/${propertyConfiguration.id}`}
-        >
-          {t('showMe')}
-          <MdOutlineOpenInNew
-            size={16}
-            className='ml-2 transition-transform group-hover/btn:translate-x-1'
-          />
+      </CardContent>
+
+      <CardFooter>
+        <Button asChild>
+          <Link href={`/property/${propertyConfiguration.id}`}>
+            {t('showMe')}
+            <MdOutlineOpenInNew
+              size={16}
+              className='ml-2 transition-transform group-hover/btn:translate-x-1'
+            />
+          </Link>
         </Button>
-      </div>
-    </div>
+      </CardFooter>
+    </Card>
   )
 }

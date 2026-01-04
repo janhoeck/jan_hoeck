@@ -1,18 +1,45 @@
-import { Button, Typography } from '@jan_hoeck/ui'
+'use client'
+
+import {
+  Button,
+  Input,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+  Small,
+  Textarea,
+  toast,
+} from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import { Form } from 'radix-ui'
-import { FormHTMLAttributes } from 'react'
+import { useActionState, useEffect, useState } from 'react'
 
-export type GuestbookFormProps = {
-  action: FormHTMLAttributes<HTMLFormElement>['action']
-  isPending: boolean
+import { insertGuestbookEntry } from './actions'
+import { FormState } from './types'
+
+const INITIAL_FORM_STATE: FormState = {
+  errors: null,
+  success: false,
+  entry: null,
 }
 
-export const GuestbookForm = (props: GuestbookFormProps) => {
-  const { action, isPending } = props
+export const GuestbookForm = () => {
   const t = useTranslations('components.guestbookForm')
 
-  const inputClassName = 'w-full p-1 border-1 rounded-sm border-neutral-300 text-slate-800 bg-white'
+  const [initialFormState, setInitialFormState] = useState(INITIAL_FORM_STATE)
+  const [formState, action, isPending] = useActionState(insertGuestbookEntry, initialFormState)
+
+  useEffect(() => {
+    if (formState.success) {
+      toast.success(t('success'))
+      setInitialFormState(INITIAL_FORM_STATE)
+    } else if (formState.errors) {
+      toast.error(t('error'))
+    }
+  }, [t, formState, toast])
+
   const fieldClassName = 'flex flex-col gap-1'
 
   return (
@@ -25,18 +52,13 @@ export const GuestbookForm = (props: GuestbookFormProps) => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('name.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('name.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('name.valueMissing')}</Typography>
+            <Small>{t('name.valueMissing')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <input
-            required
-            className={inputClassName}
-          />
+          <Input required />
         </Form.Control>
       </Form.Field>
       <Form.Field
@@ -44,22 +66,24 @@ export const GuestbookForm = (props: GuestbookFormProps) => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('rating.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('rating.label')}</Form.Label>
         </div>
         <Form.Control asChild>
-          <select
+          <Select
             required
-            defaultValue={5}
-            className={inputClassName}
+            defaultValue='5'
           >
-            <option value={1}>{t('rating.options.1')}</option>
-            <option value={2}>{t('rating.options.2')}</option>
-            <option value={3}>{t('rating.options.3')}</option>
-            <option value={4}>{t('rating.options.4')}</option>
-            <option value={5}>{t('rating.options.5')}</option>
-          </select>
+            <SelectTrigger className='w-full'>
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value='1'>{t('rating.options.1')}</SelectItem>
+              <SelectItem value='2'>{t('rating.options.2')}</SelectItem>
+              <SelectItem value='3'>{t('rating.options.3')}</SelectItem>
+              <SelectItem value='4'>{t('rating.options.4')}</SelectItem>
+              <SelectItem value='5'>{t('rating.options.5')}</SelectItem>
+            </SelectContent>
+          </Select>
         </Form.Control>
       </Form.Field>
       <Form.Field
@@ -67,18 +91,13 @@ export const GuestbookForm = (props: GuestbookFormProps) => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('message.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('message.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('message.valueMissing')}</Typography>
+            <Small>{t('message.valueMissing')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <textarea
-            required
-            className={inputClassName}
-          />
+          <Textarea required />
         </Form.Control>
       </Form.Field>
       <Form.Submit asChild>

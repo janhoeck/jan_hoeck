@@ -17,7 +17,7 @@ export const BookItCard = (props: BookItPanelProps) => {
   const t = useTranslations('pages.property.bookIt')
 
   return (
-    <Card withBorder>
+    <Card>
       <CardContent className='space-y-6'>
         <div>
           <PerNightPrice price={perNight} />
@@ -25,13 +25,11 @@ export const BookItCard = (props: BookItPanelProps) => {
           <div className='text-sm text-muted-foreground'>{t('discountInfo')}</div>
         </div>
         <div className='space-y-4'>
-          <Button
-            fullWidth
-            as={Link}
-            href='/contact'
-          >
-            <PiEnvelopeOpenLight size={16} />
-            {t('contact')}
+          <Button asChild>
+            <Link href='/contact'>
+              <PiEnvelopeOpenLight size={16} />
+              {t('contact')}
+            </Link>
           </Button>
         </div>
         <div className='pt-6 border-t border-border space-y-4'>

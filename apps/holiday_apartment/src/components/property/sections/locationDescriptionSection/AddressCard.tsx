@@ -1,9 +1,9 @@
 import { getTranslation } from '@/components/property/utils'
 import { Location } from '@/types/PropertyConfiguration'
 import { safeJoin } from '@/utils/join'
-import { Card, CardContent, Typography } from '@jan_hoeck/ui'
+import { Card, CardContent, Muted } from '@jan_hoeck/ui'
 import { useLocale } from 'next-intl'
-import { LuBed, LuMapPin } from 'react-icons/lu'
+import { LuMapPin } from 'react-icons/lu'
 
 import { GoogleMaps } from './GoogleMaps'
 
@@ -18,13 +18,13 @@ export const AddressCard = (props: AddressCardProps) => {
   const locale = useLocale()
 
   return (
-    <Card className='h-fit'>
+    <Card className='h-fit py-0 pb-6'>
       <GoogleMaps
         className='h-[320px] w-full overflow-hidden rounded-t-md'
         lat={lat}
         lng={lng}
       />
-      <CardContent>
+      <CardContent className='space-y-4'>
         <div className='flex items-start gap-3'>
           <LuMapPin
             size={20}
@@ -37,9 +37,7 @@ export const AddressCard = (props: AddressCardProps) => {
             <div className='text-sm text-muted-foreground'>{[address.postalCode, address.city].join(' ')}</div>
           </div>
         </div>
-        {address.description && (
-          <Typography variant='smallText'>{getTranslation(locale, address.description)}</Typography>
-        )}
+        {address.description && <Muted>{getTranslation(locale, address.description)}</Muted>}
       </CardContent>
     </Card>
   )

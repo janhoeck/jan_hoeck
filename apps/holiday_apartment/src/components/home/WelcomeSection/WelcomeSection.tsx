@@ -11,13 +11,16 @@ export const WelcomeSection = () => {
           fill
           priority
           src='/images/costa-calida.webp'
-          alt='Costa calida - murcia'
+          alt='Costa Calida – Murcia'
           className='object-cover'
           sizes='100vw'
-          quality={100}
+          quality={90}
         />
-        <div className='to-white absolute inset-0 bg-gradient-to-b from-black/40 via-black/20' />
+
+        {/* Optionales Overlay – OK, solange kein Blur/Scale */}
+        <div className='absolute inset-0 gradient-overlay' />
       </div>
+
       <WelcomeSectionInfo />
     </section>
   )

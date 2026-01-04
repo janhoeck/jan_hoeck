@@ -1,3 +1,5 @@
+import { List, P } from '@jan_hoeck/ui'
+
 import { ContentBlock as ContentBlockType } from '../../../types/ContentBlock'
 
 export type ContentBlockProps = {
@@ -11,9 +13,8 @@ export const ContentBlock = (props: ContentBlockProps) => {
       {items.map((item, index) => {
         if (typeof item === 'string') {
           return (
-            <p
+            <P
               key={index}
-              className='text-muted-foreground'
               dangerouslySetInnerHTML={{ __html: item }}
             />
           )
@@ -23,27 +24,21 @@ export const ContentBlock = (props: ContentBlockProps) => {
         return (
           <div key={index}>
             {text && (
-              <p
+              <P
                 key={index}
-                className='text-muted-foreground'
                 dangerouslySetInnerHTML={{ __html: text }}
               />
             )}
-            <ul className='list-disc pl-6'>
+            <List>
               {bulletpoints.map((bulletpoint, index) => {
                 return (
                   <li
                     key={index}
-                    className='text-muted-foreground'
-                  >
-                    <p
-                      key={index}
-                      dangerouslySetInnerHTML={{ __html: bulletpoint }}
-                    />
-                  </li>
+                    dangerouslySetInnerHTML={{ __html: bulletpoint }}
+                  />
                 )
               })}
-            </ul>
+            </List>
           </div>
         )
       })}

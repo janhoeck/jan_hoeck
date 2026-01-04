@@ -1,18 +1,30 @@
-import { Button, Typography } from '@jan_hoeck/ui'
+import { Button, Input, Small, Textarea, toast } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import { Form } from 'radix-ui'
-import { FormHTMLAttributes } from 'react'
+import { useActionState, useEffect, useState } from 'react'
 
-export type ContactFormProps = {
-  action: FormHTMLAttributes<HTMLFormElement>['action']
-  isPending: boolean
+import { sendMail } from './actions'
+import { FormState } from './types'
+
+const INITIAL_FORM_STATE: FormState = {
+  success: undefined,
 }
 
-export const ContactForm = (props: ContactFormProps) => {
-  const { action, isPending } = props
+export const ContactForm = () => {
   const t = useTranslations('components.contactForm')
 
-  const inputClassName = 'w-full p-1 border-1 rounded-sm border-neutral-300 text-slate-800 bg-white'
+  const [initialFormState, setInitialFormState] = useState(INITIAL_FORM_STATE)
+  const [formState, action, isPending] = useActionState(sendMail, initialFormState)
+
+  useEffect(() => {
+    if (formState.success === true) {
+      toast.success(t('success'))
+      setInitialFormState(INITIAL_FORM_STATE)
+    } else if (formState.success === false) {
+      toast.error(t('error'))
+    }
+  }, [t, formState, toast])
+
   const fieldClassName = 'flex flex-col gap-1'
 
   return (
@@ -25,18 +37,13 @@ export const ContactForm = (props: ContactFormProps) => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('name.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('name.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('name.valueMissing')}</Typography>
+            <Small>{t('name.valueMissing')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <input
-            required
-            className={inputClassName}
-          />
+          <Input required />
         </Form.Control>
       </Form.Field>
       <Form.Field
@@ -44,21 +51,18 @@ export const ContactForm = (props: ContactFormProps) => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('email.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('email.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('email.valueMissing')}</Typography>
+            <Small>{t('email.valueMissing')}</Small>
           </Form.Message>
           <Form.Message match='typeMismatch'>
-            <Typography variant='smallText'>{t('email.typeMismatch')}</Typography>
+            <Small>{t('email.typeMismatch')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <input
+          <Input
             required
             type='email'
-            className={inputClassName}
           />
         </Form.Control>
       </Form.Field>
@@ -66,14 +70,9 @@ export const ContactForm = (props: ContactFormProps) => {
         name='phone'
         className={fieldClassName}
       >
-        <Form.Label>
-          <Typography>{t('phone.label')}</Typography>
-        </Form.Label>
+        <Form.Label>{t('phone.label')}</Form.Label>
         <Form.Control asChild>
-          <input
-            type='tel'
-            className={inputClassName}
-          />
+          <Input type='tel' />
         </Form.Control>
       </Form.Field>
       <Form.Field
@@ -81,18 +80,13 @@ export const ContactForm = (props: ContactFormProps) => {
         className={fieldClassName}
       >
         <div className='flex justify-between gap-4'>
-          <Form.Label>
-            <Typography>{t('message.label')}</Typography>
-          </Form.Label>
+          <Form.Label>{t('message.label')}</Form.Label>
           <Form.Message match='valueMissing'>
-            <Typography variant='smallText'>{t('message.valueMissing')}</Typography>
+            <Small>{t('message.valueMissing')}</Small>
           </Form.Message>
         </div>
         <Form.Control asChild>
-          <textarea
-            required
-            className={inputClassName}
-          />
+          <Textarea required />
         </Form.Control>
       </Form.Field>
       <Form.Submit asChild>
