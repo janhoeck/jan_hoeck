@@ -130,10 +130,10 @@
   },
   "price": {
     "perNight": {
-      "discount": "50€",
-      "normal": "85€"
+      "offSeason": 50,
+      "mainSeason": 85
     },
-    "cleaning": "85€"
+    "cleaning": 85
   },
   "description": [
     {

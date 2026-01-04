@@ -209,9 +209,21 @@
         }
       },
       "bookIt": {
-        "perNight": "pro Nacht",
-        "cleaning": "zuzüglich einer Reinigungsgebühr von einmalig {cleaning}",
-        "discountInfo": "Ermäßigter Preis von Oktober bis Ende März",
+        "night": "Nacht",
+        "currentPrice": "Aktuelle Preis",
+        "mwst": "inkl. MwSt.",
+        "mainSeason": {
+          "title": "Hauptsaison",
+          "range": "April - September"
+        },
+        "offSeason": {
+          "title": "Nebensaison",
+          "range": "Oktober - März"
+        },
+        "cleaning": {
+          "text": "Endreinigung: {cleaning} €",
+          "once": "einmalig"
+        },
         "contact": "Anbieter kontaktieren"
       }
     },

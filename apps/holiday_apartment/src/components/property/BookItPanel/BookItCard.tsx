@@ -1,38 +1,63 @@
+import { SeasonPrice } from '@/components/property/BookItPanel/SeasonPrice'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
-import { Button, Card, CardContent } from '@jan_hoeck/ui'
+import { Button, Card, CardContent, P, Separator, Small } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import { PiEnvelopeOpenLight, PiPhoneCallLight } from 'react-icons/pi'
 
 import { Link } from '../../../i18n/navigation'
-import { PerNightPrice } from './PerNightPrice'
 
-export type BookItPanelProps = {
+export type BookItCardProps = {
   price: PropertyConfiguration['price']
 }
 
-export const BookItCard = (props: BookItPanelProps) => {
+export const BookItCard = (props: BookItCardProps) => {
   const { price } = props
   const { perNight, cleaning } = price
 
   const t = useTranslations('pages.property.bookIt')
+  const today = new Date()
+  const isDiscountPeriod = [9, 10, 11, 0, 1, 2].includes(today.getMonth())
 
   return (
     <Card>
       <CardContent className='space-y-6'>
-        <div>
-          <PerNightPrice price={perNight} />
-          <div className='text-sm text-muted-foreground'>{t('cleaning', { cleaning: cleaning ?? '' })}</div>
-          <div className='text-sm text-muted-foreground'>{t('discountInfo')}</div>
+        <div className='grid grid-cols-2 gap-2'>
+          <SeasonPrice
+            isActive={!isDiscountPeriod}
+            price={perNight.mainSeason}
+            seasonRange={t('mainSeason.range')}
+            seasonType='main'
+            title={t('mainSeason.title')}
+          />
+          <SeasonPrice
+            isActive={isDiscountPeriod}
+            price={perNight.offSeason}
+            seasonRange={t('offSeason.range')}
+            seasonType='off'
+            title={t('offSeason.title')}
+          />
         </div>
-        <div className='space-y-4'>
+        {cleaning && (
+          <div className='p-2 bg-gray-50 rounded-md flex items-center'>
+            <P>{t('cleaning.text', { cleaning })}</P>
+            <Small className='text-muted-foreground pl-2'>{t('cleaning.once')}</Small>
+          </div>
+        )}
+        <div className='flex flex-row gap-2 items-center'>
+          <div className='flex-1'>
+            <Separator />
+          </div>
           <Button asChild>
             <Link href='/contact'>
               <PiEnvelopeOpenLight size={16} />
               {t('contact')}
             </Link>
           </Button>
+          <div className='flex-1'>
+            <Separator />
+          </div>
         </div>
-        <div className='pt-6 border-t border-border space-y-4'>
+        <div className='space-y-4'>
           <div className='space-y-3 text-sm'>
             <a
               href='mailto:casas.marmenor@gmx.de'

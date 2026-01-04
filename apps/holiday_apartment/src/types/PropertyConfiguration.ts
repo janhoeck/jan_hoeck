@@ -68,10 +68,10 @@ export type HouseRules = {
 
 export type PriceConfig = {
   perNight: {
-    discount: string
-    normal: string
+    offSeason: number
+    mainSeason: number
   }
-  cleaning?: string
+  cleaning?: number
 }
 
 export type PropertyConfiguration = {

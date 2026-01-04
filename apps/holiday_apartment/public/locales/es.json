@@ -209,10 +209,22 @@
         }
       },
       "bookIt": {
-        "perNight": "por noche",
-        "cleaning": "más una tarifa de limpieza única de {cleaning}",
-        "discountInfo": "Precio con descuento desde octubre hasta finales de marzo.",
-        "contact": "Contactar Proveedor"
+        "night": "Noche",
+        "currentPrice": "Precio actual",
+        "mwst": "IVA incl.",
+        "mainSeason": {
+          "title": "Temporada alta",
+          "range": "Abril - Septiembre"
+        },
+        "offSeason": {
+          "title": "Temporada baja",
+          "range": "Octubre - Marzo"
+        },
+        "cleaning": {
+          "text": "Limpieza final: {cleaning} €",
+          "once": "una vez"
+        },
+        "contact": "Contactar al proveedor"
       }
     },
     "about": {

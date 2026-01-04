@@ -209,10 +209,22 @@
         }
       },
       "bookIt": {
-        "perNight": "per night",
-        "cleaning": "plus a one-time cleaning fee of {cleaning}",
-        "discountInfo": "Discounted price from October to the end of March",
-        "contact": "Contact Provider"
+        "night": "Night",
+        "currentPrice": "Current price",
+        "mwst": "incl. VAT",
+        "mainSeason": {
+          "title": "Main season",
+          "range": "April - September"
+        },
+        "offSeason": {
+          "title": "Off season",
+          "range": "October - March"
+        },
+        "cleaning": {
+          "text": "Final cleaning: {cleaning} €",
+          "once": "once"
+        },
+        "contact": "Contact provider"
       }
     },
     "about": {
