@@ -1,13 +1,13 @@
-import { SeasonPrice } from '@/components/property/BookItPanel/SeasonPrice'
-import { PropertyConfiguration } from '@/types/PropertyConfiguration'
+import { PriceConfig } from '@/types/PropertyConfiguration'
 import { Button, Card, CardContent, P, Separator, Small } from '@jan_hoeck/ui'
 import { useTranslations } from 'next-intl'
 import { PiEnvelopeOpenLight, PiPhoneCallLight } from 'react-icons/pi'
 
 import { Link } from '../../../i18n/navigation'
+import { SeasonPrice } from './SeasonPrice'
 
 export type BookItCardProps = {
-  price: PropertyConfiguration['price']
+  price: PriceConfig
 }
 
 export const BookItCard = (props: BookItCardProps) => {
