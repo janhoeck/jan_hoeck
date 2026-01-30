@@ -1,0 +1,15 @@
+:root {
+  --fc-button-bg-color: var(--color-primary);
+  --fc-button-border-color: var(--color-primary);
+
+  --fc-button-hover-bg-color: color-mix(in srgb, var(--color-primary) 90%, transparent);
+  --fc-button-hover-border-color: color-mix(in srgb, var(--color-primary) 90%, transparent);
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+}
+
+.fc .fc-daygrid-body-natural .fc-daygrid-day-events {
+  margin-bottom: 4px;
+}

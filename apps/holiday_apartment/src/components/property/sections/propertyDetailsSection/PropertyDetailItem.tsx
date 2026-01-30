@@ -1,4 +1,4 @@
-import { IconWithText } from '@/components/property/IconWithText/IconWithText'
+import { IconWithText } from '@/components/property/components/IconWithText'
 import { iconMapping } from '@/components/property/iconMapping'
 import { getTranslation } from '@/components/property/utils'
 import { PropertyDetailItem as PropertyDetailItemType } from '@/types/PropertyConfiguration'

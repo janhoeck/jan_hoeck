@@ -11,6 +11,10 @@
     "format": "npx prettier --write ./src"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.20",
+    "@fullcalendar/daygrid": "^6.1.20",
+    "@fullcalendar/icalendar": "^6.1.20",
+    "@fullcalendar/react": "^6.1.20",
     "@jan_hoeck/ui": "workspace:*",
     "@jan_hoeck/utils": "workspace:*",
     "@supabase/ssr": "^0.7.0",

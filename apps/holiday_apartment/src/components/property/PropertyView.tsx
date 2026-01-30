@@ -1,9 +1,10 @@
+import { BookItCard } from '@/components/property/bookIt/BookItCard'
+import { CalendarCard } from '@/components/property/calendar/CalendarCard'
+import { PropertyImageGrid } from '@/components/property/images/PropertyImageGrid'
 import { PropertyConfiguration } from '@/types/PropertyConfiguration'
 import { Separator } from '@jan_hoeck/ui'
 
 import { ContentContainer } from '../shared/Container/ContentContainer'
-import { BookItCard } from './BookItPanel/BookItCard'
-import { PropertyImageGrid } from './PropertyImages/PropertyImageGrid'
 import { AmenitiesSection } from './sections/amenitiesSection/AmenitiesSection'
 import { DescriptionSection } from './sections/descriptionSection/DescriptionSection'
 import { HouseRulesSection } from './sections/houseRulesSection/HouseRulesSection'
@@ -35,6 +36,7 @@ export const PropertyView = (props: PropertyViewProps) => {
           <div className='lg:col-span-1'>
             <div className='sticky top-24 space-y-6'>
               <BookItCard price={configuration.price} />
+              <CalendarCard propertyConfig={configuration} />
             </div>
           </div>
         </div>

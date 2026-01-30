@@ -76,6 +76,7 @@ export type PriceConfig = {
 
 export type PropertyConfiguration = {
   id: string
+  icalUrl?: string
   imageSources: string[]
   title: TranslationMap
   subtitle: TranslationMap
