@@ -1,6 +1,7 @@
 import { getTranslation } from '@/components/property/utils'
 import { GoogleMapsAPIProvider } from '@/components/shared/GoogleMapsAPIProvider/GoogleMapsAPIProvider'
 import { loadPropertyConfig } from '@/lib/load-property-configs'
+import { generateCanonicalMetadata } from '@/lib/metadata'
 import { Metadata } from 'next'
 import { PropsWithChildren } from 'react'
 
@@ -20,6 +21,7 @@ export async function generateMetadata(props: MetadataProps): Promise<Metadata> 
 
   return {
     title: getTranslation(locale, propertyConfiguration.title),
+    ...generateCanonicalMetadata(locale, `/property/${slug}`),
     openGraph: {
       title: getTranslation(locale, propertyConfiguration.title),
       url: `https://solymarmenor.com/property/${propertyConfiguration.id}`,

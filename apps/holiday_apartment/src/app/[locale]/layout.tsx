@@ -1,6 +1,7 @@
 import { LayoutFooter } from '@/components/shared/LayoutFooter'
 import { LayoutNavigation } from '@/components/shared/LayoutNavigation'
 import { WebVitals } from '@/components/shared/WebVitals'
+import { generateCanonicalMetadata } from '@/lib/metadata'
 import { Toaster } from '@jan_hoeck/ui'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -113,10 +114,7 @@ export async function generateMetadata(props: MetadataProps): Promise<Metadata> 
       'mar menor los alcazares',
       'the mar menor',
     ],
-    alternates: {
-      canonical: `https://solymarmenor.com/${locale}`,
-      languages: routing.locales.reduce((acc, lang) => ({ ...acc, [lang]: `https://solymarmenor.com/${lang}` }), {}),
-    },
+    ...generateCanonicalMetadata(locale, '/'),
     icons: {
       icon: '/favicon.ico',
     },
