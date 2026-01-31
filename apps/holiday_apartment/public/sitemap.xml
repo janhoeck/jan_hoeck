@@ -4,18 +4,6 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- Homepage -->
-    <url>
-        <loc>https://solymarmenor.com/</loc>
-        <lastmod>2025-06-20T18:22:15+01:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/"/>
-    </url>
-
     <!-- German Pages -->
     <url>
         <loc>https://solymarmenor.com/de</loc>
@@ -25,7 +13,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de"/>
     </url>
 
     <url>
@@ -36,7 +24,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/aboutus"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/aboutus"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/aboutus"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/aboutus"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/aboutus"/>
     </url>
 
     <url>
@@ -47,7 +35,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/property/apartment"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/property/apartment"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/property/apartment"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/property/apartment"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/property/apartment"/>
     </url>
 
     <url>
@@ -58,7 +46,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/property/house"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/property/house"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/property/house"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/property/house"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/property/house"/>
     </url>
 
     <url>
@@ -69,7 +57,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/contact"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/contact"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/contact"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/contact"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/contact"/>
     </url>
 
     <url>
@@ -80,7 +68,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/imprint"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/imprint"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/imprint"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/imprint"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/imprint"/>
     </url>
 
     <url>
@@ -91,7 +79,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/guestbook"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/guestbook"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/guestbook"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/guestbook"/>
     </url>
 
     <!-- English Pages -->
@@ -103,7 +91,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de"/>
     </url>
 
     <url>
@@ -114,7 +102,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/aboutus"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/aboutus"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/aboutus"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/aboutus"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/aboutus"/>
     </url>
 
     <url>
@@ -125,7 +113,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/property/apartment"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/property/apartment"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/property/apartment"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/property/apartment"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/property/apartment"/>
     </url>
 
     <url>
@@ -136,7 +124,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/property/house"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/property/house"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/property/house"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/property/house"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/property/house"/>
     </url>
 
     <url>
@@ -147,7 +135,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/contact"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/contact"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/contact"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/contact"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/contact"/>
     </url>
 
     <url>
@@ -158,7 +146,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/imprint"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/imprint"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/imprint"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/imprint"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/imprint"/>
     </url>
 
     <url>
@@ -169,7 +157,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/guestbook"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/guestbook"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/guestbook"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/guestbook"/>
     </url>
 
     <!-- Spanish Pages -->
@@ -181,7 +169,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de"/>
     </url>
 
     <url>
@@ -192,7 +180,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/aboutus"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/aboutus"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/aboutus"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/aboutus"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/aboutus"/>
     </url>
 
     <url>
@@ -203,7 +191,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/property/apartment"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/property/apartment"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/property/apartment"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/property/apartment"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/property/apartment"/>
     </url>
 
     <url>
@@ -214,7 +202,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/property/house"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/property/house"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/property/house"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/property/house"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/property/house"/>
     </url>
 
     <url>
@@ -225,7 +213,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/contact"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/contact"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/contact"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/contact"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/contact"/>
     </url>
 
     <url>
@@ -236,7 +224,7 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/imprint"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/imprint"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/imprint"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/imprint"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/imprint"/>
     </url>
 
     <url>
@@ -247,6 +235,6 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://solymarmenor.com/de/guestbook"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://solymarmenor.com/en/guestbook"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://solymarmenor.com/es/guestbook"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/guestbook"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://solymarmenor.com/de/guestbook"/>
     </url>
 </urlset>
